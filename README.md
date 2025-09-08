@@ -67,7 +67,7 @@
 - [Carátula](#carátula)
   - [Universidad, carrera, ciclo](#universidad-peruana-de-ciencias-aplicadas)
   - [Nombre del Startup](#cobox)
-  - [Nombre del Producto](#producto)
+  - [Nombre del Producto](#cobox)
   - [Relación de Integrantes](#relación-de-integrantes)
   - [Mes y Año](#mes-y-año)
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
