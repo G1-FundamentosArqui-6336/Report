@@ -1,5 +1,5 @@
 # CoBox  
-**Producto: CoBox **  
+## Producto: CoBox
 # UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 
 <p align="center">
@@ -65,9 +65,9 @@
 #### Tabla de contenidos
 
 - [Carátula](#carátula)
-  - [Universidad Peruana de Ciencias Aplicadas](#universidad-peruana-de-ciencias-aplicadas)
-  - [Nombre del Startup](#nombre-del-startup)
-  - [Nombre del Producto](#nombre-del-producto)
+  - [Universidad, carrera, ciclo](#universidad-peruana-de-ciencias-aplicadas)
+  - [Nombre del Startup](#cobox)
+  - [Nombre del Producto](#producto)
   - [Relación de Integrantes](#relación-de-integrantes)
   - [Mes y Año](#mes-y-año)
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
