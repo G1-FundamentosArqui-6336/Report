@@ -23,7 +23,7 @@
 - XXXX – U202310345  
 - XXXX – U202217212  
 
-**Abril, 2025**  
+**Septiembre, 2025**  
 **URL del proyecto:** [https://github.com/G1-FundamentosArqui-6336](https://github.com/G1-FundamentosArqui-6336)
 
 ---
