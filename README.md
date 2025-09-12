@@ -960,8 +960,29 @@ Segmento 2: Conductores de Transporte
 
 ### Conclusiones y Recomendaciones
 
+**Conclusiones**
+
+1. La investigación y análisis realizados permitieron comprender en profundidad la problemática del sector logístico y cómo la startup **Co-box logistic** puede aportar valor mediante una plataforma tecnológica innovadora.  
+2. La aplicación del enfoque **Lean UX** resultó fundamental para identificar necesidades reales de los usuarios, validar hipótesis y orientar el diseño hacia una solución centrada en el cliente.  
+3. Las herramientas utilizadas —como entrevistas, User Personas, Empathy Maps y Scenario Mapping— facilitaron la identificación de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga.  
+4. El **Product Backlog** estructurado brinda un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos.  
+5. El trabajo en equipo y la colaboración constante fueron claves para lograr un documento integral que conecta investigación, análisis y propuesta de solución de manera coherente.
+
+**Recomendaciones**
+
+1. Continuar con un proceso de validación continua, incorporando feedback de usuarios finales en cada iteración del desarrollo.  
+2. Desplegar un plan piloto con un grupo de empresas de transporte para evaluar el desempeño de la plataforma en un entorno real.  
+3. Priorizar en las primeras fases los módulos de **geolocalización en tiempo real**, **registro de incidencias** y **reportes automáticos**, al ser los de mayor impacto en la eficiencia operativa.  
+4. Implementar estrategias de capacitación para los usuarios finales, a fin de garantizar una adopción fluida de la herramienta.  
+5. Mantener un proceso de documentación y mejora continua que permita escalar la solución a nuevos mercados y escenarios logísticos.
 
 ### Referencias Bibliográficas
+
+- Gothelf, J., & Seiden, J. (2013). *Lean UX: Applying Lean Principles to Improve User Experience*. O’Reilly Media.  
+- Osterwalder, A., Pigneur, Y., Bernarda, G., & Smith, A. (2014). *Value Proposition Design: How to Create Products and Services Customers Want*. Wiley.  
+- Interaction Design Foundation. (2025). *Lean UX*. Recuperado de: [https://www.interaction-design.org](https://www.interaction-design.org)  
+- Nielsen Norman Group. (2025). *User Research Methods*. Recuperado de: [https://www.nngroup.com](https://www.nngroup.com)  
+- GitHub. (2025). *Repositorio del informe del proyecto*. Recuperado de: [https://github.com/G1-FundamentosArqui-6336/Report](https://github.com/G1-FundamentosArqui-6336/Report)  
 
 ### Anexos
 
