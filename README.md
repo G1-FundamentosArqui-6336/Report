@@ -957,3 +957,12 @@ Segmento 2: Conductores de Transporte
 | 28 | TS-03         | Endpoints de entregas                       | Como desarrollador, quiero implementar endpoints para gestionar entregas desde apps móviles.   | 5            |
 | 29 | TS-04         | Endpoints de incidencias                    | Como desarrollador, quiero implementar endpoints para gestionar incidencias.                  | 5            |
 | 30 | TS-05         | Endpoints de estadísticas                   | Como desarrollador, quiero implementar endpoints para obtener métricas y estadísticas.        | 8            |
+
+### Conclusiones y Recomendaciones
+
+
+### Referencias Bibliográficas
+
+### Anexos
+
+### Links
