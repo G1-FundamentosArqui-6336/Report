@@ -18,7 +18,7 @@
 
 ### Integrantes:
 - Ramiro Alexander Guzmán Chávez – U202217062  
-- XXXX – U20221B490  
+- David Alexander Pérez García – U202222942  
 - XXXX – U202219657  
 - XXXX – U202310345  
 - XXXX – U202217212  
@@ -200,8 +200,8 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |---------------------|---------------------|--------------|
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. |  |  |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. |  |  |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <strong>David Alexander Pérez García</strong> </br> <strong>TB1:</strong></br>Durante el desarrollo del proyecto Co-box logistic participé activamente en la investigación y análisis de los requerimientos, lo que permitió definir las funcionalidades críticas de la plataforma, como el registro de kilometraje, la geolocalización en tiempo real, la captura de evidencias fotográficas y la generación de reportes. Además, me encargué de diseñar la arquitectura del sistema considerando criterios de escalabilidad y buenas prácticas de desarrollo. |<strong>David Alexander Pérez García</strong> </br> <strong>TB1:</strong></br> Esta participación me permitió aplicar de manera práctica mis conocimientos en el desarrollo de software, reforzando mis habilidades en diseño de sistemas, programación y gestión de bases de datos geoespaciales. |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | <strong>David Alexander Pérez García</strong> </br> <strong>TB1:</strong></br>Conscientemente actualicé mis conocimientos en el uso de frameworks modernos para el desarrollo de aplicaciones web, como React, Next.js y Spring Boot, así como en el manejo de bases de datos con capacidades geoespaciales mediante PostGIS. También investigué estándares de seguridad y mejores prácticas para el tratamiento de datos sensibles y evidencias digitales | <strong>David Alexander Pérez García</strong> </br> <strong>TB1:</strong></br>Reconozco que el aprendizaje permanente es esencial para mantenerme actualizado en un sector tan dinámico como el tecnológico y para responder adecuadamente a las exigencias de proyectos innovadores. |
 
 
 ---
@@ -243,10 +243,10 @@ Además, cuento con conocimientos en lenguajes de programación como Java y Java
 
 ---
 
-#### **XXXX – Ingeniería de Software – U202301345**  
-<img src="./assets/RAMIROGUZMAN.png" alt="RAMIROGUZMAN" height="200"/>
+#### **David Alexander Pérez García – Ingeniería de Software – U202222942**  
+<img src="./assets/PEREZGARCIA.jpg" alt="PEREZGARCIA" height="200"/>
 
-XXXX.
+Hola, soy David, estudiante de Ingeniería de Software en el octavo ciclo. Me considero una persona responsable, perseverante y apasionada por la tecnología. Tengo experiencia en el desarrollo de aplicaciones web utilizando lenguajes como TypeScript, Java y PHP, y frameworks modernos como React, Next.js, Spring Boot, Express y Laravel. Creo que puedo aportar al grupo brindando soluciones técnicas eficientes, apoyando en el desarrollo del sistema y proponiendo mejoras continuas para alcanzar los objetivos del proyecto con calidad y compromiso.
 
 ---
 
