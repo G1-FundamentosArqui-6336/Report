@@ -149,7 +149,7 @@ Visión: Aspiramos a ser líderes en la innovación logística, impulsando un fu
 ---
 
 #### **Joaquin Pedraza Maldonado – Ingeniería de Software – U202218514**  
-<img src="./assets/Joaquin.png" alt="JoaquinPedraza"/>
+<img src="./assets/Joaquin.png" alt="JoaquinPedraza" height="500"/>
 
 Estudio Ing. Software. Me considero que soy una persona perseverante, entusiasta en aprender cosas nuevas. Me gusta ayudar a los demás y sé trabajar en equipo. Cuento con conocimientos en lenguajes de Programación como C++, Python,CSS, JavaScript.
 .
@@ -157,7 +157,7 @@ Estudio Ing. Software. Me considero que soy una persona perseverante, entusiasta
 ---
 
 #### **Ramiro Alexander Guzman Chavez – Ingeniería de Software – U202217062**  
-<img src="./assets/RAMIROGUZMAN.png" alt="RAMIROGUZMAN" height="200"/>
+<img src="./assets/RAMIROGUZMAN.png" alt="RAMIROGUZMAN" height="500"/>
 
 Mi perfil se basa en ser una persona responsable, disciplinada en todo aspecto y comprometida con las actividades que me puedan tocar.
 Considero que tengo una experiencia altamente capacitada para este tipo de tareas. Suelo desarrollarme de manera positiva en los trabajos grupales y tengo conocimientos en bases de datos, lo cual puede aportar de manera importante al equipo.
@@ -166,7 +166,7 @@ Además, cuento con conocimientos en lenguajes de programación como Java y Java
 ---
 
 #### **David Alexander Pérez García – Ingeniería de Software – U202222942**  
-<img src="./assets/PEREZGARCIA.jpg" alt="PEREZGARCIA" height="200"/>
+<img src="./assets/PEREZGARCIA.jpg" alt="PEREZGARCIA" height="500"/>
 
 Hola, soy David, estudiante de Ingeniería de Software en el octavo ciclo. Me considero una persona responsable, perseverante y apasionada por la tecnología. Tengo experiencia en el desarrollo de aplicaciones web utilizando lenguajes como TypeScript, Java y PHP, y frameworks modernos como React, Next.js, Spring Boot, Express y Laravel. Creo que puedo aportar al grupo brindando soluciones técnicas eficientes, apoyando en el desarrollo del sistema y proponiendo mejoras continuas para alcanzar los objetivos del proyecto con calidad y compromiso.
 
@@ -174,7 +174,7 @@ Hola, soy David, estudiante de Ingeniería de Software en el octavo ciclo. Me co
 
 #### **Merly Salon Puerta – Ingeniería de Software - u20201b772**
 
-<img src="./assets/Merly.jpg" alt="RAMIROGUZMAN" height="200"/>
+<img src="./assets/Merly.jpg" alt="RAMIROGUZMAN" height="500"/>
 
 Soy estudiante de Ingeniería de Software. Estoy dispuesta a trabajar con mi equipo esforzadamente. Cuento con conocimientos en html, css y java script, lo cual puede sumar en el desarrollo del proyecto.
 
