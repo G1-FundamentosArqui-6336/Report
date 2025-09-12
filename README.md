@@ -174,11 +174,11 @@ Hola, soy David, estudiante de Ingeniería de Software en el octavo ciclo. Me co
 
 ---
 
-#### **XXXX – Ingeniería de Software - U202219657**
+#### **Merly Salon Puerta – Ingeniería de Software - u20201b772**
 
-<img src="./assets/RAMIROGUZMAN.png" alt="RAMIROGUZMAN" height="200"/>
+<img src="./assets/Merly.jpg" alt="RAMIROGUZMAN" height="200"/>
 
-XXXX.
+Soy estudiante de Ingeniería de Software. Estoy dispuesta a trabajar con mi equipo esforzadamente. Cuento con conocimientos en html, css y java script, lo cual puede sumar en el desarrollo del proyecto.
 
 ---
 
