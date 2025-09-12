@@ -1,5 +1,5 @@
 # CoBox  
-**Producto: CoBox **  
+## Producto: CoBox
 # UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 
 <p align="center">
@@ -23,7 +23,7 @@
 - XXXX – U202310345  
 - XXXX – U202217212  
 
-**Abril, 2025**  
+**Septiembre, 2025**  
 **URL del proyecto:** [https://github.com/G1-FundamentosArqui-6336](https://github.com/G1-FundamentosArqui-6336)
 
 ---
@@ -65,9 +65,15 @@
 #### Tabla de contenidos
 
 - [Carátula](#carátula)
+  - [Universidad, carrera, ciclo](#universidad-peruana-de-ciencias-aplicadas)
+  - [Nombre del Startup](#cobox)
+  - [Nombre del Producto](#cobox)
+  - [Relación de Integrantes](#integrantes)
+  - [Mes y Año](#mes-y-año)
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
 - [Contenido](#contenido)
-- [Student Outcome (ABET)](#student-outcome-abet)
+- [Student Outcome](#student-outcome)
+
 - [Capítulo I: Introducción](#capítulo-i-introducción)
   - [1.1. Startup Profile](#11-startup-profile)
     - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
@@ -95,17 +101,18 @@
   - [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
   - [3.2. User Stories](#32-user-stories)
   - [3.3. Impact Map](#33-impact-map)
-  - [3.4. Product Backlog (Avance 1)](#34-product-backlog-avance-1)
+  - [3.4. Product Backlog](#34-product-backlog)
 
 - [Capítulo IV: Product Architecture Design](#capítulo-iv-product-architecture-design)
   - [4.1. Design Concepts, ViewPoints & ER Diagrams](#41-design-concepts-viewpoints--er-diagrams)
     - [4.1.1. Principles Statements](#411-principles-statements)
     - [4.1.2. Approaches Statements](#412-approaches-statements)
-    - [4.1.3. Context Diagram](#413-context-diagram)
-    - [4.1.4. ViewPoints Diagrams](#414-viewpoints-diagrams)
-    - [4.1.5. Relational/Non Relational Database Diagram](#415-relationalnon-relational-database-diagram)
-    - [4.1.6. Design Patterns](#416-design-patterns)
-    - [4.1.7. Tactics](#417-tactics)
+    - [4.1.3. Architectural Styles & Patterns](#413-architectural-styles--patterns)
+    - [4.1.4. Context Diagram](#414-context-diagram)
+    - [4.1.5. Approach Driven ViewPoints Diagrams](#415-approach-driven-viewpoints-diagrams)
+    - [4.1.6. Relational/Non Relational Database Diagram](#416-relationalnon-relational-database-diagram)
+    - [4.1.7. Design Patterns](#417-design-patterns)
+    - [4.1.8. Tactics](#418-tactics)
   - [4.2. Architectural Drivers](#42-architectural-drivers)
     - [4.2.1. Design Purpose](#421-design-purpose)
     - [4.2.2. Primary Functionality (User Stories)](#422-primary-functionality-user-stories)
@@ -113,21 +120,21 @@
     - [4.2.4. Constraints](#424-constraints)
     - [4.2.5. Architectural Concerns](#425-architectural-concerns)
   - [4.3. ADD Iterations](#43-add-iterations)
-    - [4.3.X Iteration N: Nombre Iteración](#43x-iteration-n-nombre-iteración)
+    - [4.3.X Iteration N](#43x-iteration-n)
       - [4.3.X.1. Architectural Design Backlog](#43x1-architectural-design-backlog)
       - [4.3.X.2. Establish Iteration Goal](#43x2-establish-iteration-goal)
       - [4.3.X.3. Choose Elements to Refine](#43x3-choose-elements-to-refine)
       - [4.3.X.4. Choose Design Concepts](#43x4-choose-design-concepts)
       - [4.3.X.5. Allocate Responsibilities & Define Interfaces](#43x5-allocate-responsibilities--define-interfaces)
-      - [4.3.X.6. Sketch Views & Record Decisions](#43x6-sketch-views--record-decisions)
-      - [4.3.X.7. Design Analysis & Review](#43x7-design-analysis--review)
+      - [4.3.X.6. Sketch Views & Record Design Decisions](#43x6-sketch-views--record-design-decisions)
+      - [4.3.X.7. Analysis & Review (Kanban Board)](#43x7-analysis--review-kanban-board)
 
 - [Capítulo V: Product Implementation, Validation & Deployment](#capítulo-v-product-implementation-validation--deployment)
   - [5.1. Testing Suites & General Patterns](#51-testing-suites--general-patterns)
     - [5.1.1. Backend Application Core Testing Suite](#511-backend-application-core-testing-suite)
     - [5.1.2. Pattern Based Backend Application(s)](#512-pattern-based-backend-applications)
     - [5.1.3. Pattern Based Custom Software Library](#513-pattern-based-custom-software-library)
-    - [5.1.4. Refactoring Report](#514-refactoring-report)
+    - [5.1.4. Framework Pattern Driven Refactoring Report](#514-framework-pattern-driven-refactoring-report)
   - [5.2. Software Configuration Management](#52-software-configuration-management)
     - [5.2.1. Software Development Environment Configuration](#521-software-development-environment-configuration)
     - [5.2.2. Source Code Management](#522-source-code-management)
@@ -135,18 +142,51 @@
     - [5.2.4. Software Deployment Configuration](#524-software-deployment-configuration)
   - [5.3. Microservices Implementation](#53-microservices-implementation)
     - [5.3.1. Sprint 1](#531-sprint-1)
+      - [5.3.1.1. Sprint Backlog 1](#5311-sprint-backlog-1)
+      - [5.3.1.2. Development Evidence](#5312-development-evidence)
+      - [5.3.1.3. Testing Suite Evidence](#5313-testing-suite-evidence)
+      - [5.3.1.4. Execution Evidence](#5314-execution-evidence)
+      - [5.3.1.5. Microservices Documentation](#5315-microservices-documentation)
+      - [5.3.1.6. Software Deployment Evidence](#5316-software-deployment-evidence)
+      - [5.3.1.7. Team Collaboration Insights](#5317-team-collaboration-insights)
+      - [5.3.1.8. Kanban Board](#5318-kanban-board)
     - [5.3.2. Sprint 2](#532-sprint-2)
+      - [5.3.2.1. Sprint Backlog 2](#5321-sprint-backlog-2)
+      - [5.3.2.2. Development Evidence](#5322-development-evidence)
+      - [5.3.2.3. Testing Suite Evidence](#5323-testing-suite-evidence)
+      - [5.3.2.4. Execution Evidence](#5324-execution-evidence)
+      - [5.3.2.5. Microservices Documentation](#5325-microservices-documentation)
+      - [5.3.2.6. Software Deployment Evidence](#5326-software-deployment-evidence)
+      - [5.3.2.7. Team Collaboration Insights](#5327-team-collaboration-insights)
+      - [5.3.2.8. Kanban Board ](#5328-kanban-board)
     - [5.3.3. Sprint 3](#533-sprint-3)
+      - [5.3.3.1. Sprint Backlog 3](#5331-sprint-backlog-3)
+      - [5.3.3.2. Development Evidence](#5332-development-evidence)
+      - [5.3.3.3. Testing Suite Evidence](#5333-testing-suite-evidence)
+      - [5.3.3.4. Execution Evidence](#5334-execution-evidence)
+      - [5.3.3.5. Microservices Documentation](#5335-microservices-documentation)
+      - [5.3.3.6. Software Deployment Evidence](#5336-software-deployment-evidence)
+      - [5.3.3.7. Team Collaboration Insights](#5337-team-collaboration-insights)
+      - [5.3.3.8. Kanban Board ](#5338-kanban-board)
     - [5.3.4. Sprint 4](#534-sprint-4)
+      - [5.3.4.1. Sprint Backlog 4](#5341-sprint-backlog-4)
+      - [5.3.4.2. Development Evidence](#5342-development-evidence)
+      - [5.3.4.3. Testing Suite Evidence](#5343-testing-suite-evidence)
+      - [5.3.4.4. Execution Evidence](#5344-execution-evidence)
+      - [5.3.4.5. Microservices Documentation](#5345-microservices-documentation)
+      - [5.3.4.6. Software Deployment Evidence](#5346-software-deployment-evidence)
+      - [5.3.4.7. Team Collaboration Insights](#5347-team-collaboration-insights)
+      - [5.3.4.8. Kanban Board](#5348-kanban-board)
   - [5.4. Microservices Deployment](#54-microservices-deployment)
     - [5.4.1. Cloud Architecture Diagram](#541-cloud-architecture-diagram)
-    - [5.4.2. Cloud Architecture Deployment (AWS, Azure o GCP)](#542-cloud-architecture-deployment)
+    - [5.4.2. Cloud Deployment (AWS, Azure o GCP)](#542-cloud-deployment-aws-azure-o-gcp)
 
-- [Conclusiones](#conclusiones)
-  - [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
-- [Video About-the-Team](#video-about-the-team)
+- [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
+- [Video About-The-Team](#video-about-the-team)
 - [Referencias Bibliográficas](#referencias-bibliográficas)
-- [Anexos](#anexos)
+- [Anexos ](#anexos)
+- [Links](#links)
+
 
 ## Student Outcome
 
@@ -168,3 +208,100 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 
 ## Capítulo I: Introducción
+
+### 1.1. Startup Profile
+
+#### 1.1.1. Descripción de la Startup
+
+
+
+#### 1.1.2. Perfiles de los integrantes del equipo
+
+
+
+---
+
+### 1.2. Solution Profile
+
+#### 1.2.1. Nombre del producto
+
+
+
+#### 1.2.2. Antecedentes y problemática
+
+
+
+#### 1.2.3. Lean UX Process
+
+##### 1.2.3.1. Lean UX Problem Statement
+
+
+
+##### 1.2.3.2. Lean UX Assumptions
+
+
+
+##### 1.2.3.3. Lean UX Hypothesis
+
+
+
+##### 1.2.3.4. Lean UX Canvas
+
+
+
+---
+
+### 1.3. Segmentos Objetivo
+
+
+
+---
+
+## Capítulo II: Requirements & Analysis
+
+### 2.1. Competidores
+
+
+
+### 2.2. Entrevistas
+
+
+
+### 2.3. Needfinding
+
+#### 2.3.1. User Personas
+
+
+
+#### 2.3.2. User Task Matrix
+
+
+
+#### 2.3.3. Empathy Maps
+
+
+
+#### 2.3.4. As-is Scenario Mapping
+
+
+
+---
+
+## Capítulo III: Requirements Specification
+
+### 3.1. To-Be Scenario Mapping
+
+
+
+### 3.2. User Stories
+
+
+
+### 3.3. Impact Map
+
+  
+
+### 3.4. Product Backlog
+
+
+---
