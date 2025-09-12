@@ -148,10 +148,11 @@ Visión: Aspiramos a ser líderes en la innovación logística, impulsando un fu
 
 ---
 
-#### **XXXX – Ingeniería de Software – U202217212**  
-<img src="./assets/RAMIROGUZMAN.png" alt="RAMIROGUZMAN" height="200"/>
+#### **Joaquin Pedraza Maldonado – Ingeniería de Software – U202218514**  
+<img src="./assets/Joaquin.png" alt="JoaquinPedraza"/>
 
-XXXXX.
+Estudio Ing. Software. Me considero que soy una persona perseverante, entusiasta en aprender cosas nuevas. Me gusta ayudar a los demás y sé trabajar en equipo. Cuento con conocimientos en lenguajes de Programación como C++, Python,CSS, JavaScript.
+.
 
 ---
 
