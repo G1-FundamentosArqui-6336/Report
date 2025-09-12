@@ -114,6 +114,7 @@
 ---
 
 ### ABET – EAC - Student Outcome 7  
+
 **Criterio: La capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas.**  
 
 En el siguiente cuadro se describen las acciones realizadas y enunciados de conclusiones por parte del equipo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome:
@@ -132,6 +133,7 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 El perfil de la startup es un pilar fundamental para articular la identidad y la hoja de ruta de una nueva empresa. Este apartado desglosa no solo su ambición y los principios que rigen sus acciones, sino que también clarifica su oferta única y cómo se distingue en el panorama competitivo. En esta sección, se detallarán los componentes cruciales que definen el carácter de la startup, incluyendo su génesis, los impulsos que motivaron su fundación, el desafío específico que se propone abordar y cómo su perspectiva innovadora le otorga una ventaja competitiva. Asimismo, se explorarán sus objetivos a corto, mediano y largo plazo, junto con las tácticas empleadas para su expansión y consolidación en su nicho de mercado. Entender estos aspectos es vital para apreciar el potencial inherente al perfil de la startup y la influencia que puede ejercer en su ecosistema.
 
 #### 1.1.1. Descripción de la Startup
+
 Co-box logistic es una plataforma web innovadora diseñada para revolucionar el sector del transporte de carga, ofreciendo una solución integral y tecnológica para la gestión de operaciones logísticas. La aplicación conecta a empresas de transporte con herramientas inteligentes que permiten el control preciso de cada servicio realizado. Entre sus funcionalidades se destacan el registro automatizado del kilometraje, la captura de evidencia fotográfica al momento de las entregas, y la geolocalización en tiempo real. Además, la generación automática de reportes e indicadores de desempeño facilita la toma de decisiones, optimizando la eficiencia operativa y reduciendo costos innecesarios.
 
 Esta solución está pensada tanto para compañías de transporte que buscan mejorar la trazabilidad de sus operaciones, como para empresas logísticas que requieren de un control detallado y eficiente de sus servicios. Al digitalizar y potenciar cada etapa del proceso, Co-box logistic asegura una mayor transparencia y calidad en la entrega de productos, contribuyendo a fortalecer la confianza del cliente final.
@@ -146,7 +148,7 @@ Visión: Aspiramos a ser líderes en la innovación logística, impulsando un fu
 ---
 
 #### **Joaquin Pedraza Maldonado – Ingeniería de Software – U202218514**  
-<img src="./assets/Joaquin.png" alt="JoaquinPedraza" height="200"/>
+<img src="./assets/Joaquin.png" alt="Joaquin Pedraza" height="200"/>
 
 Estudio Ing. Software. Me considero que soy una persona perseverante, entusiasta en aprender cosas nuevas. Me gusta ayudar a los demás y sé trabajar en equipo. Cuento con conocimientos en lenguajes de Programación como C++, Python,CSS, JavaScript.
 .
@@ -154,7 +156,7 @@ Estudio Ing. Software. Me considero que soy una persona perseverante, entusiasta
 ---
 
 #### **Ramiro Alexander Guzman Chavez – Ingeniería de Software – U202217062**  
-<img src="./assets/RAMIROGUZMAN.png" alt="RAMIROGUZMAN" height="200"/>
+<img src="./assets/RAMIROGUZMAN.png" alt="Ramiro Guzman" height="200"/>
 
 Mi perfil se basa en ser una persona responsable, disciplinada en todo aspecto y comprometida con las actividades que me puedan tocar.
 Considero que tengo una experiencia altamente capacitada para este tipo de tareas. Suelo desarrollarme de manera positiva en los trabajos grupales y tengo conocimientos en bases de datos, lo cual puede aportar de manera importante al equipo.
@@ -163,7 +165,7 @@ Además, cuento con conocimientos en lenguajes de programación como Java y Java
 ---
 
 #### **David Alexander Pérez García – Ingeniería de Software – U202222942**  
-<img src="./assets/PEREZGARCIA.jpg" alt="PEREZGARCIA" height="500"/>
+<img src="./assets/PEREZGARCIA.jpg" alt="David Perez" height="200"/>
 
 Hola, soy David, estudiante de Ingeniería de Software en el octavo ciclo. Me considero una persona responsable, perseverante y apasionada por la tecnología. Tengo experiencia en el desarrollo de aplicaciones web utilizando lenguajes como TypeScript, Java y PHP, y frameworks modernos como React, Next.js, Spring Boot, Express y Laravel. Creo que puedo aportar al grupo brindando soluciones técnicas eficientes, apoyando en el desarrollo del sistema y proponiendo mejoras continuas para alcanzar los objetivos del proyecto con calidad y compromiso.
 
@@ -171,16 +173,16 @@ Hola, soy David, estudiante de Ingeniería de Software en el octavo ciclo. Me co
 
 #### **Merly Salon Puerta – Ingeniería de Software - u20201b772**
 
-<img src="./assets/Merly.jpg" alt="RAMIROGUZMAN" height="200"/>
+<img src="./assets/Merly.jpg" alt="Ramiro Guzman" height="200"/>
 
-Soy estudiante de Ingeniería de Software. Estoy dispuesta a trabajar con mi equipo esforzadamente. Cuento con conocimientos en html, css y java script, lo cual puede sumar en el desarrollo del proyecto.
+Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me considero una persona comprometida, responsable y con una actitud proactiva hacia el trabajo en equipo. Estoy dispuesta a colaborar con mi equipo para alcanzar los objetivos del proyecto, aportando mis conocimientos y habilidades técnicas.  Cuento con experiencia en el desarrollo de interfaces web utilizando tecnologías como HTML, CSS y JavaScript, lo que me permite contribuir en la creación de soluciones visuales y funcionales. Además, tengo interés en seguir aprendiendo y perfeccionando mis habilidades en el diseño y desarrollo de software, con el objetivo de aportar valor al proyecto y garantizar su éxito.  
 
 ---
 
-#### **XXXX – U20221B490**  
-<img src="./assets/RAMIROGUZMAN.png" alt="RAMIROGUZMAN" height="200"/>
+#### **Jhon Alexander Galvez Chambi - Ingeniería de Software - U202323270**  
+<img src="./assets/Jhon.jpg" alt="Jhon Galvez" height="200"/>
 
-XXXX.
+Soy una persona responsable y comprometida con la consecución de los mejores resultados en trabajo en equipo. Poseo experiencia en diversos lenguajes de programación, incluyendo Python, JavaScript y C++, así como en varios de los frameworks asociados a estos lenguajes. Además, tengo conocimientos en tecnologías emergentes como Cloud Computing e Internet de las Cosas (IoT), y estoy dispuesto a aportar mi experiencia en estas áreas para contribuir al éxito de los proyectos en los que participo.
 
 
 ---
@@ -189,7 +191,8 @@ XXXX.
 ### 1.2. Solution Profile
 
 #### 1.2.1. Nombre del producto
-XXXX
+
+Cobox es una plataforma digital que integra tecnología avanzada para optimizar y transformar la gestión logística del transporte de carga. Su nombre refleja la idea de una "caja" inteligente que centraliza, organiza y facilita el control de operaciones, conectando a empresas y conductores con herramientas innovadoras para lograr mayor eficiencia, trazabilidad y transparencia en cada servicio.
 
 
 #### 1.2.2. Antecedentes y problemática
@@ -218,6 +221,49 @@ Nuestro mayor desafío es lograr que las empresas adopten esta solución digital
 
 ##### 1.2.3.2. Lean UX Assumptions
 
+**Business Assumptions**
+
+1. Creemos que nuestros clientes necesitan una forma digital y automatizada de gestionar las operaciones logísticas del transporte de carga.
+2. Estas necesidades se resuelven con una plataforma web que digitalice el registro de kilometraje, consumo de combustible, geolocalización y genere reportes automáticos.
+3. Nuestros clientes iniciales serán pequeñas y medianas empresas de transporte de carga que buscan mejorar la eficiencia operativa y reducir errores manuales.
+4. El valor más importante de lo que el cliente requiere de nuestro servicio es la trazabilidad completa y automatizada de cada servicio logístico realizado.
+5. El cliente puede tener los siguientes beneficios adicionales: reducción de tiempo administrativo, evidencia fotográfica de entregas, optimización de rutas, y análisis de desempeño de flota.
+6. Vamos a adquirir clientes mediante marketing directo a empresas de transporte, participación en ferias logísticas, y recomendaciones de clientes satisfechos.
+7. Haremos dinero a través de suscripciones mensuales basadas en el número de usuarios, vehículos y funcionalidades activadas por empresa.
+8. Nuestra competencia principal serán sistemas ERP logísticos tradicionales, hojas de cálculo, y otras plataformas de gestión de flotas.
+9. Los venceremos ya que nuestra plataforma se enfoca específicamente en la digitalización del transporte de carga con funcionalidades precisas y una interfaz simple.
+10. Nuestro mayor riesgo es que las empresas tradicionales se resistan al cambio digital o consideren la herramienta muy compleja para sus conductores.
+11. Resolveremos esto mediante capacitación personalizada, interfaces ultra-simples para conductores, funcionamiento offline, y soporte técnico dedicado durante la implementación.
+12. ¿Qué otras suposiciones tenemos que, si resultan falsas, harán que nuestro negocio/proyecto fracase?
+    * Que las empresas de transporte están dispuestas a pagar por digitalización cuando han funcionado con métodos tradicionales.
+    * Que los conductores adoptarán una aplicación móvil a pesar de tener diferentes niveles de habilidad tecnológica.
+    * Que las empresas valoran más la precisión de datos que la simplicidad de sus procesos actuales.
+
+**User Assumptions**
+
+1. ¿Quién será nuestro usuario?
+   * El usuario principal de Co-box Logistic son gerentes y coordinadores de operaciones logísticas que necesitan control detallado sobre su flota de vehículos.
+   * Co-box Logistic también está pensado para conductores de carga que requieren una herramienta simple para registrar información de viajes sin complicaciones técnicas.
+
+2. ¿Dónde encaja nuestro producto en su vida?
+   * Se integra en la rutina diaria de trabajo tanto en oficinas de operación logística como en campo durante la ejecución de servicios de transporte, facilitando el control y seguimiento en tiempo real.
+
+3. ¿Qué problemas resuelve nuestro producto?
+   * Se busca resolver la pérdida de tiempo y errores generados por registros manuales en papel, falta de trazabilidad en entregas, y discrepancias en reportes de kilometraje y combustible.
+   * Los procesos manuales generan conflictos entre conductores y coordinadores por falta de evidencia objetiva, afectando la confianza y eficiencia operativa.
+
+4. ¿Cómo y Cuándo es usado nuestro producto?
+   * Es utilizado durante todas las etapas del proceso logístico: planificación previa en oficinas, registro en tiempo real durante rutas, y análisis post-servicio para reportes. Los gerentes acceden principalmente desde computadoras, mientras conductores usan dispositivos móviles en campo.
+
+5. ¿Qué características son importantes?
+   * Registro automatizado de kilometraje con evidencia fotográfica
+   * Geolocalización en tiempo real y funcionamiento offline
+   * Generación automática de reportes e indicadores de desempeño
+   * Interfaz simple para conductores con botones grandes y flujo intuitivo
+
+6. ¿Cómo luce y se comporta nuestro producto?
+   * Con interfaces diferenciadas: dashboards analíticos para gerentes y aplicación móvil ultra-simple para conductores.
+   * Funcionamiento confiable offline, sincronización automática, confirmaciones visuales claras, y recordatorios inteligentes para completar registros.
 
 ##### 1.2.3.3. Lean UX Hypothesis
 
@@ -232,16 +278,38 @@ Creemos que al ofrecer una interfaz simple, junto con capacitación para los usu
 Creemos que al permitir la gestión de roles y accesos diferenciados, aumentaremos la seguridad y eficiencia interna. Sabremos que estamos en lo correcto cuando se eviten manipulaciones no autorizadas de datos y los usuarios valoren positivamente la organización del sistema.
 
 ##### 1.2.3.4. Lean UX Canvas
+
 <img src="./assets/LeanUXCanvas.png" alt="LeanUXCanvas" />
+
 ---
 
 ### 1.3. Segmentos Objetivo
 
-Nuestros segmentos objetivos son los siguientes grupos:
+Co-box Logistic ha identificado dos segmentos objetivos principales que representan los usuarios clave dentro del ecosistema del transporte de carga:
 
-Empresas de transporte de carga: Pequeñas y medianas empresas que buscan digitalizar su operación para competir con grandes operadores, mejorar el control interno y ofrecer mayor trazabilidad a sus clientes.
+**Segmento Primario: Empresas de Transporte de Carga**
 
-Conductores de unidades de carga: Usuarios de campo encargados de registrar eventos logísticos (kilometraje, combustible, entregas), interactuar con la app y proporcionar evidencia de las operaciones.
+Este segmento comprende pequeñas y medianas empresas (PyMES) del sector logístico que operan flotas de 5 a 30 vehículos, principalmente enfocadas en transporte interprovincial y distribución urbana. Estas empresas se caracterizan por:
+
+- **Perfil organizacional**: Empresas familiares o de estructura tradicional que han dependido de procesos manuales (formularios en papel, Excel, WhatsApp) pero reconocen la necesidad de modernizarse para mantenerse competitivas.
+
+- **Necesidades específicas**: Buscan digitalizar su operación para reducir errores administrativos, mejorar el control de costos operativos, aumentar la trazabilidad de servicios y ofrecer mayor transparencia a sus clientes finales.
+
+- **Roles decisores**: Gerentes de operaciones, coordinadores logísticos y propietarios que requieren información precisa y oportuna para la toma de decisiones, control de flota y generación de reportes gerenciales.
+
+- **Motivaciones clave**: Competir efectivamente con grandes operadores logísticos, optimizar recursos, reducir conflictos internos por discrepancias de datos y fortalecer la confianza con sus clientes.
+
+**Segmento Secundario: Conductores de Unidades de Carga**
+
+Este segmento incluye a los operadores de campo que ejecutan físicamente los servicios de transporte, con experiencia variable en el sector y diferentes niveles de familiaridad tecnológica:
+
+- **Perfil demográfico**: Conductores con experiencia de 3 a 15 años en el sector, edades entre 25 y 55 años, con niveles educativos diversos y habilidades tecnológicas que van desde básicas hasta intermedias.
+
+- **Responsabilidades operativas**: Encargados de registrar eventos críticos del viaje (kilometraje inicial/final, consumo de combustible, entregas realizadas), proporcionar evidencia fotográfica de operaciones y mantener comunicación constante con coordinadores.
+
+- **Necesidades funcionales**: Requieren herramientas simples e intuitivas que no interfieran con su concentración en la conducción, que funcionen en zonas de conectividad limitada y que les proporcionen protección mediante evidencia objetiva de su trabajo.
+
+- **Motivaciones personales**: Facilitar su trabajo diario, evitar conflictos por discrepancias de datos, obtener reconocimiento por desempeño y tener acceso a información que les permita mejorar profesionalmente.
 
 
 ## Capítulo II: Requirements & Analysis
