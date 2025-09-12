@@ -91,6 +91,9 @@
 - [Capítulo II: Requirements & Analysis](#capítulo-ii-requirements--analysis)
   - [2.1. Competidores](#21-competidores)
   - [2.2. Entrevistas](#22-entrevistas)
+    - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+    - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+    - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
     - [2.3.2. User Task Matrix](#232-user-task-matrix)
@@ -386,6 +389,10 @@ Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible,
 ---
 
 ### 2.2. Entrevistas
+
+## 2.2.1 Diseño de entrevistas
+## 2.2.2 Registro de entrevistas
+## 2.2.3 Análisis de entrevistas
 
 Segmento 1: Gerentes/encargados de flota
 
