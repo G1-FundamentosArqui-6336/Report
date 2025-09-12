@@ -19,9 +19,9 @@
 ### Integrantes:
 - Ramiro Alexander Guzmán Chávez – U202217062  
 - David Alexander Pérez García – U202222942  
-- XXXX – U202219657  
-- XXXX – U202310345  
-- XXXX – U202217212  
+- Joaquín Pedraza Maldonado – U202218514
+- Merly Salon Puerta – U20201b772  
+- Jhon Alexander Galvez Chambi – U202323270  
 
 **Septiembre, 2025**  
 **URL del proyecto:** [https://github.com/G1-FundamentosArqui-6336](https://github.com/G1-FundamentosArqui-6336)
