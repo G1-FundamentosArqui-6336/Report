@@ -309,8 +309,6 @@ Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible,
 ### 2.2. Entrevistas
 
 #### 2.2.1 Diseño de entrevistas
-#### 2.2.2 Registro de entrevistas
-#### 2.2.3 Análisis de entrevistas
 
 Segmento 1: Gerentes/encargados de flota
 
@@ -336,6 +334,10 @@ Segmento 2: Conductores/operadores de ruta
 ¿Le preocupa la precisión del kilometraje que ingresa?
 ¿Qué comentarios o sugerencias tendría para que la app sea fácil de usar en ruta?
 ¿Qué incentivos podrían motivarlo a completar su reporte diario a tiempo?
+#### 2.2.2 Registro de entrevistas
+#### 2.2.3 Análisis de entrevistas
+
+
 
 
 ### 2.3. Needfinding
