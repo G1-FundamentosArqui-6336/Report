@@ -417,18 +417,47 @@ Segmento 2: Conductores/operadores de ruta
 
 #### 2.3.1. User Personas
 
+Un user persona es una representación ficticia y detallada de un grupo de usuarios que comparten características, necesidades y comportamientos similares. Se utiliza para comprender mejor las motivaciones, objetivos y problemas de los usuarios, ayudando a diseñar productos o servicios que satisfagan sus expectativas. El user persona se basa en datos reales obtenidos de investigaciones y entrevistas, pero se presenta de manera resumida para facilitar la toma de decisiones en el diseño. A continuacón presentamos las User Personas de nuestro proyecto Coo-box logistic:
+
+Segmento 1: Gestor de flota
+imagen
+Segmento 2: Conductor de vehiculos de transporte
+imagen
 
 
 #### 2.3.2. User Task Matrix
 
+| Tareas / User Persona     | Jorge Perez (Frec.) | Jorge Perez (Imp.) | Darikson Brito (Frec.) | Darikson Brito (Imp.) |
+|---------------------------|---------------------|---------------------|-------------------------|------------------------|
+| **Planificar rutas**      | Alta                | Alta                | N/A                     | N/A                    |
+| **Coordinar entregas**    | Alta                | Alta                | Media                   | Alta                   |
+| **Registrar kilometraje** | Media               | Alta                | Alta                    | Alta                   |
+| **Reportar combustible**  | Media               | Alta                | Alta                    | Alta                   |
+| **Consolidar datos**      | Alta                | Alta                | N/A                     | N/A                    |
+| **Generar reportes**      | Media               | Alta                | N/A                     | N/A                    |
+| **Foto del odómetro**     | Baja                | Media               | Media                   | Alta                   |
+| **Usar apps móviles**     | Media               | Alta                | Baja                    | Alta                   |
+| **Verificar entregas**    | Alta                | Alta                | Media                   | Alta                   |
+| **Atender reclamos**      | Media               | Alta                | Baja                    | Media                  |
+
+---
+
+### Conclusiones:
+- Ambos valoran **registrar kilometraje y consumo de combustible**.
+- **Jorge Perez** (frecuente e importante) se enfoca en **análisis y consolidación**.
+- **Darikson Brito** (frecuente e importante) se enfoca en **ejecución operativa**.
+- La app debe enfocarse en **tareas compartidas y críticas**, optimizando especialmente la experiencia de registro de kilometraje, combustible y verificación de entregas.
 
 
 #### 2.3.3. Empathy Maps
+El Empathy Mapping es una herramienta utilizada para comprender mejor a los usuarios o clientes al explorar sus pensamientos, sentimientos, comportamientos y necesidades. Se organiza en secciones como ¿Qué escucha?, ¿Qué ve?, ¿Qué piensa y siente?, ¿Qué dice y hace?, Frustraciones y Motivaciones. Ayuda a los equipos de diseño a crear soluciones más alineadas con las experiencias y perspectivas de los usuarios. A continuación los mapas de empatía de los dos segmento de nuestro proyecto Coo-box Logistic:
 
+Segmento: Gestor de flota:
+
+Segmento: Conductor de vehiculos de transporte
 
 
 #### 2.3.4. As-is Scenario Mapping
-
 
 
 ---
@@ -437,17 +466,210 @@ Segmento 2: Conductores/operadores de ruta
 
 ### 3.1. To-Be Scenario Mapping
 
+Segmento 1: Gestores de Flota
+Segmento 2: Conductores de Transporte
 
 
 ### 3.2. User Stories
+
+## Epics
+
+| Epic ID   | Título                   | Descripción                                                                 |
+|-----------|--------------------------|------------------------------------------------------------------------------|
+| EP01      | Gestión de flota         | Como gestor quiero tener control total de las unidades de transporte, rutas y mantenimientos. |
+| EP02      | Gestión de entregas      | Como conductor quiero registrar y visualizar mis entregas para tener claridad en mis tareas. |
+| EP03      | Gestión de incidencias   | Como conductor o gestor quiero reportar y visualizar incidencias para actuar rápidamente. |
+| EP04      | Gestión de mantenimiento | Como gestor quiero planificar y llevar control de los mantenimientos de cada vehículo. |
+| EP05      | Gestión de indicadores   | Como gestor quiero ver reportes e indicadores automáticos para evaluar el desempeño diario. |
+| EP-LP     | Sitio web estático       | Como visitante quiero conocer los servicios y características de la plataforma para decidir si contratar. |
+| EP-API    | API RESTful              | Como desarrollador quiero acceder a los servicios mediante endpoints para integrarlos con otras aplicaciones. |
+
+---
+
+## User Stories
+
+### EP01 - Gestión de flota
+
+- **US-01**: Consultar rutas asignadas  
+  _Como gestor, quiero conocer las rutas asignadas a cada unidad para supervisar su cumplimiento operativo._  
+  **Criterios**: Acceso al módulo de unidades → selección de unidad → información de ruta, horarios y destinos.
+
+- **US-02**: Asignar unidades a rutas  
+  _Como gestor, quiero asignar unidades de transporte a rutas específicas para controlar la operación._  
+  **Criterios**: Acceso a sección de asignaciones → selección de ruta y unidad → registro exitoso.
+
+- **US-03**: Actualizar estado de unidad  
+  _Como gestor, quiero marcar una unidad como disponible o en mantenimiento._  
+  **Criterios**: Selección de unidad → modificación de estado → actualización visible.
+
+- **US-04**: Consultar historial de movimientos  
+  _Como gestor, quiero revisar el historial de movimientos de una unidad._  
+  **Criterios**: Acceso a detalles de unidad → historial con fechas y tipos de movimiento.
+
+---
+
+### EP02 - Gestión de entregas
+
+- **US-05**: Consultar entregas asignadas  
+  _Como conductor, quiero conocer las entregas asignadas del día._  
+  **Criterios**: Login → acceso a entregas → detalles con hora, cliente y dirección.
+
+- **US-06**: Registrar evidencia de entrega  
+  _Como conductor, quiero dejar constancia de entregas mediante evidencia._  
+  **Criterios**: Entrega finalizada → adjuntar evidencia → registro con fecha, hora, ubicación.
+
+- **US-07**: Revisar entregas completadas  
+  _Como conductor, quiero consultar mis entregas pasadas._  
+  **Criterios**: Acceso a módulo → filtro por fecha → visualización de entregas anteriores.
+
+- **US-08**: Registrar inicio de ruta  
+  _Como conductor, quiero confirmar el inicio de mi ruta._  
+  **Criterios**: Entregas asignadas → inicio de jornada → registro de hora de salida.
+
+---
+
+### EP03 - Gestión de incidencias
+
+- **US-09**: Reportar incidente  
+  _Como conductor, quiero reportar incidentes durante la entrega._  
+  **Criterios**: Reporte con evidencia → notificación automática al responsable.
+
+- **US-10**: Consultar incidencias  
+  _Como gestor, quiero revisar incidencias activas._  
+  **Criterios**: Acceso a información → visualización con unidad, fecha y gravedad.
+
+- **US-11**: Filtrar incidencias  
+  _Como gestor, quiero filtrar incidencias por gravedad._  
+  **Criterios**: Aplicación de filtro → lista de incidencias relevantes.
+
+- **US-12**: Revisar historial de incidencias  
+  _Como gestor, quiero analizar incidencias pasadas._  
+  **Criterios**: Filtro por fechas → visualización con estado de resolución.
+
+---
+
+### EP04 - Gestión de mantenimiento
+
+- **US-13**: Programar mantenimiento  
+  _Como gestor, quiero definir mantenimientos periódicos._  
+  **Criterios**: Selección de unidad → definición de frecuencia → agenda programada.
+
+- **US-14**: Registrar mantenimiento  
+  _Como técnico, quiero documentar mantenimiento realizado._  
+  **Criterios**: Documentación → almacenamiento en historial.
+
+- **US-15**: Consultar mantenimientos próximos  
+  _Como gestor, quiero conocer las próximas fechas de mantenimiento._  
+  **Criterios**: Consulta en calendario → fechas por unidad.
+
+- **US-16**: Recibir alertas de mantenimiento  
+  _Como gestor, quiero recibir alertas de mantenimiento próximo._  
+  **Criterios**: Faltan 3 días → alerta automática.
+
+---
+
+### EP05 - Gestión de indicadores
+
+- **US-17**: Generar reporte semanal  
+  _Como gestor, quiero ver reportes semanales de entregas._  
+  **Criterios**: Semana concluida → estadísticas de cumplimiento por conductor.
+
+- **US-18**: Evaluar eficiencia por unidad  
+  _Como gestor, quiero conocer rendimiento por unidad._  
+  **Criterios**: Acceso a datos → análisis → métricas de eficiencia.
+
+- **US-19**: Comparar desempeño entre conductores  
+  _Como gestor, quiero comparar conductores._  
+  **Criterios**: Período seleccionado → ranking con métricas.
+
+- **US-20**: Monitorear alertas críticas  
+  _Como gestor, quiero visualizar alertas críticas del sistema._  
+  **Criterios**: Acceso a panel → alertas de mayor prioridad destacadas.
+
+---
+
+### EP-LP - Sitio web estático
+
+- **US-21**: Consultar información de servicios  
+- **US-22**: Solicitar demostración  
+- **US-23**: Consultar planes y precios  
+- **US-24**: Solicitar asistencia  
+- **US-25**: Consultar casos de éxito
+
+Cada historia de esta sección sigue una estructura con 2 escenarios: interacción exitosa y fallida (cuando aplica), asegurando una experiencia de usuario clara y consistente.
+
+---
+
+### EP-API - API RESTful
+
+- **TS-01**: Autenticación API (con JWT)
+- **TS-02**: Gestión de unidades vía API
+- **TS-03**: Gestión de entregas vía API
+- **TS-04**: Gestión de incidencias vía API
+- **TS-05**: Consulta de estadísticas vía API
+
+Cada historia técnica contempla:
+- Escenario de éxito (200 o 201)
+- Escenario de error (401, 400)
+- Casos de expiración, validación o fallas lógicas
+
+---
+
+## Notas adicionales
+
+- El **Epic ID** está relacionado con las historias mediante el campo "Relacionada con (Epic ID)".
+- Se sugiere utilizar estos IDs como base para gestión en herramientas ágiles como **Jira**, **ClickUp**, **Azure DevOps** o **Notion**.
 
 
 
 ### 3.3. Impact Map
 
+
   
 
 ### 3.4. Product Backlog
+
+
+| #  | User Story ID | Título                                      | Descripción                                                                                   | Story Points |
+|----|---------------|---------------------------------------------|-----------------------------------------------------------------------------------------------|--------------|
+| 1  | US-05         | Consultar entregas pendientes               | Como conductor, quiero ver las entregas asignadas del día, para planificar mi ruta.           | 8            |
+| 2  | US-01         | Visualizar rutas asignadas                  | Como gestor, quiero ver las rutas asignadas a cada unidad, para hacer seguimiento efectivo.   | 8            |
+| 3  | US-09         | Reportar incidente durante entrega          | Como conductor, quiero reportar un incidente, para alertar al gestor y agilizar la solución.  | 8            |
+| 4  | US-13         | Programar mantenimiento preventivo          | Como gestor, quiero programar mantenimientos regulares, para evitar fallas inesperadas.       | 8            |
+| 5  | US-17         | Ver reporte semanal de entregas             | Como gestor, quiero ver un reporte semanal por conductor, para evaluar su rendimiento.        | 5            |
+| 6  | US-03         | Registrar disponibilidad de unidad          | Como gestor, quiero marcar una unidad como disponible o en mantenimiento, para gestionar eficientemente. | 5     |
+| 7  | US-08         | Confirmar inicio de ruta                    | Como conductor, quiero confirmar el inicio de mi ruta, para registrar la hora de salida.      | 5            |
+| 8  | US-12         | Visualizar historial de incidencias         | Como gestor, quiero revisar el historial de incidencias pasadas, para tomar decisiones preventivas. | 5       |
+| 9  | US-04         | Visualizar historial de movimientos         | Como gestor, quiero ver el historial de movimientos de una unidad, para rastrear sus actividades. | 5         |
+| 10 | US-16         | Notificación de mantenimiento pendiente     | Como gestor, quiero recibir alertas de mantenimiento próximo, para actuar con anticipación.   | 5            |
+| 11 | US-07         | Visualizar entregas completadas             | Como conductor, quiero ver un historial de entregas completadas, para llevar control de mis actividades. | 5     |
+| 12 | US-10         | Visualizar estado de incidencias            | Como gestor, quiero ver un listado de incidencias activas, para tomar acción rápidamente.     | 5            |
+| 13 | US-14         | Registrar mantenimiento realizado           | Como técnico, quiero registrar el mantenimiento con detalles, para dejar constancia de lo realizado. | 3      |
+| 14 | US-19         | Comparar rendimiento entre conductores      | Como gestor, quiero comparar eficiencia entre conductores, para fomentar buenas prácticas.    | 3            |
+| 15 | US-06         | Registrar entrega con evidencia             | Como conductor, quiero registrar entregas con foto y firma, para validar su cumplimiento.     | 3            |
+| 16 | US-11         | Filtrar incidencias por gravedad            | Como gestor, quiero filtrar las incidencias según su gravedad, para priorizar las más urgentes. | 3         |
+| 17 | US-02         | Asignar unidades a rutas                    | Como gestor, quiero asignar unidades de transporte a rutas específicas, para controlar la operación. | 2        |
+| 18 | US-18         | Ver eficiencia por unidad                   | Como gestor, quiero ver rendimiento por unidad, para tomar decisiones sobre el uso de la flota. | 2          |
+| 19 | US-15         | Ver próximas fechas de mantenimiento        | Como gestor, quiero ver en un calendario las fechas de mantenimiento, para no olvidar los programados. | 2      |
+| 20 | US-20         | Visualizar alertas críticas en dashboard    | Como gestor, quiero ver alertas prioritarias en el dashboard, para atender eventos críticos.  | 1            |
+| 21 | US-21         | Visualizar información de servicio          | Como visitante, quiero conocer los servicios de gestión de flotas ofrecidos, para evaluar si satisface mis necesidades. | 3 |
+| 22 | US-22         | Registrar solicitud de demo                 | Como visitante, quiero solicitar una demostración del sistema, para conocer la plataforma antes de contratar. | 5     |
+| 23 | US-23         | Visualizar planes y precios                 | Como visitante, quiero conocer los diferentes planes disponibles y sus precios, para seleccionar el más adecuado. | 3   |
+| 24 | US-24         | Contactar con soporte                       | Como visitante, quiero contactar con el equipo de soporte, para resolver dudas sobre el servicio. | 2        |
+| 25 | US-25         | Visualizar casos de éxito                   | Como visitante, quiero ver testimonios y casos de éxito, para evaluar la efectividad del sistema en casos reales. | 5   |
+| 26 | TS-01         | Autenticación API                           | Como desarrollador, quiero implementar un sistema de autenticación JWT, para asegurar el acceso a la API. | 8     |
+| 27 | TS-02         | Endpoints de unidades                       | Como desarrollador, quiero implementar endpoints CRUD para unidades de transporte, para gestionar la flota desde aplicaciones externas. | 5 |
+| 28 | TS-03         | Endpoints de entregas                       | Como desarrollador, quiero implementar endpoints para gestionar entregas desde apps móviles.   | 5            |
+| 29 | TS-04         | Endpoints de incidencias                    | Como desarrollador, quiero implementar endpoints para gestionar incidencias.                  | 5            |
+| 30 | TS-05         | Endpoints de estadísticas                   | Como desarrollador, quiero implementar endpoints para obtener métricas y estadísticas.        | 8            |
+
+---
+
+**Notas:**
+- Las historias están priorizadas del 1 al 30 según valor al usuario y esfuerzo estimado.
+- El campo **Story Points** sigue una escala tipo Fibonacci: 1, 2, 3, 5, 8.
+- Puedes usar esta tabla como base para tu tablero en herramientas como **Jira**, **Trello**, **Asana**, **Azure DevOps**, o una hoja de cálculo.
+
 
 
 ---
