@@ -234,7 +234,7 @@ Creemos que al ofrecer una interfaz simple, junto con capacitación para los usu
 Creemos que al permitir la gestión de roles y accesos diferenciados, aumentaremos la seguridad y eficiencia interna. Sabremos que estamos en lo correcto cuando se eviten manipulaciones no autorizadas de datos y los usuarios valoren positivamente la organización del sistema.
 
 ##### 1.2.3.4. Lean UX Canvas
-
+<img src="./assets/LeanUXCanvas.png" alt="LeanUXCanvas" />
 ---
 
 ### 1.3. Segmentos Objetivo
@@ -346,10 +346,10 @@ Segmento 2: Conductores/operadores de ruta
 
 Un user persona es una representación ficticia y detallada de un grupo de usuarios que comparten características, necesidades y comportamientos similares. Se utiliza para comprender mejor las motivaciones, objetivos y problemas de los usuarios, ayudando a diseñar productos o servicios que satisfagan sus expectativas. El user persona se basa en datos reales obtenidos de investigaciones y entrevistas, pero se presenta de manera resumida para facilitar la toma de decisiones en el diseño. A continuacón presentamos las User Personas de nuestro proyecto Coo-box logistic:
 
-Segmento 1: Gestor de flota
-imagen
-Segmento 2: Conductor de vehiculos de transporte
-imagen
+Segmento 1: Gestores de Flota
+<img src="./assets/UserPersona1.png" alt="UserPersona1" />
+Segmento 2: Conductores de Transporte
+<img src="./assets/UserPersona2.png" alt="Empatymapping2" />
 
 
 #### 2.3.2. User Task Matrix
@@ -379,12 +379,16 @@ imagen
 #### 2.3.3. Empathy Maps
 El Empathy Mapping es una herramienta utilizada para comprender mejor a los usuarios o clientes al explorar sus pensamientos, sentimientos, comportamientos y necesidades. Se organiza en secciones como ¿Qué escucha?, ¿Qué ve?, ¿Qué piensa y siente?, ¿Qué dice y hace?, Frustraciones y Motivaciones. Ayuda a los equipos de diseño a crear soluciones más alineadas con las experiencias y perspectivas de los usuarios. A continuación los mapas de empatía de los dos segmento de nuestro proyecto Coo-box Logistic:
 
-Segmento: Gestor de flota:
-
-Segmento: Conductor de vehiculos de transporte
-
+Segmento 1: Gestores de Flota
+<img src="./assets/Empatymapping1.png" alt="Empatymapping1" />
+Segmento 2: Conductores de Transporte
+<img src="./assets/Empatymapping2.png" alt="Empatymapping2" />
 
 #### 2.3.4. As-is Scenario Mapping
+Segmento 1: Gestores de Flota
+<img src="./assets/As-IsEmpresasdeTransporte.png" alt="As-IsEmpresasdeTransporte" />
+Segmento 2: Conductores de Transporte
+<img src="./assets/As-IsConductores.png" alt="As-IsConductores" />
 
 
 ---
@@ -394,8 +398,9 @@ Segmento: Conductor de vehiculos de transporte
 ### 3.1. To-Be Scenario Mapping
 
 Segmento 1: Gestores de Flota
+<img src="./assets/To-BeSegmento1.png" alt="To-BeSegmento1" />
 Segmento 2: Conductores de Transporte
-
+<img src="./assets/To-BeSegmento2.png" alt="To-BeSegmento2" />
 
 ### 3.2. User Stories
 
@@ -846,7 +851,10 @@ Segmento 2: Conductores de Transporte
 </table>
 
 ### 3.3. Impact Map
-
+Segmento 1: Gestores de Flota
+<img src="./assets/Impactmapgestor.png" alt="Impactmapgestor"/>
+Segmento 2: Conductores de Transporte
+<img src="./assets/Impactmapconductor.png" alt="Impactmapconductor"/>
 
 ### 3.4. Product Backlog
 
