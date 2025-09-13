@@ -221,7 +221,7 @@ Nuestro mayor desafío es lograr que las empresas adopten esta solución digital
 
 ##### 1.2.3.2. Lean UX Assumptions
 
-**Business Assumptions**
+###### Business Assumptions
 
 1. Creemos que nuestros clientes necesitan una forma digital y automatizada de gestionar las operaciones logísticas del transporte de carga.
 2. Estas necesidades se resuelven con una plataforma web que digitalice el registro de kilometraje, consumo de combustible, geolocalización y genere reportes automáticos.
@@ -239,7 +239,7 @@ Nuestro mayor desafío es lograr que las empresas adopten esta solución digital
     * Que los conductores adoptarán una aplicación móvil a pesar de tener diferentes niveles de habilidad tecnológica.
     * Que las empresas valoran más la precisión de datos que la simplicidad de sus procesos actuales.
 
-**User Assumptions**
+###### User Assumptions
 
 1. ¿Quién será nuestro usuario?
    * El usuario principal de Co-box Logistic son gerentes y coordinadores de operaciones logísticas que necesitan control detallado sobre su flota de vehículos.
@@ -402,7 +402,6 @@ Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible,
 8. ¿Le preocupa la precisión del kilometraje que ingresa?  
 9. ¿Qué comentarios o sugerencias tendría para que la app sea fácil de usar en ruta?  
 10. ¿Qué incentivos podrían motivarlo a completar su reporte diario a tiempo?  
-
 
 #### 2.2.2 Registro de entrevistas
 
@@ -1170,3 +1169,33 @@ Segmento 2: Conductores de Transporte
 | 28 | TS-03         | Endpoints de entregas                       | Como desarrollador, quiero implementar endpoints para gestionar entregas desde apps móviles.   | 5            |
 | 29 | TS-04         | Endpoints de incidencias                    | Como desarrollador, quiero implementar endpoints para gestionar incidencias.                  | 5            |
 | 30 | TS-05         | Endpoints de estadísticas                   | Como desarrollador, quiero implementar endpoints para obtener métricas y estadísticas.        | 8            |
+
+### Conclusiones y Recomendaciones
+
+**Conclusiones**
+
+1. La investigación y análisis realizados permitieron comprender en profundidad la problemática del sector logístico y cómo la startup **Co-box logistic** puede aportar valor mediante una plataforma tecnológica innovadora.  
+2. La aplicación del enfoque **Lean UX** resultó fundamental para identificar necesidades reales de los usuarios, validar hipótesis y orientar el diseño hacia una solución centrada en el cliente.  
+3. Las herramientas utilizadas —como entrevistas, User Personas, Empathy Maps y Scenario Mapping— facilitaron la identificación de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga.  
+4. El **Product Backlog** estructurado brinda un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos.  
+5. El trabajo en equipo y la colaboración constante fueron claves para lograr un documento integral que conecta investigación, análisis y propuesta de solución de manera coherente.
+
+**Recomendaciones**
+
+1. Continuar con un proceso de validación continua, incorporando feedback de usuarios finales en cada iteración del desarrollo.  
+2. Desplegar un plan piloto con un grupo de empresas de transporte para evaluar el desempeño de la plataforma en un entorno real.  
+3. Priorizar en las primeras fases los módulos de **geolocalización en tiempo real**, **registro de incidencias** y **reportes automáticos**, al ser los de mayor impacto en la eficiencia operativa.  
+4. Implementar estrategias de capacitación para los usuarios finales, a fin de garantizar una adopción fluida de la herramienta.  
+5. Mantener un proceso de documentación y mejora continua que permita escalar la solución a nuevos mercados y escenarios logísticos.
+
+### Referencias Bibliográficas
+
+- Gothelf, J., & Seiden, J. (2013). *Lean UX: Applying Lean Principles to Improve User Experience*. O’Reilly Media.  
+- Osterwalder, A., Pigneur, Y., Bernarda, G., & Smith, A. (2014). *Value Proposition Design: How to Create Products and Services Customers Want*. Wiley.  
+- Interaction Design Foundation. (2025). *Lean UX*. Recuperado de: [https://www.interaction-design.org](https://www.interaction-design.org)  
+- Nielsen Norman Group. (2025). *User Research Methods*. Recuperado de: [https://www.nngroup.com](https://www.nngroup.com)  
+- GitHub. (2025). *Repositorio del informe del proyecto*. Recuperado de: [https://github.com/G1-FundamentosArqui-6336/Report](https://github.com/G1-FundamentosArqui-6336/Report)  
+
+### Anexos
+
+### Links
