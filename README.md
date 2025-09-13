@@ -378,28 +378,30 @@ Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible,
 
 Segmento 1: Gerentes/encargados de flota
 
-¿Cuál es su rol y responsabilidades principales?
-¿Cuántos vehículos administra y qué tipos de rutas realiza?
-¿Cómo registra hoy el odómetro y el consumo de combustible?
-¿Utiliza software o formularios en papel para programar y reportar servicios?
-¿Qué problemas más frecuentes encuentra en la gestión de rutas y consumo?
-¿Con qué frecuencia revisa los reportes de eficiencia de su flota?
-¿Qué datos le gustaría recibir automáticamente después de cada viaje?
-¿Cómo impactan las discrepancias de kilometraje o combustible en su operación diaria?
-¿Qué tan dispuesto estaría a adoptar una app que integre fotos de odómetro y reportes automáticos?
-¿Cuál es el presupuesto mensual aproximado que invertiría en este tipo de herramienta?
+1. ¿Cuál es su rol y responsabilidades principales?
+2. ¿Cuántos vehículos administra y qué tipos de rutas realiza?
+3. ¿Cómo registra hoy el odómetro y el consumo de combustible?
+4. ¿Utiliza software o formularios en papel para programar y reportar servicios?
+5. ¿Qué problemas más frecuentes encuentra en la gestión de rutas y consumo?
+6. ¿Con qué frecuencia revisa los reportes de eficiencia de su flota?
+7. ¿Qué datos le gustaría recibir automáticamente después de cada viaje?
+8. ¿Cómo impactan las discrepancias de kilometraje o combustible en su operación diaria?
+9. ¿Qué tan dispuesto estaría a adoptar una app que integre fotos de odómetro y reportes automáticos?
+10. ¿Cuál es el presupuesto mensual aproximado que invertiría en este tipo de herramienta?
+<br>
 Segmento 2: Conductores/operadores de ruta
 
-¿Cuál es su experiencia conduciendo rutas de carga?
-¿Cómo registra actualmente el inicio y fin de cada viaje?
-¿Toma fotos del odómetro o anota el kilometraje manualmente?
-¿Cuánto tiempo le toma completar el registro de combustible y odómetro hoy?
-¿Qué dificultades tiene al usar apps o formularios para reportar su viaje?
-¿Preferiría usar una app móvil con botones claros para “Iniciar”, “Foto odómetro” y “Fin”?
-¿Qué tan útil le resultaría una geolocalización automática de cada parada?
-¿Le preocupa la precisión del kilometraje que ingresa?
-¿Qué comentarios o sugerencias tendría para que la app sea fácil de usar en ruta?
-¿Qué incentivos podrían motivarlo a completar su reporte diario a tiempo?
+1. ¿Cuál es su experiencia conduciendo rutas de carga?
+2. ¿Cómo registra actualmente el inicio y fin de cada viaje?
+3. ¿Toma fotos del odómetro o anota el kilometraje manualmente?
+4. ¿Cuánto tiempo le toma completar el registro de combustible y odómetro hoy?
+5. ¿Qué dificultades tiene al usar apps o formularios para reportar su viaje?
+6. ¿Preferiría usar una app móvil con botones claros para “Iniciar”, “Foto odómetro” y “Fin”?
+7. ¿Qué tan útil le resultaría una geolocalización automática de cada parada?
+8. ¿Le preocupa la precisión del kilometraje que ingresa?
+9. ¿Qué comentarios o sugerencias tendría para que la app sea fácil de usar en ruta?
+10. ¿Qué incentivos podrían motivarlo a completar su reporte diario a tiempo?
+    
 #### 2.2.2 Registro de entrevistas
 #### 2.2.3 Análisis de entrevistas
 
