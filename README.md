@@ -136,9 +136,9 @@ El perfil de la startup es un pilar fundamental para articular la identidad y la
 
 CoWare es una plataforma web innovadora diseñada para revolucionar el sector del transporte de carga, ofreciendo una solución integral y tecnológica para la gestión de operaciones logísticas. La aplicación conecta a empresas de transporte con herramientas inteligentes que permiten el control preciso de cada servicio realizado. Entre sus funcionalidades se destacan el registro automatizado del kilometraje, la captura de evidencia fotográfica al momento de las entregas, y la geolocalización en tiempo real. Además, la generación automática de reportes e indicadores de desempeño facilita la toma de decisiones, optimizando la eficiencia operativa y reduciendo costos innecesarios.
 
-Esta solución está pensada tanto para compañías de transporte que buscan mejorar la trazabilidad de sus operaciones, como para empresas logísticas que requieren de un control detallado y eficiente de sus servicios. Al digitalizar y potenciar cada etapa del proceso, Co-box logistic asegura una mayor transparencia y calidad en la entrega de productos, contribuyendo a fortalecer la confianza del cliente final.
+Esta solución está pensada tanto para compañías de transporte que buscan mejorar la trazabilidad de sus operaciones, como para empresas logísticas que requieren de un control detallado y eficiente de sus servicios. Al digitalizar y potenciar cada etapa del proceso, CoWare asegura una mayor transparencia y calidad en la entrega de productos, contribuyendo a fortalecer la confianza del cliente final.
 
-Misión: Nuestra misión en Co-box logistic es transformar la gestión del transporte de carga a través de soluciones tecnológicas inteligentes, permitiendo a nuestros clientes operar de manera más eficiente, reducir costos y mejorar la trazabilidad de sus servicios.
+Misión: Nuestra misión en CoWare es transformar la gestión del transporte de carga a través de soluciones tecnológicas inteligentes, permitiendo a nuestros clientes operar de manera más eficiente, reducir costos y mejorar la trazabilidad de sus servicios.
 
 Visión: Aspiramos a ser líderes en la innovación logística, impulsando un futuro en el que el transporte de carga sea cada vez más transparente, eficiente y sostenible, expandiendo nuestra presencia a nivel nacional e internacional.
 
@@ -217,7 +217,7 @@ CoBox es una plataforma creada para digitalizar por completo la gestión del tra
 
 Nuestro mayor desafío es lograr que las empresas adopten esta solución digital como una herramienta confiable, intuitiva y transformadora. Aunque la propuesta tecnológica representa una mejora significativa, algunas compañías pueden mostrarse reacias al cambio por temor a la complejidad o por depender de procesos tradicionales.
 
-¿Cómo podríamos facilitar la adopción de Co-box logistic como una herramienta confiable, simple y efectiva para transformar digitalmente la gestión del transporte de carga y optimizar los procesos logísticos?
+¿Cómo podríamos facilitar la adopción de CoWare como una herramienta confiable, simple y efectiva para transformar digitalmente la gestión del transporte de carga y optimizar los procesos logísticos?
 
 ##### 1.2.3.2. Lean UX Assumptions
 
@@ -243,7 +243,7 @@ Nuestro mayor desafío es lograr que las empresas adopten esta solución digital
 
 1. ¿Quién será nuestro usuario?
    * El usuario principal de CoBox son gerentes y coordinadores de operaciones logísticas que necesitan control detallado sobre su flota de vehículos.
-   * Co-box Logistic también está pensado para conductores de carga que requieren una herramienta simple para registrar información de viajes sin complicaciones técnicas.
+   * CoWare también está pensado para conductores de carga que requieren una herramienta simple para registrar información de viajes sin complicaciones técnicas.
 
 2. ¿Dónde encaja nuestro producto en su vida?
    * Se integra en la rutina diaria de trabajo tanto en oficinas de operación logística como en campo durante la ejecución de servicios de transporte, facilitando el control y seguimiento en tiempo real.
@@ -285,7 +285,7 @@ Creemos que al permitir la gestión de roles y accesos diferenciados, aumentarem
 
 ### 1.3. Segmentos Objetivo
 
-Co-box Logistic ha identificado dos segmentos objetivos principales que representan los usuarios clave dentro del ecosistema del transporte de carga:
+CoWare ha identificado dos segmentos objetivos principales que representan los usuarios clave dentro del ecosistema del transporte de carga:
 
 **Segmento Primario: Gerencia de Empresas de Transporte de Carga**
 
@@ -1174,7 +1174,7 @@ Segmento 2: Conductores de Transporte
 
 **Conclusiones**
 
-La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de Co-box logistic responda a problemas concretos del sector.
+La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de CoWare responda a problemas concretos del sector.
 
 El uso de herramientas de investigación como entrevistas, User Personas, Empathy Maps y Scenario Mapping facilitó la detección de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga, aportando una base sólida para el diseño de la plataforma.
 
