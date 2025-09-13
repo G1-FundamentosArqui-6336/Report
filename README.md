@@ -1,4 +1,4 @@
-# CoBox  
+# CoWare
 ## Producto: CoBox
 # UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 
@@ -13,7 +13,7 @@
 ### Profesor: Jorge Luis Delgado Vite
 
 ## Informe de Trabajo Final  
-**"CoBox"**  
+**"CoWares"**  
 **Producto: "CoBox"**
 
 ### Integrantes:
@@ -134,7 +134,7 @@ El perfil de la startup es un pilar fundamental para articular la identidad y la
 
 #### 1.1.1. Descripción de la Startup
 
-Co-box logistic es una plataforma web innovadora diseñada para revolucionar el sector del transporte de carga, ofreciendo una solución integral y tecnológica para la gestión de operaciones logísticas. La aplicación conecta a empresas de transporte con herramientas inteligentes que permiten el control preciso de cada servicio realizado. Entre sus funcionalidades se destacan el registro automatizado del kilometraje, la captura de evidencia fotográfica al momento de las entregas, y la geolocalización en tiempo real. Además, la generación automática de reportes e indicadores de desempeño facilita la toma de decisiones, optimizando la eficiencia operativa y reduciendo costos innecesarios.
+CoWare es una plataforma web innovadora diseñada para revolucionar el sector del transporte de carga, ofreciendo una solución integral y tecnológica para la gestión de operaciones logísticas. La aplicación conecta a empresas de transporte con herramientas inteligentes que permiten el control preciso de cada servicio realizado. Entre sus funcionalidades se destacan el registro automatizado del kilometraje, la captura de evidencia fotográfica al momento de las entregas, y la geolocalización en tiempo real. Además, la generación automática de reportes e indicadores de desempeño facilita la toma de decisiones, optimizando la eficiencia operativa y reduciendo costos innecesarios.
 
 Esta solución está pensada tanto para compañías de transporte que buscan mejorar la trazabilidad de sus operaciones, como para empresas logísticas que requieren de un control detallado y eficiente de sus servicios. Al digitalizar y potenciar cada etapa del proceso, Co-box logistic asegura una mayor transparencia y calidad en la entrega de productos, contribuyendo a fortalecer la confianza del cliente final.
 
@@ -192,7 +192,7 @@ Soy una persona responsable y comprometida con la consecución de los mejores re
 
 #### 1.2.1. Nombre del producto
 
-Cobox es una plataforma digital que integra tecnología avanzada para optimizar y transformar la gestión logística del transporte de carga. Su nombre refleja la idea de una "caja" inteligente que centraliza, organiza y facilita el control de operaciones, conectando a empresas y conductores con herramientas innovadoras para lograr mayor eficiencia, trazabilidad y transparencia en cada servicio.
+CoBox es una plataforma digital que integra tecnología avanzada para optimizar y transformar la gestión logística del transporte de carga. Su nombre refleja la idea de una "caja" inteligente que centraliza, organiza y facilita el control de operaciones, conectando a empresas y conductores con herramientas innovadoras para lograr mayor eficiencia, trazabilidad y transparencia en cada servicio.
 
 
 #### 1.2.2. Antecedentes y problemática
@@ -213,7 +213,7 @@ Cobox es una plataforma digital que integra tecnología avanzada para optimizar 
 
 ##### 1.2.3.1. Lean UX Problem Statement
 
-Co-box logistic es una plataforma creada para digitalizar por completo la gestión del transporte de carga, eliminando procesos manuales y mejorando la eficiencia operativa. Actualmente, muchas empresas aún dependen de formularios físicos, reportes en papel y hojas de cálculo, lo que genera pérdida de tiempo, errores humanos y falta de trazabilidad.
+CoBox es una plataforma creada para digitalizar por completo la gestión del transporte de carga, eliminando procesos manuales y mejorando la eficiencia operativa. Actualmente, muchas empresas aún dependen de formularios físicos, reportes en papel y hojas de cálculo, lo que genera pérdida de tiempo, errores humanos y falta de trazabilidad.
 
 Nuestro mayor desafío es lograr que las empresas adopten esta solución digital como una herramienta confiable, intuitiva y transformadora. Aunque la propuesta tecnológica representa una mejora significativa, algunas compañías pueden mostrarse reacias al cambio por temor a la complejidad o por depender de procesos tradicionales.
 
@@ -242,7 +242,7 @@ Nuestro mayor desafío es lograr que las empresas adopten esta solución digital
 ###### User Assumptions
 
 1. ¿Quién será nuestro usuario?
-   * El usuario principal de Co-box Logistic son gerentes y coordinadores de operaciones logísticas que necesitan control detallado sobre su flota de vehículos.
+   * El usuario principal de CoBox son gerentes y coordinadores de operaciones logísticas que necesitan control detallado sobre su flota de vehículos.
    * Co-box Logistic también está pensado para conductores de carga que requieren una herramienta simple para registrar información de viajes sin complicaciones técnicas.
 
 2. ¿Dónde encaja nuestro producto en su vida?
@@ -336,7 +336,7 @@ Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible,
 
 ### Comparativa de Productos
 
-| Productos            | **CO-BOX Logistic**                                                                 | **Samsara**                                                                 | **Fleet Complete**                                                            | **Sendd**                                                                 |
+| Productos            | **CoBox**                                                                 | **Samsara**                                                                 | **Fleet Complete**                                                            | **Sendd**                                                                 |
 |----------------------|--------------------------------------------------------------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------|
 | **Perfil**           | Programación de servicios, captura de odómetro (foto), registro de combustible y geolocalización, reportes web & móvil. | IoT + telemática: GPS en tiempo real, odómetro automático, control de combustible, alertas de mantenimiento. | Rastreo GPS, monitoreo de combustible, gestión de conductores, planificación de rutas. | Rutas de última milla, seguimiento en tiempo real, proof of delivery (foto/firmas). |
 | **Ventaja competitiva** | Flujo completo: unifica foto del odómetro, combustible y ruta en un solo proceso adaptado a transporte de carga. | Madurez de producto y hardware plug-and-play fácil de instalar. | Dashboards personalizables y API robusta para integraciones. | Experiencia local en Perú y UX optimizada para conductores. |
@@ -345,7 +345,7 @@ Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible,
 
 ### Perfil de Marketing
 
-| Aspecto                   | **CO-BOX Logistic**                                                              | **Samsara**                                   | **Fleet Complete**                                         | **Sendd**                                                 |
+| Aspecto                   | **CoBox**                                                              | **Samsara**                                   | **Fleet Complete**                                         | **Sendd**                                                 |
 |---------------------------|----------------------------------------------------------------------------------|-----------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------|
 | **Mercado Objetivo**      | Empresas de transporte de carga refrigerada o seca, supermercados, laboratorios y distribución general. | Flotas medianas y grandes de transporte en LATAM. | Flotas corporativas que requieren integración con ERPs.    | Negocios de e‑commerce y paquetería en Lima y alrededores. |
 | **Estrategias de Marketing** | Marketing B2B digital, demos gratuitas, alianzas con talleres y gremios de transporte. | Ferias de logística y partnerships con fabricantes de vehículos. | Partnerships con proveedores de ERP y consultoras.         | Promociones locales y boca a boca en cooperativas de delivery. |
@@ -354,7 +354,7 @@ Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible,
 
 ### Perfil de Producto
 
-| Aspecto                 | **CO-BOX Logistic**                                         | **Samsara**                                                  | **Fleet Complete**                                                  | **Sendd**                                               |
+| Aspecto                 | **CoBox**                                         | **Samsara**                                                  | **Fleet Complete**                                                  | **Sendd**                                               |
 |-------------------------|-------------------------------------------------------------|---------------------------------------------------------------|---------------------------------------------------------------------|----------------------------------------------------------|
 | **Productos & Servicios** | Programación de viajes, captura de odómetro, combustible y temperatura, reportes analíticos. | GPS tracking, scheduling, alertas de mantenimiento, reporte de combustible. | Rastreo GPS, monitoreo de combustible, gestión de conductores, planificación de rutas. | Prueba de entrega con foto/firmas, seguimiento en ruta. |
 | **Precios & Costos**     | USD 25/equipo/mes + USD 100 instalación única.             | Desde USD 30/vehículo/mes, hardware incluido.                 | Desde USD 28/vehículo/mes, descuentos anuales.                      | USD 5/entrega + comisión, sin hardware ni suscripción fija. |
@@ -364,7 +364,7 @@ Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible,
 
 ### Análisis SWOT
 
-|                        | **CO-BOX Logistic**                                          | **Samsara**                                    | **Fleet Complete**                                 | **Sendd**                                      |
+|                        | **CoBox**                                          | **Samsara**                                    | **Fleet Complete**                                 | **Sendd**                                      |
 |------------------------|--------------------------------------------------------------|------------------------------------------------|---------------------------------------------------|------------------------------------------------|
 | **Fortalezas**         | Integración odómetro + combustible + geolocalización en un solo sistema. | Hardware plug‑and‑play y ecosistema IoT completo. | Dashboards a medida y API robusta.                | Proof of delivery con foto y firmas.          |
 | **Debilidades**        | MVP en fase temprana; base de usuarios pequeña.              | Costo inicial alto y curva de configuración.    | Requiere integración técnica y tiempo de onboarding. | No registra combustible ni odómetro.          |
@@ -1173,6 +1173,7 @@ Segmento 2: Conductores de Transporte
 ### Conclusiones y Recomendaciones
 
 **Conclusiones**
+
 La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de Co-box logistic responda a problemas concretos del sector.
 
 El uso de herramientas de investigación como entrevistas, User Personas, Empathy Maps y Scenario Mapping facilitó la detección de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga, aportando una base sólida para el diseño de la plataforma.
