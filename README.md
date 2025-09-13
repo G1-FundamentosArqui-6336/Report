@@ -1173,12 +1173,11 @@ Segmento 2: Conductores de Transporte
 ### Conclusiones y Recomendaciones
 
 **Conclusiones**
+La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de Co-box logistic responda a problemas concretos del sector.
 
-1. La investigación y análisis realizados permitieron comprender en profundidad la problemática del sector logístico y cómo la startup **Co-box logistic** puede aportar valor mediante una plataforma tecnológica innovadora.  
-2. La aplicación del enfoque **Lean UX** resultó fundamental para identificar necesidades reales de los usuarios, validar hipótesis y orientar el diseño hacia una solución centrada en el cliente.  
-3. Las herramientas utilizadas —como entrevistas, User Personas, Empathy Maps y Scenario Mapping— facilitaron la identificación de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga.  
-4. El **Product Backlog** estructurado brinda un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos.  
-5. El trabajo en equipo y la colaboración constante fueron claves para lograr un documento integral que conecta investigación, análisis y propuesta de solución de manera coherente.
+El uso de herramientas de investigación como entrevistas, User Personas, Empathy Maps y Scenario Mapping facilitó la detección de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga, aportando una base sólida para el diseño de la plataforma.
+
+La estructuración del Product Backlog proporcionó un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos, lo que refuerza la viabilidad de la solución tecnológica propuesta.
 
 **Recomendaciones**
 
