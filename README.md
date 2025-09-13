@@ -287,9 +287,9 @@ Creemos que al permitir la gestión de roles y accesos diferenciados, aumentarem
 
 Co-box Logistic ha identificado dos segmentos objetivos principales que representan los usuarios clave dentro del ecosistema del transporte de carga:
 
-**Segmento Primario: Empresas de Transporte de Carga**
+**Segmento Primario: Gerencia de Empresas de Transporte de Carga**
 
-Este segmento comprende pequeñas y medianas empresas (PyMES) del sector logístico que operan flotas de 5 a 30 vehículos, principalmente enfocadas en transporte interprovincial y distribución urbana. Estas empresas se caracterizan por:
+Este segmento comprende a las genrecias de pequeñas y medianas empresas (PyMES) del sector logístico que operan flotas de 5 a 30 vehículos, principalmente enfocadas en transporte interprovincial y distribución urbana. Estas empresas se caracterizan por:
 
 - **Perfil organizacional**: Empresas familiares o de estructura tradicional que han dependido de procesos manuales (formularios en papel, Excel, WhatsApp) pero reconocen la necesidad de modernizarse para mantenerse competitivas.
 
@@ -315,6 +315,7 @@ Este segmento incluye a los operadores de campo que ejecutan físicamente los se
 ## Capítulo II: Requirements & Analysis
 
 ### 2.1. Competidores
+
 Competidor 1: Samsara
 Samsara es una plataforma de IoT y telemática para gestión de flotas que ofrece GPS en tiempo real, registro automático de odómetro y combustible, programación de rutas, alertas de mantenimiento y reportes detallados de eficiencia operativa. Está presente en LATAM y cuenta con integraciones fáciles de desplegar en vehículos.
 
@@ -376,37 +377,246 @@ Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible,
 
 #### 2.2.1 Diseño de entrevistas
 
-Segmento 1: Gerentes/encargados de flota
+**Segmento 1: Gerencia de flota**
 
-1. ¿Cuál es su rol y responsabilidades principales?
-2. ¿Cuántos vehículos administra y qué tipos de rutas realiza?
-3. ¿Cómo registra hoy el odómetro y el consumo de combustible?
-4. ¿Utiliza software o formularios en papel para programar y reportar servicios?
-5. ¿Qué problemas más frecuentes encuentra en la gestión de rutas y consumo?
-6. ¿Con qué frecuencia revisa los reportes de eficiencia de su flota?
-7. ¿Qué datos le gustaría recibir automáticamente después de cada viaje?
-8. ¿Cómo impactan las discrepancias de kilometraje o combustible en su operación diaria?
-9. ¿Qué tan dispuesto estaría a adoptar una app que integre fotos de odómetro y reportes automáticos?
-10. ¿Cuál es el presupuesto mensual aproximado que invertiría en este tipo de herramienta?
-<br>
-Segmento 2: Conductores/operadores de ruta
+1. ¿Cuál es su rol y responsabilidades principales?  
+2. ¿Cuántos vehículos administra y qué tipos de rutas realiza?  
+3. ¿Cómo registra hoy el odómetro y el consumo de combustible?  
+4. ¿Utiliza software o formularios en papel para programar y reportar servicios?  
+5. ¿Qué problemas más frecuentes encuentra en la gestión de rutas y consumo?  
+6. ¿Con qué frecuencia revisa los reportes de eficiencia de su flota?  
+7. ¿Qué datos le gustaría recibir automáticamente después de cada viaje?  
+8. ¿Cómo impactan las discrepancias de kilometraje o combustible en su operación diaria?  
+9. ¿Qué tan dispuesto estaría a adoptar una app que integre fotos de odómetro y reportes automáticos?  
+10. ¿Cuál es el presupuesto mensual aproximado que invertiría en este tipo de herramienta?  
 
-1. ¿Cuál es su experiencia conduciendo rutas de carga?
-2. ¿Cómo registra actualmente el inicio y fin de cada viaje?
-3. ¿Toma fotos del odómetro o anota el kilometraje manualmente?
-4. ¿Cuánto tiempo le toma completar el registro de combustible y odómetro hoy?
-5. ¿Qué dificultades tiene al usar apps o formularios para reportar su viaje?
-6. ¿Preferiría usar una app móvil con botones claros para “Iniciar”, “Foto odómetro” y “Fin”?
-7. ¿Qué tan útil le resultaría una geolocalización automática de cada parada?
-8. ¿Le preocupa la precisión del kilometraje que ingresa?
-9. ¿Qué comentarios o sugerencias tendría para que la app sea fácil de usar en ruta?
-10. ¿Qué incentivos podrían motivarlo a completar su reporte diario a tiempo?
-    
+**Segmento 2: Conductores/operadores de ruta**
+
+1. ¿Cuál es su experiencia conduciendo rutas de carga?  
+2. ¿Cómo registra actualmente el inicio y fin de cada viaje?  
+3. ¿Toma fotos del odómetro o anota el kilometraje manualmente?  
+4. ¿Cuánto tiempo le toma completar el registro de combustible y odómetro hoy?  
+5. ¿Qué dificultades tiene al usar apps o formularios para reportar su viaje?  
+6. ¿Preferiría usar una app móvil con botones claros para “Iniciar”, “Foto odómetro” y “Fin”?  
+7. ¿Qué tan útil le resultaría una geolocalización automática de cada parada?  
+8. ¿Le preocupa la precisión del kilometraje que ingresa?  
+9. ¿Qué comentarios o sugerencias tendría para que la app sea fácil de usar en ruta?  
+10. ¿Qué incentivos podrían motivarlo a completar su reporte diario a tiempo?  
+
 #### 2.2.2 Registro de entrevistas
-#### 2.2.3 Análisis de entrevistas
+
+**Segmento 1: Gerencia de flota**
+
+- **Entrevista #1**
+
+<p align="center">
+  <img src="./assets/entrevistajhon.png" alt="Entrevista Roberto Martinez" width="400">
+</p>
+
+Roberto Martínez, gerente de una flota de 15 camiones, enfrenta problemas con el registro manual en papel, que genera errores, campos incompletos y pérdida de documentos. Este método retrasa la información 24-48 horas, dificultando decisiones oportunas. Las discrepancias en kilometraje afectan costos de combustible y mantenimiento, además de generar conflictos con conductores y clientes.
+
+Coordina por WhatsApp, pero el desorden complica la gestión. Necesita una herramienta digital que proporcione datos en tiempo real, kilometraje exacto, consumo de combustible con evidencia, ubicación de paradas y confirmaciones fotográficas de entregas para mejorar trazabilidad y servicio al cliente.
+
+Está dispuesto a invertir entre S/800 y S/1,200 mensuales si la solución ahorra tiempo administrativo y reduce costos operativos. Valora que incluya capacitación, soporte técnico y actualizaciones, dado su escepticismo por experiencias previas con herramientas poco confiables.
+
+<div align="center">
+
+| Detalle           | Información                    |
+|-------------------|--------------------------------|
+| **Entrevistador** | Jhon Alexander Galvez Chambi  |
+| **Entrevistado**  | Roberto Martinez              |
+| **Edad**          | 31 años                       |
+| **Duración**      | 11:52 minutos                 |
+| **Enlace**        | https://shorturl.at/prt7H     |
+
+</div>
+
+- **Entrevista #2**
+
+<p align="center">
+  <img src="./assets/" alt="entrevista-2" width="400">
+</p>
+
+María Cabello Alzate, de 24 años y con cuatro años de experiencia en gestión de flotas en La Victoria (Chiclayo), supervisa alrededor de 25 camiones que cubren rutas regionales y de última milla. Actualmente, los choferes anotan el odómetro y el consumo de combustible en formularios impresos, envían fotos por WhatsApp y ella consolida manualmente todo en Excel, lo que provoca errores de transcripción, fotos de baja calidad o sin geolocalización y demoras de uno o dos días en disponer de información fiable. Para mejorar la eficiencia, María busca una plataforma que registre automáticamente el kilometraje, los litros cargados, la ubicación GPS de inicio y fin de ruta, y una fotografía clara del odómetro con fecha y hora. Revisa semanalmente un dashboard en Excel y presenta un informe mensual a la gerencia; estaría dispuesta a invertir entre USD 400 y USD 600 al mes si el sistema le permite ahorrar al menos esa misma cifra en tiempo y costos operativos, siempre y cuando la curva de aprendizaje sea mínima y los beneficios sean inmediatos.
+
+<div align="center">
+
+| Detalle          | Información                                |
+|------------------|--------------------------------------------|
+| **Entrevistador** | Joseph Pablo Rodriguez Parco           |
+| **Entrevistado**  | Maria Cabello Alzate                   |
+| **Edad**          | 24 años                                |
+| **Duración**      | 5:00 minutos                               |
+| **Enlace**        | https://shorturl.at/sRNaN |
+
+</div>
+
+- **Entrevista #3**
+
+<br>
+
+<p align="center">
+  <img src="./assets/entrevista3.png" alt="entrevista-3" width="400">
+</p>
+
+El rol que tiene es ver la programación para las unidades, revisar el gps de cada unidad, estar al tanto de la operación de cada vehículo, maneja 38 vehículos lo cual tienen una ruta de lima a provincias, el registra el consumo de combustible a través de formatos que se llenan manualmente, la frecuencia que tiene de revisión es cada 2 días, lo que espera de una pagina web ver el consumo de combustible, el rendimiento del combustible, gastos de peajes y cosas esenciales para una buena gestión de sus unidades, nos dice que la aplicación seria de mucha utilidad ya que ellos hacen sus registros manualmente, lo que el quiere es la facilidad de accesibilidad de la web.
 
 
+| Detalle          | Información                |
+|------------------|----------------------------|
+| **Entrevistador** | Raul Sanchez Cruz         |
+| **Entrevistado**  | Jorge Perez               |
+| **Edad**          | 44 años                   |
+| **Duración**      | 3:16 minutos              |
+| **Enlace**        | https://shorturl.at/I7pGH |
 
+</div>
+
+---
+
+**Segmento 2: Conductores/operadores de ruta**
+
+- **Entrevista #4**
+
+<p align="center">
+  <img src="./assets/entrevistajhon1.png" alt="Entrevista Miguel Torres" width="400">
+</p>
+
+Miguel, conductor de carga con 8 años de experiencia en rutas de Lima y el interior, encuentra tedioso y propenso a errores su actual registro manual en papel. A menudo olvida anotar datos a tiempo y debe tomar fotos del odómetro, lo que complica el proceso por falta de luz, suciedad o prisa. Estima que dedica hasta 45 minutos diarios a estos registros.
+
+Para él, una app ideal sería simple, con botones grandes, funcional sin internet y con confirmaciones visuales. Valora la geolocalización automática para justificar demoras y protegerse ante reclamos. También desea que la app registre el kilometraje con precisión para evitar dudas de la empresa.
+
+Miguel busca una herramienta que simplifique su trabajo, ahorre tiempo y permita reportar incidentes fácilmente. Lo motivaría el reconocimiento público y objetivo de su buen desempeño, más allá de incentivos económicos.
+
+<div align="center">
+
+| Detalle          | Información                            |
+|------------------|----------------------------------------|
+| **Entrevistador** | Jhon Alexander Galvez Chambi          |
+| **Entrevistado**  | Miguel Torres                         |
+| **Edad**          | 26 años                               |
+| **Duración**      | 7:31 minutos                          |
+| **Enlace**        | https://shorturl.at/fVAKN             |
+
+</div>
+
+
+- **Entrevista #5**
+
+<p align="center">
+  <img src="./assets/entrevistajoaquin1.png" alt="Entrevista Alonso Rafael" width="400">
+</p>
+
+Alonso es un conductor de carga experimentado que actualmente registra sus viajes de forma manual en una libreta. Ha tenido malas experiencias con aplicaciones móviles debido a su lentitud, registros complejos y la cantidad de información que piden.
+
+Busca una aplicación simple, rápida y sin necesidad de internet, que funcione con botones claros para iniciar y finalizar el viaje. Le gustaría una geolocalización automática para no olvidar las paradas y una alta precisión en el kilometraje, ya que su empresa es muy estricta al respecto. Como incentivo, le motivarían bonos, reconocimientos o la garantía de que no le descontarán por errores en sus reportes.
+
+<div align="center">
+
+| Detalle          | Información                  |
+|------------------|----------------------------|
+| **Entrevistador** | Joaquín Pedraza Maldonado   |
+| **Entrevistado**  | Alonso Rafael               |
+| **Edad**          |  23 años                    |
+| **Duración**      |  3:58 minutos               |
+| **Enlace**        | https://youtu.be/-YnaG3hX8B |
+
+</div>
+
+- **Entrevista #6**
+
+<p align="center">
+  <img src="./assets/entrevistamerly.png" alt="Entrevista Carlos Gonzales" width="400">
+</p>
+
+Carlos tiene más de 10 años de experiencia en transporte de carga dentro de Lima. Registra sus viajes en un cuaderno y envía mensajes por WhatsApp; además, toma fotos del odómetro, aunque llenar los reportes le toma unos 10 minutos.
+Menciona que los principales problemas son la mala señal y la complejidad de los formularios. Le gustaría una app sencilla con botones claros e integración de geolocalización automática.
+Le preocupa equivocarse en el kilometraje y sugiere que la app funcione también sin conexión. Como incentivo, considera útil un bono por puntualidad junto con un proceso más ágil.
+
+<div align="center">
+
+| Detalle          | Información                |
+|------------------|----------------------------|
+| **Entrevistador** |  Merly Salon Puerta       |
+| **Entrevistado**  |  Carlos Gonzales          |
+| **Edad**          |  29 años                  |
+| **Duración**      |  3:45 minutos             |
+| **Enlace**        | https://shorturl.at/x8AN2 |
+
+</div>
+
+#### 2.2.3. Análisis de entrevistas
+
+##### Segmento: Empresas de Transporte de Carga (Gerencia de Flota)
+
+Las entrevistas realizadas revelan que los gerentes y coordinadores de flota enfrentan desafíos operativos similares, independientemente del tamaño de su operación (15-38 vehículos).
+
+<p align="center">
+    <img src="./assets/grafico-1.png" alt="Principales problemas gerentes" width="400">
+</p>
+
+- **Problemas identificados:**
+        - Procesos manuales actuales (papel, WhatsApp, Excel) generan:
+                - Errores de transcripción.
+                - Pérdida de información.
+                - Demoras de 24-48 horas para obtener datos confiables.
+        - Desorganización y conflictos internos debido a discrepancias en kilometraje y consumo de combustible.
+
+<p align="center">
+    <img src="./assets/grafico-2.png" alt="Presupuesto gerentes" width="400">
+</p>
+
+- **Disposición a invertir:**
+        - Entre S/400 y S/1,200 mensuales, siempre que la solución:
+                - Demuestre ahorro administrativo tangible.
+                - Incluya capacitación y soporte técnico confiable.
+
+<p align="center">
+    <img src="./assets/grafico-3.png" alt="Funcionalidades valoradas gerentes" width="400">
+</p>
+
+- **Necesidades clave:**
+        - Herramientas que proporcionen:
+                - Datos en tiempo real.
+                - Evidencia fotográfica automática.
+                - Trazabilidad completa para mejorar el control de costos y la relación con clientes.
+
+##### Segmento: Conductores/Operadores de Ruta
+
+Las entrevistas con conductores, independientemente de su experiencia (3-10 años), destacan los siguientes puntos:
+
+<p align="center">
+    <img src="./assets/grafico-4.png" alt="Tiempo Diario en Registros (Minutos)" width="400">
+</p>
+
+- **Problemas identificados:**
+        - Registro manual percibido como:
+                - Tedioso y propenso a errores.
+                - Consumo excesivo de tiempo (10-45 minutos diarios).
+                - Distracción de la conducción segura.
+
+<p align="center">
+    <img src="./assets/grafico-5.png" alt="Años de Experiencia en Transporte de Carga" width="400">
+</p>
+
+- **Preocupaciones compartidas:**
+        - Precisión del kilometraje como fuente de estrés laboral, debido a la necesidad de justificar discrepancias sin evidencia objetiva.
+
+<p align="center">
+    <img src="./assets/grafico-6.png" alt="Funcionalidades Prioritarias - Conductores" width="400">
+</p>
+
+- **Necesidades clave:**
+        - Aplicación que sea:
+                - Simple, con botones grandes y confirmaciones visuales claras.
+                - Funcional sin conexión a internet.
+                - Capaz de proporcionar geolocalización automática para:
+                        - Justificar demoras o desvíos.
+                        - Proteger ante reclamos.
+
+- **Actitud hacia herramientas digitales:**
+        - Apertura a soluciones que simplifiquen su trabajo.
+        - Preferencia por reconocimiento de desempeño sobre incentivos económicos complejos.
 
 ### 2.3. Needfinding
 
