@@ -47,17 +47,6 @@
 | TB1     | 12/09/2025  | Todos los integrantes                      | Revisión final, formato del documento, referencias y anexos.                |
 
 
----
-
-## Project Report Collaboration Insights
-
-- **URL de la organización del proyecto:**  
-  [https://github.com/G1-FundamentosArqui-6336](https://github.com/G1-FundamentosArqui-6336)
-- **URL del repositorio del informe:**  
- [https://github.com/G1-FundamentosArqui-6336/Report](https://github.com/G1-FundamentosArqui-6336/Report)
-
- 
----
 ## Contenido
 #### Tabla de contenidos
 
