@@ -1194,8 +1194,15 @@ La estructuración del Product Backlog proporcionó un camino claro de desarroll
 - Osterwalder, A., Pigneur, Y., Bernarda, G., & Smith, A. (2014). *Value Proposition Design: How to Create Products and Services Customers Want*. Wiley.  
 - Interaction Design Foundation. (2025). *Lean UX*. Recuperado de: [https://www.interaction-design.org](https://www.interaction-design.org)  
 - Nielsen Norman Group. (2025). *User Research Methods*. Recuperado de: [https://www.nngroup.com](https://www.nngroup.com)  
-- GitHub. (2025). *Repositorio del informe del proyecto*. Recuperado de: [https://github.com/G1-FundamentosArqui-6336/Report](https://github.com/G1-FundamentosArqui-6336/Report)  
 
 ### Anexos
 
 ### Links
+
+Enlace al PPT
+
+[https://www.canva.com/design/DAGyy9be9zs/WfcFl0FUxStlw49J7G4pAA/edit?utm_content=DAGyy9be9zs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton](https://www.canva.com/design/DAGyy9be9zs/WfcFl0FUxStlw49J7G4pAA/edit?utm_content=DAGyy9be9zs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)  
+
+Enlace al repositorio del reporte
+
+[https://github.com/G1-FundamentosArqui-6336/Report](https://github.com/G1-FundamentosArqui-6336/Report)  
