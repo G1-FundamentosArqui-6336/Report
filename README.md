@@ -106,7 +106,6 @@
 - [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
 - [Referencias Bibliográficas](#referencias-bibliográficas)
 - [Anexos ](#anexos)
-- [Links](#links)
 
 
 ## Student Outcome  
@@ -1197,12 +1196,13 @@ La estructuración del Product Backlog proporcionó un camino claro de desarroll
 
 ### Anexos
 
-### Links
+A continuación, se incluyen materiales complementarios que respaldan el desarrollo del proyecto y facilitan la comprensión del proceso y los resultados obtenidos.
 
-Enlace al PPT
+**Anexo 1: Presentación del Proyecto (PPT)**  
+Contiene un resumen visual del proceso de diseño, incluyendo hipótesis, metodología, hallazgos de investigación, wireframes y conclusiones.  
+🔗 [Ver presentación en Canva](https://www.canva.com/design/DAGyy9be9zs/WfcFl0FUxStlw49J7G4pAA/edit?utm_content=DAGyy9be9zs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-[https://www.canva.com/design/DAGyy9be9zs/WfcFl0FUxStlw49J7G4pAA/edit?utm_content=DAGyy9be9zs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton](https://www.canva.com/design/DAGyy9be9zs/WfcFl0FUxStlw49J7G4pAA/edit?utm_content=DAGyy9be9zs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)  
+**Anexo 2: Repositorio del Reporte Completo**  
+Incluye el informe detallado del proyecto, con documentación técnica, resultados de investigación, mapas de empatía, escenarios y backlog priorizado.  
+🔗 [Acceder al repositorio en GitHub](https://github.com/G1-FundamentosArqui-6336/Report)
 
-Enlace al repositorio del reporte
-
-[https://github.com/G1-FundamentosArqui-6336/Report](https://github.com/G1-FundamentosArqui-6336/Report)  
