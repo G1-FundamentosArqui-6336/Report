@@ -13,7 +13,7 @@
 ### Profesor: Jorge Luis Delgado Vite
 
 ## Informe de Trabajo Final  
-**"CoWares"**  
+**"CoWare"**  
 **Producto: "CoBox"**
 
 ### Integrantes:
