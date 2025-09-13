@@ -221,7 +221,7 @@ Nuestro mayor desafío es lograr que las empresas adopten esta solución digital
 
 ##### 1.2.3.2. Lean UX Assumptions
 
-**Business Assumptions**
+###### Business Assumptions
 
 1. Creemos que nuestros clientes necesitan una forma digital y automatizada de gestionar las operaciones logísticas del transporte de carga.
 2. Estas necesidades se resuelven con una plataforma web que digitalice el registro de kilometraje, consumo de combustible, geolocalización y genere reportes automáticos.
@@ -239,7 +239,7 @@ Nuestro mayor desafío es lograr que las empresas adopten esta solución digital
     * Que los conductores adoptarán una aplicación móvil a pesar de tener diferentes niveles de habilidad tecnológica.
     * Que las empresas valoran más la precisión de datos que la simplicidad de sus procesos actuales.
 
-**User Assumptions**
+###### User Assumptions
 
 1. ¿Quién será nuestro usuario?
    * El usuario principal de Co-box Logistic son gerentes y coordinadores de operaciones logísticas que necesitan control detallado sobre su flota de vehículos.
