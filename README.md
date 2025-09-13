@@ -12,7 +12,7 @@
 ### NRC: 6336  
 ### Profesor: Jorge Luis Delgado Vite
 
-## Informe de Trabajo Final  
+## Informe del TB1 
 **"CoWare"**  
 **Producto: "CoBox"**
 
