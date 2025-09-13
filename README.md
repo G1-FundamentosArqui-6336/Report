@@ -330,7 +330,7 @@ Sendd es una startup peruana de última milla que permite programar rutas de ent
 ### Competitive Analysis Landscape
 
 **¿Por qué llevar a cabo este análisis?**  
-Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible, prueba fotográfica y reportes, y descubrir oportunidades de diferenciación para **CO-BOX LOGISTICS**.
+Para identificar cómo otras soluciones gestionan rutas, odómetro, combustible, prueba fotográfica y reportes, y descubrir oportunidades de diferenciación para **CoBox**.
 
 ---
 
