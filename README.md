@@ -1235,7 +1235,7 @@ El sistema también se integra con servicios externos críticos como proveedores
 #### 4.1.4. Approach driven ViewPoints Diagrams
 - Diagrama de contenedores:
 
-  <img src="./assets/diagramaContenedor.svg" alt="C4 System Context Diagram">
+  <img src="./assets/diagrama de contenedores coware.svg" alt="C4 diagrama de contenedores coware">
 
 - Diagrama de componentes:
 
