@@ -1206,15 +1206,114 @@ Segmento 2: Conductores de Transporte
 
 ### 4.2. Architectural Drivers
 
+Los drivers arquitectónicos de CoBox surgen de la necesidad de garantizar que la plataforma de colaboración en la nube sea segura, escalable, confiable y fácil de usar para startups y equipos de trabajo distribuidos. Estos drivers guían las decisiones técnicas y de diseño, asegurando que la solución responda a los objetivos de negocio, las necesidades de los usuarios y las restricciones identificadas.
+
+Los principales drivers son:
+- **Alineación con los objetivos de negocio**: facilitar la colaboración segura en proyectos digitales, optimizando el flujo de trabajo en equipos distribuidos.
+- **Cumplimiento normativo y seguridad de datos**: garantizar protección de información sensible frente a accesos no autorizados y cumplimiento con normativas como GDPR.
+- **Escalabilidad y rendimiento**: soportar el crecimiento de usuarios, proyectos y datos sin comprometer la experiencia.
+- **Experiencia de usuario**: ofrecer una interfaz intuitiva y accesible para diferentes perfiles (administradores, colaboradores, clientes).
+- **Interoperabilidad**: integrar la plataforma con herramientas externas como GitHub, Slack y servicios de almacenamiento en la nube.
+- **Disponibilidad y confiabilidad**: asegurar que el sistema esté siempre disponible y pueda recuperarse rápidamente ante fallos.
+- **Restricciones de recursos**: considerar las limitaciones propias de una startup en etapa temprana en cuanto a tiempo, presupuesto y equipo técnico.
+
+---
+
 #### 4.1.8. Design Purpose
+
+El propósito fundamental del proceso de diseño arquitectónico de CoBox es definir la estructura técnica de la plataforma de colaboración en la nube de forma coherente con los objetivos de negocio y los requisitos funcionales y no funcionales identificados.  
+Este diseño busca establecer un marco robusto que permita una implementación eficiente y adaptable, asegurando seguridad, escalabilidad y facilidad de uso.
+
+Los propósitos clave incluyen:
+- **Traducir requisitos y objetivos de negocio en decisiones técnicas**: transformar las necesidades de startups y equipos distribuidos en componentes técnicos concretos (gestión de proyectos, sincronización de archivos, colaboración en tiempo real).  
+- **Satisfacer drivers arquitectónicos**: garantizar que la arquitectura soporte usabilidad, seguridad, rendimiento, escalabilidad y confiabilidad, considerando las restricciones de recursos y dependencias externas.  
+- **Definir entidades arquitectónicas y sus interacciones**: identificar módulos principales (Usuarios, Proyectos, Archivos, Notificaciones, Integraciones) y las interfaces de comunicación entre ellos.  
+- **Promover coherencia y mantenibilidad**: aplicar principios de diseño y patrones arquitectónicos (DDD, microservicios, RBAC, API Gateway) que faciliten la evolución futura del sistema.  
+- **Crear modelos y vistas arquitectónicas**: representar la solución en diagramas C4 (Contexto, Contenedor, Componente) y UML (Clases, ERD) como documentación guía para el desarrollo.  
+- **Seguir un proceso iterativo**: utilizar ADD (Attribute-Driven Design) y validar las decisiones arquitectónicas en función de los drivers, adaptando la solución conforme se avanza en las etapas de desarrollo.  
+
+---
 
 #### 4.1.9. Primary Functionality (Primary User Stories)
 
+| User Story ID | Título                          | Descripción |
+|---------------|---------------------------------|-------------|
+| US01 | Registro y autenticación de usuarios | Como nuevo usuario, quiero registrarme e iniciar sesión de forma segura para acceder a mis proyectos en la plataforma. |
+| US02 | Creación de proyectos colaborativos | Como administrador, quiero crear proyectos y asignar miembros para facilitar la colaboración en tareas específicas. |
+| US03 | Subida y sincronización de archivos | Como usuario, quiero subir archivos y sincronizarlos en la nube para compartirlos con mi equipo en tiempo real. |
+| US04 | Gestión de permisos y roles | Como administrador, quiero asignar roles y permisos (admin, colaborador, lector) para garantizar la seguridad de la información. |
+| US05 | Notificaciones en tiempo real | Como usuario, quiero recibir notificaciones sobre cambios en los proyectos y archivos para estar siempre actualizado. |
+| US06 | Integración con herramientas externas | Como administrador, quiero conectar mi proyecto con servicios como GitHub y Slack para centralizar la colaboración. |
+| US07 | Acceso desde múltiples dispositivos | Como usuario, quiero acceder a mis proyectos desde distintos dispositivos (PC, tablet, móvil) para trabajar desde cualquier lugar. |
+
+---
+
 #### 4.1.10. Quality Attribute Scenarios
+
+### Escenario de Usabilidad (Gestión de Proyectos)
+- **Componente**: Módulo de Proyectos  
+- **Fuente**: Administrador creando un nuevo proyecto  
+- **Estímulo**: Configuración inicial del proyecto (nombre, equipo, permisos)  
+- **Entorno**: Sistema en operación normal  
+- **Artefacto**: Interfaz de usuario del módulo de proyectos  
+- **Respuesta**: Creación rápida y sencilla del proyecto, confirmación inmediata y acceso para los miembros asignados.  
+
+### Escenario de Seguridad (Autenticación de Usuarios)
+- **Componente**: Módulo de Autenticación  
+- **Fuente**: Usuario intentando iniciar sesión  
+- **Estímulo**: Ingreso de credenciales (usuario y contraseña)  
+- **Entorno**: Conexión segura mediante HTTPS  
+- **Artefacto**: Sistema de login con 2FA opcional  
+- **Respuesta**: Validación segura de credenciales, acceso autorizado y registro en el log de auditoría.  
+
+### Escenario de Rendimiento (Sincronización de Archivos)
+- **Componente**: Módulo de Archivos  
+- **Fuente**: Usuario subiendo un archivo de 50 MB  
+- **Estímulo**: Carga y sincronización en la nube  
+- **Entorno**: Sistema con 20+ usuarios activos simultáneamente  
+- **Artefacto**: Servicio de almacenamiento y sincronización  
+- **Respuesta**: Subida completada en menos de 5 segundos, disponibilidad inmediata para todos los miembros del proyecto.  
+
+### Escenario de Escalabilidad (Expansión de Usuarios)
+- **Componente**: Sistema completo  
+- **Fuente**: Administrador añadiendo 100 nuevos usuarios  
+- **Estímulo**: Creación masiva de cuentas y proyectos asociados  
+- **Entorno**: Plataforma con 200+ usuarios existentes  
+- **Artefacto**: Servicios de gestión de usuarios, proyectos y archivos  
+- **Respuesta**: El sistema mantiene un rendimiento estable, asigna recursos dinámicamente y asegura la correcta sincronización de datos.  
+
+---
 
 #### 4.1.11. Constraints
 
+| ID | Constraint |
+|----|------------|
+| C-1 | Cumplimiento con normativas de protección de datos (GDPR, ISO). |
+| C-2 | Limitaciones técnicas y financieras propias de una startup en etapa inicial. |
+| C-3 | Dependencia de integraciones con servicios externos (GitHub, Slack, almacenamiento en la nube). |
+| C-4 | Restricciones de tiempo debido al calendario académico y cronograma universitario. |
+| C-5 | Resistencia al cambio de usuarios acostumbrados a herramientas como Google Drive o Trello. |
+| C-6 | Escalabilidad inicial limitada para implementar IA o funcionalidades avanzadas. |
+| C-7 | Acceso simultáneo desde múltiples dispositivos restringido en etapas tempranas de desarrollo y pruebas. |
+
+---
+
 #### 4.1.12. Architectural Concerns
+
+| ID | Architectural Concern |
+|----|------------------------|
+| AC-1 | Riesgo de que los datos sensibles no estén adecuadamente protegidos, comprometiendo la seguridad. |
+| AC-2 | Posible falta de experiencia del equipo en tecnologías específicas (microservicios, contenedores, CI/CD). |
+| AC-3 | Incertidumbre en la correcta representación del dominio frente a las operaciones reales de los usuarios. |
+| AC-4 | La arquitectura podría no escalar eficientemente ante un rápido crecimiento de usuarios y proyectos. |
+| AC-5 | La experiencia de usuario podría no ser suficientemente intuitiva, afectando la adopción de la plataforma. |
+| AC-6 | Mantener un rendimiento óptimo ante cargas simultáneas elevadas puede ser un desafío. |
+| AC-7 | Riesgo de baja disponibilidad o recuperación lenta ante fallos críticos. |
+| AC-8 | Crecimiento rápido de usuarios podría generar cuellos de botella en la base de datos. |
+| AC-9 | Soporte insuficiente para equipos distribuidos geográficamente, limitando la colaboración en tiempo real. |
+| AC-10 | Ausencia de pruebas automatizadas puede retrasar la detección temprana de errores. |
+| AC-11 | Falta de mecanismos de auditoría y trazabilidad para acciones clave dentro de los proyectos. |
+| AC-12 | Estrategia de backup y recuperación insuficiente en caso de desastres o caídas del sistema. |
 
 -----
 
