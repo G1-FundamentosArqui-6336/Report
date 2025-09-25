@@ -92,6 +92,31 @@
   - [3.3. Impact Map](#33-impact-map)
   - [3.4. Product Backlog](#34-product-backlog)
 
+- [Capítulo IV: Product Architecture Design](#capítulo-iv-product-architecture-design)
+  - [4.1. Design Concepts, ViewPoints & ER Diagrams](#41-design-concepts-viewpoints--er-diagrams)
+    - [4.1.1. Principles Statements](#411-principles-statements)
+    - [4.1.2. Approaches Statements Architectural Styles & Patterns](#412-approaches-statements-architectural-styles--patterns)
+    - [4.1.3. Context Diagram](#413-context-diagram)
+    - [4.1.4. Approach driven ViewPoints Diagrams](#414-approach-driven-viewpoints-diagrams)
+    - [4.1.5. Relational/Non Relational Database Diagram](#415-relationalnon-relational-database-diagram)
+    - [4.1.6. Design Patterns](#416-design-patterns)
+    - [4.1.7. Tactics](#417-tactics)
+  - [4.2. Architectural Drivers](#42-architectural-drivers)
+    - [4.1.8. Design Purpose](#418-design-purpose)
+    - [4.1.9. Primary Functionality (Primary User Stories)](#419-primary-functionality-primary-user-stories)
+    - [4.1.10. Quality Attribute Scenarios](#410-quality-attribute-scenarios)
+    - [4.1.11. Constraints](#411-constraints)
+    - [4.1.12. Architectural Concerns](#412-architectural-concerns)
+  - [4.3. ADD Iterations](#43-add-iterations)
+    - [4.2.1. Iteration 1:](#421-iteration-1)
+      - [4.2.1.1. Architectural Design Backlog 1](#4211-architectural-design-backlog-1)
+      - [4.2.1.2. Establish Iteration Goal by Selecting Drivers](#4212-establish-iteration-goal-by-selecting-drivers)
+      - [4.2.1.3. Choose One or More Elements of the System to Refine](#4213-choose-one-or-more-elements-of-the-system-to-refine)
+      - [4.2.1.4. Choose One or More Design Concepts That Satisfy the Selected Drivers](#4214-choose-one-or-more-design-concepts-that-satisfy-the-selected-drivers)
+      - [4.2.1.5. Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces](#4215-instantiate-architectural-elements-allocate-responsibilities-and-define-interfaces)
+      - [4.2.1.6. Sketch Views (C4 & UML) and Record Design Decisions](#4216-sketch-views-c4--uml-and-record-design-decisions)
+      - [4.2.1.7. Analysis of Current Design and Review Iteration Goal (Kanban Board)](#4217-analysis-of-current-design-and-review-iteration-goal-kanban-board)
+
 - [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
 - [Referencias Bibliográficas](#referencias-bibliográficas)
 - [Anexos ](#anexos)
@@ -1219,15 +1244,120 @@ El sistema también se integra con servicios externos críticos como proveedores
 
 ### 4.2. Architectural Drivers
 
+Los drivers arquitectónicos de CoBox surgen de la necesidad de garantizar que la plataforma de colaboración en la nube sea segura, escalable, confiable y fácil de usar para startups y equipos de trabajo distribuidos. Estos drivers guían las decisiones técnicas y de diseño, asegurando que la solución responda a los objetivos de negocio, las necesidades de los usuarios y las restricciones identificadas.
+
+Los principales drivers son:
+- **Alineación con los objetivos de negocio**: facilitar la colaboración segura en proyectos digitales, optimizando el flujo de trabajo en equipos distribuidos.
+- **Cumplimiento normativo y seguridad de datos**: garantizar protección de información sensible frente a accesos no autorizados y cumplimiento con normativas como GDPR.
+- **Escalabilidad y rendimiento**: soportar el crecimiento de usuarios, proyectos y datos sin comprometer la experiencia.
+- **Experiencia de usuario**: ofrecer una interfaz intuitiva y accesible para diferentes perfiles (administradores, colaboradores, clientes).
+- **Interoperabilidad**: integrar la plataforma con herramientas externas como GitHub, Slack y servicios de almacenamiento en la nube.
+- **Disponibilidad y confiabilidad**: asegurar que el sistema esté siempre disponible y pueda recuperarse rápidamente ante fallos.
+- **Restricciones de recursos**: considerar las limitaciones propias de una startup en etapa temprana en cuanto a tiempo, presupuesto y equipo técnico.
+
+---
+
 #### 4.1.8. Design Purpose
+
+El propósito fundamental del proceso de diseño arquitectónico de CoBox es definir la estructura técnica de la plataforma de colaboración en la nube de forma coherente con los objetivos de negocio y los requisitos funcionales y no funcionales identificados.  
+Este diseño busca establecer un marco robusto que permita una implementación eficiente y adaptable, asegurando seguridad, escalabilidad y facilidad de uso.
+
+Los propósitos clave incluyen:
+- **Traducir requisitos y objetivos de negocio en decisiones técnicas**: transformar las necesidades de startups y equipos distribuidos en componentes técnicos concretos (gestión de proyectos, sincronización de archivos, colaboración en tiempo real).  
+- **Satisfacer drivers arquitectónicos**: garantizar que la arquitectura soporte usabilidad, seguridad, rendimiento, escalabilidad y confiabilidad, considerando las restricciones de recursos y dependencias externas.  
+- **Definir entidades arquitectónicas y sus interacciones**: identificar módulos principales (Usuarios, Proyectos, Archivos, Notificaciones, Integraciones) y las interfaces de comunicación entre ellos.  
+- **Promover coherencia y mantenibilidad**: aplicar principios de diseño y patrones arquitectónicos (DDD, microservicios, RBAC, API Gateway) que faciliten la evolución futura del sistema.  
+- **Crear modelos y vistas arquitectónicas**: representar la solución en diagramas C4 (Contexto, Contenedor, Componente) y UML (Clases, ERD) como documentación guía para el desarrollo.  
+- **Seguir un proceso iterativo**: utilizar ADD (Attribute-Driven Design) y validar las decisiones arquitectónicas en función de los drivers, adaptando la solución conforme se avanza en las etapas de desarrollo.  
+
+---
 
 #### 4.1.9. Primary Functionality (Primary User Stories)
 
+Las siguientes historias de usuario representan las funcionalidades **principales y críticas** de CoBox, ya que constituyen la base para la colaboración segura, escalable y eficiente en proyectos de trabajo distribuidos.
+
+| User Story ID | Título                          | Descripción |
+|---------------|---------------------------------|-------------|
+| US01 | Registro y autenticación de usuarios | Como nuevo usuario, quiero registrarme e iniciar sesión de forma segura para acceder a mis proyectos en la plataforma. **Esta funcionalidad es esencial porque garantiza un acceso controlado y seguro, protege los datos sensibles y constituye la puerta de entrada al ecosistema de CoBox.** |
+| US02 | Creación de proyectos colaborativos | Como administrador, quiero crear proyectos y asignar miembros para facilitar la colaboración en tareas específicas. **Es una funcionalidad clave porque organiza el trabajo en unidades manejables, fomenta la colaboración estructurada y permite centralizar la gestión de proyectos en la nube.** |
+| US03 | Subida y sincronización de archivos | Como usuario, quiero subir archivos y sincronizarlos en la nube para compartirlos con mi equipo en tiempo real. **Es vital porque asegura que todos los miembros tengan acceso inmediato a la información más reciente, evitando duplicidad de versiones y mejorando la productividad.** |
+| US04 | Gestión de permisos y roles | Como administrador, quiero asignar roles y permisos (admin, colaborador, lector) para garantizar la seguridad de la información. **Esta historia asegura control de acceso granular, protegiendo los datos sensibles y evitando el uso indebido de información por usuarios no autorizados.** |
+| US05 | Notificaciones en tiempo real | Como usuario, quiero recibir notificaciones sobre cambios en los proyectos y archivos para estar siempre actualizado. **Es importante porque mejora la comunicación interna, reduce retrasos y permite que los equipos reaccionen rápidamente ante cambios críticos.** |
+| US06 | Integración con herramientas externas | Como administrador, quiero conectar mi proyecto con servicios como GitHub y Slack para centralizar la colaboración. **Esta funcionalidad potencia la interoperabilidad de la plataforma, evitando el trabajo aislado y permitiendo una integración fluida con el ecosistema de herramientas ya utilizadas por los equipos.** |
+| US07 | Acceso desde múltiples dispositivos | Como usuario, quiero acceder a mis proyectos desde distintos dispositivos (PC, tablet, móvil) para trabajar desde cualquier lugar. **Es esencial para la flexibilidad y portabilidad, permitiendo que los usuarios colaboren sin importar su ubicación o dispositivo, lo que resulta clave en equipos distribuidos.** |
+
+---
+
 #### 4.1.10. Quality Attribute Scenarios
+
+### Escenario de Usabilidad (Gestión de Proyectos)
+- **Componente**: Módulo de Proyectos  
+- **Fuente**: Administrador creando un nuevo proyecto  
+- **Estímulo**: Configuración inicial del proyecto (nombre, equipo, permisos)  
+- **Entorno**: Sistema en operación normal  
+- **Artefacto**: Interfaz de usuario del módulo de proyectos  
+- **Respuesta**: Creación rápida y sencilla del proyecto, confirmación inmediata y acceso para los miembros asignados.  
+
+### Escenario de Seguridad (Autenticación de Usuarios)
+- **Componente**: Módulo de Autenticación  
+- **Fuente**: Usuario intentando iniciar sesión  
+- **Estímulo**: Ingreso de credenciales (usuario y contraseña)  
+- **Entorno**: Conexión segura mediante HTTPS  
+- **Artefacto**: Sistema de login con 2FA opcional  
+- **Respuesta**: Validación segura de credenciales, acceso autorizado y registro en el log de auditoría.  
+
+### Escenario de Rendimiento (Sincronización de Archivos)
+- **Componente**: Módulo de Archivos  
+- **Fuente**: Usuario subiendo un archivo de 50 MB  
+- **Estímulo**: Carga y sincronización en la nube  
+- **Entorno**: Sistema con 20+ usuarios activos simultáneamente  
+- **Artefacto**: Servicio de almacenamiento y sincronización  
+- **Respuesta**: Subida completada en menos de 5 segundos, disponibilidad inmediata para todos los miembros del proyecto.  
+
+### Escenario de Escalabilidad (Expansión de Usuarios)
+- **Componente**: Sistema completo  
+- **Fuente**: Administrador añadiendo 100 nuevos usuarios  
+- **Estímulo**: Creación masiva de cuentas y proyectos asociados  
+- **Entorno**: Plataforma con 200+ usuarios existentes  
+- **Artefacto**: Servicios de gestión de usuarios, proyectos y archivos  
+- **Respuesta**: El sistema mantiene un rendimiento estable, asigna recursos dinámicamente y asegura la correcta sincronización de datos.  
+
+---
 
 #### 4.1.11. Constraints
 
+Las restricciones representan los límites y condiciones bajo los cuales el sistema debe ser diseñado, desarrollado y operado. Estas limitaciones provienen de factores externos como normativas legales, recursos disponibles y dependencias tecnológicas, así como de factores internos relacionados con el equipo de desarrollo y los usuarios. Identificarlas permite establecer un marco realista para la implementación y gestión del proyecto, asegurando que las decisiones técnicas y estratégicas se adapten a las capacidades y al entorno en el que la solución será desplegada.
+
+| ID | Constraint |
+|----|------------|
+| C-1 | Cumplimiento con normativas de protección de datos (GDPR, ISO). |
+| C-2 | Limitaciones técnicas y financieras propias de una startup en etapa inicial. |
+| C-3 | Dependencia de integraciones con servicios externos (GitHub, Slack, almacenamiento en la nube). |
+| C-4 | Restricciones de tiempo debido al calendario académico y cronograma universitario. |
+| C-5 | Resistencia al cambio de usuarios acostumbrados a herramientas como Google Drive o Trello. |
+| C-6 | Escalabilidad inicial limitada para implementar IA o funcionalidades avanzadas. |
+| C-7 | Acceso simultáneo desde múltiples dispositivos restringido en etapas tempranas de desarrollo y pruebas. |
+
+---
+
 #### 4.1.12. Architectural Concerns
+
+Las preocupaciones arquitectónicas representan los riesgos, incertidumbres y desafíos que pueden afectar la estabilidad, seguridad, escalabilidad y usabilidad del sistema. Estos aspectos deben ser considerados desde las primeras fases del diseño arquitectónico, ya que influyen en la capacidad de la plataforma para evolucionar, responder a cambios en la demanda y garantizar una experiencia de usuario satisfactoria. Identificar y documentar estas preocupaciones facilita la planificación de soluciones preventivas o correctivas, ayudando al equipo a reducir riesgos y mejorar la resiliencia del sistema.
+
+| ID | Architectural Concern |
+|----|------------------------|
+| AC-1 | Riesgo de que los datos sensibles no estén adecuadamente protegidos, comprometiendo la seguridad. |
+| AC-2 | Posible falta de experiencia del equipo en tecnologías específicas (microservicios, contenedores, CI/CD). |
+| AC-3 | Incertidumbre en la correcta representación del dominio frente a las operaciones reales de los usuarios. |
+| AC-4 | La arquitectura podría no escalar eficientemente ante un rápido crecimiento de usuarios y proyectos. |
+| AC-5 | La experiencia de usuario podría no ser suficientemente intuitiva, afectando la adopción de la plataforma. |
+| AC-6 | Mantener un rendimiento óptimo ante cargas simultáneas elevadas puede ser un desafío. |
+| AC-7 | Riesgo de baja disponibilidad o recuperación lenta ante fallos críticos. |
+| AC-8 | Crecimiento rápido de usuarios podría generar cuellos de botella en la base de datos. |
+| AC-9 | Soporte insuficiente para equipos distribuidos geográficamente, limitando la colaboración en tiempo real. |
+| AC-10 | Ausencia de pruebas automatizadas puede retrasar la detección temprana de errores. |
+| AC-11 | Falta de mecanismos de auditoría y trazabilidad para acciones clave dentro de los proyectos. |
+| AC-12 | Estrategia de backup y recuperación insuficiente en caso de desastres o caídas del sistema. |
 
 -----
 
