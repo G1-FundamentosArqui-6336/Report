@@ -1236,15 +1236,17 @@ Los propósitos clave incluyen:
 
 #### 4.1.9. Primary Functionality (Primary User Stories)
 
+Las siguientes historias de usuario representan las funcionalidades **principales y críticas** de CoBox, ya que constituyen la base para la colaboración segura, escalable y eficiente en proyectos de trabajo distribuidos.
+
 | User Story ID | Título                          | Descripción |
 |---------------|---------------------------------|-------------|
-| US01 | Registro y autenticación de usuarios | Como nuevo usuario, quiero registrarme e iniciar sesión de forma segura para acceder a mis proyectos en la plataforma. |
-| US02 | Creación de proyectos colaborativos | Como administrador, quiero crear proyectos y asignar miembros para facilitar la colaboración en tareas específicas. |
-| US03 | Subida y sincronización de archivos | Como usuario, quiero subir archivos y sincronizarlos en la nube para compartirlos con mi equipo en tiempo real. |
-| US04 | Gestión de permisos y roles | Como administrador, quiero asignar roles y permisos (admin, colaborador, lector) para garantizar la seguridad de la información. |
-| US05 | Notificaciones en tiempo real | Como usuario, quiero recibir notificaciones sobre cambios en los proyectos y archivos para estar siempre actualizado. |
-| US06 | Integración con herramientas externas | Como administrador, quiero conectar mi proyecto con servicios como GitHub y Slack para centralizar la colaboración. |
-| US07 | Acceso desde múltiples dispositivos | Como usuario, quiero acceder a mis proyectos desde distintos dispositivos (PC, tablet, móvil) para trabajar desde cualquier lugar. |
+| US01 | Registro y autenticación de usuarios | Como nuevo usuario, quiero registrarme e iniciar sesión de forma segura para acceder a mis proyectos en la plataforma. **Esta funcionalidad es esencial porque garantiza un acceso controlado y seguro, protege los datos sensibles y constituye la puerta de entrada al ecosistema de CoBox.** |
+| US02 | Creación de proyectos colaborativos | Como administrador, quiero crear proyectos y asignar miembros para facilitar la colaboración en tareas específicas. **Es una funcionalidad clave porque organiza el trabajo en unidades manejables, fomenta la colaboración estructurada y permite centralizar la gestión de proyectos en la nube.** |
+| US03 | Subida y sincronización de archivos | Como usuario, quiero subir archivos y sincronizarlos en la nube para compartirlos con mi equipo en tiempo real. **Es vital porque asegura que todos los miembros tengan acceso inmediato a la información más reciente, evitando duplicidad de versiones y mejorando la productividad.** |
+| US04 | Gestión de permisos y roles | Como administrador, quiero asignar roles y permisos (admin, colaborador, lector) para garantizar la seguridad de la información. **Esta historia asegura control de acceso granular, protegiendo los datos sensibles y evitando el uso indebido de información por usuarios no autorizados.** |
+| US05 | Notificaciones en tiempo real | Como usuario, quiero recibir notificaciones sobre cambios en los proyectos y archivos para estar siempre actualizado. **Es importante porque mejora la comunicación interna, reduce retrasos y permite que los equipos reaccionen rápidamente ante cambios críticos.** |
+| US06 | Integración con herramientas externas | Como administrador, quiero conectar mi proyecto con servicios como GitHub y Slack para centralizar la colaboración. **Esta funcionalidad potencia la interoperabilidad de la plataforma, evitando el trabajo aislado y permitiendo una integración fluida con el ecosistema de herramientas ya utilizadas por los equipos.** |
+| US07 | Acceso desde múltiples dispositivos | Como usuario, quiero acceder a mis proyectos desde distintos dispositivos (PC, tablet, móvil) para trabajar desde cualquier lugar. **Es esencial para la flexibilidad y portabilidad, permitiendo que los usuarios colaboren sin importar su ubicación o dispositivo, lo que resulta clave en equipos distribuidos.** |
 
 ---
 
@@ -1286,6 +1288,8 @@ Los propósitos clave incluyen:
 
 #### 4.1.11. Constraints
 
+Las restricciones representan los límites y condiciones bajo los cuales el sistema debe ser diseñado, desarrollado y operado. Estas limitaciones provienen de factores externos como normativas legales, recursos disponibles y dependencias tecnológicas, así como de factores internos relacionados con el equipo de desarrollo y los usuarios. Identificarlas permite establecer un marco realista para la implementación y gestión del proyecto, asegurando que las decisiones técnicas y estratégicas se adapten a las capacidades y al entorno en el que la solución será desplegada.
+
 | ID | Constraint |
 |----|------------|
 | C-1 | Cumplimiento con normativas de protección de datos (GDPR, ISO). |
@@ -1299,6 +1303,8 @@ Los propósitos clave incluyen:
 ---
 
 #### 4.1.12. Architectural Concerns
+
+Las preocupaciones arquitectónicas representan los riesgos, incertidumbres y desafíos que pueden afectar la estabilidad, seguridad, escalabilidad y usabilidad del sistema. Estos aspectos deben ser considerados desde las primeras fases del diseño arquitectónico, ya que influyen en la capacidad de la plataforma para evolucionar, responder a cambios en la demanda y garantizar una experiencia de usuario satisfactoria. Identificar y documentar estas preocupaciones facilita la planificación de soluciones preventivas o correctivas, ayudando al equipo a reducir riesgos y mejorar la resiliencia del sistema.
 
 | ID | Architectural Concern |
 |----|------------------------|
