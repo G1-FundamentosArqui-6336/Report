@@ -95,7 +95,7 @@
 - [Capítulo IV: Product Architecture Design](#capítulo-iv-product-architecture-design)
   - [4.1. Design Concepts, ViewPoints & ER Diagrams](#41-design-concepts-viewpoints--er-diagrams)
     - [4.1.1. Principles Statements](#411-principles-statements)
-    - [4.1.2. Approaches Statements Architectural Styles & Patterns](#412-approaches-statements-architectural-styles--patterns)
+    - [4.1.2. Approaches Statements, Architectural Styles & Patterns](#412-approaches-statements-architectural-styles--patterns)
     - [4.1.3. Context Diagram](#413-context-diagram)
     - [4.1.4. Approach driven ViewPoints Diagrams](#414-approach-driven-viewpoints-diagrams)
     - [4.1.5. Relational/Non Relational Database Diagram](#415-relationalnon-relational-database-diagram)
@@ -1202,7 +1202,7 @@ Los siguientes principios arquitectónicos guían el diseño y desarrollo de la 
   6. *Seguridad por diseño:* La autenticación, autorización y protección de datos sensibles deben estar integradas desde el diseño inicial, considerando la naturaleza crítica de la información logística y de ubicación.
   7. *Persistencia poliglota:* Utilizar las tecnologías de almacenamiento más adecuadas para cada tipo de dato (relacional para transacciones, espacial para geolocalización), optimizando el rendimiento según las necesidades específicas del dominio.
 
-#### 4.1.2. Approaches Statements Architectural Styles & Patterns
+#### 4.1.2. Approaches Statements, Architectural Styles & Patterns
 
 ***Approaches Statements:***
 
