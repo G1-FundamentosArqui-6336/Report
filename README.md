@@ -1233,6 +1233,46 @@ El sistema también se integra con servicios externos críticos como proveedores
 </p>
 
 #### 4.1.4. Approach driven ViewPoints Diagrams
+- Diagrama de contenedores:
+
+  <img src="./assets/diagramaContenedor.svg" alt="C4 System Context Diagram">
+
+- Diagrama de componentes:
+
+  <img src="./assets/Analytics & Reporting Context Component.svg" alt="Analytics & Reporting Context Component">
+  
+  <img src="./assets/Maintenance Management Context Component.svg" alt="Maintenance Management Context Component">
+
+  <img src="./assets/Incident Management Context Component.svg" alt="Incident Management Context Component">
+ 
+  <img src="./assets/Delivery Management Context Component.svg" alt="Delivery Management Context Component">
+
+  <img src="./assets/Fleet Management Context Component.svg" alt="Fleet Management Context Component">
+
+- Diagramas de Actividad:
+
+  <img src="./assets/Maintenance Management Context Activity.svg" alt="Maintenance Management Context Activity">
+
+  <img src="./assets/Incident Management Context Activity.svg" alt="Incident Management Context Activity">
+ 
+  <img src="./assets/Delivery Management Context Activity.svg" alt="Delivery Management Context Activity">
+
+  <img src="./assets/Fleet Management Context Activity.svg" alt="Fleet Management Context Activity">
+
+- Diagramas de Estado:
+
+  <img src="./assets/Maintenance Management Context State.svg" alt="Maintenance Management Context State">
+
+  <img src="./assets/Incident Management Context State.svg" alt="Incident Management Context State">
+ 
+  <img src="./assets/Delivery Management Context State.svg" alt="Delivery Management Context State">
+
+  <img src="./assets/Fleet Management Context State.svg" alt="Fleet Management Context State">
+
+  - Diagrama de Clases:
+  <img src="./assets/diagramaClases.jpg" alt="Diagrama de clases">
+
+  
 
 #### 4.1.5. Relational/Non Relational Database Diagram
 
