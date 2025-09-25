@@ -95,7 +95,7 @@
 - [Capítulo IV: Product Architecture Design](#capítulo-iv-product-architecture-design)
   - [4.1. Design Concepts, ViewPoints & ER Diagrams](#41-design-concepts-viewpoints--er-diagrams)
     - [4.1.1. Principles Statements](#411-principles-statements)
-    - [4.1.2. Approaches Statements Architectural Styles & Patterns](#412-approaches-statements-architectural-styles--patterns)
+    - [4.1.2. Approaches Statements, Architectural Styles & Patterns](#412-approaches-statements-architectural-styles--patterns)
     - [4.1.3. Context Diagram](#413-context-diagram)
     - [4.1.4. Approach driven ViewPoints Diagrams](#414-approach-driven-viewpoints-diagrams)
     - [4.1.5. Relational/Non Relational Database Diagram](#415-relationalnon-relational-database-diagram)
@@ -1186,13 +1186,51 @@ Segmento 2: Conductores de Transporte
 
 ## Capítulo IV: Product Architecture Design
 
+En este capítulo el equipo aplica el método ADD v3 del Instituto de Ingeniería de Software (SEI).
+
 ### 4.1. Design Concepts, ViewPoints & ER Diagrams
 
 #### 4.1.1. Principles Statements
 
-#### 4.1.2. Approaches Statements Architectural Styles & Patterns
+Los siguientes principios arquitectónicos guían el diseño y desarrollo de la plataforma CoBox, asegurando que la solución sea escalable, mantenible y alineada con las mejores prácticas de la industria:
+
+  1. *Separación de responsabilidades por dominio:* Cada contexto delimitado debe mantener una responsabilidad específica y bien definida, evitando el acoplamiento excesivo entre dominios de negocio. Esto facilita la escalabilidad y el mantenimiento independiente de cada módulo.
+  2. *Comunicación asíncrona entre servicios:* Se priorizarán las comunicaciones asíncronas mediante message brokers sobre las llamadas síncronas directas, mejorando la resiliencia del sistema y permitiendo mejor manejo de cargas de trabajo variables típicas del sector logístico.
+  3. *API First Design:* Todas las funcionalidades del sistema deben exponerse a través de APIs bien documentadas y versionadas, facilitando la integración con sistemas externos y el desarrollo de múltiples interfaces de usuario (web, móvil).
+  4. *Tolerancia a fallos:* El sistema debe ser capaz de continuar operando parcialmente ante fallos de componentes específicos, especialmente crítico para operaciones en campo donde la conectividad puede ser intermitente.
+  5. *Observabilidad y trazabilidad:* Implementar logging, métricas y trazas distribuidas para monitorear el comportamiento del sistema en tiempo real, esencial para el seguimiento de operaciones logísticas críticas.
+  6. *Seguridad por diseño:* La autenticación, autorización y protección de datos sensibles deben estar integradas desde el diseño inicial, considerando la naturaleza crítica de la información logística y de ubicación.
+  7. *Persistencia poliglota:* Utilizar las tecnologías de almacenamiento más adecuadas para cada tipo de dato (relacional para transacciones, espacial para geolocalización), optimizando el rendimiento según las necesidades específicas del dominio.
+
+#### 4.1.2. Approaches Statements, Architectural Styles & Patterns
+
+***Approaches Statements:***
+
+  - *Domain-Driven Design (DDD):* Adoptamos DDD como enfoque principal para modelar la complejidad del dominio del transporte de carga, identificando bounded contexts claros como Fleet Management, Delivery Management, Incident Management, Maintenance Management y Analytics & Reporting. Este enfoque nos permite mantener el modelo de negocio alineado con el código y facilita la comunicación entre stakeholders técnicos y de negocio.
+
+  - *Attribute-Driven Design (ADD):* Utilizamos ADD v3 para tomar decisiones arquitectónicas basadas en escenarios de calidad específicos, priorizando atributos como disponibilidad, rendimiento y escalabilidad, críticos para una plataforma de gestión logística en tiempo real.
+
+***Architectural Styles:***
+
+  - *Cliente-Servidor:* Establece una separación clara entre las aplicaciones cliente (web y móvil) y los servicios backend, permitiendo múltiples tipos de clientes que consuman los mismos servicios de negocio.
+
+  - *Microservicios:* Cada bounded context se implementa como un microservicio independiente, permitiendo escalabilidad granular, deployments independientes y tecnologías específicas por servicio según las necesidades del dominio.
+
+***Design Patterns:***
+
+  - *API Gateway:* Actúa como punto único de entrada para todas las comunicaciones cliente-servidor, manejando autenticación, rate limiting, routing y agregación de respuestas. Especialmente importante para gestionar las diferentes necesidades de acceso entre conductores y gestores de flota.
+
+  - *Model-View-Controller (MVC):* Implementado en cada microservicio para separar la lógica de presentación, de negocio y de acceso a datos, facilitando el mantenimiento y testing de cada componente.
 
 #### 4.1.3. Context Diagram
+
+El diagrama de contexto de CoBox muestra cómo la plataforma de gestión logística interactúa con sus usuarios principales y sistemas externos. La plataforma sirve como el sistema central que conecta a tres tipos de usuarios con diferentes necesidades: administradores del sistema que gestionan la configuración general, gestores de flota que coordinan operaciones y toman decisiones basadas en datos, y conductores que ejecutan las entregas y registran información en campo.
+
+El sistema también se integra con servicios externos críticos como proveedores de mapas y geolocalización para el seguimiento en tiempo real, servicios de notificaciones para alertas importantes, y sistemas de almacenamiento en la nube para el manejo de evidencias fotográficas. Esta arquitectura permite que CoBox centralice la gestión logística mientras mantiene conectividad con el ecosistema tecnológico necesario para operaciones de transporte modernas.
+
+<p align="center">
+  <img src="./assets/CoBoxSystemContext.png" alt="C4 System Context Diagram">
+</p>
 
 #### 4.1.4. Approach driven ViewPoints Diagrams
 
