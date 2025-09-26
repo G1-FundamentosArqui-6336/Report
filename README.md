@@ -1403,19 +1403,124 @@ Las preocupaciones arquitectónicas representan los riesgos, incertidumbres y de
 
 ### 4.3. ADD Iterations
 
-#### 4.2.1. Iteration 1: 
+#### 4.2.1 Iteration 1: Análisis
+##### 4.2.1.1 Architectural Design Backlog 1
 
-##### 4.2.1.1. Architectural Design Backlog 1
+Ciertos elementos clave de la arquitectura serán esenciales para asegurar la escalabilidad, confiabilidad y adopción de la plataforma Co-box Logistic
+#### Seguridad
+| Historia de Usuario | Tareas | Criterios de Aceptación |
+|----------------------|--------|--------------------------|
+| **US-01 (Consultar rutas asignadas):** Como gestor, quiero conocer las rutas asignadas a cada unidad para supervisar su cumplimiento. | - Implementar autenticación JWT en la API.<br>- Configurar autorización basada en roles (gestor, conductor, visitante).<br>- Validar tokens expirados y manejo de errores 401/403.<br>- Notificación inmediata al gestor cuando se registre un incidente. | - Acceso solo con credenciales válidas.<br>- Los conductores solo pueden reportar incidencias propias.<br>- El sistema bloquea accesos no autorizados y registra intentos fallidos. |
+| **US-09 (Reportar incidente):** Como conductor, quiero reportar incidentes durante la entrega para que el gestor pueda intervenir. | - Implementar autenticación JWT en la API.<br>- Notificación inmediata al gestor cuando se registre un incidente. | - Acceso solo con credenciales válidas.<br>- El sistema bloquea accesos no autorizados y registra intentos fallidos.<br>- Los conductores solo pueden reportar incidencias propias. |
 
-##### 4.2.1.2. Establish Iteration Goal by Selecting Drivers
+---
 
-##### 4.2.1.3. Choose One or More Elements of the System to Refine
+#### Alta Disponibilidad
+| Historia de Usuario | Tareas | Criterios de Aceptación |
+|----------------------|--------|--------------------------|
+| **US-19 (Comparar desempeño entre conductores):** Como gestor, quiero comparar conductores para fomentar mejores prácticas. | - Configurar balanceador de carga en Azure.<br>- Implementar redundancia en servicios de WebSockets y mensajería en tiempo real.<br>- Backups diarios de base de datos en Blob Storage. | - El sistema se recupera en menos de 10 min en caso de caída.<br>- 100 usuarios concurrentes reciben alertas sin interrupciones.<br>- Reportes semanales disponibles incluso en escenarios de falla parcial. |
+| **US-20 (Monitorear alertas críticas):** Como gestor, quiero visualizar alertas críticas del sistema para tomar acciones inmediatas. | - Configurar balanceador de carga en Azure.<br>- Implementar redundancia en servicios de WebSockets y mensajería en tiempo real. | - El sistema se recupera en menos de 10 min en caso de caída.<br>- 100 usuarios concurrentes reciben alertas sin interrupciones. |
 
-##### 4.2.1.4. Choose One or More Design Concepts That Satisfy the Selected Drivers
+---
 
-##### 4.2.1.5. Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+#### Usabilidad
+| Historia de Usuario | Tareas | Criterios de Aceptación |
+|----------------------|--------|--------------------------|
+| **US-05 (Consultar entregas asignadas):** Como conductor, quiero conocer las entregas del día para planificar mi jornada. | - Menú de navegación con máximo 5 opciones principales.<br>- Iconografía clara para conductores con bajo nivel de digitalización. | - Un conductor novato puede consultar entregas en menos de 2 minutos. |
+| **US-32 (Timeline de progreso):** Como gestor, quiero ver el progreso fácilmente. | - Gráfico de barras interactivo.<br>- Actualización en tiempo real al mover o completar entregas. | - Los gráficos de progreso se actualizan sin recarga manual de la página. |
+
+##### 4.2.1.2 Establish Iteration Goal by Selecting Drivers  
+
+En esta iteración, seleccionaremos los **drivers clave** que servirán como base para definir metas que aseguren la utilidad, escalabilidad y confiabilidad de la plataforma **Co-box Logistic**, dirigida a empresas de transporte y logística.  
+
+---
+
+##### Metas de la Iteración  
+
+| Meta | Objetivo | Acciones Clave |
+|------|----------|----------------|
+| **Trazabilidad en Tiempo Real** | Garantizar que las empresas puedan visualizar en tiempo real la ubicación y el estado de las unidades y entregas, facilitando la toma de decisiones inmediatas. | - Integrar geolocalización en tiempo real de las unidades.<br>- Permitir actualización automática del estado de entregas.<br>- Incorporar alertas push para cambios críticos. |
+| **Eficiencia Operativa** | Optimizar los recursos de transporte y reducir los costos operativos mediante un control preciso de unidades, combustible y desempeño del personal. | - Implementar registro automatizado de kilometraje y consumo.<br>- Desarrollar dashboards con métricas de eficiencia.<br>- Incorporar reportes semanales de desempeño. |
+| **Seguridad de Datos y Operaciones** | Proteger la información de entregas, clientes y unidades, garantizando integridad y acceso solo a los roles correspondientes. | - Implementar autenticación JWT con validación de roles.<br>- Cifrar datos sensibles en tránsito y en reposo.<br>- Establecer políticas de acceso diferenciadas. |
+
+---
+
+##### Objetivo de la Iteración  
+
+- **Trazabilidad:** Fortalecer el control en tiempo real de las operaciones logísticas mediante geolocalización y alertas críticas.  
+- **Eficiencia:** Mejorar la planificación y el rendimiento de la flota con métricas y reportes automatizados.  
+- **Seguridad:** Robustecer la protección de datos de clientes, entregas y unidades mediante autenticación y cifrado.  
+
+---
+
+##### 4.2.1.3 Choose One or More Elements of the System to Refine  
+
+Para avanzar en el desarrollo de **Co-box Logistic** y de acuerdo con los drivers y metas definidos en la iteración, se han seleccionado los siguientes elementos del sistema para ser refinados.  
+
+---
+
+| Área | Elemento a Refinar | Razón para el Refinamiento | Esperado |
+|------|---------------------|----------------------------|----------|
+| **Trazabilidad en Tiempo Real** | Módulo de geolocalización y notificaciones | Permitir al gestor supervisar la ubicación exacta de unidades y entregas, con alertas inmediatas en caso de desvíos o incidencias. | Mapas en tiempo real, actualización automática de entregas y generación de alertas push. |
+| **Eficiencia Operativa** | Dashboards de rendimiento y consumo | Facilitar la optimización de costos y tiempos mediante indicadores de combustible, kilometraje y desempeño por unidad/conductor. | Paneles visuales con métricas de eficiencia, reportes semanales descargables (PDF, Excel) y comparativas entre conductores/unidades. |
+| **Seguridad de Accesos y Datos** | Sistema de autenticación y permisos de acceso | Asegurar que los datos estén protegidos y que cada usuario acceda únicamente a la información pertinente a su rol. | Autenticación JWT, cifrado de datos sensibles en tránsito/reposo y validación de roles diferenciados (gestor, conductor, visitante). |
+
+##### 4.2.1.4 Choose One or More Design Concepts That Satisfy the Selected Drivers  
+
+Para garantizar que la arquitectura de **Co-box Logistic** satisfaga adecuadamente las necesidades clave del negocio y los objetivos de calidad, se han identificado e incorporado conceptos de diseño específicos que abordan los principales drivers arquitectónicos. A continuación, se presentan las soluciones adoptadas para los ejes críticos de **seguridad, trazabilidad y eficiencia**:  
+
+---
+
+##### Seguridad  
+
+#### Modelo RBAC (Role-Based Access Control)  
+- **Descripción:** Se propone la implementación de un modelo de control de acceso basado en roles, donde los usuarios (gestor, conductor, visitante) tengan permisos diferenciados según su perfil.  
+- **Justificación:** Permite garantizar que cada rol acceda únicamente a la información y operaciones que le corresponden, minimizando riesgos de accesos no autorizados.  
+
+##### API Gateway Seguro  
+- **Descripción:** Incorporar un API Gateway como punto centralizado de control, encargado de gestionar autenticación, autorización y enrutamiento de peticiones hacia los microservicios internos.  
+- **Justificación:** Proporciona una capa adicional de seguridad y control en las comunicaciones, protegiendo datos sensibles de clientes, entregas y unidades frente a amenazas externas.  
+
+---
+
+##### Trazabilidad  
+
+##### Sistema de Geolocalización en Tiempo Real  
+- **Descripción:** Uso de servicios de mapas y sockets para monitorear en vivo la ubicación de cada unidad de transporte y el estado de sus entregas.  
+- **Justificación:** Responde al driver de **visibilidad operativa**, ofreciendo a gestores y clientes información en tiempo real para tomar decisiones rápidas y confiables.  
+
+---
+
+##### Eficiencia  
+
+##### Dashboards de Rendimiento  
+- **Descripción:** Paneles interactivos que muestran métricas de consumo de combustible, kilometraje y entregas completadas por unidad/conductor.  
+- **Justificación:** Favorecen la toma de decisiones informadas, reducen costos y mejoran la asignación de recursos, alineándose con el driver de **eficiencia operativa**.  
+
+---
+
+##### 4.2.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces  
+
+En esta sección se describe el proceso de **instanciación de elementos arquitectónicos**, la asignación de responsabilidades y la definición de interfaces que permitirán la interacción entre los distintos componentes del sistema **Co-box Logistic**.  
+
+---
+
+##### Instanciación de Elementos Arquitectónicos  
+
+| Elemento | Responsabilidad | Interfaces |
+|----------|-----------------|------------|
+| **Módulo de Gestión de Rutas y Entregas** | Asignar rutas, registrar entregas, controlar estados (en tránsito, entregado, con incidencia). | API REST para gestión de rutas; interfaz web/móvil para conductores y gestores. |
+| **Módulo de Geolocalización en Tiempo Real** | Mostrar en mapa la ubicación de unidades y generar alertas en caso de desviaciones. | WebSockets para streaming de ubicación; integración con mapas externos (ej. Mapbox/Google Maps). |
+| **Módulo de Control de Accesos (RBAC)** | Gestionar autenticación JWT y permisos diferenciados por rol (gestor, conductor, visitante). | API de autenticación; middleware de autorización para endpoints internos. |
+| **API Gateway** | Punto de entrada seguro que centraliza autenticación, autorización y enrutamiento a microservicios. | Exposición de endpoints `/api/v1/...`; validación de tokens en cada request. |
+| **Sistema de Reportes y Métricas** | Generar informes de eficiencia, consumo y desempeño semanal/mensual. | Exportación en PDF/Excel; dashboards visuales en frontend. |
+| **Interfaz de Usuario Web y Móvil** | Proporcionar una experiencia intuitiva a gestores y conductores para operar el sistema. | Frontend Angular/Phaser conectado a APIs; notificaciones push. |
+
+---
+
 
 ##### 4.2.1.6. Sketch Views (C4 & UML) and Record Design Decisions
+
 
 ##### 4.2.1.7. Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
