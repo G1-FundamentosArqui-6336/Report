@@ -1275,12 +1275,56 @@ El sistema también se integra con servicios externos críticos como proveedores
   
 
 #### 4.1.5. Relational/Non Relational Database Diagram
+ <img src="./assets/diagrama3.png" alt="Diagrama de clases">
 
 #### 4.1.6. Design Patterns
+El Factory Pattern se utiliza para centralizar la creación de objetos, permitiendo instanciar diferentes tipos de usuarios como Conductor, Técnico o Gestor sin exponer la lógica de construcción. Esto hace que el sistema sea más limpio y fácil de mantener cuando se agregan nuevos tipos de usuarios.
 
+El Strategy Pattern permite definir distintas estrategias de mantenimiento, como el preventivo o el correctivo, y cambiar entre ellas dinámicamente según las necesidades del sistema. De esta manera, los algoritmos se mantienen flexibles y reutilizables sin alterar la estructura principal.
+
+El Observer Pattern se emplea para implementar un sistema de notificaciones, donde los objetos que generan cambios de estado (por ejemplo, un vehículo que pasa a mantenimiento) informan automáticamente a los suscriptores interesados, logrando un fuerte desacoplamiento entre emisores y receptores.
+
+El Command Pattern encapsula operaciones en objetos, como la acción de asignar una ruta a un vehículo. Esto facilita mantener un historial de acciones y permite deshacer operaciones, ofreciendo mayor control y trazabilidad dentro del sistema.
+
+El Singleton Pattern garantiza que exista una sola instancia de un objeto global, como la configuración central del sistema. Con ello se evita la duplicidad y se asegura que todos los módulos trabajen con la misma referencia de configuración.
+
+El Decorator Pattern añade funcionalidades adicionales a los vehículos, como GPS o seguro, sin necesidad de modificar directamente las clases base. Esto ofrece gran flexibilidad al extender comportamientos de forma dinámica.
+
+El Facade Pattern proporciona una interfaz unificada y sencilla para operaciones complejas del sistema. De este modo, los usuarios y otros componentes pueden interactuar sin conocer la lógica interna, lo que simplifica la integración.
+
+El Template Method Pattern define la estructura para la generación de reportes, estableciendo pasos fijos pero permitiendo personalizar algunos de ellos según el tipo de reporte requerido. Esto asegura consistencia y a la vez flexibilidad.
+
+El State Pattern maneja los distintos estados de un vehículo, como Disponible, En Ruta o En Mantenimiento, haciendo que el comportamiento del objeto cambie automáticamente según el estado actual en el que se encuentre.
+
+Finalmente, todos estos patrones aportan beneficios como flexibilidad al extender el sistema, mantenibilidad gracias a un código organizado y desacoplado, reusabilidad de componentes y escalabilidad, preparando la arquitectura para el crecimiento futuro.
 #### 4.1.7. Tactics
 
------
+**Optimización de Código y Arquitectura**
+
+El código de CoBox puede optimizarse con pruebas de rendimiento que identifiquen procesos pesados, como la generación de reportes masivos, el cálculo de kilometrajes o la validación de entregas. El uso de patrones de diseño, como Factory para crear usuarios según su rol, Observer para notificaciones en tiempo real, Command para mantener historial de operaciones y State para el manejo dinámico de estados de vehículos, ayuda a mantener un sistema limpio y flexible. Además, separar la lógica en módulos o microservicios (vehículos, logística, usuarios, reportes) favorece la escalabilidad y facilita el mantenimiento a largo plazo.<br>
+
+**Tácticas de Disponibilidad**
+
+Validación y redundancia en datos críticos: Garantizar que información clave (Vehículo, Ruta, Entrega) sea consistente para prevenir fallas operativas y pérdidas de asignaciones.
+
+Registro histórico (logging persistente): Entidades como Mantenimiento, Incidencia y RecorridoKilométrico mantienen trazabilidad, permitiendo recuperar estados previos tras incidentes.
+
+Monitoreo activo de vehículos: Usando los atributos de la entidad Vehículo (estado, cambioEstado), se aplican mecanismos tipo heartbeat para detectar fallas o desconexiones a tiempo <br><br>
+**Tácticas de Mantenibilidad**
+
+Modularización de funciones: Separar en módulos claros (Usuarios, Vehículos, Mantenimiento, Logística) facilita actualizaciones y reduce impacto en otros componentes.
+
+Uso de entidades base y especializadas: Con Usuario como entidad general y sus subtipos (Conductor, Técnico, Gestor), se asegura bajo acoplamiento y alta cohesión.
+
+Extensibilidad estructural: La normalización permite añadir nuevos roles o tipos de mantenimiento sin romper la arquitectura existente.<br>
+
+**Tácticas de Usabilidad**
+
+Notificaciones en tiempo real: Basadas en Reporte, Incidencia y Mantenimiento, mantienen informados a conductores y gestores de cambios inmediatos.
+
+Interfaces simplificadas mediante patrones: Aplicando Facade, el usuario interactúa con vistas claras, sin lidiar con la complejidad de múltiples tablas como Ruta + Entrega + Reporte.
+
+Historial consultable y trazable: A través de Evidencia e Incidencia, se ofrece retroalimentación clara sobre operaciones pasadas y decisiones tomadas.
 
 ### 4.2. Architectural Drivers
 
