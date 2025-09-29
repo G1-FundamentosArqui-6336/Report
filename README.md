@@ -45,6 +45,12 @@
 | TB1     | 12/09/2025  | Ramiro Alexander Guzmán Chávez             | As-is Scenario Mapping, conclusiones y recomendaciones.                     |
 | TB1     | 12/09/2025  | Merly Salon Puerta                         | Impact Map y apoyo en revisión general.                                     |
 | TB1     | 12/09/2025  | Todos los integrantes                      | Revisión final, formato del documento, referencias y anexos.                |
+| TB2     | 26/09/2025  | Merly Salon Puerta                         | ADD Iteration                                     |
+| TB2     | 26/09/2025  | Merly Salon Puerta                         | Iteración 1, Arquitectural Disign Backlog 1                                     |
+| TB2     | 26/09/2025  | Merly Salon Puerta                         | Establish Iteration Goal                                     |
+| TB2     | 26/09/2025  | Merly Salon Puerta                         | Choose One or More Disign Concepts                                     |
+| TB2     | 26/09/2025  | Merly Salon Puerta                         | Instatiate Architectural Elements                                     |
+
 
 
 ## Contenido
