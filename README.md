@@ -12,7 +12,7 @@
 ### NRC: 6336  
 ### Profesor: Jorge Luis Delgado Vite
 
-## Informe del TB1 
+## Informe del TB2
 **"CoWare"**  
 **Producto: "CoBox"**
 
@@ -30,26 +30,28 @@
 
 ## Registro de Versiones del Informe
 
-| Versión | Fecha       | Autor                                      | Descripción                                                                 |
-|---------|-------------|--------------------------------------------|-----------------------------------------------------------------------------|
-| TB1     | 09/09/2025  | Ramiro Alexander Guzmán Chávez             | Desarrollo de la carátula, tabla de contenidos y estructura general del informe. |
-| TB1     | 09/09/2025  | David Alexander Pérez García               | Redacción de la sección "Descripción de la Startup" y Lean UX Assumptions/Hypothesis. |
-| TB1     | 09/09/2025  | Joaquín Pedraza Maldonado                  | Elaboración de perfiles de integrantes y Segmentos Objetivo.                |
-| TB1     | 10/09/2025  | Merly Salon Puerta                         | Desarrollo de antecedentes, problemática y User Task Matrix.               |
-| TB1     | 10/09/2025  | Jhon Alexander Galvez Chambi              | Lean UX Problem Statement y Empathy Maps.                                   |
-| TB1     | 10/09/2025  | Ramiro Alexander Guzmán Chávez             | Diseño del Lean UX Canvas y análisis de entrevistas.                        |
-| TB1     | 11/09/2025  | Merly Salon Puerta                         | Análisis de competidores y apoyo en entrevistas.                            |
-| TB1     | 11/09/2025  | Joaquín Pedraza Maldonado                  | Desarrollo de User Personas y User Stories.                                 |
-| TB1     | 11/09/2025  | David Alexander Pérez García               | Registro y vaciado de entrevistas; elaboración de To-Be Scenario Mapping.  |
-| TB1     | 11/09/2025  | Jhon Alexander Galvez Chambi              | Diseño del formato de entrevistas y desarrollo del Product Backlog.         |
-| TB1     | 12/09/2025  | Ramiro Alexander Guzmán Chávez             | As-is Scenario Mapping, conclusiones y recomendaciones.                     |
-| TB1     | 12/09/2025  | Merly Salon Puerta                         | Impact Map y apoyo en revisión general.                                     |
-| TB1     | 12/09/2025  | Todos los integrantes                      | Revisión final, formato del documento, referencias y anexos.                |
-| TB2     | 26/09/2025  | Merly Salon Puerta                         | ADD Iteration                                     |
-| TB2     | 26/09/2025  | Merly Salon Puerta                         | Iteración 1, Arquitectural Disign Backlog 1                                     |
-| TB2     | 26/09/2025  | Merly Salon Puerta                         | Establish Iteration Goal                                     |
-| TB2     | 26/09/2025  | Merly Salon Puerta                         | Choose One or More Disign Concepts                                     |
-| TB2     | 26/09/2025  | Merly Salon Puerta                         | Instatiate Architectural Elements                                     |
+| Versión | Fecha       | Autor                          | Descripción                                                                 |
+|---------|-------------|--------------------------------|-----------------------------------------------------------------------------|
+| TB1     | 09/09/2025  | Ramiro Alexander Guzmán Chávez | Desarrollo de la carátula, tabla de contenidos y estructura general del informe. |
+| TB1     | 09/09/2025  | David Alexander Pérez García   | Redacción de la sección "Descripción de la Startup" y Lean UX Assumptions/Hypothesis. |
+| TB1     | 09/09/2025  | Joaquín Pedraza Maldonado      | Elaboración de perfiles de integrantes y Segmentos Objetivo.                |
+| TB1     | 10/09/2025  | Merly Salon Puerta             | Desarrollo de antecedentes, problemática y User Task Matrix.                |
+| TB1     | 10/09/2025  | Jhon Alexander Galvez Chambi   | Lean UX Problem Statement y Empathy Maps.                                   |
+| TB1     | 10/09/2025  | Ramiro Alexander Guzmán Chávez | Diseño del Lean UX Canvas y análisis de entrevistas.                        |
+| TB1     | 11/09/2025  | Merly Salon Puerta             | Análisis de competidores y apoyo en entrevistas.                            |
+| TB1     | 11/09/2025  | Joaquín Pedraza Maldonado      | Desarrollo de User Personas y User Stories.                                 |
+| TB1     | 11/09/2025  | David Alexander Pérez García   | Registro y vaciado de entrevistas; elaboración de To-Be Scenario Mapping.   |
+| TB1     | 11/09/2025  | Jhon Alexander Galvez Chambi   | Diseño del formato de entrevistas y desarrollo del Product Backlog.         |
+| TB1     | 12/09/2025  | Ramiro Alexander Guzmán Chávez | As-is Scenario Mapping, conclusiones y recomendaciones.                     |
+| TB1     | 12/09/2025  | Merly Salon Puerta             | Impact Map y apoyo en revisión general.                                     |
+| TB1     | 12/09/2025  | Todos los integrantes          | Revisión final, formato del documento, referencias y anexos.                |
+| TB2     | 26/09/2025  | Jhon Alexander Galvez Chambi   | Desarrollo de 4.1: Design Concepts, ViewPoints & ER Diagrams (principios, enfoques, estilos, patrones y diagrama de contexto). |
+| TB2     | 26/09/2025  | David Alexander Pérez García   | Elaboración de 4.1.4: Approach Driven ViewPoints Diagrams.                  |
+| TB2     | 26/09/2025  | Joaquín Pedraza Maldonado      | Desarrollo de 4.1.5-4.1.7: Diagramas de bases de datos relacionales/no relacionales, patrones de diseño y tácticas arquitectónicas. |
+| TB2     | 26/09/2025  | Ramiro Alexander Guzmán Chávez | Redacción de 4.2: Architectural Drivers (propósito, funcionalidades primarias, escenarios de calidad, restricciones y preocupaciones arquitectónicas). |
+| TB2     | 26/09/2025  | Merly Salon Puerta             | Desarrollo de 4.3: ADD Iterations (backlog arquitectónico, drivers, conceptos de diseño, instanciación de elementos, vistas C4/UML y análisis con Kanban). |
+| TB2     | 27/09/2025  | Todos los integrantes          | Integración del Capítulo IV: Product Architecture Design, revisión grupal y ajustes finales para entrega de la TB2. |
+
 
 
 
