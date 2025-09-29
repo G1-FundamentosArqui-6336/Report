@@ -1631,7 +1631,7 @@ Después de completar la Iteración 1 del método ADD v3, se ha establecido una 
 
 Enlace del Tablero Kanban: https://trello.com/invite/b/68d9f5f5d50cbf348362a137/ATTI21acff966c1ec6ff3ab494eef5abc9a545059BA0/cobox-add-architecture-analysis
 
-
+![Kanban Board - ADD Iteration 1](/assets/KanbanBoard.png)
 
 -----
 
