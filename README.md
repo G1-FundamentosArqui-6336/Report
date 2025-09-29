@@ -1344,13 +1344,16 @@ Historial consultable y trazable: A través de Evidencia e Incidencia, se ofrece
 Los drivers arquitectónicos de CoBox surgen de la necesidad de garantizar que la plataforma de colaboración en la nube sea segura, escalable, confiable y fácil de usar para startups y equipos de trabajo distribuidos. Estos drivers guían las decisiones técnicas y de diseño, asegurando que la solución responda a los objetivos de negocio, las necesidades de los usuarios y las restricciones identificadas.
 
 Los principales drivers son:
-- **Alineación con los objetivos de negocio**: facilitar la colaboración segura en proyectos digitales, optimizando el flujo de trabajo en equipos distribuidos.
-- **Cumplimiento normativo y seguridad de datos**: garantizar protección de información sensible frente a accesos no autorizados y cumplimiento con normativas como GDPR.
-- **Escalabilidad y rendimiento**: soportar el crecimiento de usuarios, proyectos y datos sin comprometer la experiencia.
-- **Experiencia de usuario**: ofrecer una interfaz intuitiva y accesible para diferentes perfiles (administradores, colaboradores, clientes).
-- **Interoperabilidad**: integrar la plataforma con herramientas externas como GitHub, Slack y servicios de almacenamiento en la nube.
-- **Disponibilidad y confiabilidad**: asegurar que el sistema esté siempre disponible y pueda recuperarse rápidamente ante fallos.
-- **Restricciones de recursos**: considerar las limitaciones propias de una startup en etapa temprana en cuanto a tiempo, presupuesto y equipo técnico.
+- **Trazabilidad operativa en tiempo real**: garantizar visibilidad completa de ubicación, estado y progreso de unidades y entregas.
+- **Eficiencia operativa**: optimizar recursos de transporte, reducir costos de combustible y mejorar productividad de conductores.
+- **Seguridad de datos logísticos**: proteger información sensible de rutas, clientes, evidencias fotográficas y ubicaciones GPS.
+- **Escalabilidad de flota**: soportar el crecimiento de vehículos, conductores y volumen de entregas sin comprometer rendimiento.
+- **Disponibilidad operativa**: asegurar que el sistema funcione ininterrumpidamente, especialmente crítico para operaciones de campo.
+- **Usabilidad para conductores**: ofrecer interfaces simples y funcionales para usuarios con diferentes niveles de experiencia tecnológica.
+- **Auditabilidad y cumplimiento normativo**: mantener registros completos de todas las operaciones para satisfacer regulaciones del sector transporte.
+- **Interoperabilidad**: facilitar integración con sistemas ERP existentes y servicios externos (GPS, notificaciones, almacenamiento).
+- **Rendimiento bajo conectividad limitada**: garantizar funcionamiento offline en zonas rurales con sincronización posterior.
+- **Mantenibilidad del código**: facilitar actualizaciones, debugging y extensión de funcionalidades mediante patrones de diseño apropiados.
 
 ---
 
@@ -1375,49 +1378,74 @@ Las siguientes historias de usuario representan las funcionalidades **principale
 
 | User Story ID | Título                          | Descripción |
 |---------------|---------------------------------|-------------|
-| US01 | Registro y autenticación de usuarios | Como nuevo usuario, quiero registrarme e iniciar sesión de forma segura para acceder a mis proyectos en la plataforma. **Esta funcionalidad es esencial porque garantiza un acceso controlado y seguro, protege los datos sensibles y constituye la puerta de entrada al ecosistema de CoBox.** |
-| US02 | Creación de proyectos colaborativos | Como administrador, quiero crear proyectos y asignar miembros para facilitar la colaboración en tareas específicas. **Es una funcionalidad clave porque organiza el trabajo en unidades manejables, fomenta la colaboración estructurada y permite centralizar la gestión de proyectos en la nube.** |
-| US03 | Subida y sincronización de archivos | Como usuario, quiero subir archivos y sincronizarlos en la nube para compartirlos con mi equipo en tiempo real. **Es vital porque asegura que todos los miembros tengan acceso inmediato a la información más reciente, evitando duplicidad de versiones y mejorando la productividad.** |
-| US04 | Gestión de permisos y roles | Como administrador, quiero asignar roles y permisos (admin, colaborador, lector) para garantizar la seguridad de la información. **Esta historia asegura control de acceso granular, protegiendo los datos sensibles y evitando el uso indebido de información por usuarios no autorizados.** |
-| US05 | Notificaciones en tiempo real | Como usuario, quiero recibir notificaciones sobre cambios en los proyectos y archivos para estar siempre actualizado. **Es importante porque mejora la comunicación interna, reduce retrasos y permite que los equipos reaccionen rápidamente ante cambios críticos.** |
-| US06 | Integración con herramientas externas | Como administrador, quiero conectar mi proyecto con servicios como GitHub y Slack para centralizar la colaboración. **Esta funcionalidad potencia la interoperabilidad de la plataforma, evitando el trabajo aislado y permitiendo una integración fluida con el ecosistema de herramientas ya utilizadas por los equipos.** |
-| US07 | Acceso desde múltiples dispositivos | Como usuario, quiero acceder a mis proyectos desde distintos dispositivos (PC, tablet, móvil) para trabajar desde cualquier lugar. **Es esencial para la flexibilidad y portabilidad, permitiendo que los usuarios colaboren sin importar su ubicación o dispositivo, lo que resulta clave en equipos distribuidos.** |
+| US05 | Consultar entregas asignadas | Funcionalidad central que permite a conductores planificar su jornada y optimizar rutas diarias, siendo la base de la operación logística. |
+| US01 | Visualizar rutas asignadas | Esencial para gestores para supervisar y coordinar operaciones de flota en tiempo real, garantizando control operativo. |
+| US09 | Reportar incidente durante entrega | Crítica para trazabilidad y respuesta rápida ante problemas operativos que afecten entregas y la reputación del servicio. |
+| US13 | Programar mantenimiento preventivo | Fundamental para disponibilidad de la flota, evitando paradas no planificadas y optimizando vida útil de vehículos. |
+| TS01 | Autenticación API | Base de seguridad del sistema, protegiendo datos sensibles y cumpliendo con regulaciones de privacidad. |
+| TS05 | Endpoints de estadísticas | Soporte para análisis y toma de decisiones basada en datos, habilitando la eficiencia operativa.|
+| US17 | Ver reporte semanal de entregas | Fundamental para análisis de rendimiento y toma de decisiones basada en datos.|
+| US06 | Registrar entrega con evidencia | Vital para validación y prueba de cumplimiento de servicios ante clientes finales.|
 
 ---
 
 #### 4.1.10. Quality Attribute Scenarios
 
-### Escenario de Usabilidad (Gestión de Proyectos)
-- **Componente**: Módulo de Proyectos  
-- **Fuente**: Administrador creando un nuevo proyecto  
-- **Estímulo**: Configuración inicial del proyecto (nombre, equipo, permisos)  
-- **Entorno**: Sistema en operación normal  
-- **Artefacto**: Interfaz de usuario del módulo de proyectos  
-- **Respuesta**: Creación rápida y sencilla del proyecto, confirmación inmediata y acceso para los miembros asignados.  
+### Escenario de Trazabilidad (Seguimiento de Entregas)
+- **Componente**: Módulo de Delivery Management  
+- **Fuente**: Conductor registrando entrega completada  
+- **Estímulo**: Captura de evidencia fotográfica y confirmación de entrega  
+- **Entorno**: Operación en campo con conectividad móvil variable  
+- **Artefacto**: Sistema de registro de entregas con geolocalización  
+- **Respuesta**: Registro exitoso con timestamp, ubicación GPS y evidencia almacenada, notificación automática al gestor en menos de 30 segundos  
 
-### Escenario de Seguridad (Autenticación de Usuarios)
-- **Componente**: Módulo de Autenticación  
-- **Fuente**: Usuario intentando iniciar sesión  
-- **Estímulo**: Ingreso de credenciales (usuario y contraseña)  
-- **Entorno**: Conexión segura mediante HTTPS  
-- **Artefacto**: Sistema de login con 2FA opcional  
-- **Respuesta**: Validación segura de credenciales, acceso autorizado y registro en el log de auditoría.  
+### Escenario de Seguridad (Control de Acceso por Roles)
+- **Componente**: Módulo de Autenticación RBAC  
+- **Fuente**: Conductor intentando acceder a datos de otros conductores  
+- **Estímulo**: Solicitud de información fuera de su ámbito de permisos  
+- **Entorno**: Sistema en operación con múltiples usuarios concurrentes  
+- **Artefacto**: API Gateway con validación JWT y control de roles  
+- **Respuesta**: Acceso denegado con código 403, registro en audit log y alerta de seguridad  
 
-### Escenario de Rendimiento (Sincronización de Archivos)
-- **Componente**: Módulo de Archivos  
-- **Fuente**: Usuario subiendo un archivo de 50 MB  
-- **Estímulo**: Carga y sincronización en la nube  
-- **Entorno**: Sistema con 20+ usuarios activos simultáneamente  
-- **Artefacto**: Servicio de almacenamiento y sincronización  
-- **Respuesta**: Subida completada en menos de 5 segundos, disponibilidad inmediata para todos los miembros del proyecto.  
+### Escenario de Disponibilidad (Fallo de Microservicio)
+- **Componente**: Fleet Management Service  
+- **Fuente**: Fallo crítico del servicio de gestión de flota  
+- **Estímulo**: Caída completa del microservicio por sobrecarga  
+- **Entorno**: Operación en horario pico con 50 vehículos activos  
+- **Artefacto**: Load balancer e instancias redundantes  
+- **Respuesta**: Failover automático a instancia secundaria en menos de 2 minutos, sin pérdida de datos de ubicación  
 
-### Escenario de Escalabilidad (Expansión de Usuarios)
-- **Componente**: Sistema completo  
-- **Fuente**: Administrador añadiendo 100 nuevos usuarios  
-- **Estímulo**: Creación masiva de cuentas y proyectos asociados  
-- **Entorno**: Plataforma con 200+ usuarios existentes  
-- **Artefacto**: Servicios de gestión de usuarios, proyectos y archivos  
-- **Respuesta**: El sistema mantiene un rendimiento estable, asigna recursos dinámicamente y asegura la correcta sincronización de datos.  
+### Escenario de Rendimiento (Consulta de Reportes)
+- **Componente**: Analytics & Reporting Service  
+- **Fuente**: Gestor solicitando reporte semanal de 100 vehículos  
+- **Estímulo**: Generación de dashboard con 10,000 registros de entregas  
+- **Entorno**: Sistema bajo carga normal con 20 usuarios concurrentes  
+- **Artefacto**: Base de datos optimizada con índices y cache Redis  
+- **Respuesta**: Dashboard generado y renderizado en menos de 5 segundos con datos actualizados  
+
+### Escenario de Escalabilidad (Crecimiento de Flota)
+- **Componente**: Sistema completo de microservicios  
+- **Fuente**: Incorporación de 50 nuevos vehículos en un mes  
+- **Estímulo**: Aumento del 100% en volumen de transacciones y usuarios  
+- **Entorno**: Infraestructura cloud con auto-scaling habilitado  
+- **Artefacto**: Contenedores Kubernetes con métricas de CPU y memoria  
+- **Respuesta**: Escalado automático de recursos manteniendo tiempo de respuesta < 3 segundos  
+
+### Escenario de Usabilidad (Conductor Novato)
+- **Componente**: Aplicación móvil para conductores  
+- **Fuente**: Conductor con experiencia tecnológica básica  
+- **Estímulo**: Registro de primera entrega del día  
+- **Entorno**: En ruta, con presión de tiempo y distracciones del tráfico  
+- **Artefacto**: Interfaz móvil simplificada con botones grandes  
+- **Respuesta**: Conductor completa registro exitosamente en menos de 2 minutos sin asistencia  
+
+### Escenario de Interoperabilidad (Integración ERP)
+- **Componente**: API Gateway y conectores externos  
+- **Fuente**: Sistema ERP de cliente solicitando datos de entregas  
+- **Estímulo**: Sincronización diaria de 500 registros de entregas  
+- **Entorno**: Integración B2B con sistema legacy del cliente  
+- **Artefacto**: REST API con formato JSON estandarizado  
+- **Respuesta**: Datos transferidos exitosamente con 99.9% de integridad y trazabilidad completa  
 
 ---
 
@@ -1425,15 +1453,18 @@ Las siguientes historias de usuario representan las funcionalidades **principale
 
 Las restricciones representan los límites y condiciones bajo los cuales el sistema debe ser diseñado, desarrollado y operado. Estas limitaciones provienen de factores externos como normativas legales, recursos disponibles y dependencias tecnológicas, así como de factores internos relacionados con el equipo de desarrollo y los usuarios. Identificarlas permite establecer un marco realista para la implementación y gestión del proyecto, asegurando que las decisiones técnicas y estratégicas se adapten a las capacidades y al entorno en el que la solución será desplegada.
 
-| ID | Constraint |
-|----|------------|
-| C-1 | Cumplimiento con normativas de protección de datos (GDPR, ISO). |
-| C-2 | Limitaciones técnicas y financieras propias de una startup en etapa inicial. |
-| C-3 | Dependencia de integraciones con servicios externos (GitHub, Slack, almacenamiento en la nube). |
-| C-4 | Restricciones de tiempo debido al calendario académico y cronograma universitario. |
-| C-5 | Resistencia al cambio de usuarios acostumbrados a herramientas como Google Drive o Trello. |
-| C-6 | Escalabilidad inicial limitada para implementar IA o funcionalidades avanzadas. |
-| C-7 | Acceso simultáneo desde múltiples dispositivos restringido en etapas tempranas de desarrollo y pruebas. |
+| ID  | Constraint |
+|-----|------------|
+| C-1 | Funcionamiento offline requerido para operaciones en zonas rurales con conectividad limitada. |
+| C-2 | Limitaciones presupuestarias de PyMEs del sector transporte para inversión tecnológica inicial. |
+| C-3 | Dependencia de servicios GPS externos (Google Maps, Mapbox) para geolocalización precisa. |
+| C-4 | Variabilidad en niveles de alfabetización digital entre conductores de diferentes generaciones. |
+| C-5 | Regulaciones del sector transporte que requieren trazabilidad documental de entregas. |
+| C-6 | Necesidad de integración con sistemas ERP existentes en empresas establecidas. |
+| C-7 | Restricciones de dispositivos móviles con capacidades limitadas de hardware y batería. |
+| C-8 | Normativas de protección de datos (Ley de Protección de Datos Personales del Perú) que limitan el almacenamiento y procesamiento de información de ubicación. |
+| C-9 | Limitaciones de infraestructura de telecomunicaciones en rutas rurales que afectan la calidad y velocidad de transmisión de datos. |
+| C-10 | Restricciones de tiempo de implementación debido a la necesidad de mantener operaciones continuas sin interrumpir el servicio de transporte activo. |
 
 ---
 
@@ -1648,11 +1679,19 @@ Enlace del Tablero Kanban: https://trello.com/invite/b/68d9f5f5d50cbf348362a137/
 
 **Conclusiones**
 
-La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de CoWare responda a problemas concretos del sector.
+1. La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de CoWare responda a problemas concretos del sector.
 
-El uso de herramientas de investigación como entrevistas, User Personas, Empathy Maps y Scenario Mapping facilitó la detección de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga, aportando una base sólida para el diseño de la plataforma.
+2. El uso de herramientas de investigación como entrevistas, User Personas, Empathy Maps y Scenario Mapping facilitó la detección de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga, aportando una base sólida para el diseño de la plataforma.
 
-La estructuración del Product Backlog proporcionó un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos, lo que refuerza la viabilidad de la solución tecnológica propuesta.
+3. La estructuración del Product Backlog proporcionó un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos, lo que refuerza la viabilidad de la solución tecnológica propuesta.
+
+4. La implementación del método ADD v3 (Attribute-Driven Design) ha permitido establecer una arquitectura robusta y escalable que responde directamente a los drivers arquitectónicos identificados. La separación en bounded contexts mediante Domain-Driven Design asegura que cada dominio de negocio (Fleet Management, Delivery Management, Incident Management, Maintenance Management y Analytics & Reporting) mantenga responsabilidades claras y específicas.
+
+5. La arquitectura de microservicios adoptada proporciona la flexibilidad necesaria para el crecimiento independiente de cada módulo, permitiendo deployments específicos y tecnologías optimizadas según las necesidades del dominio. La implementación de un API Gateway centralizado garantiza seguridad, control de acceso y trazabilidad en todas las operaciones.
+
+6. El análisis de la Iteración 1 del ADD evidenció el cumplimiento exitoso de los tres drivers críticos establecidos: Trazabilidad en Tiempo Real mediante geolocalización GPS y WebSockets, Eficiencia Operativa a través de dashboards analíticos y reportes automatizados, y Seguridad de Datos mediante autenticación JWT y control de acceso basado en roles (RBAC).
+
+7. La aplicación de patrones arquitectónicos específicos como Factory, Observer, Command, Strategy y Facade, junto con las tácticas de calidad implementadas, aseguran que el sistema sea mantenible, escalable y resiliente ante fallos, cumpliendo con los estándares de la industria para aplicaciones críticas de transporte.
 
 **Recomendaciones**
 
@@ -1661,6 +1700,11 @@ La estructuración del Product Backlog proporcionó un camino claro de desarroll
 3. Priorizar en las primeras fases los módulos de **geolocalización en tiempo real**, **registro de incidencias** y **reportes automáticos**, al ser los de mayor impacto en la eficiencia operativa.  
 4. Implementar estrategias de capacitación para los usuarios finales, a fin de garantizar una adopción fluida de la herramienta.  
 5. Mantener un proceso de documentación y mejora continua que permita escalar la solución a nuevos mercados y escenarios logísticos.
+6. Desarrollar un plan de capacitación técnica específico para el equipo de desarrollo en tecnologías clave como Spring Cloud Gateway, PostgreSQL + PostGIS, RabbitMQ y Kafka, identificadas como críticas en las decisiones de diseño registradas.
+7. Implementar estrategias de testing automatizado que incluyan pruebas de integración entre microservicios, pruebas de carga para el sistema de tracking en tiempo real, y pruebas de seguridad para validar el control de acceso RBAC.
+8. Establecer métricas de calidad arquitectónica para evaluar continuamente aspectos como acoplamiento entre servicios, cohesión interna de bounded contexts, tiempo de respuesta de APIs y efectividad de las tácticas de disponibilidad implementadas.
+9. Planificar una estrategia de migración gradual que permita escalar la solución de un ambiente de desarrollo local hacia una infraestructura cloud nativa, considerando las restricciones de recursos identificadas y las necesidades de escalabilidad horizontal.
+10. Mantener un proceso de documentación arquitectónica evolutiva que registre nuevas decisiones de diseño, patrones implementados y lecciones aprendidas, facilitando la transferencia de conocimiento y la continuidad del proyecto a largo plazo.
 
 ### Referencias Bibliográficas
 
