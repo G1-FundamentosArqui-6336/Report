@@ -1239,6 +1239,7 @@ El sistema también se integra con servicios externos críticos como proveedores
 </p>
 
 #### 4.1.4. Approach driven ViewPoints Diagrams
+
 - Diagrama de contenedores:
 
   <img src="./assets/diagrama de contenedores coware.svg" alt="C4 diagrama de contenedores coware">
@@ -1281,9 +1282,11 @@ El sistema también se integra con servicios externos críticos como proveedores
   
 
 #### 4.1.5. Relational/Non Relational Database Diagram
+
  <img src="./assets/diagrama3.png" alt="Diagrama de clases">
 
 #### 4.1.6. Design Patterns
+
 El Factory Pattern se utiliza para centralizar la creación de objetos, permitiendo instanciar diferentes tipos de usuarios como Conductor, Técnico o Gestor sin exponer la lógica de construcción. Esto hace que el sistema sea más limpio y fácil de mantener cuando se agregan nuevos tipos de usuarios.
 
 El Strategy Pattern permite definir distintas estrategias de mantenimiento, como el preventivo o el correctivo, y cambiar entre ellas dinámicamente según las necesidades del sistema. De esta manera, los algoritmos se mantienen flexibles y reutilizables sin alterar la estructura principal.
@@ -1303,6 +1306,7 @@ El Template Method Pattern define la estructura para la generación de reportes,
 El State Pattern maneja los distintos estados de un vehículo, como Disponible, En Ruta o En Mantenimiento, haciendo que el comportamiento del objeto cambie automáticamente según el estado actual en el que se encuentre.
 
 Finalmente, todos estos patrones aportan beneficios como flexibilidad al extender el sistema, mantenibilidad gracias a un código organizado y desacoplado, reusabilidad de componentes y escalabilidad, preparando la arquitectura para el crecimiento futuro.
+
 #### 4.1.7. Tactics
 
 **Optimización de Código y Arquitectura**
@@ -1457,7 +1461,9 @@ Las preocupaciones arquitectónicas representan los riesgos, incertidumbres y de
 ##### 4.2.1.1 Architectural Design Backlog 1
 
 Ciertos elementos clave de la arquitectura serán esenciales para asegurar la escalabilidad, confiabilidad y adopción de la plataforma Co-box Logistic
+
 #### Seguridad
+
 | Historia de Usuario | Tareas | Criterios de Aceptación |
 |----------------------|--------|--------------------------|
 | **US-01 (Consultar rutas asignadas):** Como gestor, quiero conocer las rutas asignadas a cada unidad para supervisar su cumplimiento. | - Implementar autenticación JWT en la API.<br>- Configurar autorización basada en roles (gestor, conductor, visitante).<br>- Validar tokens expirados y manejo de errores 401/403.<br>- Notificación inmediata al gestor cuando se registre un incidente. | - Acceso solo con credenciales válidas.<br>- Los conductores solo pueden reportar incidencias propias.<br>- El sistema bloquea accesos no autorizados y registra intentos fallidos. |
@@ -1466,6 +1472,7 @@ Ciertos elementos clave de la arquitectura serán esenciales para asegurar la es
 ---
 
 #### Alta Disponibilidad
+
 | Historia de Usuario | Tareas | Criterios de Aceptación |
 |----------------------|--------|--------------------------|
 | **US-19 (Comparar desempeño entre conductores):** Como gestor, quiero comparar conductores para fomentar mejores prácticas. | - Configurar balanceador de carga en Azure.<br>- Implementar redundancia en servicios de WebSockets y mensajería en tiempo real.<br>- Backups diarios de base de datos en Blob Storage. | - El sistema se recupera en menos de 10 min en caso de caída.<br>- 100 usuarios concurrentes reciben alertas sin interrupciones.<br>- Reportes semanales disponibles incluso en escenarios de falla parcial. |
@@ -1571,8 +1578,66 @@ En esta sección se describe el proceso de **instanciación de elementos arquite
 
 ##### 4.2.1.6. Sketch Views (C4 & UML) and Record Design Decisions
 
+**Sketch Views**
+
+- ***Diagrama C4 - Container Level***
+
+![Diagrama C4 - Container Level](/assets/CoBoxContainers.png)
+
+- ***Diagrama UML - Modelo de Dominio***
+
+![Diagrama UML - Modelo de Dominio - Parte 1](/assets/ADDCoBoxUML.png)
+
+![Diagrama UML - Modelo de Dominio - Parte 2](/assets/ADDCoBoxUML2.png)
+
+**Decisiones de Diseño Registradas**
+
+| ID     | Título                                      | Estado   | Contexto                                                                 | Decisión                                                                                      | Consecuencias |
+|--------|---------------------------------------------|----------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|---------------|
+| DD-001 | Arquitectura de Microservicios              | Aceptada | Necesidad de escalabilidad independiente por bounded context según DDD. | Implementar cada bounded context (7 contextos identificados) como microservicio independiente. | - Escalabilidad granular por dominio <br> - Deployments independientes <br> - Tecnologías específicas por servicio <br> - Complejidad de comunicación entre servicios <br> - Overhead de infraestructura |
+| DD-002 | API Gateway como Punto de Entrada           | Aceptada | Múltiples clientes (web, móvil) y necesidad de seguridad centralizada. | Utilizar Spring Cloud Gateway con autenticación JWT integrada. | - Punto único de control de seguridad <br> - Rate limiting centralizado <br> - Routing inteligente <br> - Punto único de falla potencial <br> - Latencia adicional |
+| DD-003 | Comunicación Asíncrona con Message Brokers  | Aceptada | Eventos del dominio requieren procesamiento desacoplado para alertas críticas. | Implementar RabbitMQ para comandos síncronos y Kafka para eventos de dominio. | - Mejor resiliencia del sistema <br> - Procesamiento asíncrono de alertas <br> - Escalabilidad de procesamiento <br> - Complejidad de gestión de mensajería <br> - Eventual consistency |
+| DD-004 | PostgreSQL + PostGIS para Datos Geoespaciales | Aceptada | Multiple contexts requieren consultas espaciales: tracking, fleet, deliveries, incidents. | Utilizar PostgreSQL con PostGIS en servicios que manejan ubicación geográfica. | - Consultas geoespaciales optimizadas <br> - Consistencia entre servicios <br> - Ecosistema maduro <br> - Duplicación de datos geoespaciales entre servicios |
+| DD-005 | Redis para Caching Distribuido              | Aceptada | Necesidad de cache para tracking en tiempo real y dashboards de rendimiento. | Implementar Redis como cache distribuido compartido entre microservicios. | - Mejora en tiempo de respuesta para dashboards <br> - Reducción de carga en tracking queries <br> - Sesiones distribuidas <br> - Complejidad de invalidación <br> - Punto de falla compartido |
+| DD-006 | Sistema de Seguridad RBAC               | Aceptada | Driver crítico de "Seguridad de Datos y Operaciones" del ADD. | Implementar Spring Security con JWT + roles diferenciados (gestor, conductor, visitante). | - Control granular de acceso <br> - Auditabilidad completa <br> - Cumplimiento normativo <br> - Complejidad de gestión de roles <br> - Overhead en cada request |
+| DD-007 | Real-time Location Tracking             | Aceptada | Driver clave "Trazabilidad en Tiempo Real" requiere seguimiento continuo. | WebSockets + integración con Mapbox/Google Maps para streaming de ubicaciones. | - Visibilidad operativa en tiempo real <br> - Alertas inmediatas de desviaciones <br> - Alto consumo de ancho de banda <br> - Complejidad de manejo de desconexiones |
+| DD-008 | Analytics Stack para Dashboards         | Aceptada | Driver "Eficiencia Operativa" requiere métricas y KPIs en tiempo real. | Implementar stack analytics con Spring Boot + Chart.js para dashboards interactivos. | - Insights operativos inmediatos <br> - Comparativas de rendimiento <br> - Toma de decisiones basada en datos <br> - Complejidad de agregación de datos <br> - Carga computacional adicional |
+| DD-009 | File Storage para Evidencias            | Aceptada | Evidencias fotográficas y firmas digitales requieren almacenamiento seguro. | Utilizar AWS S3/Azure Blob Storage con cifrado para evidencias. | - Escalabilidad de almacenamiento <br> - Cifrado de evidencias críticas <br> - Integración con CDN <br> - Costos por almacenamiento <br> - Dependencia de proveedor cloud |
+
+---
+
+> Este diagrama de contenedores muestra la arquitectura completa de **CoBox** a nivel de contenedores, incluyendo todas las aplicaciones, servicios, bases de datos y sus interacciones, proporcionando una vista técnica clara para el desarrollo e implementación del sistema.
+
 
 ##### 4.2.1.7. Analysis of Current Design and Review Iteration Goal (Kanban Board)
+
+**Análisis del Diseño Actual**
+
+Después de completar la Iteración 1 del método ADD v3, se ha establecido una arquitectura base para CoBox que aborda los drivers arquitectónicos principales identificados. El análisis revela los siguientes aspectos críticos:
+
+- **Fortalezas del Diseño Actual**
+
+    - Arquitectura de microservicios alineada con DDD: Los 7 bounded contexts identificados (Security & Access Control, Fleet Management, Real-time Tracking, Delivery Management, Incident Management, Maintenance Management, Analytics & Reporting) tienen responsabilidades claras y separadas, facilitando el desarrollo independiente y la escalabilidad granular.
+
+    - Seguridad robusta implementada: La combinación de JWT + RBAC + API Gateway proporciona un control de acceso granular que satisface el driver crítico de "Seguridad de Datos y Operaciones", con auditabilidad completa mediante AuditLog.
+
+    - Trazabilidad en tiempo real lograda: La integración de WebSockets + PostgreSQL/PostGIS + servicios de mapas externos permite el seguimiento continuo de vehículos y alertas automáticas, cumpliendo el driver de "Trazabilidad en Tiempo Real".
+
+    - Base sólida para eficiencia operativa: Los contextos de Analytics & Reporting proporcionan la infraestructura necesaria para dashboards interactivos y métricas de rendimiento que apoyan la toma de decisiones basada en datos.
+
+- **Áreas de Mejora Identificadas**
+
+    - Complejidad de gestión de consistencia: La distribución de datos geoespaciales entre múltiples servicios (Fleet, Tracking, Delivery, Incident) puede generar inconsistencias temporales que requieren estrategias de sincronización más robustas.
+
+    - Overhead de infraestructura: La arquitectura requiere gestión de 13 contenedores principales (5 microservicios + 5 bases de datos + cache + message broker + file storage + API Gateway), lo que incrementa la complejidad operativa.
+
+    - Escalabilidad del tracking en tiempo real: El streaming continuo de ubicaciones vía WebSockets puede generar cuellos de botella bajo alta concurrencia de vehículos activos simultáneamente.
+
+**Review Iteration Goal**
+
+Enlace del Tablero Kanban: https://trello.com/invite/b/68d9f5f5d50cbf348362a137/ATTI21acff966c1ec6ff3ab494eef5abc9a545059BA0/cobox-add-architecture-analysis
+
+![Kanban Board - ADD Iteration 1](/assets/KanbanBoard.png)
 
 -----
 
