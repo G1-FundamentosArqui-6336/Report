@@ -12,7 +12,7 @@
 ### NRC: 6336  
 ### Profesor: Jorge Luis Delgado Vite
 
-## Informe del TB1 
+## Informe del TB2
 **"CoWare"**  
 **Producto: "CoBox"**
 
@@ -30,21 +30,29 @@
 
 ## Registro de Versiones del Informe
 
-| Versión | Fecha       | Autor                                      | Descripción                                                                 |
-|---------|-------------|--------------------------------------------|-----------------------------------------------------------------------------|
-| TB1     | 09/09/2025  | Ramiro Alexander Guzmán Chávez             | Desarrollo de la carátula, tabla de contenidos y estructura general del informe. |
-| TB1     | 09/09/2025  | David Alexander Pérez García               | Redacción de la sección "Descripción de la Startup" y Lean UX Assumptions/Hypothesis. |
-| TB1     | 09/09/2025  | Joaquín Pedraza Maldonado                  | Elaboración de perfiles de integrantes y Segmentos Objetivo.                |
-| TB1     | 10/09/2025  | Merly Salon Puerta                         | Desarrollo de antecedentes, problemática y User Task Matrix.               |
-| TB1     | 10/09/2025  | Jhon Alexander Galvez Chambi              | Lean UX Problem Statement y Empathy Maps.                                   |
-| TB1     | 10/09/2025  | Ramiro Alexander Guzmán Chávez             | Diseño del Lean UX Canvas y análisis de entrevistas.                        |
-| TB1     | 11/09/2025  | Merly Salon Puerta                         | Análisis de competidores y apoyo en entrevistas.                            |
-| TB1     | 11/09/2025  | Joaquín Pedraza Maldonado                  | Desarrollo de User Personas y User Stories.                                 |
-| TB1     | 11/09/2025  | David Alexander Pérez García               | Registro y vaciado de entrevistas; elaboración de To-Be Scenario Mapping.  |
-| TB1     | 11/09/2025  | Jhon Alexander Galvez Chambi              | Diseño del formato de entrevistas y desarrollo del Product Backlog.         |
-| TB1     | 12/09/2025  | Ramiro Alexander Guzmán Chávez             | As-is Scenario Mapping, conclusiones y recomendaciones.                     |
-| TB1     | 12/09/2025  | Merly Salon Puerta                         | Impact Map y apoyo en revisión general.                                     |
-| TB1     | 12/09/2025  | Todos los integrantes                      | Revisión final, formato del documento, referencias y anexos.                |
+| Versión | Fecha       | Autor                          | Descripción                                                                 |
+|---------|-------------|--------------------------------|-----------------------------------------------------------------------------|
+| TB1     | 09/09/2025  | Ramiro Alexander Guzmán Chávez | Desarrollo de la carátula, tabla de contenidos y estructura general del informe. |
+| TB1     | 09/09/2025  | David Alexander Pérez García   | Redacción de la sección "Descripción de la Startup" y Lean UX Assumptions/Hypothesis. |
+| TB1     | 09/09/2025  | Joaquín Pedraza Maldonado      | Elaboración de perfiles de integrantes y Segmentos Objetivo.                |
+| TB1     | 10/09/2025  | Merly Salon Puerta             | Desarrollo de antecedentes, problemática y User Task Matrix.                |
+| TB1     | 10/09/2025  | Jhon Alexander Galvez Chambi   | Lean UX Problem Statement y Empathy Maps.                                   |
+| TB1     | 10/09/2025  | Ramiro Alexander Guzmán Chávez | Diseño del Lean UX Canvas y análisis de entrevistas.                        |
+| TB1     | 11/09/2025  | Merly Salon Puerta             | Análisis de competidores y apoyo en entrevistas.                            |
+| TB1     | 11/09/2025  | Joaquín Pedraza Maldonado      | Desarrollo de User Personas y User Stories.                                 |
+| TB1     | 11/09/2025  | David Alexander Pérez García   | Registro y vaciado de entrevistas; elaboración de To-Be Scenario Mapping.   |
+| TB1     | 11/09/2025  | Jhon Alexander Galvez Chambi   | Diseño del formato de entrevistas y desarrollo del Product Backlog.         |
+| TB1     | 12/09/2025  | Ramiro Alexander Guzmán Chávez | As-is Scenario Mapping, conclusiones y recomendaciones.                     |
+| TB1     | 12/09/2025  | Merly Salon Puerta             | Impact Map y apoyo en revisión general.                                     |
+| TB1     | 12/09/2025  | Todos los integrantes          | Revisión final, formato del documento, referencias y anexos.                |
+| TB2     | 26/09/2025  | Jhon Alexander Galvez Chambi   | Desarrollo de 4.1: Design Concepts, ViewPoints & ER Diagrams (principios, enfoques, estilos, patrones y diagrama de contexto). |
+| TB2     | 26/09/2025  | David Alexander Pérez García   | Elaboración de 4.1.4: Approach Driven ViewPoints Diagrams.                  |
+| TB2     | 26/09/2025  | Joaquín Pedraza Maldonado      | Desarrollo de 4.1.5-4.1.7: Diagramas de bases de datos relacionales/no relacionales, patrones de diseño y tácticas arquitectónicas. |
+| TB2     | 26/09/2025  | Ramiro Alexander Guzmán Chávez | Redacción de 4.2: Architectural Drivers (propósito, funcionalidades primarias, escenarios de calidad, restricciones y preocupaciones arquitectónicas). |
+| TB2     | 26/09/2025  | Merly Salon Puerta             | Desarrollo de 4.3: ADD Iterations (backlog arquitectónico, drivers, conceptos de diseño, instanciación de elementos, vistas C4/UML y análisis con Kanban). |
+| TB2     | 27/09/2025  | Todos los integrantes          | Integración del Capítulo IV: Product Architecture Design, revisión grupal y ajustes finales para entrega de la TB2. |
+
+
 
 
 ## Contenido
@@ -92,10 +100,37 @@
   - [3.3. Impact Map](#33-impact-map)
   - [3.4. Product Backlog](#34-product-backlog)
 
+- [Capítulo IV: Product Architecture Design](#capítulo-iv-product-architecture-design)
+  - [4.1. Design Concepts, ViewPoints & ER Diagrams](#41-design-concepts-viewpoints--er-diagrams)
+    - [4.1.1. Principles Statements](#411-principles-statements)
+    - [4.1.2. Approaches Statements, Architectural Styles & Patterns](#412-approaches-statements-architectural-styles--patterns)
+    - [4.1.3. Context Diagram](#413-context-diagram)
+    - [4.1.4. Approach driven ViewPoints Diagrams](#414-approach-driven-viewpoints-diagrams)
+    - [4.1.5. Relational/Non Relational Database Diagram](#415-relationalnon-relational-database-diagram)
+    - [4.1.6. Design Patterns](#416-design-patterns)
+    - [4.1.7. Tactics](#417-tactics)
+  - [4.2. Architectural Drivers](#42-architectural-drivers)
+    - [4.1.8. Design Purpose](#418-design-purpose)
+    - [4.1.9. Primary Functionality (Primary User Stories)](#419-primary-functionality-primary-user-stories)
+    - [4.1.10. Quality Attribute Scenarios](#410-quality-attribute-scenarios)
+    - [4.1.11. Constraints](#411-constraints)
+    - [4.1.12. Architectural Concerns](#412-architectural-concerns)
+  - [4.3. ADD Iterations](#43-add-iterations)
+    - [4.2.1. Iteration 1:](#421-iteration-1)
+      - [4.2.1.1. Architectural Design Backlog 1](#4211-architectural-design-backlog-1)
+      - [4.2.1.2. Establish Iteration Goal by Selecting Drivers](#4212-establish-iteration-goal-by-selecting-drivers)
+      - [4.2.1.3. Choose One or More Elements of the System to Refine](#4213-choose-one-or-more-elements-of-the-system-to-refine)
+      - [4.2.1.4. Choose One or More Design Concepts That Satisfy the Selected Drivers](#4214-choose-one-or-more-design-concepts-that-satisfy-the-selected-drivers)
+      - [4.2.1.5. Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces](#4215-instantiate-architectural-elements-allocate-responsibilities-and-define-interfaces)
+      - [4.2.1.6. Sketch Views (C4 & UML) and Record Design Decisions](#4216-sketch-views-c4--uml-and-record-design-decisions)
+      - [4.2.1.7. Analysis of Current Design and Review Iteration Goal (Kanban Board)](#4217-analysis-of-current-design-and-review-iteration-goal-kanban-board)
+
 - [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
 - [Referencias Bibliográficas](#referencias-bibliográficas)
 - [Anexos ](#anexos)
 
+
+## Student Outcome  
 
 ## Student Outcome  
 
@@ -109,10 +144,11 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |----------------------|---------------------|--------------|
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Me encargué de investigar y analizar los requerimientos del sistema, lo cual me permitió profundizar en el diseño de arquitecturas escalables, aplicar buenas prácticas de desarrollo y conocer mejor el uso de bases de datos geoespaciales para funcionalidades críticas como geolocalización, evidencias y reportes.<br><br>**TB1:**<br>**Ramiro Alexander Guzmán Chávez:** Investigué metodologías ágiles, centrándome en Scrum, para aplicarlas en la planificación del proyecto. Esto me permitió mejorar la organización del equipo y entender cómo adaptar estos marcos de trabajo a equipos pequeños y tareas técnicas dentro de un entorno real de desarrollo.<br><br>**TB1:**<br>**Joaquín Pedraza Maldonado:** Aprendí a utilizar Figma para la creación de prototipos de alta fidelidad y estudié principios de diseño centrado en el usuario. Esto me permitió estructurar interfaces intuitivas y validar decisiones de diseño con base en criterios funcionales y estéticos dentro del proyecto.<br><br>**TB1:**<br>**Merly Salon Puerta:** Profundicé en técnicas de análisis cualitativo y *needfinding* para comprender mejor las necesidades del usuario. Apliqué herramientas como mapas de empatía y user personas, lo cual facilitó la identificación de funcionalidades relevantes para el sistema desde una perspectiva centrada en el usuario.<br><br>**TB1:**<br>**Jhon Alexander Galvez Chambi:** Investigué el funcionamiento de APIs de geolocalización y su integración con sistemas backend. Estudié también estructuras de datos espaciales, lo cual me permitió implementar el seguimiento en tiempo real dentro del sistema y comprender mejor el procesamiento de información geográfica. | **TB1:**<br>Durante esta fase, el equipo demostró su capacidad para adquirir nuevos conocimientos y aplicarlos en el desarrollo del proyecto. La búsqueda activa de información, el dominio de herramientas técnicas y el enfoque práctico evidencian que cada integrante fortaleció sus competencias, aportando valor al sistema propuesto mediante un aprendizaje técnico autónomo y efectivo. |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Reconocí la importancia del aprendizaje continuo y actualicé mis conocimientos en React, Next.js y Spring Boot. También aprendí a usar PostGIS para manejar datos geoespaciales y estudié mejores prácticas para el tratamiento de información sensible y evidencias digitales en plataformas web.<br><br>**TB1:**<br>**Ramiro Alexander Guzmán Chávez:** Acepté la necesidad de seguir aprendiendo para responder a las exigencias del proyecto, por lo que estudié liderazgo técnico, gestión de tiempos y coordinación en equipos ágiles, apoyándome en libros, artículos y recursos académicos relacionados a metodologías de desarrollo de software.<br><br>**TB1:**<br>**Joaquín Pedraza Maldonado:** Consideré fundamental actualizar mis habilidades en diseño UX/UI, por lo que revisé guías, buenas prácticas y recursos actualizados sobre accesibilidad, diseño responsivo y comportamiento del usuario. Esto me permitió diseñar una experiencia visual adecuada y adaptada a las necesidades reales del proyecto.<br><br>**TB1:**<br>**Merly Salon Puerta:** Comprendí que el aprendizaje permanente es clave para obtener información útil del usuario, por lo que me capacité en métodos de recolección de datos cualitativos, análisis de entrevistas y síntesis de hallazgos para mejorar la relevancia y funcionalidad del sistema propuesto.<br><br>**TB1:**<br>**Jhon Alexander Galvez Chambi:** Reafirmé la necesidad del aprendizaje continuo para dominar tecnologías nuevas, por eso profundicé en el uso de servicios de geolocalización, estructuras REST y autenticación segura, aplicando ese conocimiento para integrar funcionalidades críticas del sistema. | **TB1:**<br>Los integrantes del equipo demostramos ser conscientes de la necesidad del aprendizaje continuo en un entorno tecnológico cambiante. Al buscar activamente nuevos conocimientos, adaptarnos a herramientas y enfrentar retos técnicos, desarrollamos una actitud profesional orientada a la mejora constante y al crecimiento personal dentro del ámbito del desarrollo de software. |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Me encargué de investigar y analizar los requerimientos del sistema, lo cual me permitió profundizar en el diseño de arquitecturas escalables, aplicar buenas prácticas de desarrollo y conocer mejor el uso de bases de datos geoespaciales para funcionalidades críticas como geolocalización, evidencias y reportes.<br><br>**Ramiro Alexander Guzmán Chávez:** Investigué metodologías ágiles, centrándome en Scrum, para aplicarlas en la planificación del proyecto. Esto me permitió mejorar la organización del equipo y entender cómo adaptar estos marcos de trabajo a equipos pequeños y tareas técnicas dentro de un entorno real de desarrollo.<br><br>**Joaquín Pedraza Maldonado:** Aprendí a utilizar Figma para la creación de prototipos de alta fidelidad y estudié principios de diseño centrado en el usuario. Esto me permitió estructurar interfaces intuitivas y validar decisiones de diseño con base en criterios funcionales y estéticos dentro del proyecto.<br><br>**Merly Salon Puerta:** Profundicé en técnicas de análisis cualitativo y *needfinding* para comprender mejor las necesidades del usuario. Apliqué herramientas como mapas de empatía y user personas, lo cual facilitó la identificación de funcionalidades relevantes para el sistema desde una perspectiva centrada en el usuario.<br><br>**Jhon Alexander Galvez Chambi:** Investigué el funcionamiento de APIs de geolocalización y su integración con sistemas backend. Estudié también estructuras de datos espaciales, lo cual me permitió implementar el seguimiento en tiempo real dentro del sistema y comprender mejor el procesamiento de información geográfica.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Desarrollé conceptos de diseño arquitectónico, diagramas de contexto y enfoques basados en estilos y patrones arquitectónicos. Esto me permitió comprender cómo modelar la estructura del sistema y alinear los diagramas con las necesidades del proyecto.<br><br>**David Alexander Pérez García:** Elaboré el enfoque *Approach driven ViewPoints Diagrams*, lo que me ayudó a profundizar en cómo representar diferentes perspectivas de arquitectura para distintos interesados, fortaleciendo el entendimiento de vistas arquitectónicas escalables.<br><br>**Joaquín Pedraza Maldonado:** Diseñé diagramas de bases de datos relacionales y no relacionales, además de aplicar patrones de diseño y tácticas arquitectónicas. Esto me permitió ampliar mis conocimientos en optimización de datos, escalabilidad y en cómo estructurar soluciones flexibles y mantenibles.<br><br>**Ramiro Alexander Guzmán Chávez:** Desarrollé los *Architectural Drivers*, definiendo propósito, funcionalidades primarias, escenarios de atributos de calidad, restricciones y preocupaciones arquitectónicas. Esto me permitió profundizar en cómo los drivers influyen en las decisiones arquitectónicas y en la evaluación de trade-offs.<br><br>**Merly Salon Puerta:** Dirigí las iteraciones ADD, desarrollando el backlog arquitectónico, metas de iteración, refinamiento de elementos del sistema y vistas C4/UML. Además, analicé el diseño actual y revisé los objetivos mediante tablero Kanban. Este proceso me permitió adquirir experiencia práctica en cómo evolucionar un diseño arquitectónico en iteraciones controladas. | **TB1:**<br>Durante esta fase, el equipo demostró su capacidad para adquirir nuevos conocimientos y aplicarlos en el desarrollo del proyecto. La búsqueda activa de información, el dominio de herramientas técnicas y el enfoque práctico evidencian que cada integrante fortaleció sus competencias, aportando valor al sistema propuesto mediante un aprendizaje técnico autónomo y efectivo.<br><br>**TB2:**<br>El equipo demostró capacidad de adquirir nuevos conocimientos aplicados directamente en el diseño arquitectónico del sistema. Cada integrante profundizó en técnicas y herramientas específicas, desde vistas arquitectónicas hasta tácticas de calidad y drivers, consolidando un aprendizaje autónomo y colaborativo orientado a la creación de una arquitectura sólida y escalable. |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Reconocí la importancia del aprendizaje continuo y actualicé mis conocimientos en React, Next.js y Spring Boot. También aprendí a usar PostGIS para manejar datos geoespaciales y estudié mejores prácticas para el tratamiento de información sensible y evidencias digitales en plataformas web.<br><br>**Ramiro Alexander Guzmán Chávez:** Acepté la necesidad de seguir aprendiendo para responder a las exigencias del proyecto, por lo que estudié liderazgo técnico, gestión de tiempos y coordinación en equipos ágiles, apoyándome en libros, artículos y recursos académicos relacionados a metodologías de desarrollo de software.<br><br>**Joaquín Pedraza Maldonado:** Consideré fundamental actualizar mis habilidades en diseño UX/UI, por lo que revisé guías, buenas prácticas y recursos actualizados sobre accesibilidad, diseño responsivo y comportamiento del usuario. Esto me permitió diseñar una experiencia visual adecuada y adaptada a las necesidades reales del proyecto.<br><br>**Merly Salon Puerta:** Comprendí que el aprendizaje permanente es clave para obtener información útil del usuario, por lo que me capacité en métodos de recolección de datos cualitativos, análisis de entrevistas y síntesis de hallazgos para mejorar la relevancia y funcionalidad del sistema propuesto.<br><br>**Jhon Alexander Galvez Chambi:** Reafirmé la necesidad del aprendizaje continuo para dominar tecnologías nuevas, por eso profundicé en el uso de servicios de geolocalización, estructuras REST y autenticación segura, aplicando ese conocimiento para integrar funcionalidades críticas del sistema.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Reconocí la importancia de actualizar mis conocimientos en estilos arquitectónicos, ER diagrams y modelado de contexto, entendiendo que el aprendizaje continuo es clave para representar de manera adecuada sistemas complejos.<br><br>**David Alexander Pérez García:** Reafirmé la necesidad de mantenerme actualizado en frameworks y herramientas que soportan vistas arquitectónicas. Comprendí que el aprendizaje permanente es vital para proponer soluciones escalables que atiendan diferentes perspectivas de interesados.<br><br>**Joaquín Pedraza Maldonado:** Fortalecí mis competencias en bases de datos no relacionales, tácticas de calidad y patrones de diseño, reconociendo que la actualización constante de conocimientos permite construir sistemas con mayor desempeño y mantenibilidad.<br><br>**Ramiro Alexander Guzmán Chávez:** Profundicé en el rol de los drivers arquitectónicos y entendí que el aprendizaje permanente es esencial para identificar escenarios de calidad, restricciones y preocupaciones en proyectos de software reales.<br><br>**Merly Salon Puerta:** Comprendí que el aprendizaje continuo es clave para manejar técnicas como C4, UML y Kanban en el contexto de diseño arquitectónico. Reconocí que la práctica reiterada y la iteración son necesarias para mejorar continuamente las decisiones arquitectónicas. | **TB1:**<br>Los integrantes del equipo demostramos ser conscientes de la necesidad del aprendizaje continuo en un entorno tecnológico cambiante. Al buscar activamente nuevos conocimientos, adaptarnos a herramientas y enfrentar retos técnicos, desarrollamos una actitud profesional orientada a la mejora constante y al crecimiento personal dentro del ámbito del desarrollo de software.<br><br>**TB2:**<br>Los integrantes del equipo consolidamos la importancia del aprendizaje permanente como pilar en el desarrollo profesional. El proceso de investigación, análisis y aplicación práctica nos permitió afrontar con éxito la complejidad del diseño arquitectónico, reforzando una actitud proactiva y adaptable frente a los retos del proyecto. |
 
 ---
+
 
 ## Capítulo I: Introducción
 
@@ -1158,15 +1194,506 @@ Segmento 2: Conductores de Transporte
 | 29 | TS-04         | Endpoints de incidencias                    | Como desarrollador, quiero implementar endpoints para gestionar incidencias.                  | 5            |
 | 30 | TS-05         | Endpoints de estadísticas                   | Como desarrollador, quiero implementar endpoints para obtener métricas y estadísticas.        | 8            |
 
+
+## Capítulo IV: Product Architecture Design
+
+En este capítulo el equipo aplica el método ADD v3 del Instituto de Ingeniería de Software (SEI).
+
+### 4.1. Design Concepts, ViewPoints & ER Diagrams
+
+#### 4.1.1. Principles Statements
+
+Los siguientes principios arquitectónicos guían el diseño y desarrollo de la plataforma CoBox, asegurando que la solución sea escalable, mantenible y alineada con las mejores prácticas de la industria:
+
+  1. *Separación de responsabilidades por dominio:* Cada contexto delimitado debe mantener una responsabilidad específica y bien definida, evitando el acoplamiento excesivo entre dominios de negocio. Esto facilita la escalabilidad y el mantenimiento independiente de cada módulo.
+  2. *Comunicación asíncrona entre servicios:* Se priorizarán las comunicaciones asíncronas mediante message brokers sobre las llamadas síncronas directas, mejorando la resiliencia del sistema y permitiendo mejor manejo de cargas de trabajo variables típicas del sector logístico.
+  3. *API First Design:* Todas las funcionalidades del sistema deben exponerse a través de APIs bien documentadas y versionadas, facilitando la integración con sistemas externos y el desarrollo de múltiples interfaces de usuario (web, móvil).
+  4. *Tolerancia a fallos:* El sistema debe ser capaz de continuar operando parcialmente ante fallos de componentes específicos, especialmente crítico para operaciones en campo donde la conectividad puede ser intermitente.
+  5. *Observabilidad y trazabilidad:* Implementar logging, métricas y trazas distribuidas para monitorear el comportamiento del sistema en tiempo real, esencial para el seguimiento de operaciones logísticas críticas.
+  6. *Seguridad por diseño:* La autenticación, autorización y protección de datos sensibles deben estar integradas desde el diseño inicial, considerando la naturaleza crítica de la información logística y de ubicación.
+  7. *Persistencia poliglota:* Utilizar las tecnologías de almacenamiento más adecuadas para cada tipo de dato (relacional para transacciones, espacial para geolocalización), optimizando el rendimiento según las necesidades específicas del dominio.
+
+#### 4.1.2. Approaches Statements, Architectural Styles & Patterns
+
+***Approaches Statements:***
+
+  - *Domain-Driven Design (DDD):* Adoptamos DDD como enfoque principal para modelar la complejidad del dominio del transporte de carga, identificando bounded contexts claros como Fleet Management, Delivery Management, Incident Management, Maintenance Management y Analytics & Reporting. Este enfoque nos permite mantener el modelo de negocio alineado con el código y facilita la comunicación entre stakeholders técnicos y de negocio.
+
+  - *Attribute-Driven Design (ADD):* Utilizamos ADD v3 para tomar decisiones arquitectónicas basadas en escenarios de calidad específicos, priorizando atributos como disponibilidad, rendimiento y escalabilidad, críticos para una plataforma de gestión logística en tiempo real.
+
+***Architectural Styles:***
+
+  - *Cliente-Servidor:* Establece una separación clara entre las aplicaciones cliente (web y móvil) y los servicios backend, permitiendo múltiples tipos de clientes que consuman los mismos servicios de negocio.
+
+  - *Microservicios:* Cada bounded context se implementa como un microservicio independiente, permitiendo escalabilidad granular, deployments independientes y tecnologías específicas por servicio según las necesidades del dominio.
+
+***Design Patterns:***
+
+  - *API Gateway:* Actúa como punto único de entrada para todas las comunicaciones cliente-servidor, manejando autenticación, rate limiting, routing y agregación de respuestas. Especialmente importante para gestionar las diferentes necesidades de acceso entre conductores y gestores de flota.
+
+  - *Model-View-Controller (MVC):* Implementado en cada microservicio para separar la lógica de presentación, de negocio y de acceso a datos, facilitando el mantenimiento y testing de cada componente.
+
+#### 4.1.3. Context Diagram
+
+El diagrama de contexto de CoBox muestra cómo la plataforma de gestión logística interactúa con sus usuarios principales y sistemas externos. La plataforma sirve como el sistema central que conecta a tres tipos de usuarios con diferentes necesidades: administradores del sistema que gestionan la configuración general, gestores de flota que coordinan operaciones y toman decisiones basadas en datos, y conductores que ejecutan las entregas y registran información en campo.
+
+El sistema también se integra con servicios externos críticos como proveedores de mapas y geolocalización para el seguimiento en tiempo real, servicios de notificaciones para alertas importantes, y sistemas de almacenamiento en la nube para el manejo de evidencias fotográficas. Esta arquitectura permite que CoBox centralice la gestión logística mientras mantiene conectividad con el ecosistema tecnológico necesario para operaciones de transporte modernas.
+
+<p align="center">
+  <img src="./assets/CoBoxSystemContext.png" alt="C4 System Context Diagram">
+</p>
+
+#### 4.1.4. Approach driven ViewPoints Diagrams
+
+- Diagrama de contenedores:
+
+  <img src="./assets/diagrama de contenedores coware.svg" alt="C4 diagrama de contenedores coware">
+
+- Diagrama de componentes:
+
+  <img src="./assets/Analytics & Reporting Context Component.svg" alt="Analytics & Reporting Context Component">
+  
+  <img src="./assets/Maintenance Management Context Component.svg" alt="Maintenance Management Context Component">
+
+  <img src="./assets/Incident Management Context Component.svg" alt="Incident Management Context Component">
+ 
+  <img src="./assets/Delivery Management Context Component.svg" alt="Delivery Management Context Component">
+
+  <img src="./assets/Fleet Management Context Component.svg" alt="Fleet Management Context Component">
+
+- Diagramas de Actividad:
+
+  <img src="./assets/Maintenance Management Context Activity.svg" alt="Maintenance Management Context Activity">
+
+  <img src="./assets/Incident Management Context Activity.svg" alt="Incident Management Context Activity">
+ 
+  <img src="./assets/Delivery Management Context Activity.svg" alt="Delivery Management Context Activity">
+
+  <img src="./assets/Fleet Management Context Activity.svg" alt="Fleet Management Context Activity">
+
+- Diagramas de Estado:
+
+  <img src="./assets/Maintenance Management Context State.svg" alt="Maintenance Management Context State">
+
+  <img src="./assets/Incident Management Context State.svg" alt="Incident Management Context State">
+ 
+  <img src="./assets/Delivery Management Context State.svg" alt="Delivery Management Context State">
+
+  <img src="./assets/Fleet Management Context State.svg" alt="Fleet Management Context State">
+
+  - Diagrama de Clases:
+  <img src="./assets/diagramaClases.jpg" alt="Diagrama de clases">
+
+  
+
+#### 4.1.5. Relational/Non Relational Database Diagram
+
+ <img src="./assets/diagrama3.png" alt="Diagrama de clases">
+
+#### 4.1.6. Design Patterns
+
+El Factory Pattern se utiliza para centralizar la creación de objetos, permitiendo instanciar diferentes tipos de usuarios como Conductor, Técnico o Gestor sin exponer la lógica de construcción. Esto hace que el sistema sea más limpio y fácil de mantener cuando se agregan nuevos tipos de usuarios.
+
+El Strategy Pattern permite definir distintas estrategias de mantenimiento, como el preventivo o el correctivo, y cambiar entre ellas dinámicamente según las necesidades del sistema. De esta manera, los algoritmos se mantienen flexibles y reutilizables sin alterar la estructura principal.
+
+El Observer Pattern se emplea para implementar un sistema de notificaciones, donde los objetos que generan cambios de estado (por ejemplo, un vehículo que pasa a mantenimiento) informan automáticamente a los suscriptores interesados, logrando un fuerte desacoplamiento entre emisores y receptores.
+
+El Command Pattern encapsula operaciones en objetos, como la acción de asignar una ruta a un vehículo. Esto facilita mantener un historial de acciones y permite deshacer operaciones, ofreciendo mayor control y trazabilidad dentro del sistema.
+
+El Singleton Pattern garantiza que exista una sola instancia de un objeto global, como la configuración central del sistema. Con ello se evita la duplicidad y se asegura que todos los módulos trabajen con la misma referencia de configuración.
+
+El Decorator Pattern añade funcionalidades adicionales a los vehículos, como GPS o seguro, sin necesidad de modificar directamente las clases base. Esto ofrece gran flexibilidad al extender comportamientos de forma dinámica.
+
+El Facade Pattern proporciona una interfaz unificada y sencilla para operaciones complejas del sistema. De este modo, los usuarios y otros componentes pueden interactuar sin conocer la lógica interna, lo que simplifica la integración.
+
+El Template Method Pattern define la estructura para la generación de reportes, estableciendo pasos fijos pero permitiendo personalizar algunos de ellos según el tipo de reporte requerido. Esto asegura consistencia y a la vez flexibilidad.
+
+El State Pattern maneja los distintos estados de un vehículo, como Disponible, En Ruta o En Mantenimiento, haciendo que el comportamiento del objeto cambie automáticamente según el estado actual en el que se encuentre.
+
+Finalmente, todos estos patrones aportan beneficios como flexibilidad al extender el sistema, mantenibilidad gracias a un código organizado y desacoplado, reusabilidad de componentes y escalabilidad, preparando la arquitectura para el crecimiento futuro.
+
+#### 4.1.7. Tactics
+
+**Optimización de Código y Arquitectura**
+
+El código de CoBox puede optimizarse con pruebas de rendimiento que identifiquen procesos pesados, como la generación de reportes masivos, el cálculo de kilometrajes o la validación de entregas. El uso de patrones de diseño, como Factory para crear usuarios según su rol, Observer para notificaciones en tiempo real, Command para mantener historial de operaciones y State para el manejo dinámico de estados de vehículos, ayuda a mantener un sistema limpio y flexible. Además, separar la lógica en módulos o microservicios (vehículos, logística, usuarios, reportes) favorece la escalabilidad y facilita el mantenimiento a largo plazo.<br>
+
+**Tácticas de Disponibilidad**
+
+Validación y redundancia en datos críticos: Garantizar que información clave (Vehículo, Ruta, Entrega) sea consistente para prevenir fallas operativas y pérdidas de asignaciones.
+
+Registro histórico (logging persistente): Entidades como Mantenimiento, Incidencia y RecorridoKilométrico mantienen trazabilidad, permitiendo recuperar estados previos tras incidentes.
+
+Monitoreo activo de vehículos: Usando los atributos de la entidad Vehículo (estado, cambioEstado), se aplican mecanismos tipo heartbeat para detectar fallas o desconexiones a tiempo <br><br>
+**Tácticas de Mantenibilidad**
+
+Modularización de funciones: Separar en módulos claros (Usuarios, Vehículos, Mantenimiento, Logística) facilita actualizaciones y reduce impacto en otros componentes.
+
+Uso de entidades base y especializadas: Con Usuario como entidad general y sus subtipos (Conductor, Técnico, Gestor), se asegura bajo acoplamiento y alta cohesión.
+
+Extensibilidad estructural: La normalización permite añadir nuevos roles o tipos de mantenimiento sin romper la arquitectura existente.<br>
+
+**Tácticas de Usabilidad**
+
+Notificaciones en tiempo real: Basadas en Reporte, Incidencia y Mantenimiento, mantienen informados a conductores y gestores de cambios inmediatos.
+
+Interfaces simplificadas mediante patrones: Aplicando Facade, el usuario interactúa con vistas claras, sin lidiar con la complejidad de múltiples tablas como Ruta + Entrega + Reporte.
+
+Historial consultable y trazable: A través de Evidencia e Incidencia, se ofrece retroalimentación clara sobre operaciones pasadas y decisiones tomadas.
+
+### 4.2. Architectural Drivers
+
+Los drivers arquitectónicos de CoBox surgen de la necesidad de garantizar que la plataforma de colaboración en la nube sea segura, escalable, confiable y fácil de usar para startups y equipos de trabajo distribuidos. Estos drivers guían las decisiones técnicas y de diseño, asegurando que la solución responda a los objetivos de negocio, las necesidades de los usuarios y las restricciones identificadas.
+
+Los principales drivers son:
+- **Trazabilidad operativa en tiempo real**: garantizar visibilidad completa de ubicación, estado y progreso de unidades y entregas.
+- **Eficiencia operativa**: optimizar recursos de transporte, reducir costos de combustible y mejorar productividad de conductores.
+- **Seguridad de datos logísticos**: proteger información sensible de rutas, clientes, evidencias fotográficas y ubicaciones GPS.
+- **Escalabilidad de flota**: soportar el crecimiento de vehículos, conductores y volumen de entregas sin comprometer rendimiento.
+- **Disponibilidad operativa**: asegurar que el sistema funcione ininterrumpidamente, especialmente crítico para operaciones de campo.
+- **Usabilidad para conductores**: ofrecer interfaces simples y funcionales para usuarios con diferentes niveles de experiencia tecnológica.
+- **Auditabilidad y cumplimiento normativo**: mantener registros completos de todas las operaciones para satisfacer regulaciones del sector transporte.
+- **Interoperabilidad**: facilitar integración con sistemas ERP existentes y servicios externos (GPS, notificaciones, almacenamiento).
+- **Rendimiento bajo conectividad limitada**: garantizar funcionamiento offline en zonas rurales con sincronización posterior.
+- **Mantenibilidad del código**: facilitar actualizaciones, debugging y extensión de funcionalidades mediante patrones de diseño apropiados.
+
+---
+
+#### 4.1.8. Design Purpose
+
+El propósito fundamental del proceso de diseño arquitectónico de CoBox es definir la estructura técnica de la plataforma de colaboración en la nube de forma coherente con los objetivos de negocio y los requisitos funcionales y no funcionales identificados.  
+Este diseño busca establecer un marco robusto que permita una implementación eficiente y adaptable, asegurando seguridad, escalabilidad y facilidad de uso.
+
+Los propósitos clave incluyen:
+- **Traducir requisitos y objetivos de negocio en decisiones técnicas**: transformar las necesidades de startups y equipos distribuidos en componentes técnicos concretos (gestión de proyectos, sincronización de archivos, colaboración en tiempo real).  
+- **Satisfacer drivers arquitectónicos**: garantizar que la arquitectura soporte usabilidad, seguridad, rendimiento, escalabilidad y confiabilidad, considerando las restricciones de recursos y dependencias externas.  
+- **Definir entidades arquitectónicas y sus interacciones**: identificar módulos principales (Usuarios, Proyectos, Archivos, Notificaciones, Integraciones) y las interfaces de comunicación entre ellos.  
+- **Promover coherencia y mantenibilidad**: aplicar principios de diseño y patrones arquitectónicos (DDD, microservicios, RBAC, API Gateway) que faciliten la evolución futura del sistema.  
+- **Crear modelos y vistas arquitectónicas**: representar la solución en diagramas C4 (Contexto, Contenedor, Componente) y UML (Clases, ERD) como documentación guía para el desarrollo.  
+- **Seguir un proceso iterativo**: utilizar ADD (Attribute-Driven Design) y validar las decisiones arquitectónicas en función de los drivers, adaptando la solución conforme se avanza en las etapas de desarrollo.  
+
+---
+
+#### 4.1.9. Primary Functionality (Primary User Stories)
+
+Las siguientes historias de usuario representan las funcionalidades **principales y críticas** de CoBox, ya que constituyen la base para la colaboración segura, escalable y eficiente en proyectos de trabajo distribuidos.
+
+| User Story ID | Título                          | Descripción |
+|---------------|---------------------------------|-------------|
+| US05 | Consultar entregas asignadas | Funcionalidad central que permite a conductores planificar su jornada y optimizar rutas diarias, siendo la base de la operación logística. |
+| US01 | Visualizar rutas asignadas | Esencial para gestores para supervisar y coordinar operaciones de flota en tiempo real, garantizando control operativo. |
+| US09 | Reportar incidente durante entrega | Crítica para trazabilidad y respuesta rápida ante problemas operativos que afecten entregas y la reputación del servicio. |
+| US13 | Programar mantenimiento preventivo | Fundamental para disponibilidad de la flota, evitando paradas no planificadas y optimizando vida útil de vehículos. |
+| TS01 | Autenticación API | Base de seguridad del sistema, protegiendo datos sensibles y cumpliendo con regulaciones de privacidad. |
+| TS05 | Endpoints de estadísticas | Soporte para análisis y toma de decisiones basada en datos, habilitando la eficiencia operativa.|
+| US17 | Ver reporte semanal de entregas | Fundamental para análisis de rendimiento y toma de decisiones basada en datos.|
+| US06 | Registrar entrega con evidencia | Vital para validación y prueba de cumplimiento de servicios ante clientes finales.|
+
+---
+
+#### 4.1.10. Quality Attribute Scenarios
+
+### Escenario de Trazabilidad (Seguimiento de Entregas)
+- **Componente**: Módulo de Delivery Management  
+- **Fuente**: Conductor registrando entrega completada  
+- **Estímulo**: Captura de evidencia fotográfica y confirmación de entrega  
+- **Entorno**: Operación en campo con conectividad móvil variable  
+- **Artefacto**: Sistema de registro de entregas con geolocalización  
+- **Respuesta**: Registro exitoso con timestamp, ubicación GPS y evidencia almacenada, notificación automática al gestor en menos de 30 segundos  
+
+### Escenario de Seguridad (Control de Acceso por Roles)
+- **Componente**: Módulo de Autenticación RBAC  
+- **Fuente**: Conductor intentando acceder a datos de otros conductores  
+- **Estímulo**: Solicitud de información fuera de su ámbito de permisos  
+- **Entorno**: Sistema en operación con múltiples usuarios concurrentes  
+- **Artefacto**: API Gateway con validación JWT y control de roles  
+- **Respuesta**: Acceso denegado con código 403, registro en audit log y alerta de seguridad  
+
+### Escenario de Disponibilidad (Fallo de Microservicio)
+- **Componente**: Fleet Management Service  
+- **Fuente**: Fallo crítico del servicio de gestión de flota  
+- **Estímulo**: Caída completa del microservicio por sobrecarga  
+- **Entorno**: Operación en horario pico con 50 vehículos activos  
+- **Artefacto**: Load balancer e instancias redundantes  
+- **Respuesta**: Failover automático a instancia secundaria en menos de 2 minutos, sin pérdida de datos de ubicación  
+
+### Escenario de Rendimiento (Consulta de Reportes)
+- **Componente**: Analytics & Reporting Service  
+- **Fuente**: Gestor solicitando reporte semanal de 100 vehículos  
+- **Estímulo**: Generación de dashboard con 10,000 registros de entregas  
+- **Entorno**: Sistema bajo carga normal con 20 usuarios concurrentes  
+- **Artefacto**: Base de datos optimizada con índices y cache Redis  
+- **Respuesta**: Dashboard generado y renderizado en menos de 5 segundos con datos actualizados  
+
+### Escenario de Escalabilidad (Crecimiento de Flota)
+- **Componente**: Sistema completo de microservicios  
+- **Fuente**: Incorporación de 50 nuevos vehículos en un mes  
+- **Estímulo**: Aumento del 100% en volumen de transacciones y usuarios  
+- **Entorno**: Infraestructura cloud con auto-scaling habilitado  
+- **Artefacto**: Contenedores Kubernetes con métricas de CPU y memoria  
+- **Respuesta**: Escalado automático de recursos manteniendo tiempo de respuesta < 3 segundos  
+
+### Escenario de Usabilidad (Conductor Novato)
+- **Componente**: Aplicación móvil para conductores  
+- **Fuente**: Conductor con experiencia tecnológica básica  
+- **Estímulo**: Registro de primera entrega del día  
+- **Entorno**: En ruta, con presión de tiempo y distracciones del tráfico  
+- **Artefacto**: Interfaz móvil simplificada con botones grandes  
+- **Respuesta**: Conductor completa registro exitosamente en menos de 2 minutos sin asistencia  
+
+### Escenario de Interoperabilidad (Integración ERP)
+- **Componente**: API Gateway y conectores externos  
+- **Fuente**: Sistema ERP de cliente solicitando datos de entregas  
+- **Estímulo**: Sincronización diaria de 500 registros de entregas  
+- **Entorno**: Integración B2B con sistema legacy del cliente  
+- **Artefacto**: REST API con formato JSON estandarizado  
+- **Respuesta**: Datos transferidos exitosamente con 99.9% de integridad y trazabilidad completa  
+
+---
+
+#### 4.1.11. Constraints
+
+Las restricciones representan los límites y condiciones bajo los cuales el sistema debe ser diseñado, desarrollado y operado. Estas limitaciones provienen de factores externos como normativas legales, recursos disponibles y dependencias tecnológicas, así como de factores internos relacionados con el equipo de desarrollo y los usuarios. Identificarlas permite establecer un marco realista para la implementación y gestión del proyecto, asegurando que las decisiones técnicas y estratégicas se adapten a las capacidades y al entorno en el que la solución será desplegada.
+
+| ID  | Constraint |
+|-----|------------|
+| C-1 | Funcionamiento offline requerido para operaciones en zonas rurales con conectividad limitada. |
+| C-2 | Limitaciones presupuestarias de PyMEs del sector transporte para inversión tecnológica inicial. |
+| C-3 | Dependencia de servicios GPS externos (Google Maps, Mapbox) para geolocalización precisa. |
+| C-4 | Variabilidad en niveles de alfabetización digital entre conductores de diferentes generaciones. |
+| C-5 | Regulaciones del sector transporte que requieren trazabilidad documental de entregas. |
+| C-6 | Necesidad de integración con sistemas ERP existentes en empresas establecidas. |
+| C-7 | Restricciones de dispositivos móviles con capacidades limitadas de hardware y batería. |
+| C-8 | Normativas de protección de datos (Ley de Protección de Datos Personales del Perú) que limitan el almacenamiento y procesamiento de información de ubicación. |
+| C-9 | Limitaciones de infraestructura de telecomunicaciones en rutas rurales que afectan la calidad y velocidad de transmisión de datos. |
+| C-10 | Restricciones de tiempo de implementación debido a la necesidad de mantener operaciones continuas sin interrumpir el servicio de transporte activo. |
+
+---
+
+#### 4.1.12. Architectural Concerns
+
+Las preocupaciones arquitectónicas representan los riesgos, incertidumbres y desafíos que pueden afectar la estabilidad, seguridad, escalabilidad y usabilidad del sistema. Estos aspectos deben ser considerados desde las primeras fases del diseño arquitectónico, ya que influyen en la capacidad de la plataforma para evolucionar, responder a cambios en la demanda y garantizar una experiencia de usuario satisfactoria. Identificar y documentar estas preocupaciones facilita la planificación de soluciones preventivas o correctivas, ayudando al equipo a reducir riesgos y mejorar la resiliencia del sistema.
+
+| ID | Architectural Concern |
+|----|------------------------|
+| AC-1 | Riesgo de que los datos sensibles no estén adecuadamente protegidos, comprometiendo la seguridad. |
+| AC-2 | Posible falta de experiencia del equipo en tecnologías específicas (microservicios, contenedores, CI/CD). |
+| AC-3 | Incertidumbre en la correcta representación del dominio frente a las operaciones reales de los usuarios. |
+| AC-4 | La arquitectura podría no escalar eficientemente ante un rápido crecimiento de usuarios y proyectos. |
+| AC-5 | La experiencia de usuario podría no ser suficientemente intuitiva, afectando la adopción de la plataforma. |
+| AC-6 | Mantener un rendimiento óptimo ante cargas simultáneas elevadas puede ser un desafío. |
+| AC-7 | Riesgo de baja disponibilidad o recuperación lenta ante fallos críticos. |
+| AC-8 | Crecimiento rápido de usuarios podría generar cuellos de botella en la base de datos. |
+| AC-9 | Soporte insuficiente para equipos distribuidos geográficamente, limitando la colaboración en tiempo real. |
+| AC-10 | Ausencia de pruebas automatizadas puede retrasar la detección temprana de errores. |
+| AC-11 | Falta de mecanismos de auditoría y trazabilidad para acciones clave dentro de los proyectos. |
+| AC-12 | Estrategia de backup y recuperación insuficiente en caso de desastres o caídas del sistema. |
+
+-----
+
+### 4.3. ADD Iterations
+
+#### 4.2.1 Iteration 1: Análisis
+##### 4.2.1.1 Architectural Design Backlog 1
+
+Ciertos elementos clave de la arquitectura serán esenciales para asegurar la escalabilidad, confiabilidad y adopción de la plataforma Co-box Logistic
+
+#### Seguridad
+
+| Historia de Usuario | Tareas | Criterios de Aceptación |
+|----------------------|--------|--------------------------|
+| **US-01 (Consultar rutas asignadas):** Como gestor, quiero conocer las rutas asignadas a cada unidad para supervisar su cumplimiento. | - Implementar autenticación JWT en la API.<br>- Configurar autorización basada en roles (gestor, conductor, visitante).<br>- Validar tokens expirados y manejo de errores 401/403.<br>- Notificación inmediata al gestor cuando se registre un incidente. | - Acceso solo con credenciales válidas.<br>- Los conductores solo pueden reportar incidencias propias.<br>- El sistema bloquea accesos no autorizados y registra intentos fallidos. |
+| **US-09 (Reportar incidente):** Como conductor, quiero reportar incidentes durante la entrega para que el gestor pueda intervenir. | - Implementar autenticación JWT en la API.<br>- Notificación inmediata al gestor cuando se registre un incidente. | - Acceso solo con credenciales válidas.<br>- El sistema bloquea accesos no autorizados y registra intentos fallidos.<br>- Los conductores solo pueden reportar incidencias propias. |
+
+---
+
+#### Alta Disponibilidad
+
+| Historia de Usuario | Tareas | Criterios de Aceptación |
+|----------------------|--------|--------------------------|
+| **US-19 (Comparar desempeño entre conductores):** Como gestor, quiero comparar conductores para fomentar mejores prácticas. | - Configurar balanceador de carga en Azure.<br>- Implementar redundancia en servicios de WebSockets y mensajería en tiempo real.<br>- Backups diarios de base de datos en Blob Storage. | - El sistema se recupera en menos de 10 min en caso de caída.<br>- 100 usuarios concurrentes reciben alertas sin interrupciones.<br>- Reportes semanales disponibles incluso en escenarios de falla parcial. |
+| **US-20 (Monitorear alertas críticas):** Como gestor, quiero visualizar alertas críticas del sistema para tomar acciones inmediatas. | - Configurar balanceador de carga en Azure.<br>- Implementar redundancia en servicios de WebSockets y mensajería en tiempo real. | - El sistema se recupera en menos de 10 min en caso de caída.<br>- 100 usuarios concurrentes reciben alertas sin interrupciones. |
+
+---
+
+#### Usabilidad
+| Historia de Usuario | Tareas | Criterios de Aceptación |
+|----------------------|--------|--------------------------|
+| **US-05 (Consultar entregas asignadas):** Como conductor, quiero conocer las entregas del día para planificar mi jornada. | - Menú de navegación con máximo 5 opciones principales.<br>- Iconografía clara para conductores con bajo nivel de digitalización. | - Un conductor novato puede consultar entregas en menos de 2 minutos. |
+| **US-32 (Timeline de progreso):** Como gestor, quiero ver el progreso fácilmente. | - Gráfico de barras interactivo.<br>- Actualización en tiempo real al mover o completar entregas. | - Los gráficos de progreso se actualizan sin recarga manual de la página. |
+
+##### 4.2.1.2 Establish Iteration Goal by Selecting Drivers  
+
+En esta iteración, seleccionaremos los **drivers clave** que servirán como base para definir metas que aseguren la utilidad, escalabilidad y confiabilidad de la plataforma **Co-box Logistic**, dirigida a empresas de transporte y logística.  
+
+---
+
+##### Metas de la Iteración  
+
+| Meta | Objetivo | Acciones Clave |
+|------|----------|----------------|
+| **Trazabilidad en Tiempo Real** | Garantizar que las empresas puedan visualizar en tiempo real la ubicación y el estado de las unidades y entregas, facilitando la toma de decisiones inmediatas. | - Integrar geolocalización en tiempo real de las unidades.<br>- Permitir actualización automática del estado de entregas.<br>- Incorporar alertas push para cambios críticos. |
+| **Eficiencia Operativa** | Optimizar los recursos de transporte y reducir los costos operativos mediante un control preciso de unidades, combustible y desempeño del personal. | - Implementar registro automatizado de kilometraje y consumo.<br>- Desarrollar dashboards con métricas de eficiencia.<br>- Incorporar reportes semanales de desempeño. |
+| **Seguridad de Datos y Operaciones** | Proteger la información de entregas, clientes y unidades, garantizando integridad y acceso solo a los roles correspondientes. | - Implementar autenticación JWT con validación de roles.<br>- Cifrar datos sensibles en tránsito y en reposo.<br>- Establecer políticas de acceso diferenciadas. |
+
+---
+
+##### Objetivo de la Iteración  
+
+- **Trazabilidad:** Fortalecer el control en tiempo real de las operaciones logísticas mediante geolocalización y alertas críticas.  
+- **Eficiencia:** Mejorar la planificación y el rendimiento de la flota con métricas y reportes automatizados.  
+- **Seguridad:** Robustecer la protección de datos de clientes, entregas y unidades mediante autenticación y cifrado.  
+
+---
+
+##### 4.2.1.3 Choose One or More Elements of the System to Refine  
+
+Para avanzar en el desarrollo de **Co-box Logistic** y de acuerdo con los drivers y metas definidos en la iteración, se han seleccionado los siguientes elementos del sistema para ser refinados.  
+
+---
+
+| Área | Elemento a Refinar | Razón para el Refinamiento | Esperado |
+|------|---------------------|----------------------------|----------|
+| **Trazabilidad en Tiempo Real** | Módulo de geolocalización y notificaciones | Permitir al gestor supervisar la ubicación exacta de unidades y entregas, con alertas inmediatas en caso de desvíos o incidencias. | Mapas en tiempo real, actualización automática de entregas y generación de alertas push. |
+| **Eficiencia Operativa** | Dashboards de rendimiento y consumo | Facilitar la optimización de costos y tiempos mediante indicadores de combustible, kilometraje y desempeño por unidad/conductor. | Paneles visuales con métricas de eficiencia, reportes semanales descargables (PDF, Excel) y comparativas entre conductores/unidades. |
+| **Seguridad de Accesos y Datos** | Sistema de autenticación y permisos de acceso | Asegurar que los datos estén protegidos y que cada usuario acceda únicamente a la información pertinente a su rol. | Autenticación JWT, cifrado de datos sensibles en tránsito/reposo y validación de roles diferenciados (gestor, conductor, visitante). |
+
+##### 4.2.1.4 Choose One or More Design Concepts That Satisfy the Selected Drivers  
+
+Para garantizar que la arquitectura de **Co-box Logistic** satisfaga adecuadamente las necesidades clave del negocio y los objetivos de calidad, se han identificado e incorporado conceptos de diseño específicos que abordan los principales drivers arquitectónicos. A continuación, se presentan las soluciones adoptadas para los ejes críticos de **seguridad, trazabilidad y eficiencia**:  
+
+---
+
+##### Seguridad  
+
+#### Modelo RBAC (Role-Based Access Control)  
+- **Descripción:** Se propone la implementación de un modelo de control de acceso basado en roles, donde los usuarios (gestor, conductor, visitante) tengan permisos diferenciados según su perfil.  
+- **Justificación:** Permite garantizar que cada rol acceda únicamente a la información y operaciones que le corresponden, minimizando riesgos de accesos no autorizados.  
+
+##### API Gateway Seguro  
+- **Descripción:** Incorporar un API Gateway como punto centralizado de control, encargado de gestionar autenticación, autorización y enrutamiento de peticiones hacia los microservicios internos.  
+- **Justificación:** Proporciona una capa adicional de seguridad y control en las comunicaciones, protegiendo datos sensibles de clientes, entregas y unidades frente a amenazas externas.  
+
+---
+
+##### Trazabilidad  
+
+##### Sistema de Geolocalización en Tiempo Real  
+- **Descripción:** Uso de servicios de mapas y sockets para monitorear en vivo la ubicación de cada unidad de transporte y el estado de sus entregas.  
+- **Justificación:** Responde al driver de **visibilidad operativa**, ofreciendo a gestores y clientes información en tiempo real para tomar decisiones rápidas y confiables.  
+
+---
+
+##### Eficiencia  
+
+##### Dashboards de Rendimiento  
+- **Descripción:** Paneles interactivos que muestran métricas de consumo de combustible, kilometraje y entregas completadas por unidad/conductor.  
+- **Justificación:** Favorecen la toma de decisiones informadas, reducen costos y mejoran la asignación de recursos, alineándose con el driver de **eficiencia operativa**.  
+
+---
+
+##### 4.2.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces  
+
+En esta sección se describe el proceso de **instanciación de elementos arquitectónicos**, la asignación de responsabilidades y la definición de interfaces que permitirán la interacción entre los distintos componentes del sistema **Co-box Logistic**.  
+
+---
+
+##### Instanciación de Elementos Arquitectónicos  
+
+| Elemento | Responsabilidad | Interfaces |
+|----------|-----------------|------------|
+| **Módulo de Gestión de Rutas y Entregas** | Asignar rutas, registrar entregas, controlar estados (en tránsito, entregado, con incidencia). | API REST para gestión de rutas; interfaz web/móvil para conductores y gestores. |
+| **Módulo de Geolocalización en Tiempo Real** | Mostrar en mapa la ubicación de unidades y generar alertas en caso de desviaciones. | WebSockets para streaming de ubicación; integración con mapas externos (ej. Mapbox/Google Maps). |
+| **Módulo de Control de Accesos (RBAC)** | Gestionar autenticación JWT y permisos diferenciados por rol (gestor, conductor, visitante). | API de autenticación; middleware de autorización para endpoints internos. |
+| **API Gateway** | Punto de entrada seguro que centraliza autenticación, autorización y enrutamiento a microservicios. | Exposición de endpoints `/api/v1/...`; validación de tokens en cada request. |
+| **Sistema de Reportes y Métricas** | Generar informes de eficiencia, consumo y desempeño semanal/mensual. | Exportación en PDF/Excel; dashboards visuales en frontend. |
+| **Interfaz de Usuario Web y Móvil** | Proporcionar una experiencia intuitiva a gestores y conductores para operar el sistema. | Frontend Angular/Phaser conectado a APIs; notificaciones push. |
+
+---
+
+
+##### 4.2.1.6. Sketch Views (C4 & UML) and Record Design Decisions
+
+**Sketch Views**
+
+- ***Diagrama C4 - Container Level***
+
+![Diagrama C4 - Container Level](/assets/CoBoxContainers.png)
+
+- ***Diagrama UML - Modelo de Dominio***
+
+![Diagrama UML - Modelo de Dominio - Parte 1](/assets/ADDCoBoxUML.png)
+
+![Diagrama UML - Modelo de Dominio - Parte 2](/assets/ADDCoBoxUML2.png)
+
+**Decisiones de Diseño Registradas**
+
+| ID     | Título                                      | Estado   | Contexto                                                                 | Decisión                                                                                      | Consecuencias |
+|--------|---------------------------------------------|----------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|---------------|
+| DD-001 | Arquitectura de Microservicios              | Aceptada | Necesidad de escalabilidad independiente por bounded context según DDD. | Implementar cada bounded context (7 contextos identificados) como microservicio independiente. | - Escalabilidad granular por dominio <br> - Deployments independientes <br> - Tecnologías específicas por servicio <br> - Complejidad de comunicación entre servicios <br> - Overhead de infraestructura |
+| DD-002 | API Gateway como Punto de Entrada           | Aceptada | Múltiples clientes (web, móvil) y necesidad de seguridad centralizada. | Utilizar Spring Cloud Gateway con autenticación JWT integrada. | - Punto único de control de seguridad <br> - Rate limiting centralizado <br> - Routing inteligente <br> - Punto único de falla potencial <br> - Latencia adicional |
+| DD-003 | Comunicación Asíncrona con Message Brokers  | Aceptada | Eventos del dominio requieren procesamiento desacoplado para alertas críticas. | Implementar RabbitMQ para comandos síncronos y Kafka para eventos de dominio. | - Mejor resiliencia del sistema <br> - Procesamiento asíncrono de alertas <br> - Escalabilidad de procesamiento <br> - Complejidad de gestión de mensajería <br> - Eventual consistency |
+| DD-004 | PostgreSQL + PostGIS para Datos Geoespaciales | Aceptada | Multiple contexts requieren consultas espaciales: tracking, fleet, deliveries, incidents. | Utilizar PostgreSQL con PostGIS en servicios que manejan ubicación geográfica. | - Consultas geoespaciales optimizadas <br> - Consistencia entre servicios <br> - Ecosistema maduro <br> - Duplicación de datos geoespaciales entre servicios |
+| DD-005 | Redis para Caching Distribuido              | Aceptada | Necesidad de cache para tracking en tiempo real y dashboards de rendimiento. | Implementar Redis como cache distribuido compartido entre microservicios. | - Mejora en tiempo de respuesta para dashboards <br> - Reducción de carga en tracking queries <br> - Sesiones distribuidas <br> - Complejidad de invalidación <br> - Punto de falla compartido |
+| DD-006 | Sistema de Seguridad RBAC               | Aceptada | Driver crítico de "Seguridad de Datos y Operaciones" del ADD. | Implementar Spring Security con JWT + roles diferenciados (gestor, conductor, visitante). | - Control granular de acceso <br> - Auditabilidad completa <br> - Cumplimiento normativo <br> - Complejidad de gestión de roles <br> - Overhead en cada request |
+| DD-007 | Real-time Location Tracking             | Aceptada | Driver clave "Trazabilidad en Tiempo Real" requiere seguimiento continuo. | WebSockets + integración con Mapbox/Google Maps para streaming de ubicaciones. | - Visibilidad operativa en tiempo real <br> - Alertas inmediatas de desviaciones <br> - Alto consumo de ancho de banda <br> - Complejidad de manejo de desconexiones |
+| DD-008 | Analytics Stack para Dashboards         | Aceptada | Driver "Eficiencia Operativa" requiere métricas y KPIs en tiempo real. | Implementar stack analytics con Spring Boot + Chart.js para dashboards interactivos. | - Insights operativos inmediatos <br> - Comparativas de rendimiento <br> - Toma de decisiones basada en datos <br> - Complejidad de agregación de datos <br> - Carga computacional adicional |
+| DD-009 | File Storage para Evidencias            | Aceptada | Evidencias fotográficas y firmas digitales requieren almacenamiento seguro. | Utilizar AWS S3/Azure Blob Storage con cifrado para evidencias. | - Escalabilidad de almacenamiento <br> - Cifrado de evidencias críticas <br> - Integración con CDN <br> - Costos por almacenamiento <br> - Dependencia de proveedor cloud |
+
+---
+
+> Este diagrama de contenedores muestra la arquitectura completa de **CoBox** a nivel de contenedores, incluyendo todas las aplicaciones, servicios, bases de datos y sus interacciones, proporcionando una vista técnica clara para el desarrollo e implementación del sistema.
+
+
+##### 4.2.1.7. Analysis of Current Design and Review Iteration Goal (Kanban Board)
+
+**Análisis del Diseño Actual**
+
+Después de completar la Iteración 1 del método ADD v3, se ha establecido una arquitectura base para CoBox que aborda los drivers arquitectónicos principales identificados. El análisis revela los siguientes aspectos críticos:
+
+- **Fortalezas del Diseño Actual**
+
+    - Arquitectura de microservicios alineada con DDD: Los 7 bounded contexts identificados (Security & Access Control, Fleet Management, Real-time Tracking, Delivery Management, Incident Management, Maintenance Management, Analytics & Reporting) tienen responsabilidades claras y separadas, facilitando el desarrollo independiente y la escalabilidad granular.
+
+    - Seguridad robusta implementada: La combinación de JWT + RBAC + API Gateway proporciona un control de acceso granular que satisface el driver crítico de "Seguridad de Datos y Operaciones", con auditabilidad completa mediante AuditLog.
+
+    - Trazabilidad en tiempo real lograda: La integración de WebSockets + PostgreSQL/PostGIS + servicios de mapas externos permite el seguimiento continuo de vehículos y alertas automáticas, cumpliendo el driver de "Trazabilidad en Tiempo Real".
+
+    - Base sólida para eficiencia operativa: Los contextos de Analytics & Reporting proporcionan la infraestructura necesaria para dashboards interactivos y métricas de rendimiento que apoyan la toma de decisiones basada en datos.
+
+- **Áreas de Mejora Identificadas**
+
+    - Complejidad de gestión de consistencia: La distribución de datos geoespaciales entre múltiples servicios (Fleet, Tracking, Delivery, Incident) puede generar inconsistencias temporales que requieren estrategias de sincronización más robustas.
+
+    - Overhead de infraestructura: La arquitectura requiere gestión de 13 contenedores principales (5 microservicios + 5 bases de datos + cache + message broker + file storage + API Gateway), lo que incrementa la complejidad operativa.
+
+    - Escalabilidad del tracking en tiempo real: El streaming continuo de ubicaciones vía WebSockets puede generar cuellos de botella bajo alta concurrencia de vehículos activos simultáneamente.
+
+**Review Iteration Goal**
+
+Enlace del Tablero Kanban: https://trello.com/invite/b/68d9f5f5d50cbf348362a137/ATTI21acff966c1ec6ff3ab494eef5abc9a545059BA0/cobox-add-architecture-analysis
+
+![Kanban Board - ADD Iteration 1](/assets/KanbanBoard.png)
+
+-----
+
 ### Conclusiones y Recomendaciones
 
 **Conclusiones**
 
-La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de CoWare responda a problemas concretos del sector.
+1. La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de CoWare responda a problemas concretos del sector.
 
-El uso de herramientas de investigación como entrevistas, User Personas, Empathy Maps y Scenario Mapping facilitó la detección de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga, aportando una base sólida para el diseño de la plataforma.
+2. El uso de herramientas de investigación como entrevistas, User Personas, Empathy Maps y Scenario Mapping facilitó la detección de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga, aportando una base sólida para el diseño de la plataforma.
 
-La estructuración del Product Backlog proporcionó un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos, lo que refuerza la viabilidad de la solución tecnológica propuesta.
+3. La estructuración del Product Backlog proporcionó un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos, lo que refuerza la viabilidad de la solución tecnológica propuesta.
+
+4. La implementación del método ADD v3 (Attribute-Driven Design) ha permitido establecer una arquitectura robusta y escalable que responde directamente a los drivers arquitectónicos identificados. La separación en bounded contexts mediante Domain-Driven Design asegura que cada dominio de negocio (Fleet Management, Delivery Management, Incident Management, Maintenance Management y Analytics & Reporting) mantenga responsabilidades claras y específicas.
+
+5. La arquitectura de microservicios adoptada proporciona la flexibilidad necesaria para el crecimiento independiente de cada módulo, permitiendo deployments específicos y tecnologías optimizadas según las necesidades del dominio. La implementación de un API Gateway centralizado garantiza seguridad, control de acceso y trazabilidad en todas las operaciones.
+
+6. El análisis de la Iteración 1 del ADD evidenció el cumplimiento exitoso de los tres drivers críticos establecidos: Trazabilidad en Tiempo Real mediante geolocalización GPS y WebSockets, Eficiencia Operativa a través de dashboards analíticos y reportes automatizados, y Seguridad de Datos mediante autenticación JWT y control de acceso basado en roles (RBAC).
+
+7. La aplicación de patrones arquitectónicos específicos como Factory, Observer, Command, Strategy y Facade, junto con las tácticas de calidad implementadas, aseguran que el sistema sea mantenible, escalable y resiliente ante fallos, cumpliendo con los estándares de la industria para aplicaciones críticas de transporte.
 
 **Recomendaciones**
 
@@ -1175,6 +1702,11 @@ La estructuración del Product Backlog proporcionó un camino claro de desarroll
 3. Priorizar en las primeras fases los módulos de **geolocalización en tiempo real**, **registro de incidencias** y **reportes automáticos**, al ser los de mayor impacto en la eficiencia operativa.  
 4. Implementar estrategias de capacitación para los usuarios finales, a fin de garantizar una adopción fluida de la herramienta.  
 5. Mantener un proceso de documentación y mejora continua que permita escalar la solución a nuevos mercados y escenarios logísticos.
+6. Desarrollar un plan de capacitación técnica específico para el equipo de desarrollo en tecnologías clave como Spring Cloud Gateway, PostgreSQL + PostGIS, RabbitMQ y Kafka, identificadas como críticas en las decisiones de diseño registradas.
+7. Implementar estrategias de testing automatizado que incluyan pruebas de integración entre microservicios, pruebas de carga para el sistema de tracking en tiempo real, y pruebas de seguridad para validar el control de acceso RBAC.
+8. Establecer métricas de calidad arquitectónica para evaluar continuamente aspectos como acoplamiento entre servicios, cohesión interna de bounded contexts, tiempo de respuesta de APIs y efectividad de las tácticas de disponibilidad implementadas.
+9. Planificar una estrategia de migración gradual que permita escalar la solución de un ambiente de desarrollo local hacia una infraestructura cloud nativa, considerando las restricciones de recursos identificadas y las necesidades de escalabilidad horizontal.
+10. Mantener un proceso de documentación arquitectónica evolutiva que registre nuevas decisiones de diseño, patrones implementados y lecciones aprendidas, facilitando la transferencia de conocimiento y la continuidad del proyecto a largo plazo.
 
 ### Referencias Bibliográficas
 
