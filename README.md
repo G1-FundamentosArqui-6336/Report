@@ -1854,11 +1854,221 @@ Cuando se completa una entrega, el servicio `Deliveries` publica un evento `Deli
 
 #### 5.1.3. Pattern Based Custom Software Library
 
+#### Implementación de DDD (Domain-Driven Design)
+
+El diseño impulsado por el dominio (DDD) es un enfoque arquitectónico que organiza el desarrollo de software en torno a los **dominios del negocio**, dividiendo la aplicación en **Bounded Contexts** y capas bien definidas.  
+En **CoWare**, se ha adoptado DDD como la base de la arquitectura, permitiendo representar fielmente los procesos del sector logístico mediante una estructura modular y escalable.
+
+La aplicación se ha organizado en los siguientes **Bounded Contexts** principales:
+
+- **Fleet Management**: administración de vehículos, choferes, mantenimiento y kilometraje.  
+- **Deliveries Management**: registro, seguimiento y confirmación de entregas.  
+- **Tracking & Evidence**: geolocalización en tiempo real y almacenamiento de evidencias fotográficas.  
+- **Reports & Analytics**: generación automática de reportes operativos y de desempeño.  
+- **IAM (Identity & Access Management)**: autenticación, autorización y gestión de roles de usuario.  
+- **Shared Kernel**: módulo común que incluye utilidades, constantes, eventos compartidos y configuraciones base.
+
+Cada **Bounded Context** refleja un subdominio del negocio logístico y se estructura en las cuatro capas recomendadas por DDD: **Aplicación**, **Dominio**, **Infraestructura** e **Interfaces**.
+
+---
+
+#### Ejemplo aplicado al Bounded Context: Deliveries Management
+
+El **Bounded Context Deliveries** se encarga de gestionar todo el flujo de entregas, desde la asignación del vehículo hasta la confirmación final del servicio.  
+Este contexto aplica las capas de DDD de la siguiente forma:
+
+- **Capa de Aplicación:**  
+  Contiene los casos de uso como `CreateDeliveryService`, `CompleteDeliveryService` y `UploadEvidenceService`.  
+  Estos servicios orquestan la lógica de negocio, coordinando la interacción entre las entidades de dominio y los repositorios.  
+  También gestionan eventos de integración para notificar a otros contextos (como Reports o Notifications).
+
+- **Capa de Dominio:**  
+  Define las entidades centrales (`Delivery`, `VehicleAssignment`, `Evidence`) y los objetos de valor (`DeliveryStatus`, `Location`, `PhotoMetadata`).  
+  Aquí se encuentran las reglas de negocio, como la validación de estados de entrega, el control de kilometraje y las condiciones para marcar un servicio como completado.
+
+- **Capa de Infraestructura:**  
+  Implementa la persistencia y la comunicación entre microservicios.  
+  Se utiliza **Spring Data JPA** para la interacción con la base de datos **MySQL**, y **RabbitMQ** o **Kafka** para la mensajería de eventos asíncronos.  
+  Además, se integran servicios de almacenamiento en la nube (por ejemplo, **Azure Blob Storage**) para guardar las evidencias fotográficas.
+
+- **Capa de Interfaces:**  
+  Expone los endpoints REST del contexto, como `POST /api/v1/deliveries` o `PATCH /api/v1/deliveries/{id}/complete`, que permiten a la aplicación frontend registrar y actualizar entregas.  
+  También incluye controladores WebSocket para actualizaciones en tiempo real del estado de las rutas.
+
+---
+
+#### Ventajas de usar DDD en CoWare
+
+- **Separación de responsabilidades:** Cada capa y contexto tiene funciones claras, lo que mejora el mantenimiento y la calidad del código.  
+- **Alineación con el negocio:** Los Bounded Contexts reflejan directamente los procesos logísticos reales, como entregas, monitoreo, mantenimiento o reportes.  
+- **Escalabilidad:** Cada contexto puede desplegarse y evolucionar de forma independiente, facilitando la adopción de una arquitectura de microservicios.  
+- **Reutilización:** Las reglas de negocio en la capa de dominio pueden ser aplicadas por diferentes interfaces (web, móvil, API externa).  
+- **Tolerancia a cambios:** Permite agregar nuevas funcionalidades, como un módulo de facturación o analítica avanzada, sin afectar los demás contextos.
+
+---
+
+#### Utilidades de DDD en este proyecto
+
+- **Organización y mantenibilidad:** La estructura modular facilita el trabajo en equipo y la integración de nuevas funcionalidades.  
+- **Claridad conceptual:** Cada contexto representa un área de negocio concreta, evitando confusiones y solapamientos de lógica.  
+- **Pruebas más simples:** Al estar las reglas de negocio aisladas, las pruebas unitarias y de integración pueden ejecutarse con mayor precisión.  
+- **Adaptabilidad:** Se pueden implementar diferentes interfaces de usuario (panel web, app móvil de conductor, dashboards administrativos) sin modificar la lógica de negocio.  
+- **Extensibilidad:** Nuevos contextos, como “Billing” o “Client Management”, pueden agregarse fácilmente sin romper el sistema existente.
+
 #### 5.1.4. Framework Pattern Driven Refactoring Report
+#### Implementación del patrón DTO (Data Transfer Object)
+
+El patrón **DTO (Data Transfer Object)** se utiliza para **transferir datos entre diferentes capas de la aplicación** sin exponer directamente los modelos internos del dominio.  
+Los DTO son objetos simples (sin lógica de negocio) diseñados únicamente para transportar información entre el backend y el frontend.
+
+---
+
+#### Argumentos para usarlo en este proyecto
+
+- **Optimización del tráfico de red:**  
+  En una plataforma como **CoWare**, donde se manejan datos de entregas, vehículos y reportes, los DTO permiten agrupar múltiples datos en un solo objeto antes de enviarlos al cliente.  
+  Esto reduce la cantidad de llamadas a la API y mejora el rendimiento general del sistema, especialmente en operaciones que involucran información de varios módulos (por ejemplo, resumen de entregas con conductor, vehículo y estado).
+
+- **Desacoplamiento entre capas:**  
+  Los DTO crean una **barrera entre la capa de dominio y la capa de presentación**, evitando exponer directamente las entidades del negocio.  
+  Así, si en el futuro se modifica la estructura interna de `Delivery`, `Vehicle` o `Report`, esos cambios no afectan a los consumidores externos de la API.
+
+- **Seguridad y control sobre los datos:**  
+  Permiten **filtrar la información sensible** antes de enviarla al cliente.  
+  Por ejemplo, se evita mostrar identificadores internos, tokens de sesión o datos confidenciales del conductor, manteniendo el principio de mínimo privilegio.
+
+---
+
+#### Ejemplo aplicado al contexto Deliveries
+
+En el contexto `Deliveries`, se utiliza un DTO llamado `DeliveryResource` para transportar los datos necesarios de una entrega, sin exponer la entidad completa del dominio `Delivery`.  
+De esta forma, el frontend solo recibe la información relevante (código, estado, fecha y conductor asignado), manteniendo la seguridad y la eficiencia.
+
+package com.coware.deliveries.interfaces.rest.resources;
+
+public record DeliveryResource(
+    Long id,
+    String deliveryCode,
+    String status,
+    String driverName,
+    String vehiclePlate,
+    String deliveryDate
+) {}
 
 ### 5.2. Software Configuration Management
 
-#### 5.2.1. Software Development Environment Configuration
+La **Gestión de Configuración de Software (SCM, por sus siglas en inglés)** es una disciplina que permite **identificar, controlar y rastrear todos los componentes del software** durante su ciclo de vida.  
+Su propósito es asegurar que los cambios en el código, la documentación y los artefactos del proyecto se gestionen de manera organizada, evitando errores y garantizando la coherencia entre versiones.  
+Esta práctica resulta esencial en el desarrollo de **CoWare**, ya que involucra múltiples módulos y microservicios que deben mantenerse sincronizados en entornos de desarrollo, prueba y producción.  
+
+El objetivo principal de la SCM en CoWare es **mantener la estabilidad del sistema**, facilitar la colaboración entre desarrolladores y garantizar un despliegue controlado y eficiente.  
+(Martin, 2023)
+
+---
+
+#### 5.2.1 Software Development Environment Configuration
+#### Directrices de Desarrollo para CoWare
+
+En esta sección, se presentan las **convenciones y prácticas recomendadas** utilizadas en el desarrollo de **CoWare**, una plataforma web inteligente enfocada en optimizar la trazabilidad y gestión del transporte de carga.  
+Estas directrices buscan mantener una estructura de código coherente, facilitar la mantenibilidad y optimizar la experiencia de desarrollo colaborativo entre los equipos de backend y frontend.
+
+---
+
+#### Definición de Requisitos
+
+Antes del desarrollo, se establecieron los principales objetivos funcionales de CoWare:
+
+- **Gestión de Entregas y Rutas:** Registro y seguimiento de entregas con control de estados, evidencias fotográficas y kilometraje.  
+- **Monitoreo en Tiempo Real:** Geolocalización de unidades activas mediante integración con APIs de mapas.  
+- **Reportes Automáticos:** Generación de indicadores de rendimiento, consumo de combustible y cumplimiento operativo.  
+- **Control de Flota:** Administración de vehículos, mantenimientos y disponibilidad.  
+- **Gestión de Usuarios y Roles:** Sistema de autenticación y autorización basado en JWT, con roles de gestor, conductor y administrador.  
+- **Optimización de Costos:** Consolidación de datos operativos para detectar ineficiencias logísticas.
+
+---
+
+#### Elección de la Tecnología
+
+#### Frontend
+- **Tecnología:** Angular  
+- **Motivo de elección:** Angular ofrece una arquitectura basada en componentes, ideal para construir interfaces dinámicas y modulares.  
+  Facilita la comunicación con el backend mediante servicios REST y permite mantener una estructura escalable y reutilizable.  
+- **Ventaja clave:** Soporte robusto para SPA (Single Page Application), modularidad, seguridad con interceptores y comunidad activa.
+
+#### Backend
+- **Tecnología:** Spring Boot (Java 17)  
+- **Motivo de elección:** Spring Boot proporciona una estructura limpia y organizada para el desarrollo de microservicios RESTful.  
+  Su integración con **Spring Data JPA** y **JWT Security** permite manejar autenticación, persistencia y transacciones con eficiencia.  
+- **Ventaja clave:** Despliegue rápido, alta estabilidad, integración sencilla con bases de datos MySQL y soporte a arquitecturas distribuidas.
+
+---
+
+#### Configuración del Entorno de Desarrollo
+
+- **Editor de Código Principal:** IntelliJ IDEA Ultimate  
+  - **Propósito:** Edición, ejecución y depuración del código tanto del backend (Spring Boot) como del frontend (Angular).  
+  - **Ruta de descarga:** [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)  
+  - **Motivo de elección:** Excelente integración con proyectos full stack, autocompletado inteligente, refactorización avanzada y depuración integrada.  
+  - **Ventaja clave:** Aumenta la productividad y reduce errores mediante herramientas automáticas de inspección de código.
+
+- **Gestor de Dependencias:**  
+  - **Backend:** Maven  
+  - **Frontend:** NPM  
+  - **Propósito:** Controlar versiones de librerías y garantizar la consistencia del entorno de desarrollo.
+
+---
+
+#### Control de Versiones y Colaboración
+
+- **Herramienta:** GitHub  
+  - **Propósito:** Control de versiones, trabajo colaborativo y gestión de ramas.  
+  - **Ruta:** [https://github.com](https://github.com)  
+  - **Motivo de elección:** Permite al equipo sincronizar cambios, realizar revisiones de código y administrar issues desde un entorno centralizado.  
+  - **Ventaja clave:** Facilita el trabajo en equipo con flujos basados en *branches*, *pull requests* y *releases*.
+
+---
+
+#### Despliegue del Backend
+
+- **Plataforma:** Render  
+  - **Propósito:** Hospedaje en la nube del backend de CoWare.  
+  - **Ruta:** [https://render.com](https://render.com)  
+  - **Motivo de elección:** Plataforma confiable y fácil de usar para proyectos Spring Boot, con integración automática desde GitHub.  
+  - **Ventaja clave:** Despliegue continuo, configuración simple y soporte para entornos seguros con variables de entorno.
+
+- **Base de Datos:** MySQL (Azure Flexible Server)  
+  - **Motivo de elección:** Ofrece alta disponibilidad, respaldo automático y facilidad de integración con Spring Data JPA.  
+  - **Ventaja clave:** Escalabilidad y persistencia garantizada para los datos logísticos y de usuarios.
+
+---
+
+#### Product UX/UI Design
+
+- **Herramienta de Diseño:** Figma  
+  - **Propósito:** Creación de interfaces y prototipos visuales para el panel del gestor y la app del conductor.  
+  - **Ruta:** [https://www.figma.com](https://www.figma.com)  
+  - **Motivo de elección:** Facilita la colaboración en tiempo real entre diseñadores y desarrolladores.  
+  - **Ventaja clave:** Permite iterar diseños rápidamente, mantener consistencia visual y crear componentes reutilizables.
+
+---
+
+#### Software Development Practices
+
+Durante el desarrollo de **CoWare**, se aplican las siguientes tecnologías y buenas prácticas base del desarrollo web:
+
+- **HTML5:** Estructura fundamental de las interfaces, garantizando accesibilidad y semántica.  
+  Referencia: [https://www.w3schools.com/html](https://www.w3schools.com/html)
+
+- **CSS3:** Estilos visuales coherentes con el diseño retro tecnológico del producto, usando layouts responsivos y variables personalizadas.  
+  Referencia: [https://www.w3schools.com/css](https://www.w3schools.com/css)
+
+- **TypeScript (Angular):** Uso estricto de tipado y componentes modulares para mejorar mantenibilidad y legibilidad del código.  
+  Referencia: [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
+
+- **Spring Boot:** Desarrollo de microservicios REST, autenticación con JWT y manejo de excepciones globales.  
+  Referencia: [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
+
+---
 #### 5.2.2. Source Code Management
 #### 5.2.3. Source Code Style Guide & Conventions
 #### 5.2.4. Software Deployment Configuration
