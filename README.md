@@ -1698,7 +1698,184 @@ Enlace del Tablero Kanban: https://trello.com/invite/b/68d9f5f5d50cbf348362a137/
 ![Kanban Board - ADD Iteration 1](/assets/KanbanBoard.png)
 
 -----
+## Capítulo V: Product Implementation, Validation & Deployment
+### 5.1. Testing Suites & General Patterns
+#### 5.1.1. Backend Application Core Testing Suite
+Link del Backend desplegado:
 
+Evidencia del funcionamiento del backend de la aplicación:
+
+Evidencia de la creación de user stories:
+
+Evidencia de la creación de sprints:
+
+Evidencia de la creación de los Epics:
+
+Evidencia de la gestión de los miembros:
+
+#### 5.1.2. Pattern Based Backend Application(s)
+### Patrón Singleton
+Garantiza que una clase tenga una única instancia y proporciona un punto de acceso global a dicha instancia.
+
+#### ¿Dónde utilizamos este patrón en nuestra aplicación?
+En servicios base como el `HttpClientService` o las configuraciones de `Axios` en el frontend, donde se crea una instancia única con la `baseURL` para cada bounded context (`Fleet`, `Deliveries`, `Reports`, `Auth`).  
+También se utiliza en el backend para el `DatabaseConnectionService` y el `WebSocketManager`, asegurando que haya una sola conexión activa por servicio, evitando duplicaciones y mejorando el rendimiento.
+
+#### Ventajas:
+- **Control centralizado:** Mantiene una única instancia compartida por toda la aplicación, ideal para recursos globales (conexiones, tokens, configuración).  
+- **Consistencia:** Evita conflictos o estados incoherentes al tener una única fuente de verdad.  
+- **Optimización de recursos:** Reduce el consumo de memoria y tiempo de inicialización en servicios concurrentes.
+
+#### Utilidades:
+- Ideal para servicios que requieren mantener un **estado compartido y persistente** en toda la aplicación, como:
+  - Configuración única de cliente HTTP (`Axios`, `HttpClient`).  
+  - Conexión a bases de datos o brokers de mensajería.  
+  - Manejo de sesiones o sockets de geolocalización en tiempo real.
+
+---
+
+### Patrón Factory Method
+Proporciona una interfaz para crear objetos en una superclase, pero permite a las subclases alterar el tipo de objetos que se crearán.
+
+#### ¿Dónde utilizamos este patrón en nuestra aplicación?
+En los servicios de generación de reportes, mediante una `ReportFactory` que crea diferentes tipos de reportes (`FuelReport`, `PerformanceReport`, `DeliverySummaryReport`) según las métricas o filtros seleccionados.  
+También se aplica en la creación de eventos logísticos a través de un `EventFactory`, que genera distintos tipos de eventos como `DeliveryStartedEvent`, `DeliveryCompletedEvent` o `VehicleMaintenanceEvent`.
+
+#### Ventajas:
+- **Desacoplamiento:** Permite crear objetos sin depender de clases concretas.  
+- **Escalabilidad:** Facilita agregar nuevos tipos de reportes o eventos sin modificar la lógica existente.  
+- **Reutilización:** Centraliza la creación de objetos complejos reutilizando una misma interfaz.
+
+#### Utilidades:
+- Es útil cuando la aplicación necesita generar diferentes tipos de objetos relacionados, pero no se desea acoplar el código a sus implementaciones concretas, como:
+  - Reportes logísticos con diferentes formatos o fuentes de datos.  
+  - Creación de comandos o eventos para flujos de entrega, mantenimiento o monitoreo.
+
+---
+
+### Patrón Observer
+Permite que un objeto notifique automáticamente a otros sobre cambios en su estado, sin acoplamiento directo entre ellos.
+
+#### ¿Dónde utilizamos este patrón en nuestra aplicación?
+En el módulo de `NotificationsService` y en el flujo de `Deliveries`.  
+Cuando una entrega cambia de estado (por ejemplo, "En ruta", "Entregado" o "Fallido"), se emite un evento que notifica automáticamente al dashboard de supervisión, a los clientes suscritos y a otros servicios interesados, como `Reports` o `Fleet`.  
+También se emplea para enviar alertas automáticas de mantenimiento o exceso de kilometraje.
+
+#### Ventajas:
+- **Desacoplamiento:** Facilita la comunicación entre módulos sin dependencias directas.  
+- **Reactividad:** Ideal para mantener actualizaciones en tiempo real en dashboards o sistemas de monitoreo.  
+- **Escalabilidad:** Permite añadir nuevos observadores sin modificar el código del emisor.
+
+#### Utilidades:
+- Es esencial en sistemas que requieren comunicación basada en eventos, como:
+  - Notificaciones automáticas de entrega completada o incidencias.  
+  - Actualización en tiempo real del mapa de geolocalización.  
+  - Alertas de mantenimiento preventivo o consumo anómalo de combustible.
+
+---
+
+### Patrón Builder
+Se utiliza para construir objetos complejos paso a paso, permitiendo múltiples configuraciones sin sobrecargar los constructores.
+
+#### ¿Dónde utilizamos este patrón en nuestra aplicación?
+En la creación de **reportes personalizados**, mediante un `ReportBuilder` que permite añadir secciones de rendimiento, consumo, entregas y evidencias según los filtros seleccionados.  
+También se usa en la configuración dinámica de rutas (`RouteBuilder`), donde se construye un objeto `Route` con diferentes atributos opcionales como conductor, vehículo, puntos de control y tiempos estimados.
+
+#### Ventajas:
+- **Claridad:** Simplifica la creación de objetos complejos con múltiples opciones.  
+- **Flexibilidad:** Permite construir distintas representaciones del mismo objeto (por ejemplo, reportes diarios, semanales o mensuales).  
+- **Mantenibilidad:** Facilita la extensión o modificación de parámetros sin romper la estructura base.
+
+### Utilidades:
+- Ideal para objetos que requieren múltiples pasos de configuración o atributos opcionales, como:
+  - Construcción de reportes logísticos y de desempeño.  
+  - Creación de rutas personalizadas con parámetros variables.  
+  - Generación de dashboards adaptados a diferentes roles (conductor, gestor, cliente).
+
+---
+
+### Patrón Saga
+Coordina transacciones distribuidas entre varios microservicios a través de una secuencia de pasos con operaciones compensatorias en caso de error.
+
+#### ¿Dónde utilizamos este patrón en nuestra aplicación?
+En el flujo de operaciones logísticas, donde intervienen múltiples servicios: `Orders`, `Fleet`, `Deliveries`, y `Billing`.  
+Por ejemplo, cuando se inicia un servicio de entrega, se registran la asignación de vehículo, el inicio de ruta, la confirmación de entrega y la facturación final. Si una etapa falla, el patrón Saga ejecuta acciones compensatorias para mantener la consistencia.
+
+#### Ventajas:
+- **Consistencia distribuida:** Mantiene integridad de datos entre microservicios.  
+- **Recuperación automática:** Permite revertir transacciones fallidas sin afectar todo el flujo.  
+- **Tolerancia a fallos:** Mejora la resiliencia del sistema.
+
+#### Utilidades:
+- Es esencial en procesos de negocio largos o distribuidos, como:
+  - Gestión completa del ciclo de una entrega.  
+  - Procesos de mantenimiento con múltiples etapas.  
+  - Coordinación entre logística y facturación.
+
+---
+
+### Patrón API Gateway
+Centraliza el acceso a todos los microservicios, actuando como un único punto de entrada para las solicitudes externas.
+
+### ¿Dónde utilizamos este patrón en nuestra aplicación?
+En `CoWareGateway`, que gestiona las solicitudes hacia los servicios de `Auth`, `Deliveries`, `Tracking`, `Evidence` y `Reports`.  
+El gateway se encarga de la autenticación JWT, la autorización por roles y el enrutamiento de peticiones, además de aplicar políticas de seguridad (CORS, rate-limiting).
+
+### Ventajas:
+- **Seguridad y control:** Centraliza autenticación, logs y reglas de acceso.  
+- **Escalabilidad:** Facilita agregar o versionar microservicios sin cambiar el frontend.  
+- **Eficiencia:** Reduce llamadas directas y simplifica la comunicación cliente-servidor.
+
+#### Utilidades:
+- Ideal para arquitecturas de microservicios donde:
+  - Se necesita un punto único de autenticación y entrada.  
+  - Se administran rutas, tokens y cabeceras globales.  
+  - Se aplican políticas de seguridad y monitoreo unificadas.
+
+---
+
+### Patrón Event-Driven (Basado en eventos)
+Permite que los microservicios se comuniquen de manera asíncrona mediante la publicación y suscripción a eventos.
+
+#### ¿Dónde utilizamos este patrón en nuestra aplicación?
+En la integración entre `Deliveries`, `Fleet`, `Notifications` y `Reports`.  
+Cuando se completa una entrega, el servicio `Deliveries` publica un evento `DeliveryCompleted`, que otros servicios escuchan para actualizar el dashboard, generar reportes o enviar notificaciones.
+
+#### Ventajas:
+- **Escalabilidad:** Facilita añadir nuevos consumidores sin afectar la lógica existente.  
+- **Desacoplamiento:** Los servicios no dependen entre sí, solo de los eventos.  
+- **Reactividad:** Permite procesamiento en tiempo real.
+
+#### Utilidades:
+- Ideal para sistemas logísticos donde los módulos deben reaccionar a cambios, como:
+  - Publicación de eventos de entregas, recargas o incidencias.  
+  - Sincronización de reportes en segundo plano.  
+  - Alertas automáticas a supervisores o clientes.
+
+#### 5.1.3. Pattern Based Custom Software Library
+
+#### 5.1.4. Framework Pattern Driven Refactoring Report
+
+### 5.2. Software Configuration Management
+
+#### 5.2.1. Software Development Environment Configuration
+#### 5.2.2. Source Code Management
+#### 5.2.3. Source Code Style Guide & Conventions
+#### 5.2.4. Software Deployment Configuration
+
+### 5.3. Microservices Implementation
+
+#### 5.3.1. Sprint 1
+##### 5.3.1.1. Sprint Backlog 1
+##### 5.3.1.2. Development Evidence for Sprint Review
+##### 5.3.1.3. Testing Suite Evidence for Sprint Review
+##### 5.3.1.4. Execution Evidence for Sprint Review
+##### 5.3.1.5. Microservices Documentation Evidence for Sprint Review
+##### 5.3.1.6. Software Deployment Evidence for Sprint Review
+##### 5.3.1.7. Team Collaboration Insights during Sprint
+##### 5.3.1.8. Kanban Board --> TP1
+
+-----
 ### Conclusiones y Recomendaciones
 
 **Conclusiones**
