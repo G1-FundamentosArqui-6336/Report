@@ -2069,21 +2069,375 @@ Durante el desarrollo de **CoWare**, se aplican las siguientes tecnologías y bu
   Referencia: [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
 
 ---
-#### 5.2.2. Source Code Management
-#### 5.2.3. Source Code Style Guide & Conventions
+#### 5.2.2 Source Code Management
+
+#### Gestión de Cambios en el Código Fuente con GitHub
+
+El equipo de desarrollo de **CoWare** ha definido una estrategia sólida para la **gestión de cambios en el código fuente**, utilizando **GitHub** como plataforma principal de **control de versiones** y colaboración.  
+Esta práctica garantiza la trazabilidad de los cambios, la organización del flujo de trabajo y la correcta integración entre los diferentes módulos que componen el sistema: frontend, backend y servicios de apoyo.
+
+Se han configurado **repositorios remotos** para almacenar el código de cada componente de la plataforma, permitiendo un desarrollo colaborativo y controlado entre los integrantes del equipo.
+
+**Repositorios del proyecto:**
+
+- **Landing Page:** 
+- **Frontend (Angular):** 
+- **Backend (Spring Boot):** 
+---
+
+#### Estructura del Repositorio
+
+Para asegurar un desarrollo ordenado y colaborativo, los repositorios de CoWare implementan una **estructura basada en ramas (branches)** según las etapas del flujo de trabajo.  
+Esta metodología permite mantener la versión estable en producción mientras se desarrollan nuevas funcionalidades en paralelo.
+
+Las ramas principales son:
+
+- **main:** Contiene la versión estable y lista para producción. Todo el código en esta rama ha pasado pruebas funcionales y de integración.  
+- **develop:** Reúne las características en desarrollo que serán integradas posteriormente en la rama `main`.  
+- **feature/**: Ramas derivadas de `develop` para crear nuevas funcionalidades específicas.  
+- **release/**: Ramas destinadas a la preparación de una nueva versión antes del despliegue final.  
+
+---
+
+#### Modelo de Trabajo: GitFlow
+
+Se aplica el modelo **GitFlow**, propuesto por **Vincent Driessen**, el cual estructura el proceso de desarrollo mediante ramas específicas que representan las distintas fases del ciclo de vida del software.  
+Este modelo facilita el trabajo colaborativo, la integración continua y la trazabilidad de versiones.
+
+**Resumen de ramas GitFlow utilizadas:**
+- `main`: código estable en producción.  
+- `develop`: rama de integración de nuevas funcionalidades.  
+- `feature/*`: desarrollo de nuevas características (por ejemplo, `feature/geolocation-module`).  
+- `release/*`: pruebas previas al lanzamiento (por ejemplo, `release/v1.2.0`).  
+
+---
+
+#### Convenciones de Commits
+
+El equipo adopta el estándar **Conventional Commits**, con el fin de mantener un historial de cambios claro, estructurado y automatizable.  
+Cada mensaje de commit incluye un prefijo que describe la naturaleza del cambio, permitiendo generar **versionado semántico** y reportes de cambios (changelogs) de forma automática.
+
+**Ejemplos de convenciones utilizadas:**
+
+| Tipo | Descripción | Ejemplo |
+|------|--------------|----------|
+| **feat** | Nueva funcionalidad | `feat: agregar módulo de monitoreo de rutas` |
+| **fix** | Corrección de errores | `fix: resolver error en cálculo de kilometraje` |
+| **docs** | Actualización de documentación | `docs: actualizar guía de instalación del backend` |
+| **style** | Cambios de formato o estilo sin afectar la lógica | `style: ajustar sangrías en componente delivery-card` |
+| **refactor** | Mejoras internas sin alterar el comportamiento | `refactor: optimizar servicio de geolocalización` |
+| **test** | Añadir o modificar pruebas | `test: crear pruebas unitarias para VehicleService` |
+
+Este estándar mejora la comunicación entre los desarrolladores y facilita la revisión de cambios, manteniendo un historial limpio y fácil de entender.
+
+---
+
+#### Documentación del Proyecto
+
+Toda la documentación de **CoWare** se encuentra en los archivos `README.md` ubicados en la raíz de cada repositorio.  
+Estos archivos incluyen:
+
+- Descripción general del módulo.  
+- Requisitos del entorno de desarrollo.  
+- Instrucciones para instalación y despliegue.  
+- Guía para contribuir al proyecto.  
+- Ejemplos de uso de la API o comandos principales.
+
+---
+
+#### 5.2.3 Source Code Style Guide & Conventions
+
+En esta guía se presentan las **convenciones, estilos, estructuras y principios** que rigen el desarrollo del código fuente de **CoWare**.  
+Estas normas garantizan **coherencia, mantenibilidad, flexibilidad y escalabilidad** en todos los componentes del sistema, tanto en el frontend (Angular) como en el backend (Spring Boot).  
+El cumplimiento de estas guías asegura una colaboración fluida entre los miembros del equipo y un código más limpio, legible y fácil de evolucionar.
+
+---
+
+#### Lenguajes y Tecnologías Utilizadas
+
+- **HTML5:** Para estructurar el contenido web con etiquetas semánticas, mejorando la accesibilidad y el SEO.  
+- **CSS3 / SCSS:** Para definir la presentación visual de la plataforma, aplicando principios de diseño responsive y reutilización de estilos.  
+- **TypeScript:** Lenguaje principal del frontend Angular, con tipado estático, interfaces y decoradores que mejoran la calidad del código.  
+- **Java (Spring Boot):** Lenguaje del backend, enfocado en la lógica de negocio, seguridad y conexión con la base de datos.  
+- **JSON / REST:** Formato estándar para la comunicación entre frontend y backend mediante APIs.
+
+---
+
+#### HTML
+
+- **Nombres descriptivos:**  
+  Usar nombres representativos para clases e identificadores.  
+  Ejemplo: `delivery-card` en lugar de `box1`.  
+
+- **Indentación clara:**  
+  Mantener una sangría uniforme de **2 espacios** para facilitar la lectura.  
+
+- **Etiquetas semánticas:**  
+  Uso obligatorio de etiquetas como `<header>`, `<main>`, `<section>`, `<article>` y `<footer>`.  
+
+- **Comentarios útiles:**  
+  Comentar únicamente el código que requiera explicación adicional.  
+  ```html
+  <!-- Sección principal del panel de control -->
+  <main class="dashboard-main">...</main>
+
+
 #### 5.2.4. Software Deployment Configuration
+Para desplegar nuestro sitio web mediante GitHub Pages, primero debemos ingresar al repositorio del proyecto en GitHub.
+Una vez dentro, accedemos a la configuración (Settings) del repositorio y, en el menú lateral, seleccionamos la sección “Pages”.
+Desde allí podremos configurar los parámetros necesarios para publicar el sitio web directamente desde el repositorio.
+
+[PONER CAPTURA]
+
+Implementación con Git: Permite conservar un registro detallado de todas las modificaciones realizadas en el proyecto y gestionar eficazmente las distintas versiones del código fuente.
+
+[PONER CAPTURA]
+
+En la sección GitHub Pages, seleccionamos la rama principal (main) desde el menú desplegable “Branch” y guardamos los cambios haciendo clic en “Save”.
+Tras unos instantes, GitHub generará automáticamente el enlace de nuestro sitio web publicado, permitiéndonos acceder a la versión desplegada en línea.
+
 
 ### 5.3. Microservices Implementation
-
 #### 5.3.1. Sprint 1
+Durante el Sprint 1, nos centramos principalmente en el desarrollo del BackEnd de Horizon utilizando Java, junto con la optimización de la Landing Page.
+Este sprint resultó clave para establecer las primeras funcionalidades base del sistema, sentando las bases técnicas para los siguientes ciclos de desarrollo.
+
 ##### 5.3.1.1. Sprint Backlog 1
+Para el primer sprint backlog, recopilamos las historias de usuario enfocadas en el desarrollo del BackEnd.
+Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello.
+Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
+
+[PONER CAPTURA TRELLO]
+
+<table>
+<tr>
+    <th colspan="3">Sprint #</th>
+    <th colspan="10">Sprint 1</th>
+</tr>
+<tr>
+    <td colspan="3">User Story</td>
+    <td colspan="10">Work-Item/Task</td>
+</tr>
+<tr>
+    <td colspan="1">Id</td>
+    <td colspan="2">Title</td>
+    <td colspan="1">Id</td>
+    <td colspan="2">Title</td>
+    <td colspan="3">Description</td>
+    <td colspan="1">Estimation</td>
+    <td colspan="2">Assigned To</td>
+    <td colspan="1">Status (To-do / InProcess / To-Review / Done)</td>
+</tr>
+<tr>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td colspan="1"></td>
+    <td colspan="2">Ramiro Alexander Guzmán Chávez</td>
+    <td colspan="1"></td>
+</tr>
+<tr>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td colspan="1"></td>
+    <td colspan="2">David Alexander Pérez García</td>
+    <td colspan="1"></td>
+</tr>
+<tr>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td colspan="1"></td>
+    <td colspan="2">Joaquín Pedraza Maldonado</td>
+    <td colspan="1"></td>
+</tr>
+<tr>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td colspan="1"></td>
+    <td colspan="2">Merly Salon Puerta</td>
+    <td colspan="1"></td>
+</tr>
+<tr>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="1"></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td colspan="1"></td>
+    <td colspan="2">Jhon Alexander Galvez Chambi</td>
+    <td colspan="1"></td>
+</tr>
+</table>
+
+
 ##### 5.3.1.2. Development Evidence for Sprint Review
+[PONER CSPTURA GITHUB COMMITS CRONTRIBUYENTES]
+
+<table border="1">
+  <tr>
+    <th>Repository</th>
+    <th>Branch</th>
+    <th>Commit Id</th>
+    <th>Commit Message</th>
+    <th>Commit Message Body</th>
+    <th>Committed on (Date)</th>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td>dev</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td>dev</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td>dev</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td>dev</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td>dev</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td>dev</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
 ##### 5.3.1.3. Testing Suite Evidence for Sprint Review
+<table border="1">
+  <tr>
+    <th>Repository</th>
+    <th>Branch</th>
+    <th>Commit Id</th>
+    <th>Commit Message</th>
+    <th>Commit Message Body</th>
+    <th>Committed on (Date)</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
 ##### 5.3.1.4. Execution Evidence for Sprint Review
+
+Link del backend desplegado: [LINK DESPLIEGUE]
+
+Evidencia del funcionamiento del backend de la aplicación: [SCREENSHOT]
+
+Evidencia de la creación de user stories: [SCREENSHOT]
+
+Evidencia de la creación de sprints: [SCREENSHOT]
+
+Evidencia de la creación de los Epics: [SCREENSHOT]
+
+Evidencia de la gestión de los miembros: [SCREENSHOT]
+
+Asimismo, durante este Sprint, el equipo culminó y desplegó con éxito la Landing Page.
+A continuación, se muestran imágenes que evidencian cómo el diseño transmite de forma clara, atractiva e intuitiva la información relacionada con nuestro producto y la identidad de la empresa.
+
+[IMAGENES DE DESPLIEGUE DE LANDING PAGE]
+
 ##### 5.3.1.5. Microservices Documentation Evidence for Sprint Review
+Se ha realizado un nuevo repositorio con el sistema backend:
+[PONER CAPTURA DE GITHUB]
+
 ##### 5.3.1.6. Software Deployment Evidence for Sprint Review
+El despliegue del BackEnd se realizó en la plataforma Render, mientras que la base de datos fue implementada en Railway.
+La documentación de la API se encuentra disponible mediante la interfaz de Swagger, accesible a través del siguiente enlace: [PONER ENLACE]
+[PONER CAPTURA DE DESPLIEGUE]
+
 ##### 5.3.1.7. Team Collaboration Insights during Sprint
+Durante el Sprint 1, el equipo centró sus esfuerzos en migrar el proyecto previo hacia una arquitectura basada en microservicios, integrando un API Gateway como componente esencial para la gestión y orquestación de las comunicaciones entre servicios.
+
+[PONER CAPTURAS DE GITHUB DE CONTRIBUCIONES DEL EQUIPO]
+
 ##### 5.3.1.8. Kanban Board --> TP1
+[PONER CAPTURA]
 
 -----
 ### Conclusiones y Recomendaciones
