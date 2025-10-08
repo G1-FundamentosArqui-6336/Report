@@ -130,8 +130,6 @@
 
 ## Student Outcome  
 
-## Student Outcome  
-
 ---
 
 ### ABET – EAC - Student Outcome 7  
