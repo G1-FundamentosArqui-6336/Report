@@ -144,7 +144,7 @@
       - [5.3.1.5. Microservices Documentation Evidence for Sprint Review](#5315-microservices-documentation-evidence-for-sprint-review)
       - [5.3.1.6. Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
       - [5.3.1.7. Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
-      - [5.3.1.8. Kanban Board --> TP1](#5318-kanban-board----tp1)
+      - [5.3.1.8. Kanban Board --> TP1](#5318-kanban-board)
 
 
 - [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
@@ -2436,7 +2436,7 @@ Durante el Sprint 1, el equipo centró sus esfuerzos en migrar el proyecto previ
 
 [PONER CAPTURAS DE GITHUB DE CONTRIBUCIONES DEL EQUIPO]
 
-##### 5.3.1.8. Kanban Board --> TP1
+##### 5.3.1.8. Kanban Board
 [PONER CAPTURA]
 
 -----
