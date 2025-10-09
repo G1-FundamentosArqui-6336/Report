@@ -2226,7 +2226,6 @@ Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada hi
 Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
 
 [PONER CAPTURA TRELLO]
-
 <table>
 <tr>
     <th colspan="3">Sprint #</th>
@@ -2237,66 +2236,198 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
     <td colspan="10">Work-Item/Task</td>
 </tr>
 <tr>
-    <td colspan="1">Id</td>
+    <td>Id</td>
     <td colspan="2">Title</td>
-    <td colspan="1">Id</td>
+    <td>Id</td>
     <td colspan="2">Title</td>
     <td colspan="3">Description</td>
-    <td colspan="1">Estimation</td>
+    <td>Estimation</td>
     <td colspan="2">Assigned To</td>
-    <td colspan="1">Status (To-do / InProcess / To-Review / Done)</td>
+    <td>Status (To-do / InProcess / To-Review / Done)</td>
 </tr>
+
+<!-- Ramiro Guzmán - Fleet -->
 <tr>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td colspan="1"></td>
+    <td>US-01</td>
+    <td colspan="2">Consultar rutas asignadas</td>
+    <td>WI-01</td>
+    <td colspan="2">Implementar endpoint GET /routes</td>
+    <td colspan="3">Permite al gestor consultar las rutas asignadas por unidad de transporte.</td>
+    <td>5</td>
     <td colspan="2">Ramiro Alexander Guzmán Chávez</td>
-    <td colspan="1"></td>
+    <td>To-do</td>
 </tr>
 <tr>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td colspan="1"></td>
+    <td>US-02</td>
+    <td colspan="2">Asignar unidades a rutas</td>
+    <td>WI-02</td>
+    <td colspan="2">Desarrollar formulario de asignación</td>
+    <td colspan="3">Permite vincular unidades y rutas operativas.</td>
+    <td>3</td>
+    <td colspan="2">Ramiro Alexander Guzmán Chávez</td>
+    <td>To-do</td>
+</tr>
+<tr>
+    <td>US-03</td>
+    <td colspan="2">Actualizar estado de unidad</td>
+    <td>WI-03</td>
+    <td colspan="2">Crear servicio PUT /vehicles/{id}/status</td>
+    <td colspan="3">Actualiza el estado operativo de cada unidad.</td>
+    <td>2</td>
+    <td colspan="2">Ramiro Alexander Guzmán Chávez</td>
+    <td>To-do</td>
+</tr>
+<tr>
+    <td>US-04</td>
+    <td colspan="2">Consultar historial de movimientos</td>
+    <td>WI-04</td>
+    <td colspan="2">Diseñar vista de historial de flota</td>
+    <td colspan="3">Permite revisar los movimientos y cambios de estado de las unidades.</td>
+    <td>3</td>
+    <td colspan="2">Ramiro Alexander Guzmán Chávez</td>
+    <td>To-do</td>
+</tr>
+
+<!-- David Pérez - Delivery -->
+<tr>
+    <td>US-05</td>
+    <td colspan="2">Consultar entregas asignadas</td>
+    <td>WI-05</td>
+    <td colspan="2">Implementar módulo de entregas pendientes</td>
+    <td colspan="3">Muestra al conductor las entregas del día con detalles de cliente y dirección.</td>
+    <td>3</td>
     <td colspan="2">David Alexander Pérez García</td>
-    <td colspan="1"></td>
+    <td>To-do</td>
 </tr>
 <tr>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td colspan="1"></td>
+    <td>US-06</td>
+    <td colspan="2">Registrar evidencia de entrega</td>
+    <td>WI-06</td>
+    <td colspan="2">Configurar carga de imágenes y ubicación GPS</td>
+    <td colspan="3">Permite validar entregas con evidencia fotográfica y hora.</td>
+    <td>5</td>
+    <td colspan="2">David Alexander Pérez García</td>
+    <td>To-do</td>
+</tr>
+<tr>
+    <td>US-07</td>
+    <td colspan="2">Revisar entregas completadas</td>
+    <td>WI-07</td>
+    <td colspan="2">Desarrollar historial de entregas</td>
+    <td colspan="3">Permite consultar entregas finalizadas con filtros por fecha.</td>
+    <td>2</td>
+    <td colspan="2">David Alexander Pérez García</td>
+    <td>To-do</td>
+</tr>
+<tr>
+    <td>US-08</td>
+    <td colspan="2">Registrar inicio de ruta</td>
+    <td>WI-08</td>
+    <td colspan="2">Registrar hora de salida del conductor</td>
+    <td colspan="3">Permite registrar el inicio de jornada de reparto.</td>
+    <td>2</td>
+    <td colspan="2">David Alexander Pérez García</td>
+    <td>To-do</td>
+</tr>
+
+<!-- Joaquín Pedraza - Incident -->
+<tr>
+    <td>US-09</td>
+    <td colspan="2">Reportar incidente</td>
+    <td>WI-09</td>
+    <td colspan="2">Crear endpoint POST /incidents</td>
+    <td colspan="3">Permite registrar incidentes con descripción y evidencia.</td>
+    <td>3</td>
     <td colspan="2">Joaquín Pedraza Maldonado</td>
-    <td colspan="1"></td>
+    <td>To-do</td>
 </tr>
 <tr>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td colspan="1"></td>
+    <td>US-10</td>
+    <td colspan="2">Consultar incidencias</td>
+    <td>WI-10</td>
+    <td colspan="2">Diseñar vista de incidencias activas</td>
+    <td colspan="3">Muestra las incidencias activas con prioridad y estado.</td>
+    <td>3</td>
+    <td colspan="2">Joaquín Pedraza Maldonado</td>
+    <td>To-do</td>
+</tr>
+<tr>
+    <td>US-11</td>
+    <td colspan="2">Filtrar incidencias</td>
+    <td>WI-11</td>
+    <td colspan="2">Agregar filtros por gravedad</td>
+    <td colspan="3">Permite priorizar las incidencias más críticas.</td>
+    <td>2</td>
+    <td colspan="2">Joaquín Pedraza Maldonado</td>
+    <td>To-do</td>
+</tr>
+<tr>
+    <td>US-12</td>
+    <td colspan="2">Revisar historial de incidencias</td>
+    <td>WI-12</td>
+    <td colspan="2">Crear tabla histórica de incidencias</td>
+    <td colspan="3">Permite analizar incidentes pasados y soluciones aplicadas.</td>
+    <td>3</td>
+    <td colspan="2">Joaquín Pedraza Maldonado</td>
+    <td>To-do</td>
+</tr>
+
+<!-- Merly Salon - IAM -->
+<tr>
+    <td>US-26</td>
+    <td colspan="2">Autenticación y gestión de roles</td>
+    <td>WI-26</td>
+    <td colspan="2">Implementar módulo IAM con JWT</td>
+    <td colspan="3">Permite registrar usuarios, iniciar sesión y asignar roles según el perfil (gestor, conductor, técnico).</td>
+    <td>5</td>
     <td colspan="2">Merly Salon Puerta</td>
-    <td colspan="1"></td>
+    <td>To-do</td>
+</tr>
+
+<!-- Jhon Gálvez - Maintenance -->
+<tr>
+    <td>US-13</td>
+    <td colspan="2">Programar mantenimiento</td>
+    <td>WI-13</td>
+    <td colspan="2">Crear agenda de mantenimiento</td>
+    <td colspan="3">Permite definir mantenimientos periódicos según kilometraje o fecha.</td>
+    <td>3</td>
+    <td colspan="2">Jhon Alexander Galvez Chambi</td>
+    <td>To-do</td>
 </tr>
 <tr>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="1"></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td colspan="1"></td>
+    <td>US-14</td>
+    <td colspan="2">Registrar mantenimiento</td>
+    <td>WI-14</td>
+    <td colspan="2">Diseñar formulario de mantenimiento</td>
+    <td colspan="3">Registra actividades y observaciones realizadas por el técnico.</td>
+    <td>3</td>
     <td colspan="2">Jhon Alexander Galvez Chambi</td>
-    <td colspan="1"></td>
+    <td>To-do</td>
 </tr>
+<tr>
+    <td>US-15</td>
+    <td colspan="2">Consultar mantenimientos próximos</td>
+    <td>WI-15</td>
+    <td colspan="2">Implementar vista calendario de mantenimientos</td>
+    <td colspan="3">Muestra mantenimientos pendientes por unidad y fecha.</td>
+    <td>2</td>
+    <td colspan="2">Jhon Alexander Galvez Chambi</td>
+    <td>To-do</td>
+</tr>
+<tr>
+    <td>US-16</td>
+    <td colspan="2">Recibir alertas de mantenimiento</td>
+    <td>WI-16</td>
+    <td colspan="2">Programar alertas automáticas</td>
+    <td colspan="3">Envía recordatorios automáticos cuando se acerca una fecha programada.</td>
+    <td>2</td>
+    <td colspan="2">Jhon Alexander Galvez Chambi</td>
+    <td>To-do</td>
+</tr>
+
 </table>
+
 
 
 ##### 5.3.1.2. Development Evidence for Sprint Review
