@@ -1647,7 +1647,7 @@ En esta sección se describe el proceso de **instanciación de elementos arquite
 | **Módulo de Control de Accesos (RBAC)** | Gestionar autenticación JWT y permisos diferenciados por rol (gestor, conductor, visitante). | API de autenticación; middleware de autorización para endpoints internos. |
 | **API Gateway** | Punto de entrada seguro que centraliza autenticación, autorización y enrutamiento a microservicios. | Exposición de endpoints `/api/v1/...`; validación de tokens en cada request. |
 | **Sistema de Reportes y Métricas** | Generar informes de eficiencia, consumo y desempeño semanal/mensual. | Exportación en PDF/Excel; dashboards visuales en frontend. |
-| **Interfaz de Usuario Web y Móvil** | Proporcionar una experiencia intuitiva a gestores y conductores para operar el sistema. | Frontend Angular/Phaser conectado a APIs; notificaciones push. |
+| **Interfaz de Usuario Web y Móvil** | Proporcionar una experiencia intuitiva a gestores y conductores para operar el sistema. | Frontend React/Phaser conectado a APIs; notificaciones push. |
 
 ---
 
@@ -2008,10 +2008,11 @@ Antes del desarrollo, se establecieron los principales objetivos funcionales de 
 #### Elección de la Tecnología
 
 #### Frontend
-- **Tecnología:** Angular  
-- **Motivo de elección:** Angular ofrece una arquitectura basada en componentes, ideal para construir interfaces dinámicas y modulares.  
-  Facilita la comunicación con el backend mediante servicios REST y permite mantener una estructura escalable y reutilizable.  
-- **Ventaja clave:** Soporte robusto para SPA (Single Page Application), modularidad, seguridad con interceptores y comunidad activa.
+- **Tecnología:** React  
+- **Motivo de elección:** React es una biblioteca basada en componentes con una UI declarativa y manejo de estado mediante Hooks/Context, ideal para construir interfaces dinámicas, modulares y altamente reutilizables.  
+  Facilita la comunicación con el backend mediante `fetch` o Axios (con interceptores para tokens/errores) y se integra fácilmente con patrones como Redux/RTK o React Query para el manejo de datos.  
+- **Ventaja clave:** Excelente soporte para SPA con React Router, composición y reutilización de componentes, ecosistema maduro (Next.js para SSR/SSG) y amplia comunidad activa.
+
 
 #### Backend
 - **Tecnología:** Spring Boot (Java 17)  
@@ -2024,7 +2025,7 @@ Antes del desarrollo, se establecieron los principales objetivos funcionales de 
 #### Configuración del Entorno de Desarrollo
 
 - **Editor de Código Principal:** IntelliJ IDEA Ultimate  
-  - **Propósito:** Edición, ejecución y depuración del código tanto del backend (Spring Boot) como del frontend (Angular).  
+  - **Propósito:** Edición, ejecución y depuración del código tanto del backend (Spring Boot) como del frontend (React).  
   - **Ruta de descarga:** [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)  
   - **Motivo de elección:** Excelente integración con proyectos full stack, autocompletado inteligente, refactorización avanzada y depuración integrada.  
   - **Ventaja clave:** Aumenta la productividad y reduce errores mediante herramientas automáticas de inspección de código.
@@ -2080,7 +2081,7 @@ Durante el desarrollo de **CoWare**, se aplican las siguientes tecnologías y bu
 - **CSS3:** Estilos visuales coherentes con el diseño retro tecnológico del producto, usando layouts responsivos y variables personalizadas.  
   Referencia: [https://www.w3schools.com/css](https://www.w3schools.com/css)
 
-- **TypeScript (Angular):** Uso estricto de tipado y componentes modulares para mejorar mantenibilidad y legibilidad del código.  
+- **TypeScript (React):** Uso estricto de tipado y componentes funcionales con Hooks para mejorar la mantenibilidad, la legibilidad y la detección temprana de errores en tiempo de compilación.  
   Referencia: [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
 
 - **Spring Boot:** Desarrollo de microservicios REST, autenticación con JWT y manejo de excepciones globales.  
@@ -2099,8 +2100,8 @@ Se han configurado **repositorios remotos** para almacenar el código de cada co
 **Repositorios del proyecto:**
 
 - **Landing Page:** 
-- **Frontend (Angular):** 
-- **Backend (Spring Boot):** 
+- **Frontend:** 
+- **Backend:** 
 ---
 
 #### Estructura del Repositorio
@@ -2166,7 +2167,7 @@ Estos archivos incluyen:
 #### 5.2.3 Source Code Style Guide & Conventions
 
 En esta guía se presentan las **convenciones, estilos, estructuras y principios** que rigen el desarrollo del código fuente de **CoWare**.  
-Estas normas garantizan **coherencia, mantenibilidad, flexibilidad y escalabilidad** en todos los componentes del sistema, tanto en el frontend (Angular) como en el backend (Spring Boot).  
+Estas normas garantizan **coherencia, mantenibilidad, flexibilidad y escalabilidad** en todos los componentes del sistema, tanto en el frontend (React) como en el backend (Spring Boot).  
 El cumplimiento de estas guías asegura una colaboración fluida entre los miembros del equipo y un código más limpio, legible y fácil de evolucionar.
 
 ---
@@ -2175,7 +2176,7 @@ El cumplimiento de estas guías asegura una colaboración fluida entre los miemb
 
 - **HTML5:** Para estructurar el contenido web con etiquetas semánticas, mejorando la accesibilidad y el SEO.  
 - **CSS3 / SCSS:** Para definir la presentación visual de la plataforma, aplicando principios de diseño responsive y reutilización de estilos.  
-- **TypeScript:** Lenguaje principal del frontend Angular, con tipado estático, interfaces y decoradores que mejoran la calidad del código.  
+- **TypeScript:** Lenguaje principal del frontend React, con tipado estático, interfaces y tipos genéricos que mejoran la calidad, mantenibilidad y escalabilidad del código. 
 - **Java (Spring Boot):** Lenguaje del backend, enfocado en la lógica de negocio, seguridad y conexión con la base de datos.  
 - **JSON / REST:** Formato estándar para la comunicación entre frontend y backend mediante APIs.
 
