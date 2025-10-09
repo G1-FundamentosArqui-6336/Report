@@ -1070,6 +1070,26 @@ Segmento 2: Conductores de Transporte
             <td>EP-LP</td>
         </tr>
         <tr>
+    <td>US-26</td>
+    <td>Autenticación y gestión de roles</td>
+    <td>Como administrador, quiero registrar usuarios, iniciar sesión y asignar roles según el perfil (gestor, conductor o técnico) para controlar los accesos dentro del sistema.</td>
+    <td>
+        Escenario 01: Registro de usuario<br>
+        Dado que el administrador desea registrar un nuevo usuario<br>
+        Cuando completa los datos requeridos y selecciona el rol correspondiente<br>
+        Entonces el sistema crea el usuario y le asigna los permisos adecuados.<br><br>
+        Escenario 02: Inicio de sesión<br>
+        Dado que un usuario registrado accede al sistema<br>
+        Cuando ingresa sus credenciales válidas<br>
+        Entonces el sistema valida el acceso y retorna un token JWT.<br><br>
+        Escenario 03: Asignación y actualización de roles<br>
+        Dado que el administrador desea modificar permisos<br>
+        Cuando selecciona un usuario existente y cambia su rol<br>
+        Entonces el sistema actualiza la información y notifica el cambio.
+    </td>
+    <td>EP-API</td>
+      </tr>
+        <tr>
             <td>TS-01</td>
             <td>Autenticación API</td>
             <td>Como desarrollador, quiero implementar autenticación mediante JWT para proteger el acceso a la API.</td>
