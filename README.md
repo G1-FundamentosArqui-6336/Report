@@ -12,7 +12,7 @@
 ### NRC: 6336  
 ### Profesor: Jorge Luis Delgado Vite
 
-## Informe del TB2
+## Informe del TP1
 **"CoWare"**  
 **Producto: "CoBox"**
 
@@ -23,7 +23,7 @@
 - Merly Salon Puerta – U20201b772  
 - Jhon Alexander Galvez Chambi – U202323270  
 
-**Septiembre, 2025**  
+**Octubre, 2025**  
 **URL del proyecto:** [https://github.com/G1-FundamentosArqui-6336](https://github.com/G1-FundamentosArqui-6336)
 
 ---
@@ -1723,9 +1723,13 @@ Enlace del Tablero Kanban: https://trello.com/invite/b/68d9f5f5d50cbf348362a137/
 ![Kanban Board - ADD Iteration 1](/assets/KanbanBoard.png)
 
 -----
+
 ## Capítulo V: Product Implementation, Validation & Deployment
+
 ### 5.1. Testing Suites & General Patterns
+
 #### 5.1.1. Backend Application Core Testing Suite
+
 Se han implementado pruebas unitarias puras del dominio para validar la lógica de negocio y el comportamiento de los agregados clave: Order, Fleet, Incident, y MaintenanceOrder.
 Stack Tecnológico
 Herramientas Utilizadas
@@ -1753,143 +1757,184 @@ Este conjunto de pruebas se enfoca exclusivamente en la capa de dominio (negocio
 
 
 #### 5.1.2. Pattern Based Backend Application(s)
-### Patrón Singleton
-Garantiza que una clase tenga una única instancia y proporciona un punto de acceso global a dicha instancia.
 
-#### ¿Dónde utilizamos este patrón en nuestra aplicación?
-En servicios base como el `HttpClientService` o las configuraciones de `Axios` en el frontend, donde se crea una instancia única con la `baseURL` para cada bounded context (`Fleet`, `Deliveries`, `Reports`, `Auth`).  
-También se utiliza en el backend para el `DatabaseConnectionService` y el `WebSocketManager`, asegurando que haya una sola conexión activa por servicio, evitando duplicaciones y mejorando el rendimiento.
-
-#### Ventajas:
-- **Control centralizado:** Mantiene una única instancia compartida por toda la aplicación, ideal para recursos globales (conexiones, tokens, configuración).  
-- **Consistencia:** Evita conflictos o estados incoherentes al tener una única fuente de verdad.  
-- **Optimización de recursos:** Reduce el consumo de memoria y tiempo de inicialización en servicios concurrentes.
-
-#### Utilidades:
-- Ideal para servicios que requieren mantener un **estado compartido y persistente** en toda la aplicación, como:
-  - Configuración única de cliente HTTP (`Axios`, `HttpClient`).  
-  - Conexión a bases de datos o brokers de mensajería.  
-  - Manejo de sesiones o sockets de geolocalización en tiempo real.
+La aplicación backend de **CoBox** fue diseñada bajo los principios de **Domain-Driven Design (DDD)** y **Clean Architecture**, aplicando diversos patrones de diseño que fortalecen la cohesión interna, la extensibilidad y la mantenibilidad del sistema.
+A continuación, se describen los principales patrones empleados, junto con su propósito, localización dentro del sistema y beneficios asociados.
 
 ---
 
-### Patrón Factory Method
-Proporciona una interfaz para crear objetos en una superclase, pero permite a las subclases alterar el tipo de objetos que se crearán.
+##### Patrón Singleton
 
-#### ¿Dónde utilizamos este patrón en nuestra aplicación?
-En los servicios de generación de reportes, mediante una `ReportFactory` que crea diferentes tipos de reportes (`FuelReport`, `PerformanceReport`, `DeliverySummaryReport`) según las métricas o filtros seleccionados.  
-También se aplica en la creación de eventos logísticos a través de un `EventFactory`, que genera distintos tipos de eventos como `DeliveryStartedEvent`, `DeliveryCompletedEvent` o `VehicleMaintenanceEvent`.
+**Propósito:**
+Garantiza que una clase posea una única instancia durante todo el ciclo de vida de la aplicación, proporcionando un punto de acceso global y controlado.
 
-#### Ventajas:
-- **Desacoplamiento:** Permite crear objetos sin depender de clases concretas.  
-- **Escalabilidad:** Facilita agregar nuevos tipos de reportes o eventos sin modificar la lógica existente.  
-- **Reutilización:** Centraliza la creación de objetos complejos reutilizando una misma interfaz.
+**Aplicación en CoBox:**
 
-#### Utilidades:
-- Es útil cuando la aplicación necesita generar diferentes tipos de objetos relacionados, pero no se desea acoplar el código a sus implementaciones concretas, como:
-  - Reportes logísticos con diferentes formatos o fuentes de datos.  
-  - Creación de comandos o eventos para flujos de entrega, mantenimiento o monitoreo.
+* En servicios base como `HttpClientService` o las configuraciones de `Axios` (en el frontend), donde se define una instancia única con la `baseURL` para cada *bounded context* (`Fleet`, `Deliveries`, `Reports`, `Auth`).
+* En el backend, se aplica en componentes como `DatabaseConnectionService` y `WebSocketManager`, asegurando una sola conexión activa por servicio y evitando duplicaciones de recursos.
 
----
+**Ventajas:**
 
-### Patrón Observer
-Permite que un objeto notifique automáticamente a otros sobre cambios en su estado, sin acoplamiento directo entre ellos.
+* **Control centralizado:** Mantiene una instancia compartida para recursos globales (configuración, conexiones, tokens).
+* **Consistencia de estado:** Garantiza una única fuente de verdad.
+* **Optimización de recursos:** Minimiza el consumo de memoria y la inicialización redundante en procesos concurrentes.
 
-#### ¿Dónde utilizamos este patrón en nuestra aplicación?
-En el módulo de `NotificationsService` y en el flujo de `Deliveries`.  
-Cuando una entrega cambia de estado (por ejemplo, "En ruta", "Entregado" o "Fallido"), se emite un evento que notifica automáticamente al dashboard de supervisión, a los clientes suscritos y a otros servicios interesados, como `Reports` o `Fleet`.  
-También se emplea para enviar alertas automáticas de mantenimiento o exceso de kilometraje.
+**Utilidades:**
+Ideal para servicios que requieren mantener un **estado compartido y persistente**, tales como:
 
-#### Ventajas:
-- **Desacoplamiento:** Facilita la comunicación entre módulos sin dependencias directas.  
-- **Reactividad:** Ideal para mantener actualizaciones en tiempo real en dashboards o sistemas de monitoreo.  
-- **Escalabilidad:** Permite añadir nuevos observadores sin modificar el código del emisor.
-
-#### Utilidades:
-- Es esencial en sistemas que requieren comunicación basada en eventos, como:
-  - Notificaciones automáticas de entrega completada o incidencias.  
-  - Actualización en tiempo real del mapa de geolocalización.  
-  - Alertas de mantenimiento preventivo o consumo anómalo de combustible.
+* Configuración única de clientes HTTP (`Axios`, `HttpClient`).
+* Conexión a bases de datos o brokers de mensajería.
+* Administración de sesiones o *sockets* de geolocalización en tiempo real.
 
 ---
 
-### Patrón Builder
-Se utiliza para construir objetos complejos paso a paso, permitiendo múltiples configuraciones sin sobrecargar los constructores.
+##### Patrón Factory Method
 
-#### ¿Dónde utilizamos este patrón en nuestra aplicación?
-En la creación de **reportes personalizados**, mediante un `ReportBuilder` que permite añadir secciones de rendimiento, consumo, entregas y evidencias según los filtros seleccionados.  
-También se usa en la configuración dinámica de rutas (`RouteBuilder`), donde se construye un objeto `Route` con diferentes atributos opcionales como conductor, vehículo, puntos de control y tiempos estimados.
+**Propósito:**
+Proporciona una interfaz genérica para la creación de objetos, permitiendo que las subclases definan las instancias específicas que se deben generar.
 
-#### Ventajas:
-- **Claridad:** Simplifica la creación de objetos complejos con múltiples opciones.  
-- **Flexibilidad:** Permite construir distintas representaciones del mismo objeto (por ejemplo, reportes diarios, semanales o mensuales).  
-- **Mantenibilidad:** Facilita la extensión o modificación de parámetros sin romper la estructura base.
+**Aplicación en CoBox:**
 
-### Utilidades:
-- Ideal para objetos que requieren múltiples pasos de configuración o atributos opcionales, como:
-  - Construcción de reportes logísticos y de desempeño.  
-  - Creación de rutas personalizadas con parámetros variables.  
-  - Generación de dashboards adaptados a diferentes roles (conductor, gestor, cliente).
+* En los servicios de generación de reportes mediante una `ReportFactory`, que produce distintos tipos de reportes (`FuelReport`, `PerformanceReport`, `DeliverySummaryReport`) según filtros y métricas.
+* En la creación de eventos logísticos mediante un `EventFactory`, responsable de instanciar eventos como `DeliveryStartedEvent`, `DeliveryCompletedEvent` o `VehicleMaintenanceEvent`.
 
----
+**Ventajas:**
 
-### Patrón Saga
-Coordina transacciones distribuidas entre varios microservicios a través de una secuencia de pasos con operaciones compensatorias en caso de error.
+* **Desacoplamiento:** El código cliente no depende de clases concretas.
+* **Escalabilidad:** Permite incorporar nuevos tipos de reportes o eventos sin modificar la lógica base.
+* **Reutilización:** Centraliza la creación de objetos complejos a través de una interfaz común.
 
-#### ¿Dónde utilizamos este patrón en nuestra aplicación?
-En el flujo de operaciones logísticas, donde intervienen múltiples servicios: `Orders`, `Fleet`, `Deliveries`, y `Billing`.  
-Por ejemplo, cuando se inicia un servicio de entrega, se registran la asignación de vehículo, el inicio de ruta, la confirmación de entrega y la facturación final. Si una etapa falla, el patrón Saga ejecuta acciones compensatorias para mantener la consistencia.
+**Utilidades:**
+Adecuado para casos donde se generan múltiples objetos relacionados, tales como:
 
-#### Ventajas:
-- **Consistencia distribuida:** Mantiene integridad de datos entre microservicios.  
-- **Recuperación automática:** Permite revertir transacciones fallidas sin afectar todo el flujo.  
-- **Tolerancia a fallos:** Mejora la resiliencia del sistema.
-
-#### Utilidades:
-- Es esencial en procesos de negocio largos o distribuidos, como:
-  - Gestión completa del ciclo de una entrega.  
-  - Procesos de mantenimiento con múltiples etapas.  
-  - Coordinación entre logística y facturación.
+* Reportes logísticos con diferentes formatos o fuentes de datos.
+* Creación de comandos o eventos dentro de los flujos de entrega y mantenimiento.
 
 ---
 
-### Patrón API Gateway
-Centraliza el acceso a todos los microservicios, actuando como un único punto de entrada para las solicitudes externas.
+##### Patrón Observer
 
-### ¿Dónde utilizamos este patrón en nuestra aplicación?
-En `CoWareGateway`, que gestiona las solicitudes hacia los servicios de `Auth`, `Deliveries`, `Tracking`, `Evidence` y `Reports`.  
-El gateway se encarga de la autenticación JWT, la autorización por roles y el enrutamiento de peticiones, además de aplicar políticas de seguridad (CORS, rate-limiting).
+**Propósito:**
+Establece una relación de suscripción entre objetos, de forma que cuando uno cambia su estado, notifica automáticamente a todos sus observadores.
 
-### Ventajas:
-- **Seguridad y control:** Centraliza autenticación, logs y reglas de acceso.  
-- **Escalabilidad:** Facilita agregar o versionar microservicios sin cambiar el frontend.  
-- **Eficiencia:** Reduce llamadas directas y simplifica la comunicación cliente-servidor.
+**Aplicación en CoBox:**
 
-#### Utilidades:
-- Ideal para arquitecturas de microservicios donde:
-  - Se necesita un punto único de autenticación y entrada.  
-  - Se administran rutas, tokens y cabeceras globales.  
-  - Se aplican políticas de seguridad y monitoreo unificadas.
+* En el módulo `NotificationsService` y en el flujo de `Deliveries`.
+  Cuando una entrega cambia de estado ("En ruta", "Entregado", "Fallido"), se emite un evento que notifica al *dashboard* de supervisión, a los clientes suscritos y a otros servicios (`Reports`, `Fleet`).
+* También se emplea para el envío de alertas automáticas relacionadas con mantenimiento o kilometraje excesivo.
+
+**Ventajas:**
+
+* **Desacoplamiento funcional:** Los módulos se comunican sin dependencias directas.
+* **Reactividad:** Mantiene sincronizados los componentes en tiempo real.
+* **Escalabilidad:** Permite agregar nuevos observadores sin modificar emisores existentes.
+
+**Utilidades:**
+Fundamental en sistemas orientados a eventos, como:
+
+* Notificaciones automáticas de entregas o incidencias.
+* Actualización en tiempo real del mapa de geolocalización.
+* Alertas preventivas de mantenimiento o consumo anómalo de combustible.
 
 ---
 
-### Patrón Event-Driven (Basado en eventos)
-Permite que los microservicios se comuniquen de manera asíncrona mediante la publicación y suscripción a eventos.
+##### Patrón Builder
 
-#### ¿Dónde utilizamos este patrón en nuestra aplicación?
-En la integración entre `Deliveries`, `Fleet`, `Notifications` y `Reports`.  
-Cuando se completa una entrega, el servicio `Deliveries` publica un evento `DeliveryCompleted`, que otros servicios escuchan para actualizar el dashboard, generar reportes o enviar notificaciones.
+**Propósito:**
+Facilita la construcción de objetos complejos paso a paso, ofreciendo una interfaz fluida y flexible sin sobrecargar los constructores.
 
-#### Ventajas:
-- **Escalabilidad:** Facilita añadir nuevos consumidores sin afectar la lógica existente.  
-- **Desacoplamiento:** Los servicios no dependen entre sí, solo de los eventos.  
-- **Reactividad:** Permite procesamiento en tiempo real.
+**Aplicación en CoBox:**
 
-#### Utilidades:
-- Ideal para sistemas logísticos donde los módulos deben reaccionar a cambios, como:
-  - Publicación de eventos de entregas, recargas o incidencias.  
-  - Sincronización de reportes en segundo plano.  
-  - Alertas automáticas a supervisores o clientes.
+* En la creación de reportes personalizados a través de un `ReportBuilder`, que permite agregar secciones específicas (rendimiento, consumo, entregas, evidencias).
+* En la configuración dinámica de rutas mediante un `RouteBuilder`, encargado de construir objetos `Route` con parámetros opcionales (conductor, vehículo, puntos de control, tiempos estimados).
+
+**Ventajas:**
+
+* **Claridad y legibilidad:** Estructura la construcción de objetos complejos.
+* **Flexibilidad:** Soporta múltiples representaciones del mismo objeto (diario, semanal, mensual).
+* **Mantenibilidad:** Facilita incorporar nuevos atributos sin alterar el diseño base.
+
+**Utilidades:**
+Apto para objetos con múltiples pasos de configuración, como:
+
+* Reportes logísticos y de desempeño.
+* Rutas personalizadas con parámetros variables.
+* Dashboards adaptados a distintos roles (conductor, gestor, cliente).
+
+---
+
+##### Patrón Saga
+
+**Propósito:**
+Coordina transacciones distribuidas entre varios servicios mediante una secuencia de pasos, aplicando operaciones compensatorias en caso de fallos.
+
+**Aplicación en CoBox:**
+
+* En los flujos logísticos que involucran múltiples *bounded contexts* (`Orders`, `Fleet`, `Deliveries`, `Billing`).
+  Por ejemplo, durante una entrega, se registran la asignación del vehículo, el inicio de ruta, la confirmación y la facturación. Si ocurre un error en una etapa, el patrón Saga ejecuta compensaciones para preservar la consistencia global.
+
+**Ventajas:**
+
+* **Consistencia distribuida:** Asegura integridad de datos en flujos multi-servicio.
+* **Recuperación automática:** Revierten fallos sin comprometer el flujo completo.
+* **Resiliencia:** Aumenta la tolerancia a fallos del sistema.
+
+**Utilidades:**
+Clave en procesos de negocio distribuidos, como:
+
+* Gestión del ciclo completo de una entrega.
+* Procesos de mantenimiento con varias fases.
+* Coordinación entre logística y facturación.
+
+---
+
+##### Patrón API Gateway
+
+**Propósito:**
+Centraliza el acceso a todos los microservicios, actuando como un único punto de entrada para peticiones externas y aplicando políticas de seguridad y enrutamiento.
+
+**Aplicación en CoBox:**
+
+* Implementado mediante `CoWareGateway`, que gestiona peticiones hacia `Auth`, `Deliveries`, `Tracking`, `Evidence` y `Reports`.
+  Este gateway maneja la autenticación JWT, la autorización basada en roles y las políticas de seguridad (CORS, rate limiting).
+
+**Ventajas:**
+
+* **Seguridad y control centralizado:** Gestiona autenticación, logs y reglas de acceso.
+* **Escalabilidad:** Permite agregar o versionar microservicios sin afectar el cliente.
+* **Eficiencia:** Simplifica la comunicación y reduce la latencia cliente-servidor.
+
+**Utilidades:**
+Indispensable en arquitecturas de microservicios donde se requiere:
+
+* Un punto único de autenticación y gestión de tokens.
+* Administración de rutas y cabeceras globales.
+* Políticas unificadas de seguridad y monitoreo.
+
+---
+
+##### Patrón Event-Driven (Basado en eventos)
+
+**Propósito:**
+Permite la comunicación asíncrona entre microservicios mediante la publicación y suscripción de eventos, promoviendo un diseño altamente desacoplado y reactivo.
+
+**Aplicación en CoBox:**
+
+* En la interacción entre `Deliveries`, `Fleet`, `Notifications` y `Reports`.
+  Cuando se completa una entrega, `Deliveries` publica el evento `DeliveryCompleted`, que los demás servicios consumen para actualizar dashboards, generar reportes o enviar notificaciones.
+
+**Ventajas:**
+
+* **Escalabilidad:** Facilita la incorporación de nuevos consumidores sin modificar el código existente.
+* **Desacoplamiento:** Los servicios se comunican a través de eventos, no de llamadas directas.
+* **Reactividad:** Permite respuestas inmediatas ante cambios del sistema.
+
+**Utilidades:**
+Fundamental para sistemas logísticos y distribuidos:
+
+* Publicación de eventos de entregas, recargas o incidencias.
+* Sincronización de reportes en segundo plano.
+* Alertas automáticas para supervisores o clientes.
 
 #### 5.1.3. Pattern Based Custom Software Library
 
@@ -1955,34 +2000,39 @@ Este contexto aplica las capas de DDD de la siguiente forma:
 - **Extensibilidad:** Nuevos contextos, como “Billing” o “Client Management”, pueden agregarse fácilmente sin romper el sistema existente.
 
 #### 5.1.4. Framework Pattern Driven Refactoring Report
-#### Implementación del patrón DTO (Data Transfer Object)
 
-El patrón **DTO (Data Transfer Object)** se utiliza para **transferir datos entre diferentes capas de la aplicación** sin exponer directamente los modelos internos del dominio.  
-Los DTO son objetos simples (sin lógica de negocio) diseñados únicamente para transportar información entre el backend y el frontend.
-
----
-
-#### Argumentos para usarlo en este proyecto
-
-- **Optimización del tráfico de red:**  
-  En una plataforma como **CoWare**, donde se manejan datos de entregas, vehículos y reportes, los DTO permiten agrupar múltiples datos en un solo objeto antes de enviarlos al cliente.  
-  Esto reduce la cantidad de llamadas a la API y mejora el rendimiento general del sistema, especialmente en operaciones que involucran información de varios módulos (por ejemplo, resumen de entregas con conductor, vehículo y estado).
-
-- **Desacoplamiento entre capas:**  
-  Los DTO crean una **barrera entre la capa de dominio y la capa de presentación**, evitando exponer directamente las entidades del negocio.  
-  Así, si en el futuro se modifica la estructura interna de `Delivery`, `Vehicle` o `Report`, esos cambios no afectan a los consumidores externos de la API.
-
-- **Seguridad y control sobre los datos:**  
-  Permiten **filtrar la información sensible** antes de enviarla al cliente.  
-  Por ejemplo, se evita mostrar identificadores internos, tokens de sesión o datos confidenciales del conductor, manteniendo el principio de mínimo privilegio.
+El proceso de refactorización de **CoBox** se fundamenta en la aplicación sistemática de **patrones de diseño y arquitectura**, con el propósito de garantizar **cohesión interna, bajo acoplamiento y alta mantenibilidad** en todos los *bounded contexts*.
+Entre los patrones empleados destacan el **Data Transfer Object (DTO)** y el **Command Query Responsibility Segregation (CQRS)**, ambos esenciales para mejorar la organización del flujo de datos, la escalabilidad y la claridad del código fuente.
 
 ---
 
-#### Ejemplo aplicado al contexto Deliveries
+##### Implementación del patrón DTO (Data Transfer Object)
 
-En el contexto `Deliveries`, se utiliza un DTO llamado `DeliveryResource` para transportar los datos necesarios de una entrega, sin exponer la entidad completa del dominio `Delivery`.  
-De esta forma, el frontend solo recibe la información relevante (código, estado, fecha y conductor asignado), manteniendo la seguridad y la eficiencia.
+El patrón **DTO (Data Transfer Object)** se utiliza para **transferir información entre capas del sistema** sin exponer directamente las entidades del dominio.
+Los DTO son objetos simples y serializables, sin lógica de negocio, que facilitan la comunicación entre el backend y las interfaces cliente, mejorando la eficiencia y la seguridad en la transferencia de datos.
 
+---
+
+###### Argumentos para su adopción en CoBox
+
+* **Optimización del tráfico de red:**
+  En una plataforma logística como **CoBox**, que maneja datos de entregas, vehículos, reportes y mantenimientos, los DTO permiten **agrupar información relevante en un solo objeto** antes de enviarla al cliente.
+  Esto reduce la cantidad de llamadas a la API y mejora el rendimiento, especialmente en endpoints que combinan información de varios módulos.
+
+* **Desacoplamiento entre capas:**
+  Los DTO establecen una **barrera de abstracción** entre la capa de dominio y la capa de presentación, evitando que los modelos internos se expongan directamente.
+  De esta forma, los cambios estructurales en las entidades (`Delivery`, `Vehicle`, `MaintenanceOrder`, etc.) no afectan la API pública ni las integraciones existentes.
+
+* **Seguridad y control de datos:**
+  Permiten **filtrar información sensible** (por ejemplo, identificadores internos o tokens de sesión) antes de enviarla a los clientes, reforzando las políticas de seguridad del sistema.
+
+---
+
+###### Ejemplo aplicado al Bounded Context: Deliveries
+
+En el *bounded context* **Deliveries**, se implementa un DTO llamado `DeliveryResource`, diseñado para transportar únicamente los datos necesarios de una entrega al frontend, sin exponer el modelo completo del dominio `Delivery`.
+
+```java
 package com.coware.deliveries.interfaces.rest.resources;
 
 public record DeliveryResource(
@@ -1993,141 +2043,284 @@ public record DeliveryResource(
     String vehiclePlate,
     String deliveryDate
 ) {}
+```
+
+Este recurso encapsula los atributos estrictamente requeridos por la interfaz cliente, garantizando un **intercambio de datos ligero, seguro y desacoplado** de la estructura interna del dominio.
+
+---
+
+##### Implementación del patrón CQRS (Command Query Responsibility Segregation)
+
+El patrón **CQRS** separa las operaciones de **lectura (Query)** de las operaciones de **escritura (Command)**, mejorando la escalabilidad, la claridad del código y el control sobre los flujos de datos.
+En el contexto de **CoBox**, este patrón se aplica principalmente en el **Bounded Context Maintenance**, encargado de gestionar las órdenes y programaciones de mantenimiento de la flota.
+
+---
+
+###### Aplicación en el Bounded Context: Maintenance
+
+En **Maintenance**, el patrón CQRS permite distinguir entre los servicios que **modifican el estado del sistema** y aquellos que **recuperan información**.
+Esta separación facilita la validación de reglas de negocio y mejora la capacidad de auditoría y testing.
+
+* **Comandos (Command Services):**
+  Los comandos se encargan de ejecutar acciones que alteran el estado del dominio, tales como la creación, actualización o cierre de órdenes de mantenimiento.
+  Ejemplos:
+
+  * `CreateMaintenanceOrderCommand`
+  * `UpdateMaintenanceScheduleCommand`
+  * `CompleteMaintenanceOrderCommand`
+
+  Estos comandos son procesados por el servicio de aplicación:
+
+  ```java
+  @Service
+  @Transactional
+  public class MaintenanceScheduleCommandServiceImpl implements MaintenanceScheduleCommandService {
+      private final MaintenanceScheduleRepository scheduleRepository;
+      private final MaintenanceOrderRepository orderRepository;
+
+      public MaintenanceScheduleCommandServiceImpl(
+              MaintenanceScheduleRepository scheduleRepository,
+              MaintenanceOrderRepository orderRepository) {
+          this.scheduleRepository = scheduleRepository;
+          this.orderRepository = orderRepository;
+      }
+
+      @Override
+      public Long handle(CreateMaintenanceOrderCommand command) {
+          MaintenanceOrder order = new MaintenanceOrder(command.vehicleId(), command.scheduledDate());
+          return orderRepository.save(order).getId();
+      }
+  }
+  ```
+
+* **Consultas (Query Services):**
+  Las consultas se implementan en servicios independientes que **no modifican el estado**, y están optimizadas para recuperar datos de manera eficiente.
+  Ejemplo:
+
+  ```java
+  @Service
+  public class MaintenanceScheduleQueryServiceImpl implements MaintenanceScheduleQueryService {
+      private final MaintenanceScheduleRepository scheduleRepository;
+
+      public MaintenanceScheduleQueryServiceImpl(MaintenanceScheduleRepository scheduleRepository) {
+          this.scheduleRepository = scheduleRepository;
+      }
+
+      @Override
+      public Optional<MaintenanceSchedule> findByVehicleId(Long vehicleId) {
+          return scheduleRepository.findByVehicleId(vehicleId);
+      }
+  }
+  ```
+
+---
+
+###### Beneficios del patrón CQRS en CoBox
+
+* **Separación de responsabilidades:** Aísla la lógica de lectura y escritura, reduciendo el acoplamiento y aumentando la claridad del código.
+* **Escalabilidad y rendimiento:** Permite optimizar las consultas sin afectar la lógica de negocio que maneja comandos.
+* **Mantenibilidad:** Facilita la incorporación de nuevas operaciones sin alterar el núcleo del dominio.
+* **Trazabilidad:** Mejora la auditoría del sistema al diferenciar explícitamente las acciones que modifican el estado del sistema de las que solo consultan información.
+* **Preparación para microservicios:** Esta separación conceptual permite dividir fácilmente los servicios de lectura y escritura en microservicios independientes en etapas posteriores.
+
+---
+
+##### Conclusión del proceso de refactorización
+
+La incorporación de patrones como **DTO** y **CQRS** en la arquitectura DDD de CoBox ha permitido **fortalecer la modularidad, mejorar la calidad del código y preparar la base técnica** para la próxima migración hacia una arquitectura de microservicios.
+Ambos patrones se complementan al ofrecer **claridad en los flujos de datos**, **seguridad en las interacciones** y **flexibilidad para evolucionar el sistema sin afectar los módulos existentes**.
 
 ### 5.2. Software Configuration Management
 
-La **Gestión de Configuración de Software (SCM, por sus siglas en inglés)** es una disciplina que permite **identificar, controlar y rastrear todos los componentes del software** durante su ciclo de vida.  
-Su propósito es asegurar que los cambios en el código, la documentación y los artefactos del proyecto se gestionen de manera organizada, evitando errores y garantizando la coherencia entre versiones.  
-Esta práctica resulta esencial en el desarrollo de **CoWare**, ya que involucra múltiples módulos y microservicios que deben mantenerse sincronizados en entornos de desarrollo, prueba y producción.  
+La **Gestión de Configuración de Software (SCM, por sus siglas en inglés)** es una disciplina fundamental que permite **identificar, controlar y rastrear todos los componentes del software** a lo largo de su ciclo de vida.
+Su propósito es garantizar que los cambios en el código fuente, la documentación y los artefactos del proyecto se administren de forma organizada, evitando inconsistencias y preservando la integridad entre versiones.
 
-El objetivo principal de la SCM en CoWare es **mantener la estabilidad del sistema**, facilitar la colaboración entre desarrolladores y garantizar un despliegue controlado y eficiente.  
-(Martin, 2023)
+En el caso de **CoBox**, esta práctica resulta esencial debido a la naturaleza modular del sistema —basado en *bounded contexts* bajo el paradigma DDD— y a su progresiva transición hacia una **arquitectura de microservicios**.
+La SCM permite mantener la coherencia entre entornos de desarrollo, pruebas y producción, asegurando una evolución controlada del producto digital.
 
----
-
-#### 5.2.1 Software Development Environment Configuration
-#### Directrices de Desarrollo para CoWare
-
-En esta sección, se presentan las **convenciones y prácticas recomendadas** utilizadas en el desarrollo de **CoWare**, una plataforma web inteligente enfocada en optimizar la trazabilidad y gestión del transporte de carga.  
-Estas directrices buscan mantener una estructura de código coherente, facilitar la mantenibilidad y optimizar la experiencia de desarrollo colaborativo entre los equipos de backend y frontend.
+El objetivo principal de la SCM en CoBox es **mantener la estabilidad del sistema**, **facilitar la colaboración entre desarrolladores** y **garantizar un despliegue controlado, reproducible y seguro**.
 
 ---
 
-#### Definición de Requisitos
+#### 5.2.1. Software Development Environment Configuration
 
-Antes del desarrollo, se establecieron los principales objetivos funcionales de CoWare:
+##### Directrices de Desarrollo para CoBox
 
-- **Gestión de Entregas y Rutas:** Registro y seguimiento de entregas con control de estados, evidencias fotográficas y kilometraje.  
-- **Monitoreo en Tiempo Real:** Geolocalización de unidades activas mediante integración con APIs de mapas.  
-- **Reportes Automáticos:** Generación de indicadores de rendimiento, consumo de combustible y cumplimiento operativo.  
-- **Control de Flota:** Administración de vehículos, mantenimientos y disponibilidad.  
-- **Gestión de Usuarios y Roles:** Sistema de autenticación y autorización basado en JWT, con roles de gestor, conductor y administrador.  
-- **Optimización de Costos:** Consolidación de datos operativos para detectar ineficiencias logísticas.
+Esta sección presenta las **convenciones, herramientas y prácticas** adoptadas en el desarrollo de **CoBox**, una plataforma web inteligente orientada a la **gestión logística, trazabilidad y mantenimiento preventivo de flotas**.
+El entorno de desarrollo ha sido diseñado para mantener una estructura de código coherente, escalable y alineada con los principios de **Domain-Driven Design (DDD)** y **Clean Architecture**.
 
 ---
 
-#### Elección de la Tecnología
+##### Definición de Requisitos Funcionales
 
-#### Frontend
-- **Tecnología:** React  
-- **Motivo de elección:** React es una biblioteca basada en componentes con una UI declarativa y manejo de estado mediante Hooks/Context, ideal para construir interfaces dinámicas, modulares y altamente reutilizables.  
-  Facilita la comunicación con el backend mediante `fetch` o Axios (con interceptores para tokens/errores) y se integra fácilmente con patrones como Redux/RTK o React Query para el manejo de datos.  
-- **Ventaja clave:** Excelente soporte para SPA con React Router, composición y reutilización de componentes, ecosistema maduro (Next.js para SSR/SSG) y amplia comunidad activa.
+Previo al desarrollo, se establecieron los principales objetivos funcionales del sistema:
 
-
-#### Backend
-- **Tecnología:** Spring Boot (Java 17)  
-- **Motivo de elección:** Spring Boot proporciona una estructura limpia y organizada para el desarrollo de microservicios RESTful.  
-  Su integración con **Spring Data JPA** y **JWT Security** permite manejar autenticación, persistencia y transacciones con eficiencia.  
-- **Ventaja clave:** Despliegue rápido, alta estabilidad, integración sencilla con bases de datos MySQL y soporte a arquitecturas distribuidas.
+* **Gestión de Entregas y Rutas:** Registro, seguimiento y confirmación de entregas con evidencia fotográfica y control de kilometraje.
+* **Monitoreo en Tiempo Real:** Geolocalización de unidades activas mediante integración con APIs de mapas.
+* **Reportes Automáticos:** Generación de indicadores de rendimiento, mantenimiento y desempeño operativo.
+* **Control de Flota:** Administración de vehículos, mantenimiento preventivo y disponibilidad por estado.
+* **Gestión de Usuarios y Roles:** Sistema de autenticación y autorización con **JWT**, con roles diferenciados (gestor, conductor, administrador).
+* **Optimización de Costos:** Consolidación de datos operativos para detectar ineficiencias logísticas.
 
 ---
 
-#### Configuración del Entorno de Desarrollo
+##### Elección del Stack Tecnológico
 
-- **Editor de Código Principal:** IntelliJ IDEA Ultimate  
-  - **Propósito:** Edición, ejecución y depuración del código tanto del backend (Spring Boot) como del frontend (React).  
-  - **Ruta de descarga:** [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)  
-  - **Motivo de elección:** Excelente integración con proyectos full stack, autocompletado inteligente, refactorización avanzada y depuración integrada.  
-  - **Ventaja clave:** Aumenta la productividad y reduce errores mediante herramientas automáticas de inspección de código.
+###### Frontend
 
-- **Gestor de Dependencias:**  
-  - **Backend:** Maven  
-  - **Frontend:** NPM  
-  - **Propósito:** Controlar versiones de librerías y garantizar la consistencia del entorno de desarrollo.
+* **Tecnología:** React 18
+* **Motivo de elección:**
+  React ofrece una arquitectura declarativa basada en componentes, ideal para construir interfaces dinámicas, reactivas y reutilizables.
+  Permite una integración sencilla con el backend mediante `Axios` y control de estado a través de Context API o React Query.
+* **Ventajas:**
 
----
+  * Excelente soporte para **Single Page Applications (SPA)** mediante React Router.
+  * Ecosistema maduro y mantenido activamente.
+  * Compatibilidad con frameworks como **Next.js** para SSR/SSG.
+  * Integración natural con **TypeScript** para un tipado más seguro.
 
-#### Control de Versiones y Colaboración
+###### Backend
 
-- **Herramienta:** GitHub  
-  - **Propósito:** Control de versiones, trabajo colaborativo y gestión de ramas.  
-  - **Ruta:** [https://github.com](https://github.com)  
-  - **Motivo de elección:** Permite al equipo sincronizar cambios, realizar revisiones de código y administrar issues desde un entorno centralizado.  
-  - **Ventaja clave:** Facilita el trabajo en equipo con flujos basados en *branches*, *pull requests* y *releases*.
+* **Tecnología:** Spring Boot (Java 21)
+* **Motivo de elección:**
+  Spring Boot proporciona una estructura robusta y flexible para construir **microservicios RESTful** en conformidad con las capas de DDD.
+  Ofrece integración nativa con **Spring Data JPA**, **Spring Security (JWT)** y control transaccional eficiente.
+* **Ventajas:**
 
----
+  * Facilidad de despliegue en plataformas cloud como AWS.
+  * Ecosistema extensible con dependencias maduras (Spring Cloud, Validation, Lombok).
+  * Alta estabilidad y escalabilidad para entornos productivos.
 
-#### Despliegue del Backend
+###### Base de Datos
 
-- **Plataforma:** Render  
-  - **Propósito:** Hospedaje en la nube del backend de CoWare.  
-  - **Ruta:** [https://render.com](https://render.com)  
-  - **Motivo de elección:** Plataforma confiable y fácil de usar para proyectos Spring Boot, con integración automática desde GitHub.  
-  - **Ventaja clave:** Despliegue continuo, configuración simple y soporte para entornos seguros con variables de entorno.
+* **Tecnología:** PostgreSQL (AWS RDS)
+* **Motivo de elección:**
+  PostgreSQL ofrece un motor relacional sólido y altamente compatible con **Spring Data JPA**, con soporte para transacciones ACID y operaciones complejas.
+* **Ventajas:**
 
-- **Base de Datos:** MySQL (Azure Flexible Server)  
-  - **Motivo de elección:** Ofrece alta disponibilidad, respaldo automático y facilidad de integración con Spring Data JPA.  
-  - **Ventaja clave:** Escalabilidad y persistencia garantizada para los datos logísticos y de usuarios.
-
----
-
-#### Product UX/UI Design
-
-- **Herramienta de Diseño:** Figma  
-  - **Propósito:** Creación de interfaces y prototipos visuales para el panel del gestor y la app del conductor.  
-  - **Ruta:** [https://www.figma.com](https://www.figma.com)  
-  - **Motivo de elección:** Facilita la colaboración en tiempo real entre diseñadores y desarrolladores.  
-  - **Ventaja clave:** Permite iterar diseños rápidamente, mantener consistencia visual y crear componentes reutilizables.
+  * Alta disponibilidad y replicación en AWS RDS.
+  * Compatibilidad con JSONB y consultas avanzadas.
+  * Seguridad y cifrado en reposo y en tránsito.
 
 ---
 
-#### Software Development Practices
+##### Configuración del Entorno de Desarrollo
 
-Durante el desarrollo de **CoWare**, se aplican las siguientes tecnologías y buenas prácticas base del desarrollo web:
+* **IDE Principal:** IntelliJ IDEA Ultimate
 
-- **HTML5:** Estructura fundamental de las interfaces, garantizando accesibilidad y semántica.  
-  Referencia: [https://www.w3schools.com/html](https://www.w3schools.com/html)
+  * **Propósito:** Desarrollo, depuración y ejecución de los proyectos backend (Spring Boot) y frontend (React).
+  * **Ruta:** [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)
+  * **Ventajas:** Integración con Git, Maven y Docker; refactorización avanzada; inspección de código estática; y soporte para entornos full stack.
 
-- **CSS3:** Estilos visuales coherentes con el diseño retro tecnológico del producto, usando layouts responsivos y variables personalizadas.  
-  Referencia: [https://www.w3schools.com/css](https://www.w3schools.com/css)
+* **Gestores de Dependencias:**
 
-- **TypeScript (React):** Uso estricto de tipado y componentes funcionales con Hooks para mejorar la mantenibilidad, la legibilidad y la detección temprana de errores en tiempo de compilación.  
-  Referencia: [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
+  * **Backend:** Maven
+  * **Frontend:** NPM
+  * **Objetivo:** Asegurar versiones consistentes de librerías y mantener la reproducibilidad del entorno de desarrollo.
 
-- **Spring Boot:** Desarrollo de microservicios REST, autenticación con JWT y manejo de excepciones globales.  
-  Referencia: [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
+* **Lenguajes principales:**
+
+  * **Java 21 (backend)**
+  * **TypeScript (frontend)**
 
 ---
+
+##### Control de Versiones y Colaboración
+
+* **Herramienta:** GitHub
+
+  * **URL:** [https://github.com](https://github.com)
+  * **Motivo:** Control de versiones distribuido y colaboración centralizada entre desarrolladores.
+  * **Flujo adoptado:** **GitFlow**, con ramas:
+
+    * `main` → versión estable y desplegable.
+    * `develop` → rama activa de integración.
+    * `feature/*` → ramas temporales por funcionalidad.
+    * `release/*` → preparación de entregas.
+    * `hotfix/*` → corrección de incidencias críticas.
+  * **Commits:** Convenciones basadas en **Conventional Commits**.
+  * **Versionado:** Aplicación de **Semantic Versioning (SemVer 2.0.0)** para releases.
+
+---
+
+##### Despliegue del Backend
+
+* **Plataforma:** AWS Elastic Beanstalk
+
+  * **Propósito:** Despliegue automatizado del backend Spring Boot.
+  * **Ventajas:** Integración directa con GitHub, balanceo de carga automático y gestión escalable de entornos.
+  * **Integraciones:**
+
+    * **AWS RDS (PostgreSQL)** como base de datos persistente.
+    * **S3** para almacenamiento de archivos y evidencias.
+    * **CloudWatch** para monitoreo de logs y métricas.
+
+* **Workflows de Deploy:**
+
+  * Implementados mediante **GitHub Actions**, con etapas de build, test y deployment automatizado.
+  * Configuración de *secrets* para credenciales y variables de entorno.
+
+---
+
+##### Product UX/UI Design
+
+* **Herramienta:** Figma
+
+  * **Propósito:** Creación de prototipos de interfaz y flujos de usuario para el panel administrativo y la app del conductor.
+  * **Ruta:** [https://www.figma.com](https://www.figma.com)
+  * **Ventajas:** Colaboración en tiempo real, diseño de componentes reutilizables y consistencia visual en todo el producto.
+
+---
+
+##### Software Development Practices
+
+Durante el desarrollo de **CoBox**, se implementaron prácticas y estándares reconocidos en la industria:
+
+* **HTML5 / CSS3:** Estructura semántica y estilos adaptativos para garantizar accesibilidad y experiencia responsive.
+
+  * Referencia: [https://developer.mozilla.org/docs/Web/HTML](https://developer.mozilla.org/docs/Web/HTML)
+
+* **TypeScript (React):** Tipado estático, componentes funcionales y Hooks para mejorar mantenibilidad y detectar errores en tiempo de compilación.
+
+  * Referencia: [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
+
+* **Spring Boot (Java 21):** Desarrollo de microservicios REST, autenticación JWT, validación con `@Valid`, control global de excepciones y uso de `@Transactional` para consistencia de datos.
+
+  * Referencia: [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
+
+* **Domain-Driven Design (DDD):** División del dominio en *bounded contexts*, uso de entidades, agregados, value objects, servicios de dominio y eventos de integración.
+
+  * Referencia: Evans, Eric. *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley, 2004.
+
+* **Clean Architecture & SOLID:** Principios para garantizar independencia entre capas, responsabilidad única y flexibilidad para refactorización.
+
+  * Referencia: Martin, Robert C. *Clean Architecture*. Prentice Hall, 2017.
+
+* **GitFlow Workflow:** Organización del ciclo de vida del código fuente en ramas controladas y versionadas.
+
+  * Referencia: Driessen, Vincent. *A successful Git branching model*, 2010.
+
+---
+
 #### 5.2.2 Source Code Management
 
 #### Gestión de Cambios en el Código Fuente con GitHub
 
-El equipo de desarrollo de **CoWare** ha definido una estrategia sólida para la **gestión de cambios en el código fuente**, utilizando **GitHub** como plataforma principal de **control de versiones** y colaboración.  
+El equipo de desarrollo de **CoBox** ha definido una estrategia sólida para la **gestión de cambios en el código fuente**, utilizando **GitHub** como plataforma principal de **control de versiones** y colaboración.  
 Esta práctica garantiza la trazabilidad de los cambios, la organización del flujo de trabajo y la correcta integración entre los diferentes módulos que componen el sistema: frontend, backend y servicios de apoyo.
 
 Se han configurado **repositorios remotos** para almacenar el código de cada componente de la plataforma, permitiendo un desarrollo colaborativo y controlado entre los integrantes del equipo.
 
 **Repositorios del proyecto:**
 
-- **Landing Page:** 
-- **Frontend:** 
-- **Backend:** 
+- **Landing Page:** https://github.com/G1-FundamentosArqui-6336/Landing-Page
+- **Frontend:** https://github.com/G1-FundamentosArqui-6336/frontend
+- **Backend:** https://github.com/G1-FundamentosArqui-6336/backend
 ---
 
 #### Estructura del Repositorio
 
-Para asegurar un desarrollo ordenado y colaborativo, los repositorios de CoWare implementan una **estructura basada en ramas (branches)** según las etapas del flujo de trabajo.  
+Para asegurar un desarrollo ordenado y colaborativo, los repositorios de CoBox implementan una **estructura basada en ramas (branches)** según las etapas del flujo de trabajo.  
 Esta metodología permite mantener la versión estable en producción mientras se desarrollan nuevas funcionalidades en paralelo.
 
 Las ramas principales son:
@@ -2174,7 +2367,7 @@ Este estándar mejora la comunicación entre los desarrolladores y facilita la r
 
 #### Documentación del Proyecto
 
-Toda la documentación de **CoWare** se encuentra en los archivos `README.md` ubicados en la raíz de cada repositorio.  
+Toda la documentación de **CoBox** se encuentra en los archivos `README.md` ubicados en la raíz de cada repositorio.  
 Estos archivos incluyen:
 
 - Descripción general del módulo.  
@@ -2185,64 +2378,387 @@ Estos archivos incluyen:
 
 ---
 
-#### 5.2.3 Source Code Style Guide & Conventions
+#### 5.2.3. Source Code Style Guide & Conventions
 
-En esta guía se presentan las **convenciones, estilos, estructuras y principios** que rigen el desarrollo del código fuente de **CoWare**.  
-Estas normas garantizan **coherencia, mantenibilidad, flexibilidad y escalabilidad** en todos los componentes del sistema, tanto en el frontend (React) como en el backend (Spring Boot).  
-El cumplimiento de estas guías asegura una colaboración fluida entre los miembros del equipo y un código más limpio, legible y fácil de evolucionar.
-
----
-
-#### Lenguajes y Tecnologías Utilizadas
-
-- **HTML5:** Para estructurar el contenido web con etiquetas semánticas, mejorando la accesibilidad y el SEO.  
-- **CSS3 / SCSS:** Para definir la presentación visual de la plataforma, aplicando principios de diseño responsive y reutilización de estilos.  
-- **TypeScript:** Lenguaje principal del frontend React, con tipado estático, interfaces y tipos genéricos que mejoran la calidad, mantenibilidad y escalabilidad del código. 
-- **Java (Spring Boot):** Lenguaje del backend, enfocado en la lógica de negocio, seguridad y conexión con la base de datos.  
-- **JSON / REST:** Formato estándar para la comunicación entre frontend y backend mediante APIs.
+Esta guía establece las **convenciones, estructuras y principios de estilo** aplicados en el desarrollo del código fuente de **CoBox**.
+Su objetivo es garantizar **coherencia, mantenibilidad y escalabilidad** en todos los componentes del sistema, tanto en el **frontend (React + TypeScript)** como en el **backend (Spring Boot + Java 21)**.
+La aplicación disciplinada de estas convenciones asegura un código limpio, legible y fácil de mantener por cualquier miembro del equipo o colaborador externo.
 
 ---
 
-#### HTML
+##### Lenguajes y Tecnologías Base
 
-- **Nombres descriptivos:**  
-  Usar nombres representativos para clases e identificadores.  
-  Ejemplo: `delivery-card` en lugar de `box1`.  
+* **HTML5:** Estructura semántica y accesible del contenido web.
+* **CSS3 / SCSS:** Definición modular de estilos con diseño responsivo.
+* **TypeScript (React):** Tipado estático, componentes funcionales y validación temprana de errores.
+* **Java 21 (Spring Boot):** Lógica de negocio, seguridad y persistencia bajo principios DDD.
+* **JSON / REST:** Intercambio de datos entre frontend y backend mediante APIs RESTful.
 
-- **Indentación clara:**  
-  Mantener una sangría uniforme de **2 espacios** para facilitar la lectura.  
+---
 
-- **Etiquetas semánticas:**  
-  Uso obligatorio de etiquetas como `<header>`, `<main>`, `<section>`, `<article>` y `<footer>`.  
+### Frontend Code Style — React + TypeScript
 
-- **Comentarios útiles:**  
-  Comentar únicamente el código que requiera explicación adicional.  
-  ```html
-  <!-- Sección principal del panel de control -->
-  <main class="dashboard-main">...</main>
+##### Estructura de Proyecto
 
+El frontend de CoBox sigue una **arquitectura modular y escalable**, organizada por **bounded contexts** y subdividida en tres capas principales: `data`, `domain` y `presentation`.
+
+```bash
+src/
+ ├── deliveries/
+ │    ├── data/          # Conexión API, repositorios y mapeadores
+ │    ├── domain/        # Modelos, entidades y lógica de negocio
+ │    └── presentation/  # Componentes UI, vistas y navegación
+ ├── shared/             # Componentes y utilidades comunes
+ └── app/                # Configuración global (routes, providers)
+```
+
+##### Convenciones de Nomenclatura
+
+| Tipo de elemento      | Convención                         | Ejemplo                              |
+| --------------------- | ---------------------------------- | ------------------------------------ |
+| Componentes React     | PascalCase                         | `DeliveryCard.tsx`, `HomeScreen.tsx` |
+| Hooks personalizados  | camelCase prefijado con `use`      | `useAuth()`, `useFetchDeliveries()`  |
+| Archivos de estilos   | kebab-case                         | `delivery-card.scss`                 |
+| Interfaces y tipos    | PascalCase prefijado con `I` o `T` | `IUser`, `TDeliveryStatus`           |
+| Variables y funciones | camelCase                          | `handleSubmit`, `isLoggedIn`         |
+| Constantes globales   | UPPER_CASE                         | `BASE_URL`, `MAX_RETRIES`            |
+
+##### Reglas de Código y Formateo
+
+* **Indentación:** 2 espacios por nivel.
+* **Longitud máxima de línea:** 100 caracteres.
+* **Imports ordenados:** primero librerías externas, luego internas, y finalmente estilos.
+* **Hooks:** deben ser llamados al inicio del cuerpo de un componente.
+* **JSX limpio:** evitar anidaciones excesivas y utilizar componentes reutilizables.
+* **PropTypes o tipos explícitos:** todos los componentes deben especificar tipos de props y estado.
+
+##### Ejemplo de Componente
+
+```tsx
+import React from "react";
+import { Delivery } from "../../domain/models/Delivery";
+
+interface DeliveryCardProps {
+  delivery: Delivery;
+}
+
+export const DeliveryCard: React.FC<DeliveryCardProps> = ({ delivery }) => (
+  <article className="delivery-card">
+    <h3>{delivery.code}</h3>
+    <p>Status: {delivery.status}</p>
+    <p>Driver: {delivery.driverName}</p>
+  </article>
+);
+```
+
+##### Estilo y Buenas Prácticas de UI
+
+* **CSS modularizado:** un archivo `.scss` por componente.
+* **Variables de color y tipografía** definidas globalmente en `/shared/styles/_variables.scss`.
+* **Responsive Design:** uso de *flexbox*, *grid* y *media queries* adaptativas.
+* **Testing UI:** validación mediante **React Testing Library** y **Jest**.
+
+---
+
+### Backend Code Style — Java 21 + Spring Boot
+
+##### Estructura de Proyecto (DDD)
+
+El backend sigue una organización basada en **bounded contexts**, cada uno estructurado conforme a las capas DDD:
+
+```bash
+src/main/java/org/upc/cobox/
+ ├── maintenance/               # Bounded Context: Maintenance
+ │    ├── application/          # Servicios y comandos de aplicación
+ │    ├── domain/               # Entidades, value objects, agregados, eventos
+ │    ├── infrastructure/       # Persistencia y adaptadores externos
+ │    └── interfaces/           # Controladores REST, DTOs y mapeadores
+ └── shared/                    # Utilidades comunes (event bus, base classes)
+```
+
+##### Nomenclatura
+
+| Tipo de elemento   | Convención                                   | Ejemplo                                          |
+| ------------------ | -------------------------------------------- | ------------------------------------------------ |
+| Paquetes           | lowercase                                    | `org.upc.cobox.maintenance.domain`               |
+| Clases y Entidades | PascalCase                                   | `MaintenanceOrder`, `VehicleAssignment`          |
+| Métodos            | camelCase                                    | `createOrder()`, `validateRule()`                |
+| Constantes         | UPPER_CASE                                   | `MAX_TOLERANCE_PERCENTAGE`                       |
+| Variables          | camelCase                                    | `maintenanceRule`, `orderRepository`             |
+| DTOs               | PascalCase con sufijo `Resource` o `Request` | `MaintenanceOrderResource`, `CreateOrderRequest` |
+| Eventos            | PascalCase con sufijo `Event`                | `MaintenanceOrderCreatedEvent`                   |
+
+##### Estilo y Reglas de Código
+
+* **Indentación:** 4 espacios por nivel.
+* **Longitud máxima de línea:** 120 caracteres.
+* **Anotaciones:** alineadas sobre el método o clase correspondiente.
+* **Excepciones:** personalizadas dentro del contexto de dominio (`InvalidMaintenanceStateException`).
+* **Documentación:** uso de **KDoc/Javadoc** en clases públicas y métodos clave.
+* **Logs:** emplear `Slf4j` para registro estructurado.
+* **Validaciones:** usar `javax.validation` (`@NotNull`, `@Size`, `@Min`, etc.) en DTOs y comandos.
+
+##### Ejemplo de Servicio Aplicando DDD
+
+```java
+@Service
+@Transactional
+public class MaintenanceScheduleCommandServiceImpl implements MaintenanceScheduleCommandService {
+
+    private final MaintenanceScheduleRepository scheduleRepository;
+    private final MaintenanceOrderRepository orderRepository;
+
+    public MaintenanceScheduleCommandServiceImpl(MaintenanceScheduleRepository scheduleRepository,
+                                                 MaintenanceOrderRepository orderRepository) {
+        this.scheduleRepository = scheduleRepository;
+        this.orderRepository = orderRepository;
+    }
+
+    @Override
+    public Long handle(CreateMaintenanceOrderCommand command) {
+        MaintenanceOrder order = new MaintenanceOrder(command.vehicleId(), command.scheduledDate());
+        return orderRepository.save(order).getId();
+    }
+}
+```
+
+##### Testing y Cobertura
+
+* **Framework de pruebas:** JUnit 5 + Mockito.
+* **Estrategia:** pruebas unitarias por capa (domain, application, infrastructure).
+* **Cobertura mínima:** 80% por módulo.
+* **Tests de integración:** validados con `@SpringBootTest`.
+* **Nombrado:** `ClassNameTest` (por ejemplo, `MaintenanceOrderServiceTest`).
+
+---
+
+### Convenciones Transversales
+
+##### Commits y Versionado
+
+* **Mensajes de commit:** seguir el formato de **Conventional Commits**:
+
+  ```
+  feat: add new delivery tracking endpoint
+  fix: resolve maintenance schedule persistence issue
+  refactor: simplify order repository interface
+  ```
+* **Versionado semántico:**
+
+  * `MAJOR.MINOR.PATCH` → ejemplo: `v1.3.2`
+  * Cambios mayores indican ruptura de compatibilidad.
+
+##### Documentación
+
+* Cada módulo debe incluir un archivo `README.md` con:
+
+  * Descripción del contexto.
+  * Dependencias principales.
+  * Pasos de ejecución local y despliegue.
+  * Enlaces a documentación adicional.
+
+##### Principios de Código Limpio
+
+* **Responsabilidad Única (SRP):** cada clase y método debe tener un único propósito.
+* **Open/Closed Principle:** el código debe ser extensible sin modificarse.
+* **DRY (Don’t Repeat Yourself):** evitar duplicidad mediante abstracción y reutilización.
+* **YAGNI (You Aren’t Gonna Need It):** implementar solo lo necesario.
+* **Fail Fast:** validaciones tempranas ante errores.
+
+---
+
+### Referencias Técnicas
+
+* **TypeScript Style Guide – Google:** [https://google.github.io/styleguide/tsguide.html](https://google.github.io/styleguide/tsguide.html)
+* **Airbnb React/JSX Style Guide:** [https://airbnb.io/javascript/react](https://airbnb.io/javascript/react)
+* **Oracle Java Code Conventions:** [https://www.oracle.com/java/technologies/javase/codeconventions-150003.pdf](https://www.oracle.com/java/technologies/javase/codeconventions-150003.pdf)
+* **Spring Boot Reference Guide:** [https://docs.spring.io/spring-boot/docs/current/reference/html](https://docs.spring.io/spring-boot/docs/current/reference/html)
+* **DDD & Clean Code Principles:**
+
+  * Evans, Eric. *Domain-Driven Design: Tackling Complexity in the Heart of Software*.
+  * Martin, Robert C. *Clean Architecture*.
+* **Conventional Commits:** [https://www.conventionalcommits.org](https://www.conventionalcommits.org)
+* **Semantic Versioning 2.0.0:** [https://semver.org](https://semver.org)
 
 #### 5.2.4. Software Deployment Configuration
-Para desplegar nuestro sitio web mediante GitHub Pages, primero debemos ingresar al repositorio del proyecto en GitHub.
-Una vez dentro, accedemos a la configuración (Settings) del repositorio y, en el menú lateral, seleccionamos la sección “Pages”.
-Desde allí podremos configurar los parámetros necesarios para publicar el sitio web directamente desde el repositorio.
 
-[PONER CAPTURA]
+Esta sección resume —de forma concisa y operativa— el flujo de **despliegue del backend (Spring Boot, Java 21) en AWS** usando **Elastic Beanstalk (EB)** y **PostgreSQL en RDS**, con **GitHub Actions** para CI/CD.
+Se incluye una nota breve para la *landing* en Netlify.
 
-Implementación con Git: Permite conservar un registro detallado de todas las modificaciones realizadas en el proyecto y gestionar eficazmente las distintas versiones del código fuente.
+> **Stack**: Spring Boot (21) · PostgreSQL · AWS EB + RDS · GitHub Actions · Maven
 
-[PONER CAPTURA]
+---
 
-En la sección GitHub Pages, seleccionamos la rama principal (main) desde el menú desplegable “Branch” y guardamos los cambios haciendo clic en “Save”.
-Tras unos instantes, GitHub generará automáticamente el enlace de nuestro sitio web publicado, permitiéndonos acceder a la versión desplegada en línea.
+##### 1) RDS PostgreSQL (nueva instancia)
 
+**Configuración mínima**
+
+* Engine: **PostgreSQL 15** · Template: **Free tier** · Class: **db.t3.micro** · Storage: **20 GB gp2**
+* DB identifier: `cobox` *(único)*
+* Master user: `cl_admin` · Password: *(guardar en secreto)*
+* **VPC**: default (la misma del ecosistema actual) · **Public access**: **Yes**
+* **DB name**: `cobox_bd`
+* **Security Group**: crear `cobox-backend-rds-sg` (abriremos reglas abajo)
+
+**Inbound temporal (desarrollo/local)**
+
+```
+Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: 0.0.0.0/0
+Desc: Acceso temporal de desarrollo
+```
+
+> Luego se restringe para permitir **solo** el SG del entorno de EB.
+
+![Consola RDS – detalles de instancia](/assets/AuroraRDSCobox.png)
+
+---
+
+##### 2) Elastic Beanstalk (Java 21)
+
+**Crear aplicación/entorno**
+
+* Application: `cobox-backend` *(único)*
+* Environment: `cobox-backend-env` *(único)*
+* Platform: **Java – Corretto 21 (Amazon Linux 2023)**
+* Preset: **Single instance (free tier)**
+* Code: **Sample application**
+
+**Configure more options → Software (Environment properties)**
+
+```properties
+SERVER_PORT=5000
+SPRING_DATASOURCE_URL=jdbc:postgresql://<RDS-ENDPOINT>:5432/nuevo_backend
+SPRING_DATASOURCE_USERNAME=nuevo_admin
+SPRING_DATASOURCE_PASSWORD=<TU_PASSWORD>
+SPRING_JPA_HIBERNATE_DDL_AUTO=update
+SPRING_JPA_SHOW_SQL=false
+SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+```
+
+* Instances: `t3.micro`
+* Roles/Profiles: **aws-elasticbeanstalk-service-role** / **aws-elasticbeanstalk-ec2-role**
+* Network: VPC default, subnets públicas, **Public IP: enabled**
+
+![Configuración de variables en EB](/assets/AWSCoboxVariables.png)
+![Entorno de Cobox habilitado en AWS](/assets/AWSCoboxBackendEnv.png)
+
+---
+
+##### 3) Conectar Security Groups (RDS ↔ EB)
+
+1. Identifica el **Security Group del entorno EB** (EC2 → Security Groups).
+2. En `cobox-backend-rds-sg` agrega **Inbound**:
+
+```
+Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: <SG-ID-de-EB>
+Desc: Acceso desde Elastic Beanstalk
+```
+
+![Reglas inbound del SG de RDS](/assets/PanelSGCobox.png)
+
+---
+
+##### 4) GitHub Actions (CI/CD a EB)
+
+**Secrets del repo**
+
+* `AWS_ACCESS_KEY_ID` — usuario `github-actions-...`
+* `AWS_SECRET_ACCESS_KEY`
+* `AWS_ACCOUNT_ID` *(si usas bucket EB “regional” por cuenta)*
+
+**Workflow `.github/workflows/aws-deploy.yml`**
+
+```yaml
+name: Deploy Spring Boot Cobox to AWS Elastic Beanstalk
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'  # Usa corretto para coincidir con AWS
+          java-version: '21'
+
+      - name: Build with Maven
+        run: mvn clean package -DskipTests
+
+      - name: Get timestamp
+        id: time
+        run: echo "timestamp=$(date +%Y%m%d_%H%M%S)" >> $GITHUB_OUTPUT
+
+      - name: Deploy to Elastic Beanstalk
+        uses: einaregilsson/beanstalk-deploy@v22
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: cobox-backend
+          environment_name: Cobox-backend-env
+          version_label: cobox-${{ steps.time.outputs.timestamp }}
+          region: ${{ secrets.AWS_REGION }}
+          deployment_package: target/cobox-0.0.1-SNAPSHOT.jar
+```
+
+![Secrets en GitHub](/assets/CoboxBackendRepoSecrets.png)
+![Workflow exitoso](/assets/SuccesfulWorkflow.png)
+
+---
+
+##### 5) Spring Boot: variables y *health check*
+
+**`application.properties` (usar env vars)**
+
+```properties
+server.port=${SERVER_PORT:8080}
+spring.datasource.url=${SPRING_DATASOURCE_URL}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
+spring.jpa.hibernate.ddl-auto=${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+spring.jpa.show-sql=${SPRING_JPA_SHOW_SQL:false}
+spring.jpa.properties.hibernate.dialect=${SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT}
+```
+
+---
+
+##### 6) Landing Page (Netlify) — *resumen operativo*
+
+* **Netlify ↔ GitHub**: conectar el repo de la *landing* desde el **Netlify Dashboard**.
+* Incluir `netlify.toml` para *build* y *publish* automáticos, por ejemplo:
+
+```toml
+[build]
+  command = "npm run build"
+  publish  = "dist"   # o "build" según framework
+[build.environment]
+  NODE_VERSION = "20"
+```
+
+* Cada **push a main** dispara el deploy automático.
+
+![Sitio conectado en Netlify](/assets/NetlifyConnection.png)
+![`netlify.toml` en repo](/assets/NetlifyToml.png)
+
+---
 
 ### 5.3. Microservices Implementation
+
 #### 5.3.1. Sprint 1
-Durante el Sprint 1, nos centramos principalmente en el desarrollo del BackEnd de Horizon utilizando Java, junto con la optimización de la Landing Page.
+
+Durante el Sprint 1, nos centramos principalmente en el desarrollo del BackEnd de CoBox utilizando Java, junto con la optimización de la Landing Page.
 Este sprint resultó clave para establecer las primeras funcionalidades base del sistema, sentando las bases técnicas para los siguientes ciclos de desarrollo.
 
 ##### 5.3.1.1. Sprint Backlog 1
+
 Para el primer sprint backlog, recopilamos las historias de usuario enfocadas en el desarrollo del BackEnd.
 Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello.
 Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
@@ -2530,47 +3046,55 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
 
 ##### 5.3.1.4. Execution Evidence for Sprint Review
 
-Link del backend desplegado: [https://faltacolocarlinkaqui.app]
+Link de Backend Web Services desplegado: http://cobox.us-east-2.elasticbeanstalk.com/swagger-ui/index.html
 
-Evidencia del funcionamiento del backend de la aplicación: [SCREENSHOT]
+Demo de Backend Web Services: 
+
+Evidencia del funcionamiento del backend de la aplicación:
 <div align="center">
     <img src="./assets/backend-deployment.png" alt="backend deployment" width="400">
 </div>
 
-Evidencia del contexto Delivery Management : [SCREENSHOT]
+Evidencia del contexto Delivery Management:
 <div align="center">
     <img src="./assets/contexto-delivery.png" alt="contexto Delivery Management" width="400">
 </div>
-Evidencia del contexto Fleet Management: [SCREENSHOT]
+
+Evidencia del contexto Fleet Management:
 <div align="center">
     <img src="./assets/contexto-fleet.png" alt="contexto Fleet Management" width="400">
 </div>
-Evidencia del contexto Incident Management: [SCREENSHOT]
+
+Evidencia del contexto Incident Management:
 <div align="center">
     <img src="./assets/contexto-incident.png" alt="contexto Incident Management" width="400">
 </div>
-Evidencia del contexto Maintenance Management: [SCREENSHOT]
+
+Evidencia del contexto Maintenance Management:
 <div align="center">
     <img src="./assets/contexto-maintenance.png" alt="contexto maintenance Management" width="400">
 </div>
+
+---
+
 Durante este Sprint, el equipo terminó y lanzó con éxito la Landing Page, la cual se desarrolló en React y se desplegó usando Netlify. Esta página tiene como objetivo comunicar de manera clara las funcionalidades clave de nuestro producto y empresa.
 
-Seccion funciones: [SCREENSHOT]
+Seccion Funciones:
 <div align="center">
-    <img src="./assets/landing_view1.png" alt="funciones" width="400">
+    <img src="./assets/landing_view1.png" alt="Funciones" width="400">
 </div>
 
-Seccion Cómo funciona: [SCREENSHOT]
+Seccion Cómo funciona:
 <div align="center">
     <img src="./assets/landing_view2.png" alt="Cómo funciona" width="400">
 </div>
 
-Seccion Precios: [SCREENSHOT]
+Seccion Precios:
 <div align="center">
     <img src="./assets/landing_view3.png" alt="Precios" width="400">
 </div>
 
-Seccion Contacto: [SCREENSHOT]
+Seccion Contacto:
 <div align="center">
     <img src="./assets/landing_view4.png" alt="Contacto" width="400">
 </div>
@@ -2615,19 +3139,198 @@ asegurando que cada dominio evolucione de forma autónoma sin afectar a los dem�
 </div>
 
 ##### 5.3.1.6. Software Deployment Evidence for Sprint Review
-El despliegue del BackEnd se realizó en la plataforma Render, mientras que la base de datos fue implementada en Railway.
-La documentación de la API se encuentra disponible mediante la interfaz de Swagger, accesible a través del siguiente enlace: [PONER ENLACE]
-[PONER CAPTURA DE DESPLIEGUE]
+
+Esta sección resume —de forma concisa y operativa— el flujo de **despliegue del backend (Spring Boot, Java 21) en AWS** usando **Elastic Beanstalk (EB)** y **PostgreSQL en RDS**, con **GitHub Actions** para CI/CD durante este Sprint 1.
+Se incluye una nota breve para la *landing* en Netlify.
+
+> **Stack**: Spring Boot (21) · PostgreSQL · AWS EB + RDS · GitHub Actions · Maven
+
+---
+
+##### 1) RDS PostgreSQL (nueva instancia)
+
+**Configuración mínima**
+
+* Engine: **PostgreSQL 15** · Template: **Free tier** · Class: **db.t3.micro** · Storage: **20 GB gp2**
+* DB identifier: `cobox` *(único)*
+* Master user: `cl_admin` · Password: *(guardar en secreto)*
+* **VPC**: default (la misma del ecosistema actual) · **Public access**: **Yes**
+* **DB name**: `cobox_bd`
+* **Security Group**: crear `cobox-backend-rds-sg` (abriremos reglas abajo)
+
+**Inbound temporal (desarrollo/local)**
+
+```
+Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: 0.0.0.0/0
+Desc: Acceso temporal de desarrollo
+```
+
+> Luego se restringe para permitir **solo** el SG del entorno de EB.
+
+![Consola RDS – detalles de instancia](/assets/AuroraRDSCobox.png)
+
+---
+
+##### 2) Elastic Beanstalk (Java 21)
+
+**Crear aplicación/entorno**
+
+* Application: `cobox-backend` *(único)*
+* Environment: `cobox-backend-env` *(único)*
+* Platform: **Java – Corretto 21 (Amazon Linux 2023)**
+* Preset: **Single instance (free tier)**
+* Code: **Sample application**
+
+**Configure more options → Software (Environment properties)**
+
+```properties
+SERVER_PORT=5000
+SPRING_DATASOURCE_URL=jdbc:postgresql://<RDS-ENDPOINT>:5432/nuevo_backend
+SPRING_DATASOURCE_USERNAME=nuevo_admin
+SPRING_DATASOURCE_PASSWORD=<TU_PASSWORD>
+SPRING_JPA_HIBERNATE_DDL_AUTO=update
+SPRING_JPA_SHOW_SQL=false
+SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+```
+
+* Instances: `t3.micro`
+* Roles/Profiles: **aws-elasticbeanstalk-service-role** / **aws-elasticbeanstalk-ec2-role**
+* Network: VPC default, subnets públicas, **Public IP: enabled**
+
+![Configuración de variables en EB](/assets/AWSCoboxVariables.png)
+![Entorno de Cobox habilitado en AWS](/assets/AWSCoboxBackendEnv.png)
+
+---
+
+##### 3) Conectar Security Groups (RDS ↔ EB)
+
+1. Identifica el **Security Group del entorno EB** (EC2 → Security Groups).
+2. En `cobox-backend-rds-sg` agrega **Inbound**:
+
+```
+Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: <SG-ID-de-EB>
+Desc: Acceso desde Elastic Beanstalk
+```
+
+![Reglas inbound del SG de RDS](/assets/PanelSGCobox.png)
+
+---
+
+##### 4) GitHub Actions (CI/CD a EB)
+
+**Secrets del repo**
+
+* `AWS_ACCESS_KEY_ID` — usuario `github-actions-...`
+* `AWS_SECRET_ACCESS_KEY`
+* `AWS_ACCOUNT_ID` *(si usas bucket EB “regional” por cuenta)*
+
+**Workflow `.github/workflows/aws-deploy.yml`**
+
+```yaml
+name: Deploy Spring Boot Cobox to AWS Elastic Beanstalk
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'  # Usa corretto para coincidir con AWS
+          java-version: '21'
+
+      - name: Build with Maven
+        run: mvn clean package -DskipTests
+
+      - name: Get timestamp
+        id: time
+        run: echo "timestamp=$(date +%Y%m%d_%H%M%S)" >> $GITHUB_OUTPUT
+
+      - name: Deploy to Elastic Beanstalk
+        uses: einaregilsson/beanstalk-deploy@v22
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: cobox-backend
+          environment_name: Cobox-backend-env
+          version_label: cobox-${{ steps.time.outputs.timestamp }}
+          region: ${{ secrets.AWS_REGION }}
+          deployment_package: target/cobox-0.0.1-SNAPSHOT.jar
+```
+
+![Secrets en GitHub](/assets/CoboxBackendRepoSecrets.png)
+![Workflow exitoso](/assets/SuccesfulWorkflow.png)
+
+---
+
+##### 5) Spring Boot: variables y *health check*
+
+**`application.properties` (usar env vars)**
+
+```properties
+server.port=${SERVER_PORT:8080}
+spring.datasource.url=${SPRING_DATASOURCE_URL}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
+spring.jpa.hibernate.ddl-auto=${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+spring.jpa.show-sql=${SPRING_JPA_SHOW_SQL:false}
+spring.jpa.properties.hibernate.dialect=${SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT}
+```
+
+---
+
+##### 6) Landing Page (Netlify) — *resumen operativo*
+
+* **Netlify ↔ GitHub**: conectar el repo de la *landing* desde el **Netlify Dashboard**.
+* Incluir `netlify.toml` para *build* y *publish* automáticos, por ejemplo:
+
+```toml
+[build]
+  command = "npm run build"
+  publish  = "dist"   # o "build" según framework
+[build.environment]
+  NODE_VERSION = "20"
+```
+
+* Cada **push a main** dispara el deploy automático.
+
+![Sitio conectado en Netlify](/assets/NetlifyConnection.png)
+![`netlify.toml` en repo](/assets/NetlifyToml.png)
+
 
 ##### 5.3.1.7. Team Collaboration Insights during Sprint
-Durante el Sprint 1, el equipo centró sus esfuerzos en migrar el proyecto previo hacia una arquitectura basada en microservicios, integrando un API Gateway como componente esencial para la gestión y orquestación de las comunicaciones entre servicios.
 
-[PONER CAPTURAS DE GITHUB DE CONTRIBUCIONES DEL EQUIPO]
+Durante esta fase de entrega, el equipo mantuvo una coordinación constante en las tareas de desarrollo de la landing page y los servicios backend.
+Además, se realizaron las actualizaciones pertinentes en la documentación. Esta colaboración efectiva fue clave para asegurar el correcto modelado y la funcionalidad de nuestra lógica de negocio.
+
+- _Evidencias de colaboración:_
+
+  - Backend Web Services:
+  ![Evidencias de colaboración - Backend Web Services](/assets/insights_backend.png)
+
+  - Landing Page:
+  ![Evidencias de colaboración - Landing Page](/assets/insights_landingpage.png)
+
+  - Reporte:
+  ![Evidencias de colaboración - Landing Page](/assets/insights_report.png)
+
 
 ##### 5.3.1.8. Kanban Board
+
 [PONER CAPTURA]
 
 -----
+
+
 ### Conclusiones y Recomendaciones
 
 **Conclusiones**
@@ -2656,7 +3359,7 @@ Durante el Sprint 1, el equipo centró sus esfuerzos en migrar el proyecto previ
 6. Desarrollar un plan de capacitación técnica específico para el equipo de desarrollo en tecnologías clave como Spring Cloud Gateway, PostgreSQL + PostGIS, RabbitMQ y Kafka, identificadas como críticas en las decisiones de diseño registradas.
 7. Implementar estrategias de testing automatizado que incluyan pruebas de integración entre microservicios, pruebas de carga para el sistema de tracking en tiempo real, y pruebas de seguridad para validar el control de acceso RBAC.
 8. Establecer métricas de calidad arquitectónica para evaluar continuamente aspectos como acoplamiento entre servicios, cohesión interna de bounded contexts, tiempo de respuesta de APIs y efectividad de las tácticas de disponibilidad implementadas.
-9. Planificar una estrategia de migración gradual que permita escalar la solución de un ambiente de desarrollo local hacia una infraestructura cloud nativa, considerando las restricciones de recursos identificadas y las necesidades de escalabilidad horizontal.
+9. Planificar una estrategia de migración gradual que permita escalar la solución de un ambiente de desarrollo local hacia una infraestructura cloud nativa, considerando las restricciones de recursos identificadas y las necesidades de escalabilidad CoBoxtal.
 10. Mantener un proceso de documentación arquitectónica evolutiva que registre nuevas decisiones de diseño, patrones implementados y lecciones aprendidas, facilitando la transferencia de conocimiento y la continuidad del proyecto a largo plazo.
 
 ### Referencias Bibliográficas
