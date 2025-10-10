@@ -2556,9 +2556,39 @@ Seccion Contacto: [SCREENSHOT]
 
 Landing page desplegado: [https://cobox-logistics.netlify.app]
 
-##### 5.3.1.5. Microservices Documentation Evidence for Sprint Review
-Se ha realizado un nuevo repositorio con el sistema backend:
-[PONER CAPTURA DE GITHUB]
+El sistema **CoBox** está diseñado bajo una arquitectura de **microservicios** con enfoque en **Domain-Driven Design (DDD)**.  
+Cada módulo representa un *bounded context* con su propio dominio, lógica de negocio, base de datos y API independiente.  
+Esto permite mantener un **bajo acoplamiento** y una **alta cohesión** entre los servicios.
+
+---
+
+**Principales microservicios del sistema:**
+
+- **IAM:** Gestiona la autenticación y autorización de usuarios mediante tokens JWT.  
+- **Fleet:** Administra conductores y vehículos, controlando su disponibilidad y estado.  
+- **Delivery:** Gestiona pedidos, asignaciones y entregas.  
+- **Incident:** Permite registrar y actualizar incidentes operativos.  
+- **Maintenance:** Cubre la gestión de órdenes de mantenimiento de los vehículos.
+
+---
+
+Cada microservicio sigue un diseño basado en **agregados** y **objetos de valor**, donde las reglas de negocio se encapsulan dentro de las entidades del dominio.  
+Por ejemplo, el agregado **Driver** controla los cambios de estado entre `AVAILABLE`, `BUSY` y `UNAVAILABLE`, asegurando la consistencia del sistema.
+
+La comunicación entre servicios combina métodos **síncronos** (a través de **API REST**) y **asíncronos** (mediante **eventos de dominio**).  
+Estos eventos permiten mantener la sincronización entre los contextos, como cuando un vehículo entra en mantenimiento o un incidente cambia de estado.
+
+El microservicio **IAM** centraliza la seguridad del sistema, proporcionando autenticación basada en **JWT** y control de roles.  
+Además, cada servicio implementa **auditoría** y **validaciones locales** para garantizar la integridad de sus datos.
+
+---
+
+En conjunto, esta estructura modular ofrece **escalabilidad**, **independencia de despliegue** y **claridad en la separación de responsabilidades**,  
+asegurando que cada dominio evolucione de forma autónoma sin afectar a los demás componentes del sistema.
+
+<div align="center">
+    <img src="./assets/microservicesrrr.png" alt="microservicesrrr.png" width="400">
+</div>
 
 ##### 5.3.1.6. Software Deployment Evidence for Sprint Review
 El despliegue del BackEnd se realizó en la plataforma Render, mientras que la base de datos fue implementada en Railway.
