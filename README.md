@@ -2763,7 +2763,7 @@ Para el primer sprint backlog, recopilamos las historias de usuario enfocadas en
 Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello.
 Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
 
-[PONER CAPTURA TRELLO]
+[![image.png](https://i.postimg.cc/9fGXCpYK/image.png)](https://postimg.cc/Ty3vcnSJ)
 <table>
 <tr>
     <th colspan="3">Sprint #</th>
@@ -3326,9 +3326,10 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 
 ##### 5.3.1.8. Kanban Board
 
-[PONER CAPTURA]
+[![image.png](https://i.postimg.cc/9fGXCpYK/image.png)](https://postimg.cc/Ty3vcnSJ)
 
------
+Anexo 
+https://trello.com/invite/b/68e8d03e19f78bd9207611db/ATTI3cfa249d2bf04756f11ffeaaec7717b7EFC1F7D8/cobox-kanban-sprint-1
 
 
 ### Conclusiones y Recomendaciones
