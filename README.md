@@ -2474,7 +2474,7 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
   </tr>
   <tr>
     <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop<td>
+    <td>feat/develop</td>
     <td>20b8a45b00fecb8f85f9412a98ee6251f1399876</td>
     <td>feat(delivery/order-api): Add GET endpoints for delivered orders</td>
     <td>davidalexd</td>
