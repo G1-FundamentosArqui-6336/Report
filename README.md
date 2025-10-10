@@ -3328,8 +3328,7 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 
 [![image.png](https://i.postimg.cc/9fGXCpYK/image.png)](https://postimg.cc/Ty3vcnSJ)
 
-Anexo 
-https://trello.com/invite/b/68e8d03e19f78bd9207611db/ATTI3cfa249d2bf04756f11ffeaaec7717b7EFC1F7D8/cobox-kanban-sprint-1
+ Anexo: [https://shorturl.at/CzirV](https://shorturl.at/CzirV)  
 
 
 ### Conclusiones y Recomendaciones
