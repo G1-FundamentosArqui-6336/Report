@@ -1719,17 +1719,31 @@ Enlace del Tablero Kanban: https://trello.com/invite/b/68d9f5f5d50cbf348362a137/
 ## Capítulo V: Product Implementation, Validation & Deployment
 ### 5.1. Testing Suites & General Patterns
 #### 5.1.1. Backend Application Core Testing Suite
-Link del Backend desplegado:
+Se han implementado pruebas unitarias puras del dominio para validar la lógica de negocio y el comportamiento de los agregados clave: Order, Fleet, Incident, y MaintenanceOrder.
+Stack Tecnológico
+Herramientas Utilizadas
+- Framework de Pruebas	JUnit 5 (Jupiter)
+- Librería de Asertos	AssertJ (Para aserciones fluidas y legibles)
+- Patrón de Datos de Prueba	Mothers (Clases dedicadas para la creación controlada de objetos de prueba válidos)
 
-Evidencia del funcionamiento del backend de la aplicación:
+Este conjunto de pruebas se enfoca exclusivamente en la capa de dominio (negocio) de la aplicación, aislado de cualquier framework, asegurando la verificación de las reglas intrínsecas del modelo.
 
-Evidencia de la creación de user stories:
+<div align="center">
+    <img src="./assets/maintenancetest.png" alt="maintenancetest" width="400">
+</div>
 
-Evidencia de la creación de sprints:
+<div align="center">
+    <img src="./assets/ordertests.png" alt="ordertests" width="400">
+</div>
 
-Evidencia de la creación de los Epics:
+<div align="center">
+    <img src="./assets/incidenttest.png" alt="incidenttest" width="400">
+</div>
 
-Evidencia de la gestión de los miembros:
+<div align="center">
+    <img src="./assets/fleettest.png" alt="fleettest" width="400">
+</div>
+
 
 #### 5.1.2. Pattern Based Backend Application(s)
 ### Patrón Singleton
