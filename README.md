@@ -2465,53 +2465,46 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
     <th>Committed on (Date)</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>github.com/upc-cobox/backend</td>
+    <td>feat/develop</td>
+    <td>50c74ca3a97421c41a49909d38d057569df07c16</td>
+    <td>feat: Add FleetController</td>
+    <td>RamiroGuzmanCh</td>
+    <td>08/10/25</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>github.com/upc-cobox/backend</td>
+    <td>feat/develop<td>
+    <td>20b8a45b00fecb8f85f9412a98ee6251f1399876</td>
+    <td>feat(delivery/order-api): Add GET endpoints for delivered orders</td>
+    <td>davidalexd</td>
+    <td>08/10/25</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>github.com/upc-cobox/backend</td>
+    <td>feat/develop</td>
+    <td>a294691fe518085a5ee07df5847548c4df861441</td>
+    <td>feat: Add maintenance management bounded context</td>
+    <td>Chaomeum</td>
+    <td>08/10/25</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>github.com/upc-cobox/backend</td>
+    <td>feat/develop</td>
+    <td>6f319f7cc223a2848d9c6ed3b9b757871ed84952</td>
+    <td>Feat(Pedraza) Adedd Bounded Context Incident</td>
+    <td>JoaquinPedraza1</td>
+    <td>08/10/25</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>github.com/upc-cobox/backend</td>
+    <td>feat/develop</td>
+    <td>27dceacea52a95e4db627485fb81c9e00b426275</td>
+    <td>feat(init):template for backend cobox(included context iam and shared)</td>
+    <td>MerlySalonP</td>
+    <td>1/10/25</td>
   </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+
 </table>
 
 ##### 5.3.1.4. Execution Evidence for Sprint Review
