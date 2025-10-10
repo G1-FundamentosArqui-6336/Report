@@ -12,7 +12,7 @@
 ### NRC: 6336  
 ### Profesor: Jorge Luis Delgado Vite
 
-## Informe del TB2
+## Informe del TP1
 **"CoWare"**  
 **Producto: "CoBox"**
 
@@ -23,7 +23,7 @@
 - Merly Salon Puerta – U20201b772  
 - Jhon Alexander Galvez Chambi – U202323270  
 
-**Septiembre, 2025**  
+**Octubre, 2025**  
 **URL del proyecto:** [https://github.com/G1-FundamentosArqui-6336](https://github.com/G1-FundamentosArqui-6336)
 
 ---
@@ -1723,9 +1723,13 @@ Enlace del Tablero Kanban: https://trello.com/invite/b/68d9f5f5d50cbf348362a137/
 ![Kanban Board - ADD Iteration 1](/assets/KanbanBoard.png)
 
 -----
+
 ## Capítulo V: Product Implementation, Validation & Deployment
+
 ### 5.1. Testing Suites & General Patterns
+
 #### 5.1.1. Backend Application Core Testing Suite
+
 Se han implementado pruebas unitarias puras del dominio para validar la lógica de negocio y el comportamiento de los agregados clave: Order, Fleet, Incident, y MaintenanceOrder.
 Stack Tecnológico
 Herramientas Utilizadas
@@ -2302,21 +2306,21 @@ Durante el desarrollo de **CoBox**, se implementaron prácticas y estándares re
 
 #### Gestión de Cambios en el Código Fuente con GitHub
 
-El equipo de desarrollo de **CoWare** ha definido una estrategia sólida para la **gestión de cambios en el código fuente**, utilizando **GitHub** como plataforma principal de **control de versiones** y colaboración.  
+El equipo de desarrollo de **CoBox** ha definido una estrategia sólida para la **gestión de cambios en el código fuente**, utilizando **GitHub** como plataforma principal de **control de versiones** y colaboración.  
 Esta práctica garantiza la trazabilidad de los cambios, la organización del flujo de trabajo y la correcta integración entre los diferentes módulos que componen el sistema: frontend, backend y servicios de apoyo.
 
 Se han configurado **repositorios remotos** para almacenar el código de cada componente de la plataforma, permitiendo un desarrollo colaborativo y controlado entre los integrantes del equipo.
 
 **Repositorios del proyecto:**
 
-- **Landing Page:** 
-- **Frontend:** 
-- **Backend:** 
+- **Landing Page:** https://github.com/G1-FundamentosArqui-6336/Landing-Page
+- **Frontend:** https://github.com/G1-FundamentosArqui-6336/frontend
+- **Backend:** https://github.com/G1-FundamentosArqui-6336/backend
 ---
 
 #### Estructura del Repositorio
 
-Para asegurar un desarrollo ordenado y colaborativo, los repositorios de CoWare implementan una **estructura basada en ramas (branches)** según las etapas del flujo de trabajo.  
+Para asegurar un desarrollo ordenado y colaborativo, los repositorios de CoBox implementan una **estructura basada en ramas (branches)** según las etapas del flujo de trabajo.  
 Esta metodología permite mantener la versión estable en producción mientras se desarrollan nuevas funcionalidades en paralelo.
 
 Las ramas principales son:
@@ -2363,7 +2367,7 @@ Este estándar mejora la comunicación entre los desarrolladores y facilita la r
 
 #### Documentación del Proyecto
 
-Toda la documentación de **CoWare** se encuentra en los archivos `README.md` ubicados en la raíz de cada repositorio.  
+Toda la documentación de **CoBox** se encuentra en los archivos `README.md` ubicados en la raíz de cada repositorio.  
 Estos archivos incluyen:
 
 - Descripción general del módulo.  
@@ -2374,64 +2378,387 @@ Estos archivos incluyen:
 
 ---
 
-#### 5.2.3 Source Code Style Guide & Conventions
+#### 5.2.3. Source Code Style Guide & Conventions
 
-En esta guía se presentan las **convenciones, estilos, estructuras y principios** que rigen el desarrollo del código fuente de **CoWare**.  
-Estas normas garantizan **coherencia, mantenibilidad, flexibilidad y escalabilidad** en todos los componentes del sistema, tanto en el frontend (React) como en el backend (Spring Boot).  
-El cumplimiento de estas guías asegura una colaboración fluida entre los miembros del equipo y un código más limpio, legible y fácil de evolucionar.
-
----
-
-#### Lenguajes y Tecnologías Utilizadas
-
-- **HTML5:** Para estructurar el contenido web con etiquetas semánticas, mejorando la accesibilidad y el SEO.  
-- **CSS3 / SCSS:** Para definir la presentación visual de la plataforma, aplicando principios de diseño responsive y reutilización de estilos.  
-- **TypeScript:** Lenguaje principal del frontend React, con tipado estático, interfaces y tipos genéricos que mejoran la calidad, mantenibilidad y escalabilidad del código. 
-- **Java (Spring Boot):** Lenguaje del backend, enfocado en la lógica de negocio, seguridad y conexión con la base de datos.  
-- **JSON / REST:** Formato estándar para la comunicación entre frontend y backend mediante APIs.
+Esta guía establece las **convenciones, estructuras y principios de estilo** aplicados en el desarrollo del código fuente de **CoBox**.
+Su objetivo es garantizar **coherencia, mantenibilidad y escalabilidad** en todos los componentes del sistema, tanto en el **frontend (React + TypeScript)** como en el **backend (Spring Boot + Java 21)**.
+La aplicación disciplinada de estas convenciones asegura un código limpio, legible y fácil de mantener por cualquier miembro del equipo o colaborador externo.
 
 ---
 
-#### HTML
+##### Lenguajes y Tecnologías Base
 
-- **Nombres descriptivos:**  
-  Usar nombres representativos para clases e identificadores.  
-  Ejemplo: `delivery-card` en lugar de `box1`.  
+* **HTML5:** Estructura semántica y accesible del contenido web.
+* **CSS3 / SCSS:** Definición modular de estilos con diseño responsivo.
+* **TypeScript (React):** Tipado estático, componentes funcionales y validación temprana de errores.
+* **Java 21 (Spring Boot):** Lógica de negocio, seguridad y persistencia bajo principios DDD.
+* **JSON / REST:** Intercambio de datos entre frontend y backend mediante APIs RESTful.
 
-- **Indentación clara:**  
-  Mantener una sangría uniforme de **2 espacios** para facilitar la lectura.  
+---
 
-- **Etiquetas semánticas:**  
-  Uso obligatorio de etiquetas como `<header>`, `<main>`, `<section>`, `<article>` y `<footer>`.  
+### Frontend Code Style — React + TypeScript
 
-- **Comentarios útiles:**  
-  Comentar únicamente el código que requiera explicación adicional.  
-  ```html
-  <!-- Sección principal del panel de control -->
-  <main class="dashboard-main">...</main>
+##### Estructura de Proyecto
 
+El frontend de CoBox sigue una **arquitectura modular y escalable**, organizada por **bounded contexts** y subdividida en tres capas principales: `data`, `domain` y `presentation`.
+
+```bash
+src/
+ ├── deliveries/
+ │    ├── data/          # Conexión API, repositorios y mapeadores
+ │    ├── domain/        # Modelos, entidades y lógica de negocio
+ │    └── presentation/  # Componentes UI, vistas y navegación
+ ├── shared/             # Componentes y utilidades comunes
+ └── app/                # Configuración global (routes, providers)
+```
+
+##### Convenciones de Nomenclatura
+
+| Tipo de elemento      | Convención                         | Ejemplo                              |
+| --------------------- | ---------------------------------- | ------------------------------------ |
+| Componentes React     | PascalCase                         | `DeliveryCard.tsx`, `HomeScreen.tsx` |
+| Hooks personalizados  | camelCase prefijado con `use`      | `useAuth()`, `useFetchDeliveries()`  |
+| Archivos de estilos   | kebab-case                         | `delivery-card.scss`                 |
+| Interfaces y tipos    | PascalCase prefijado con `I` o `T` | `IUser`, `TDeliveryStatus`           |
+| Variables y funciones | camelCase                          | `handleSubmit`, `isLoggedIn`         |
+| Constantes globales   | UPPER_CASE                         | `BASE_URL`, `MAX_RETRIES`            |
+
+##### Reglas de Código y Formateo
+
+* **Indentación:** 2 espacios por nivel.
+* **Longitud máxima de línea:** 100 caracteres.
+* **Imports ordenados:** primero librerías externas, luego internas, y finalmente estilos.
+* **Hooks:** deben ser llamados al inicio del cuerpo de un componente.
+* **JSX limpio:** evitar anidaciones excesivas y utilizar componentes reutilizables.
+* **PropTypes o tipos explícitos:** todos los componentes deben especificar tipos de props y estado.
+
+##### Ejemplo de Componente
+
+```tsx
+import React from "react";
+import { Delivery } from "../../domain/models/Delivery";
+
+interface DeliveryCardProps {
+  delivery: Delivery;
+}
+
+export const DeliveryCard: React.FC<DeliveryCardProps> = ({ delivery }) => (
+  <article className="delivery-card">
+    <h3>{delivery.code}</h3>
+    <p>Status: {delivery.status}</p>
+    <p>Driver: {delivery.driverName}</p>
+  </article>
+);
+```
+
+##### Estilo y Buenas Prácticas de UI
+
+* **CSS modularizado:** un archivo `.scss` por componente.
+* **Variables de color y tipografía** definidas globalmente en `/shared/styles/_variables.scss`.
+* **Responsive Design:** uso de *flexbox*, *grid* y *media queries* adaptativas.
+* **Testing UI:** validación mediante **React Testing Library** y **Jest**.
+
+---
+
+### Backend Code Style — Java 21 + Spring Boot
+
+##### Estructura de Proyecto (DDD)
+
+El backend sigue una organización basada en **bounded contexts**, cada uno estructurado conforme a las capas DDD:
+
+```bash
+src/main/java/org/upc/cobox/
+ ├── maintenance/               # Bounded Context: Maintenance
+ │    ├── application/          # Servicios y comandos de aplicación
+ │    ├── domain/               # Entidades, value objects, agregados, eventos
+ │    ├── infrastructure/       # Persistencia y adaptadores externos
+ │    └── interfaces/           # Controladores REST, DTOs y mapeadores
+ └── shared/                    # Utilidades comunes (event bus, base classes)
+```
+
+##### Nomenclatura
+
+| Tipo de elemento   | Convención                                   | Ejemplo                                          |
+| ------------------ | -------------------------------------------- | ------------------------------------------------ |
+| Paquetes           | lowercase                                    | `org.upc.cobox.maintenance.domain`               |
+| Clases y Entidades | PascalCase                                   | `MaintenanceOrder`, `VehicleAssignment`          |
+| Métodos            | camelCase                                    | `createOrder()`, `validateRule()`                |
+| Constantes         | UPPER_CASE                                   | `MAX_TOLERANCE_PERCENTAGE`                       |
+| Variables          | camelCase                                    | `maintenanceRule`, `orderRepository`             |
+| DTOs               | PascalCase con sufijo `Resource` o `Request` | `MaintenanceOrderResource`, `CreateOrderRequest` |
+| Eventos            | PascalCase con sufijo `Event`                | `MaintenanceOrderCreatedEvent`                   |
+
+##### Estilo y Reglas de Código
+
+* **Indentación:** 4 espacios por nivel.
+* **Longitud máxima de línea:** 120 caracteres.
+* **Anotaciones:** alineadas sobre el método o clase correspondiente.
+* **Excepciones:** personalizadas dentro del contexto de dominio (`InvalidMaintenanceStateException`).
+* **Documentación:** uso de **KDoc/Javadoc** en clases públicas y métodos clave.
+* **Logs:** emplear `Slf4j` para registro estructurado.
+* **Validaciones:** usar `javax.validation` (`@NotNull`, `@Size`, `@Min`, etc.) en DTOs y comandos.
+
+##### Ejemplo de Servicio Aplicando DDD
+
+```java
+@Service
+@Transactional
+public class MaintenanceScheduleCommandServiceImpl implements MaintenanceScheduleCommandService {
+
+    private final MaintenanceScheduleRepository scheduleRepository;
+    private final MaintenanceOrderRepository orderRepository;
+
+    public MaintenanceScheduleCommandServiceImpl(MaintenanceScheduleRepository scheduleRepository,
+                                                 MaintenanceOrderRepository orderRepository) {
+        this.scheduleRepository = scheduleRepository;
+        this.orderRepository = orderRepository;
+    }
+
+    @Override
+    public Long handle(CreateMaintenanceOrderCommand command) {
+        MaintenanceOrder order = new MaintenanceOrder(command.vehicleId(), command.scheduledDate());
+        return orderRepository.save(order).getId();
+    }
+}
+```
+
+##### Testing y Cobertura
+
+* **Framework de pruebas:** JUnit 5 + Mockito.
+* **Estrategia:** pruebas unitarias por capa (domain, application, infrastructure).
+* **Cobertura mínima:** 80% por módulo.
+* **Tests de integración:** validados con `@SpringBootTest`.
+* **Nombrado:** `ClassNameTest` (por ejemplo, `MaintenanceOrderServiceTest`).
+
+---
+
+### Convenciones Transversales
+
+##### Commits y Versionado
+
+* **Mensajes de commit:** seguir el formato de **Conventional Commits**:
+
+  ```
+  feat: add new delivery tracking endpoint
+  fix: resolve maintenance schedule persistence issue
+  refactor: simplify order repository interface
+  ```
+* **Versionado semántico:**
+
+  * `MAJOR.MINOR.PATCH` → ejemplo: `v1.3.2`
+  * Cambios mayores indican ruptura de compatibilidad.
+
+##### Documentación
+
+* Cada módulo debe incluir un archivo `README.md` con:
+
+  * Descripción del contexto.
+  * Dependencias principales.
+  * Pasos de ejecución local y despliegue.
+  * Enlaces a documentación adicional.
+
+##### Principios de Código Limpio
+
+* **Responsabilidad Única (SRP):** cada clase y método debe tener un único propósito.
+* **Open/Closed Principle:** el código debe ser extensible sin modificarse.
+* **DRY (Don’t Repeat Yourself):** evitar duplicidad mediante abstracción y reutilización.
+* **YAGNI (You Aren’t Gonna Need It):** implementar solo lo necesario.
+* **Fail Fast:** validaciones tempranas ante errores.
+
+---
+
+### Referencias Técnicas
+
+* **TypeScript Style Guide – Google:** [https://google.github.io/styleguide/tsguide.html](https://google.github.io/styleguide/tsguide.html)
+* **Airbnb React/JSX Style Guide:** [https://airbnb.io/javascript/react](https://airbnb.io/javascript/react)
+* **Oracle Java Code Conventions:** [https://www.oracle.com/java/technologies/javase/codeconventions-150003.pdf](https://www.oracle.com/java/technologies/javase/codeconventions-150003.pdf)
+* **Spring Boot Reference Guide:** [https://docs.spring.io/spring-boot/docs/current/reference/html](https://docs.spring.io/spring-boot/docs/current/reference/html)
+* **DDD & Clean Code Principles:**
+
+  * Evans, Eric. *Domain-Driven Design: Tackling Complexity in the Heart of Software*.
+  * Martin, Robert C. *Clean Architecture*.
+* **Conventional Commits:** [https://www.conventionalcommits.org](https://www.conventionalcommits.org)
+* **Semantic Versioning 2.0.0:** [https://semver.org](https://semver.org)
 
 #### 5.2.4. Software Deployment Configuration
-Para desplegar nuestro sitio web mediante GitHub Pages, primero debemos ingresar al repositorio del proyecto en GitHub.
-Una vez dentro, accedemos a la configuración (Settings) del repositorio y, en el menú lateral, seleccionamos la sección “Pages”.
-Desde allí podremos configurar los parámetros necesarios para publicar el sitio web directamente desde el repositorio.
 
-[PONER CAPTURA]
+Esta sección resume —de forma concisa y operativa— el flujo de **despliegue del backend (Spring Boot, Java 21) en AWS** usando **Elastic Beanstalk (EB)** y **PostgreSQL en RDS**, con **GitHub Actions** para CI/CD.
+Se incluye una nota breve para la *landing* en Netlify.
 
-Implementación con Git: Permite conservar un registro detallado de todas las modificaciones realizadas en el proyecto y gestionar eficazmente las distintas versiones del código fuente.
+> **Stack**: Spring Boot (21) · PostgreSQL · AWS EB + RDS · GitHub Actions · Maven
 
-[PONER CAPTURA]
+---
 
-En la sección GitHub Pages, seleccionamos la rama principal (main) desde el menú desplegable “Branch” y guardamos los cambios haciendo clic en “Save”.
-Tras unos instantes, GitHub generará automáticamente el enlace de nuestro sitio web publicado, permitiéndonos acceder a la versión desplegada en línea.
+##### 1) RDS PostgreSQL (nueva instancia)
 
+**Configuración mínima**
+
+* Engine: **PostgreSQL 15** · Template: **Free tier** · Class: **db.t3.micro** · Storage: **20 GB gp2**
+* DB identifier: `cobox` *(único)*
+* Master user: `cl_admin` · Password: *(guardar en secreto)*
+* **VPC**: default (la misma del ecosistema actual) · **Public access**: **Yes**
+* **DB name**: `cobox_bd`
+* **Security Group**: crear `cobox-backend-rds-sg` (abriremos reglas abajo)
+
+**Inbound temporal (desarrollo/local)**
+
+```
+Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: 0.0.0.0/0
+Desc: Acceso temporal de desarrollo
+```
+
+> Luego se restringe para permitir **solo** el SG del entorno de EB.
+
+![Consola RDS – detalles de instancia](/assets/AuroraRDSCobox.png)
+
+---
+
+##### 2) Elastic Beanstalk (Java 21)
+
+**Crear aplicación/entorno**
+
+* Application: `cobox-backend` *(único)*
+* Environment: `cobox-backend-env` *(único)*
+* Platform: **Java – Corretto 21 (Amazon Linux 2023)**
+* Preset: **Single instance (free tier)**
+* Code: **Sample application**
+
+**Configure more options → Software (Environment properties)**
+
+```properties
+SERVER_PORT=5000
+SPRING_DATASOURCE_URL=jdbc:postgresql://<RDS-ENDPOINT>:5432/nuevo_backend
+SPRING_DATASOURCE_USERNAME=nuevo_admin
+SPRING_DATASOURCE_PASSWORD=<TU_PASSWORD>
+SPRING_JPA_HIBERNATE_DDL_AUTO=update
+SPRING_JPA_SHOW_SQL=false
+SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+```
+
+* Instances: `t3.micro`
+* Roles/Profiles: **aws-elasticbeanstalk-service-role** / **aws-elasticbeanstalk-ec2-role**
+* Network: VPC default, subnets públicas, **Public IP: enabled**
+
+![Configuración de variables en EB](/assets/AWSCoboxVariables.png)
+![Entorno de Cobox habilitado en AWS](/assets/AWSCoboxBackendEnv.png)
+
+---
+
+##### 3) Conectar Security Groups (RDS ↔ EB)
+
+1. Identifica el **Security Group del entorno EB** (EC2 → Security Groups).
+2. En `cobox-backend-rds-sg` agrega **Inbound**:
+
+```
+Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: <SG-ID-de-EB>
+Desc: Acceso desde Elastic Beanstalk
+```
+
+![Reglas inbound del SG de RDS](/assets/PanelSGCobox.png)
+
+---
+
+##### 4) GitHub Actions (CI/CD a EB)
+
+**Secrets del repo**
+
+* `AWS_ACCESS_KEY_ID` — usuario `github-actions-...`
+* `AWS_SECRET_ACCESS_KEY`
+* `AWS_ACCOUNT_ID` *(si usas bucket EB “regional” por cuenta)*
+
+**Workflow `.github/workflows/aws-deploy.yml`**
+
+```yaml
+name: Deploy Spring Boot Cobox to AWS Elastic Beanstalk
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'  # Usa corretto para coincidir con AWS
+          java-version: '21'
+
+      - name: Build with Maven
+        run: mvn clean package -DskipTests
+
+      - name: Get timestamp
+        id: time
+        run: echo "timestamp=$(date +%Y%m%d_%H%M%S)" >> $GITHUB_OUTPUT
+
+      - name: Deploy to Elastic Beanstalk
+        uses: einaregilsson/beanstalk-deploy@v22
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: cobox-backend
+          environment_name: Cobox-backend-env
+          version_label: cobox-${{ steps.time.outputs.timestamp }}
+          region: ${{ secrets.AWS_REGION }}
+          deployment_package: target/cobox-0.0.1-SNAPSHOT.jar
+```
+
+![Secrets en GitHub](/assets/CoboxBackendRepoSecrets.png)
+![Workflow exitoso](/assets/SuccesfulWorkflow.png)
+
+---
+
+##### 5) Spring Boot: variables y *health check*
+
+**`application.properties` (usar env vars)**
+
+```properties
+server.port=${SERVER_PORT:8080}
+spring.datasource.url=${SPRING_DATASOURCE_URL}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
+spring.jpa.hibernate.ddl-auto=${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+spring.jpa.show-sql=${SPRING_JPA_SHOW_SQL:false}
+spring.jpa.properties.hibernate.dialect=${SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT}
+```
+
+---
+
+##### 6) Landing Page (Netlify) — *resumen operativo*
+
+* **Netlify ↔ GitHub**: conectar el repo de la *landing* desde el **Netlify Dashboard**.
+* Incluir `netlify.toml` para *build* y *publish* automáticos, por ejemplo:
+
+```toml
+[build]
+  command = "npm run build"
+  publish  = "dist"   # o "build" según framework
+[build.environment]
+  NODE_VERSION = "20"
+```
+
+* Cada **push a main** dispara el deploy automático.
+
+![Sitio conectado en Netlify](/assets/NetlifyConnection.png)
+![`netlify.toml` en repo](/assets/NetlifyToml.png)
+
+---
 
 ### 5.3. Microservices Implementation
+
 #### 5.3.1. Sprint 1
-Durante el Sprint 1, nos centramos principalmente en el desarrollo del BackEnd de Horizon utilizando Java, junto con la optimización de la Landing Page.
+
+Durante el Sprint 1, nos centramos principalmente en el desarrollo del BackEnd de CoBox utilizando Java, junto con la optimización de la Landing Page.
 Este sprint resultó clave para establecer las primeras funcionalidades base del sistema, sentando las bases técnicas para los siguientes ciclos de desarrollo.
 
 ##### 5.3.1.1. Sprint Backlog 1
+
 Para el primer sprint backlog, recopilamos las historias de usuario enfocadas en el desarrollo del BackEnd.
 Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello.
 Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
@@ -2719,47 +3046,55 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
 
 ##### 5.3.1.4. Execution Evidence for Sprint Review
 
-Link del backend desplegado: http://cobox.us-east-2.elasticbeanstalk.com/swagger-ui/index.html
+Link de Backend Web Services desplegado: http://cobox.us-east-2.elasticbeanstalk.com/swagger-ui/index.html
+
+Demo de Backend Web Services: 
 
 Evidencia del funcionamiento del backend de la aplicación:
 <div align="center">
     <img src="./assets/backend-deployment.png" alt="backend deployment" width="400">
 </div>
 
-Evidencia del contexto Delivery Management : [SCREENSHOT]
+Evidencia del contexto Delivery Management:
 <div align="center">
     <img src="./assets/contexto-delivery.png" alt="contexto Delivery Management" width="400">
 </div>
-Evidencia del contexto Fleet Management: [SCREENSHOT]
+
+Evidencia del contexto Fleet Management:
 <div align="center">
     <img src="./assets/contexto-fleet.png" alt="contexto Fleet Management" width="400">
 </div>
-Evidencia del contexto Incident Management: [SCREENSHOT]
+
+Evidencia del contexto Incident Management:
 <div align="center">
     <img src="./assets/contexto-incident.png" alt="contexto Incident Management" width="400">
 </div>
-Evidencia del contexto Maintenance Management: [SCREENSHOT]
+
+Evidencia del contexto Maintenance Management:
 <div align="center">
     <img src="./assets/contexto-maintenance.png" alt="contexto maintenance Management" width="400">
 </div>
+
+---
+
 Durante este Sprint, el equipo terminó y lanzó con éxito la Landing Page, la cual se desarrolló en React y se desplegó usando Netlify. Esta página tiene como objetivo comunicar de manera clara las funcionalidades clave de nuestro producto y empresa.
 
-Seccion funciones: [SCREENSHOT]
+Seccion Funciones:
 <div align="center">
-    <img src="./assets/landing_view1.png" alt="funciones" width="400">
+    <img src="./assets/landing_view1.png" alt="Funciones" width="400">
 </div>
 
-Seccion Cómo funciona: [SCREENSHOT]
+Seccion Cómo funciona:
 <div align="center">
     <img src="./assets/landing_view2.png" alt="Cómo funciona" width="400">
 </div>
 
-Seccion Precios: [SCREENSHOT]
+Seccion Precios:
 <div align="center">
     <img src="./assets/landing_view3.png" alt="Precios" width="400">
 </div>
 
-Seccion Contacto: [SCREENSHOT]
+Seccion Contacto:
 <div align="center">
     <img src="./assets/landing_view4.png" alt="Contacto" width="400">
 </div>
@@ -2804,19 +3139,198 @@ asegurando que cada dominio evolucione de forma autónoma sin afectar a los dem�
 </div>
 
 ##### 5.3.1.6. Software Deployment Evidence for Sprint Review
-El despliegue del BackEnd se realizó en la plataforma Render, mientras que la base de datos fue implementada en Railway.
-La documentación de la API se encuentra disponible mediante la interfaz de Swagger, accesible a través del siguiente enlace: [PONER ENLACE]
-[PONER CAPTURA DE DESPLIEGUE]
+
+Esta sección resume —de forma concisa y operativa— el flujo de **despliegue del backend (Spring Boot, Java 21) en AWS** usando **Elastic Beanstalk (EB)** y **PostgreSQL en RDS**, con **GitHub Actions** para CI/CD durante este Sprint 1.
+Se incluye una nota breve para la *landing* en Netlify.
+
+> **Stack**: Spring Boot (21) · PostgreSQL · AWS EB + RDS · GitHub Actions · Maven
+
+---
+
+##### 1) RDS PostgreSQL (nueva instancia)
+
+**Configuración mínima**
+
+* Engine: **PostgreSQL 15** · Template: **Free tier** · Class: **db.t3.micro** · Storage: **20 GB gp2**
+* DB identifier: `cobox` *(único)*
+* Master user: `cl_admin` · Password: *(guardar en secreto)*
+* **VPC**: default (la misma del ecosistema actual) · **Public access**: **Yes**
+* **DB name**: `cobox_bd`
+* **Security Group**: crear `cobox-backend-rds-sg` (abriremos reglas abajo)
+
+**Inbound temporal (desarrollo/local)**
+
+```
+Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: 0.0.0.0/0
+Desc: Acceso temporal de desarrollo
+```
+
+> Luego se restringe para permitir **solo** el SG del entorno de EB.
+
+![Consola RDS – detalles de instancia](/assets/AuroraRDSCobox.png)
+
+---
+
+##### 2) Elastic Beanstalk (Java 21)
+
+**Crear aplicación/entorno**
+
+* Application: `cobox-backend` *(único)*
+* Environment: `cobox-backend-env` *(único)*
+* Platform: **Java – Corretto 21 (Amazon Linux 2023)**
+* Preset: **Single instance (free tier)**
+* Code: **Sample application**
+
+**Configure more options → Software (Environment properties)**
+
+```properties
+SERVER_PORT=5000
+SPRING_DATASOURCE_URL=jdbc:postgresql://<RDS-ENDPOINT>:5432/nuevo_backend
+SPRING_DATASOURCE_USERNAME=nuevo_admin
+SPRING_DATASOURCE_PASSWORD=<TU_PASSWORD>
+SPRING_JPA_HIBERNATE_DDL_AUTO=update
+SPRING_JPA_SHOW_SQL=false
+SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+```
+
+* Instances: `t3.micro`
+* Roles/Profiles: **aws-elasticbeanstalk-service-role** / **aws-elasticbeanstalk-ec2-role**
+* Network: VPC default, subnets públicas, **Public IP: enabled**
+
+![Configuración de variables en EB](/assets/AWSCoboxVariables.png)
+![Entorno de Cobox habilitado en AWS](/assets/AWSCoboxBackendEnv.png)
+
+---
+
+##### 3) Conectar Security Groups (RDS ↔ EB)
+
+1. Identifica el **Security Group del entorno EB** (EC2 → Security Groups).
+2. En `cobox-backend-rds-sg` agrega **Inbound**:
+
+```
+Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: <SG-ID-de-EB>
+Desc: Acceso desde Elastic Beanstalk
+```
+
+![Reglas inbound del SG de RDS](/assets/PanelSGCobox.png)
+
+---
+
+##### 4) GitHub Actions (CI/CD a EB)
+
+**Secrets del repo**
+
+* `AWS_ACCESS_KEY_ID` — usuario `github-actions-...`
+* `AWS_SECRET_ACCESS_KEY`
+* `AWS_ACCOUNT_ID` *(si usas bucket EB “regional” por cuenta)*
+
+**Workflow `.github/workflows/aws-deploy.yml`**
+
+```yaml
+name: Deploy Spring Boot Cobox to AWS Elastic Beanstalk
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'  # Usa corretto para coincidir con AWS
+          java-version: '21'
+
+      - name: Build with Maven
+        run: mvn clean package -DskipTests
+
+      - name: Get timestamp
+        id: time
+        run: echo "timestamp=$(date +%Y%m%d_%H%M%S)" >> $GITHUB_OUTPUT
+
+      - name: Deploy to Elastic Beanstalk
+        uses: einaregilsson/beanstalk-deploy@v22
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: cobox-backend
+          environment_name: Cobox-backend-env
+          version_label: cobox-${{ steps.time.outputs.timestamp }}
+          region: ${{ secrets.AWS_REGION }}
+          deployment_package: target/cobox-0.0.1-SNAPSHOT.jar
+```
+
+![Secrets en GitHub](/assets/CoboxBackendRepoSecrets.png)
+![Workflow exitoso](/assets/SuccesfulWorkflow.png)
+
+---
+
+##### 5) Spring Boot: variables y *health check*
+
+**`application.properties` (usar env vars)**
+
+```properties
+server.port=${SERVER_PORT:8080}
+spring.datasource.url=${SPRING_DATASOURCE_URL}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
+spring.jpa.hibernate.ddl-auto=${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+spring.jpa.show-sql=${SPRING_JPA_SHOW_SQL:false}
+spring.jpa.properties.hibernate.dialect=${SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT}
+```
+
+---
+
+##### 6) Landing Page (Netlify) — *resumen operativo*
+
+* **Netlify ↔ GitHub**: conectar el repo de la *landing* desde el **Netlify Dashboard**.
+* Incluir `netlify.toml` para *build* y *publish* automáticos, por ejemplo:
+
+```toml
+[build]
+  command = "npm run build"
+  publish  = "dist"   # o "build" según framework
+[build.environment]
+  NODE_VERSION = "20"
+```
+
+* Cada **push a main** dispara el deploy automático.
+
+![Sitio conectado en Netlify](/assets/NetlifyConnection.png)
+![`netlify.toml` en repo](/assets/NetlifyToml.png)
+
 
 ##### 5.3.1.7. Team Collaboration Insights during Sprint
-Durante el Sprint 1, el equipo centró sus esfuerzos en migrar el proyecto previo hacia una arquitectura basada en microservicios, integrando un API Gateway como componente esencial para la gestión y orquestación de las comunicaciones entre servicios.
 
-[PONER CAPTURAS DE GITHUB DE CONTRIBUCIONES DEL EQUIPO]
+Durante esta fase de entrega, el equipo mantuvo una coordinación constante en las tareas de desarrollo de la landing page y los servicios backend.
+Además, se realizaron las actualizaciones pertinentes en la documentación. Esta colaboración efectiva fue clave para asegurar el correcto modelado y la funcionalidad de nuestra lógica de negocio.
+
+- _Evidencias de colaboración:_
+
+  - Backend Web Services:
+  ![Evidencias de colaboración - Backend Web Services](/assets/insights_backend.png)
+
+  - Landing Page:
+  ![Evidencias de colaboración - Landing Page](/assets/insights_landingpage.png)
+
+  - Reporte:
+  ![Evidencias de colaboración - Landing Page](/assets/insights_report.png)
+
 
 ##### 5.3.1.8. Kanban Board
+
 [PONER CAPTURA]
 
 -----
+
+
 ### Conclusiones y Recomendaciones
 
 **Conclusiones**
@@ -2845,7 +3359,7 @@ Durante el Sprint 1, el equipo centró sus esfuerzos en migrar el proyecto previ
 6. Desarrollar un plan de capacitación técnica específico para el equipo de desarrollo en tecnologías clave como Spring Cloud Gateway, PostgreSQL + PostGIS, RabbitMQ y Kafka, identificadas como críticas en las decisiones de diseño registradas.
 7. Implementar estrategias de testing automatizado que incluyan pruebas de integración entre microservicios, pruebas de carga para el sistema de tracking en tiempo real, y pruebas de seguridad para validar el control de acceso RBAC.
 8. Establecer métricas de calidad arquitectónica para evaluar continuamente aspectos como acoplamiento entre servicios, cohesión interna de bounded contexts, tiempo de respuesta de APIs y efectividad de las tácticas de disponibilidad implementadas.
-9. Planificar una estrategia de migración gradual que permita escalar la solución de un ambiente de desarrollo local hacia una infraestructura cloud nativa, considerando las restricciones de recursos identificadas y las necesidades de escalabilidad horizontal.
+9. Planificar una estrategia de migración gradual que permita escalar la solución de un ambiente de desarrollo local hacia una infraestructura cloud nativa, considerando las restricciones de recursos identificadas y las necesidades de escalabilidad CoBoxtal.
 10. Mantener un proceso de documentación arquitectónica evolutiva que registre nuevas decisiones de diseño, patrones implementados y lecciones aprendidas, facilitando la transferencia de conocimiento y la continuidad del proyecto a largo plazo.
 
 ### Referencias Bibliográficas
