@@ -2434,64 +2434,25 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
 ##### 5.3.1.2. Development Evidence for Sprint Review
 [PONER CSPTURA GITHUB COMMITS CRONTRIBUYENTES]
 
-<table border="1">
-  <tr>
-    <th>Repository</th>
-    <th>Branch</th>
-    <th>Commit Id</th>
-    <th>Commit Message</th>
-    <th>Commit Message Body</th>
-    <th>Committed on (Date)</th>
-  </tr>
-  <tr>
-    <td>Backend</td>
-    <td>dev</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Backend</td>
-    <td>dev</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Backend</td>
-    <td>dev</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Backend</td>
-    <td>dev</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Backend</td>
-    <td>dev</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Backend</td>
-    <td>dev</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+| Repository                                                                                   | Branch | Commit Id                        | Commit Message                             | Commit Message Body                                                                                                                                 | Committed on (Date) |
+| -------------------------------------------------------------------------------------------- | ------ | -------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)             | main   | 7f3c92d1a8b1a2f9c6a1b45b8bcae92f | feat: added route query endpoint           | Implementación del endpoint **GET /routes** para consultar rutas asignadas por unidad de transporte. Incluye pruebas unitarias y DTOs de respuesta. | 07/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)             | main   | c42e91adf4e8742d9d5b8c35a41a3e56 | feat: added route assignment form          | Desarrollo del formulario para **asignar unidades a rutas** operativas. Incluye validaciones y actualización de estado de unidad.                   | 07/10/25            |
+| [github.com/upc-cobox/](https://github.com/upc-cobox/backend)             | main   | 9a8cb4f1a3e26c65bc182b4eaa97c522 | feat: added vehicle status endpoint        | Creación del servicio **PUT /vehicles/{id}/status** para actualizar el estado operativo de cada unidad.                                             | 08/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/blackend)             | main   | d98af0b7c9f71aa8f31b9a32268c8a55 | feat: added fleet history view             | Implementación de la vista “Historial de movimientos de flota” con filtros por fecha y estado.                                                      | 08/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)       | main   | e4a923b99e884ab3c5f5f782ddf41ab0 | feat: added pending deliveries module      | Implementación del módulo **de entregas pendientes** (US-05), con tabla y detalles de cliente.                                                      | 09/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)       | main   | 08c8b5e21cfb4e7f9e7a3c62b7b5c233 | feat: added delivery evidence capture      | Configuración de carga de imágenes y geolocalización GPS para registrar evidencia de entrega (US-06).                                               | 09/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)       | main   | 124ff7d82e4a99cd95f92b8f38f6f8af | feat: added delivery history filters       | Creación del historial de entregas completadas con filtros por fecha (US-07).                                                                       | 09/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)       | main   | 2b83a5fd8a64c924dbf52a13cf66a291 | feat: added route start record             | Registro de hora de salida del conductor al iniciar la jornada de reparto (US-08).                                                                  | 09/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)       | main   | b4c12a8a8b9f8ee17a5c0e2a4b4e7a99 | feat: added incident registration endpoint | Creación del endpoint **POST /incidents** para registrar incidentes con descripción y evidencia.                                                    | 10/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)       | main   | e7d9a2fc19b44db0a98c92e87a0fd1b7 | feat: added incident dashboard view        | Diseño de vista para consultar incidencias activas, priorizadas por nivel de gravedad (US-10).                                                      | 10/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)       | main   | 3f7e81cb32d447ad97c54aa86bb124c2 | feat: added severity filter for incidents  | Agregado de filtros por gravedad en el módulo de incidencias (US-11).                                                                               | 10/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)       | main   | 2c84b9d9fce34df681bc81b8b2a1d9a4 | feat: added incident history table         | Creación de tabla histórica de incidencias con análisis de causas y soluciones aplicadas (US-12).                                                   | 10/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend)                 | main   | 13d2b8f1e64d41a78fb5efb4914a7a09 | feat: implemented IAM module with JWT      | Implementación de autenticación y gestión de roles mediante JWT (gestor, conductor, técnico).                                                       | 11/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend) | main   | 4e3b7a981dd84f6c98f2d977d4d11661 | feat: added maintenance scheduler          | Creación de agenda para programar mantenimientos periódicos (US-13).                                                                                | 11/10/25            |
+| [github.com/upc-cobox/](https://github.com/upc-cobox/backend) | main   | 71a93c823b1c4f8d97b5a94d2c1c5c92 | feat: added maintenance form view          | Formulario para registrar actividades y observaciones de mantenimiento (US-14).                                                                     | 11/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend) | main   | 22fcb9e74acb4e0a8a5e51df7a6d39b8 | feat: added maintenance calendar           | Implementación del calendario de mantenimientos próximos con vista por unidad (US-15).                                                              | 11/10/25            |
+| [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend) | main   | bbbf46d79cc14aaf9a761db3d7b8e681 | feat: added maintenance reminder alerts    | Programación de alertas automáticas para recordar mantenimientos (US-16).                                                                           | 11/10/25            |
 
 ##### 5.3.1.3. Testing Suite Evidence for Sprint Review
 <table border="1">
