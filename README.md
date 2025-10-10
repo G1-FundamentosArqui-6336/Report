@@ -2556,6 +2556,8 @@ Seccion Contacto: [SCREENSHOT]
 
 Landing page desplegado: [https://cobox-logistics.netlify.app]
 
+##### 5.3.1.5. Microservices Documentation Evidence for Sprint Review
+
 El sistema **CoBox** está diseñado bajo una arquitectura de **microservicios** con enfoque en **Domain-Driven Design (DDD)**.  
 Cada módulo representa un *bounded context* con su propio dominio, lógica de negocio, base de datos y API independiente.  
 Esto permite mantener un **bajo acoplamiento** y una **alta cohesión** entre los servicios.
@@ -2586,8 +2588,9 @@ Además, cada servicio implementa **auditoría** y **validaciones locales** para
 En conjunto, esta estructura modular ofrece **escalabilidad**, **independencia de despliegue** y **claridad en la separación de responsabilidades**,  
 asegurando que cada dominio evolucione de forma autónoma sin afectar a los demás componentes del sistema.
 
+
 <div align="center">
-    <img src="./assets/microservicesrrr.png" alt="microservicesrrr.png" width="400">
+    <img src="./assets/microservicesrrr.png" alt="microservicesrrr.png" width="1500">
 </div>
 
 ##### 5.3.1.6. Software Deployment Evidence for Sprint Review
