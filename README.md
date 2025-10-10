@@ -2432,7 +2432,7 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
 
 
 ##### 5.3.1.2. Development Evidence for Sprint Review
-[PONER CSPTURA GITHUB COMMITS CRONTRIBUYENTES]
+
 
 | Repository                                                                                   | Branch | Commit Id                        | Commit Message                             | Commit Message Body                                                                                                                                 | Committed on (Date) |
 | -------------------------------------------------------------------------------------------- | ------ | -------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
