@@ -51,6 +51,12 @@
 | TB2     | 26/09/2025  | Ramiro Alexander Guzmán Chávez | Redacción de 4.2: Architectural Drivers (propósito, funcionalidades primarias, escenarios de calidad, restricciones y preocupaciones arquitectónicas). |
 | TB2     | 26/09/2025  | Merly Salon Puerta             | Desarrollo de 4.3: ADD Iterations (backlog arquitectónico, drivers, conceptos de diseño, instanciación de elementos, vistas C4/UML y análisis con Kanban). |
 | TB2     | 27/09/2025  | Todos los integrantes          | Integración del Capítulo IV: Product Architecture Design, revisión grupal y ajustes finales para entrega de la TB2. |
+| TP1     | 08/10/2025  | Ramiro Alexander Guzmán Chávez | Configuración del entorno de desarrollo, estructura del backend, documentación técnica de microservicios y despliegue inicial. |
+| TP1     | 08/10/2025  | David Alexander Pérez García   | Implementación de pruebas unitarias, gestión del repositorio y aplicación de convenciones de estilo en el código backend. |
+| TP1     | 08/10/2025  | Joaquín Pedraza Maldonado      | Elaboración de documentación de microservicios con enfoque DDD y revisión de endpoints. |
+| TP1     | 08/10/2025  | Merly Salon Puerta             | Validación del diseño actual mediante Kanban Board, coordinación del sprint y registro de evidencias del desarrollo. |
+| TP1     | 08/10/2025  | Jhon Alexander Galvez Chambi   | Validación del diseño técnico y documentación de evidencias del sprint review. |
+| TP1     | 09/10/2025  | Todos los integrantes          | Integración del Capítulo V: Product Implementation, Validation & Deployment, revisión grupal y preparación del informe final. |
 
 
 
