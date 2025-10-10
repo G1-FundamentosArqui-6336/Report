@@ -2516,22 +2516,52 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
 
 ##### 5.3.1.4. Execution Evidence for Sprint Review
 
-Link del backend desplegado: [LINK DESPLIEGUE]
+Link del backend desplegado: [https://faltacolocarlinkaqui.app]
 
 Evidencia del funcionamiento del backend de la aplicación: [SCREENSHOT]
+<div align="center">
+    <img src="./assets/backend-deployment.png" alt="backend deployment" width="400">
+</div>
 
-Evidencia de la creación de user stories: [SCREENSHOT]
+Evidencia del contexto Delivery Management : [SCREENSHOT]
+<div align="center">
+    <img src="./assets/contexto-delivery.png" alt="contexto Delivery Management" width="400">
+</div>
+Evidencia del contexto Fleet Management: [SCREENSHOT]
+<div align="center">
+    <img src="./assets/contexto-fleet.png" alt="contexto Fleet Management" width="400">
+</div>
+Evidencia del contexto Incident Management: [SCREENSHOT]
+<div align="center">
+    <img src="./assets/contexto-incident.png" alt="contexto Incident Management" width="400">
+</div>
+Evidencia del contexto Maintenance Management: [SCREENSHOT]
+<div align="center">
+    <img src="./assets/contexto-maintenance.png" alt="contexto maintenance Management" width="400">
+</div>
+Durante este Sprint, el equipo terminó y lanzó con éxito la Landing Page, la cual se desarrolló en React y se desplegó usando Netlify. Esta página tiene como objetivo comunicar de manera clara las funcionalidades clave de nuestro producto y empresa.
 
-Evidencia de la creación de sprints: [SCREENSHOT]
+Seccion funciones: [SCREENSHOT]
+<div align="center">
+    <img src="./assets/landing_view1.png" alt="funciones" width="400">
+</div>
 
-Evidencia de la creación de los Epics: [SCREENSHOT]
+Seccion Cómo funciona: [SCREENSHOT]
+<div align="center">
+    <img src="./assets/landing_view2.png" alt="Cómo funciona" width="400">
+</div>
 
-Evidencia de la gestión de los miembros: [SCREENSHOT]
+Seccion Precios: [SCREENSHOT]
+<div align="center">
+    <img src="./assets/landing_view3.png" alt="Precios" width="400">
+</div>
 
-Asimismo, durante este Sprint, el equipo culminó y desplegó con éxito la Landing Page.
-A continuación, se muestran imágenes que evidencian cómo el diseño transmite de forma clara, atractiva e intuitiva la información relacionada con nuestro producto y la identidad de la empresa.
+Seccion Contacto: [SCREENSHOT]
+<div align="center">
+    <img src="./assets/landing_view4.png" alt="Contacto" width="400">
+</div>
 
-[IMAGENES DE DESPLIEGUE DE LANDING PAGE]
+Landing page desplegado: [https://cobox-logistics.netlify.app]
 
 ##### 5.3.1.5. Microservices Documentation Evidence for Sprint Review
 Se ha realizado un nuevo repositorio con el sistema backend:
