@@ -1207,40 +1207,38 @@ Segmento 2: Conductores de Transporte
 
 ### 3.4. Product Backlog
 
-
-| #  | User Story ID | Título                                      | Descripción                                                                                   | Story Points |
-|----|---------------|---------------------------------------------|-----------------------------------------------------------------------------------------------|--------------|
-| 1  | US-05         | Consultar entregas pendientes               | Como conductor, quiero ver las entregas asignadas del día, para planificar mi ruta.           | 8            |
-| 2  | US-01         | Visualizar rutas asignadas                  | Como gestor, quiero ver las rutas asignadas a cada unidad, para hacer seguimiento efectivo.   | 8            |
-| 3  | US-09         | Reportar incidente durante entrega          | Como conductor, quiero reportar un incidente, para alertar al gestor y agilizar la solución.  | 8            |
-| 4  | US-13         | Programar mantenimiento preventivo          | Como gestor, quiero programar mantenimientos regulares, para evitar fallas inesperadas.       | 8            |
-| 5  | US-17         | Ver reporte semanal de entregas             | Como gestor, quiero ver un reporte semanal por conductor, para evaluar su rendimiento.        | 5            |
-| 6  | US-03         | Registrar disponibilidad de unidad          | Como gestor, quiero marcar una unidad como disponible o en mantenimiento, para gestionar eficientemente. | 5     |
-| 7  | US-08         | Confirmar inicio de ruta                    | Como conductor, quiero confirmar el inicio de mi ruta, para registrar la hora de salida.      | 5            |
-| 8  | US-12         | Visualizar historial de incidencias         | Como gestor, quiero revisar el historial de incidencias pasadas, para tomar decisiones preventivas. | 5       |
-| 9  | US-04         | Visualizar historial de movimientos         | Como gestor, quiero ver el historial de movimientos de una unidad, para rastrear sus actividades. | 5         |
-| 10 | US-16         | Notificación de mantenimiento pendiente     | Como gestor, quiero recibir alertas de mantenimiento próximo, para actuar con anticipación.   | 5            |
-| 11 | US-07         | Visualizar entregas completadas             | Como conductor, quiero ver un historial de entregas completadas, para llevar control de mis actividades. | 5     |
-| 12 | US-10         | Visualizar estado de incidencias            | Como gestor, quiero ver un listado de incidencias activas, para tomar acción rápidamente.     | 5            |
-| 13 | US-14         | Registrar mantenimiento realizado           | Como técnico, quiero registrar el mantenimiento con detalles, para dejar constancia de lo realizado. | 3      |
-| 14 | US-19         | Comparar rendimiento entre conductores      | Como gestor, quiero comparar eficiencia entre conductores, para fomentar buenas prácticas.    | 3            |
-| 15 | US-06         | Registrar entrega con evidencia             | Como conductor, quiero registrar entregas con foto y firma, para validar su cumplimiento.     | 3            |
-| 16 | US-11         | Filtrar incidencias por gravedad            | Como gestor, quiero filtrar las incidencias según su gravedad, para priorizar las más urgentes. | 3         |
-| 17 | US-02         | Asignar unidades a rutas                    | Como gestor, quiero asignar unidades de transporte a rutas específicas, para controlar la operación. | 2        |
-| 18 | US-18         | Ver eficiencia por unidad                   | Como gestor, quiero ver rendimiento por unidad, para tomar decisiones sobre el uso de la flota. | 2          |
-| 19 | US-15         | Ver próximas fechas de mantenimiento        | Como gestor, quiero ver en un calendario las fechas de mantenimiento, para no olvidar los programados. | 2      |
-| 20 | US-20         | Visualizar alertas críticas en dashboard    | Como gestor, quiero ver alertas prioritarias en el dashboard, para atender eventos críticos.  | 1            |
-| 21 | US-21         | Visualizar información de servicio          | Como visitante, quiero conocer los servicios de gestión de flotas ofrecidos, para evaluar si satisface mis necesidades. | 3 |
-| 22 | US-22         | Registrar solicitud de demo                 | Como visitante, quiero solicitar una demostración del sistema, para conocer la plataforma antes de contratar. | 5     |
-| 23 | US-23         | Visualizar planes y precios                 | Como visitante, quiero conocer los diferentes planes disponibles y sus precios, para seleccionar el más adecuado. | 3   |
-| 24 | US-24         | Contactar con soporte                       | Como visitante, quiero contactar con el equipo de soporte, para resolver dudas sobre el servicio. | 2        |
-| 25 | US-25         | Visualizar casos de éxito                   | Como visitante, quiero ver testimonios y casos de éxito, para evaluar la efectividad del sistema en casos reales. | 5   |
-| 26 | TS-01         | Autenticación API                           | Como desarrollador, quiero implementar un sistema de autenticación JWT, para asegurar el acceso a la API. | 8     |
-| 27 | TS-02         | Endpoints de unidades                       | Como desarrollador, quiero implementar endpoints CRUD para unidades de transporte, para gestionar la flota desde aplicaciones externas. | 5 |
-| 28 | TS-03         | Endpoints de entregas                       | Como desarrollador, quiero implementar endpoints para gestionar entregas desde apps móviles.   | 5            |
-| 29 | TS-04         | Endpoints de incidencias                    | Como desarrollador, quiero implementar endpoints para gestionar incidencias.                  | 5            |
-| 30 | TS-05         | Endpoints de estadísticas                   | Como desarrollador, quiero implementar endpoints para obtener métricas y estadísticas.        | 8            |
-
+| #  | Epic ID | User Story ID | Título | Descripción | Story Points | Orientación CRUD |
+|----|----------|---------------|--------|--------------|---------------|------------------|
+| 1  | **EP01 - Gestión de Flota** | US-01 | Consultar rutas asignadas | Como gestor, quiero conocer las rutas asignadas a cada unidad para supervisar su cumplimiento operativo. | 8 | Read |
+| 2  | EP01 | US-02 | Asignar unidades a rutas | Como gestor, quiero asignar unidades de transporte a rutas específicas para controlar la operación. | 2 | Create |
+| 3  | EP01 | US-03 | Actualizar estado de unidad | Como gestor, quiero marcar una unidad como disponible o en mantenimiento para una mejor gestión. | 5 | Update |
+| 4  | EP01 | US-04 | Consultar historial de movimientos | Como gestor, quiero revisar el historial de movimientos de una unidad para rastrear su actividad. | 5 | Read |
+| 5  | **EP02 - Gestión de Entregas** | US-05 | Consultar entregas asignadas | Como conductor, quiero conocer las entregas asignadas del día para planificar mi jornada. | 8 | Read |
+| 6  | EP02 | US-06 | Registrar evidencia de entrega | Como conductor, quiero dejar constancia de entregas realizadas mediante evidencia. | 3 | Create |
+| 7  | EP02 | US-07 | Revisar entregas completadas | Como conductor, quiero consultar mis entregas pasadas para llevar control de mis actividades. | 5 | Read |
+| 8  | EP02 | US-08 | Registrar inicio de ruta | Como conductor, quiero confirmar el inicio de mi ruta para registrar la hora de salida. | 5 | Create |
+| 9  | **EP03 - Gestión de Incidencias** | US-09 | Reportar incidente | Como conductor, quiero reportar incidentes durante la entrega para que el gestor pueda intervenir. | 8 | Create |
+| 10 | EP03 | US-10 | Consultar incidencias activas | Como gestor, quiero revisar las incidencias activas para tomar decisiones rápidas. | 5 | Read |
+| 11 | EP03 | US-11 | Filtrar incidencias por gravedad | Como gestor, quiero filtrar las incidencias por gravedad para priorizar acciones. | 3 | Read |
+| 12 | EP03 | US-12 | Revisar historial de incidencias | Como gestor, quiero analizar incidencias pasadas para tomar decisiones preventivas. | 5 | Read |
+| 13 | **EP04 - Gestión de Mantenimiento** | US-13 | Programar mantenimiento | Como gestor, quiero definir mantenimientos periódicos para evitar fallos imprevistos. | 8 | Update |
+| 14 | EP04 | US-14 | Registrar mantenimiento realizado | Como técnico, quiero documentar el mantenimiento realizado para dejar constancia. | 3 | Create |
+| 15 | EP04 | US-15 | Consultar mantenimientos próximos | Como gestor, quiero conocer las próximas fechas de mantenimiento para planificar. | 2 | Read |
+| 16 | EP04 | US-16 | Recibir alertas de mantenimiento | Como gestor, quiero recibir alertas de mantenimiento próximo para evitar retrasos. | 5 | Read |
+| 17 | **EP05 - Gestión de Indicadores/Reportes** | US-17 | Generar reporte semanal | Como gestor, quiero ver reportes semanales de entregas para evaluar el rendimiento del personal. | 5 | Read |
+| 18 | EP05 | US-18 | Evaluar eficiencia por unidad | Como gestor, quiero conocer el rendimiento por unidad para tomar decisiones. | 2 | Read |
+| 19 | EP05 | US-19 | Comparar desempeño entre conductores | Como gestor, quiero comparar a los conductores para fomentar mejores prácticas. | 3 | Read |
+| 20 | EP05 | US-20 | Monitorear alertas críticas | Como gestor, quiero visualizar alertas críticas del sistema para tomar acciones inmediatas. | 1 | Read |
+| 21 | **EP-LP - Sitio Web Estático** | US-21 | Consultar información de servicios | Como visitante, quiero conocer los servicios disponibles. | 3 | Read |
+| 22 | EP-LP | US-22 | Solicitar demostración | Como visitante, quiero registrar interés en una demo. | 5 | Create |
+| 23 | EP-LP | US-23 | Consultar planes y precios | Como visitante, quiero comparar los planes disponibles. | 3 | Read |
+| 24 | EP-LP | US-24 | Solicitar asistencia | Como visitante, quiero contactar soporte para resolver dudas. | 2 | Create |
+| 25 | EP-LP | US-25 | Consultar casos de éxito | Como visitante, quiero revisar casos de éxito reales. | 5 | Read |
+| 26 | **EP-API - API RESTful** | TS-01 | Autenticación API | Como desarrollador, quiero implementar autenticación mediante JWT para proteger el acceso a la API. | 8 | Create/Validate |
+| 27 | EP-API | TS-02 | Gestión de unidades vía API | Como desarrollador, quiero usar endpoints CRUD para gestionar unidades desde aplicaciones externas. | 5 | CRUD |
+| 28 | EP-API | TS-03 | Gestión de entregas vía API | Como desarrollador, quiero usar endpoints para registrar y consultar entregas desde apps móviles. | 5 | CRUD |
+| 29 | EP-API | TS-04 | Gestión de incidencias vía API | Como desarrollador, quiero implementar endpoints para reportar y resolver incidencias del sistema. | 5 | CRUD |
+| 30 | EP-API | TS-05 | Consulta de estadísticas vía API | Como desarrollador, quiero acceder a estadísticas desde la API para integrarlas en reportes externos. | 8 | Read |
 
 ## Capítulo IV: Product Architecture Design
 
