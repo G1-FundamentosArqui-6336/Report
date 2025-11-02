@@ -1663,13 +1663,19 @@ En esta sección se describe el proceso de **instanciación de elementos arquite
 
 - ***Diagrama C4 - Container Level***
 
-![Diagrama C4 - Container Level](/assets/CoBoxContainers.png)
+<div align="center">
+    <img src="./assets/CoBoxContainers.png" alt="Diagrama C4 - Container Level">
+</div>
 
 - ***Diagrama UML - Modelo de Dominio***
 
-![Diagrama UML - Modelo de Dominio - Parte 1](/assets/ADDCoBoxUML.png)
+<div align="center">
+    <img src="./assets/ADDCoBoxUML.png" alt="Diagrama UML - Modelo de Dominio - Parte 1">
+</div>
 
-![Diagrama UML - Modelo de Dominio - Parte 2](/assets/ADDCoBoxUML2.png)
+<div align="center">
+    <img src="./assets/ADDCoBoxUML2.png" alt="Diagrama UML - Modelo de Dominio - Parte 2">
+</div>
 
 **Decisiones de Diseño Registradas**
 
@@ -1718,7 +1724,9 @@ Después de completar la Iteración 1 del método ADD v3, se ha establecido una 
 
 Enlace del Tablero Kanban: https://trello.com/invite/b/68d9f5f5d50cbf348362a137/ATTI21acff966c1ec6ff3ab494eef5abc9a545059BA0/cobox-add-architecture-analysis
 
-![Kanban Board - ADD Iteration 1](/assets/KanbanBoard.png)
+<div align="center">
+    <img src="./assets/KanbanBoard.png" alt="Kanban Board - ADD Iteration 1">
+</div>
 
 -----
 
@@ -2591,7 +2599,7 @@ Se incluye una nota breve para la *landing* en Netlify.
 
 **Configuración mínima**
 
-* Engine: **PostgreSQL 15** · Template: **Free tier** · Class: **db.t3.micro** · Storage: **20 GB gp2**
+* Engine: **PostgreSQL 17** · Template: **Free tier** · Class: **db.t3.micro** · Storage: **20 GB gp2**
 * DB identifier: `cobox` *(único)*
 * Master user: `cl_admin` · Password: *(guardar en secreto)*
 * **VPC**: default (la misma del ecosistema actual) · **Public access**: **Yes**
@@ -2607,7 +2615,9 @@ Desc: Acceso temporal de desarrollo
 
 > Luego se restringe para permitir **solo** el SG del entorno de EB.
 
-![Consola RDS – detalles de instancia](/assets/AuroraRDSCobox.png)
+<div align="center">
+    <img src="./assets/AuroraRDSCobox.png" alt="Consola RDS – detalles de instancia">
+</div>
 
 ---
 
@@ -2637,8 +2647,13 @@ SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
 * Roles/Profiles: **aws-elasticbeanstalk-service-role** / **aws-elasticbeanstalk-ec2-role**
 * Network: VPC default, subnets públicas, **Public IP: enabled**
 
-![Configuración de variables en EB](/assets/AWSCoboxVariables.png)
-![Entorno de Cobox habilitado en AWS](/assets/AWSCoboxBackendEnv.png)
+<div align="center">
+    <img src="./assets/AWSCoboxVariables.png" alt="Configuración de variables en EB">
+</div>
+
+<div align="center">
+    <img src="./assets/AWSCoboxBackendEnv.png" alt="Entorno de Cobox habilitado en AWS">
+</div>
 
 ---
 
@@ -2652,7 +2667,9 @@ Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: <SG-ID-de-EB>
 Desc: Acceso desde Elastic Beanstalk
 ```
 
-![Reglas inbound del SG de RDS](/assets/PanelSGCobox.png)
+<div align="center">
+    <img src="./assets/PanelSGCobox.png" alt="Reglas inbound del SG de RDS">
+</div>
 
 ---
 
@@ -2707,8 +2724,13 @@ jobs:
           deployment_package: target/cobox-0.0.1-SNAPSHOT.jar
 ```
 
-![Secrets en GitHub](/assets/CoboxBackendRepoSecrets.png)
-![Workflow exitoso](/assets/SuccesfulWorkflow.png)
+<div align="center">
+    <img src="./assets/CoboxBackendRepoSecrets.png" alt="Secrets en GitHub">
+</div>
+
+<div align="center">
+    <img src="./assets/SuccesfulWorkflow.png" alt="Workflow exitoso">
+</div>
 
 ---
 
@@ -2743,8 +2765,13 @@ spring.jpa.properties.hibernate.dialect=${SPRING_JPA_PROPERTIES_HIBERNATE_DIALEC
 
 * Cada **push a main** dispara el deploy automático.
 
-![Sitio conectado en Netlify](/assets/NetlifyConnection.png)
-![`netlify.toml` en repo](/assets/NetlifyToml.png)
+<div align="center">
+    <img src="./assets/NetlifyConnection.png" alt="Sitio conectado en Netlify">
+</div>
+
+<div align="center">
+    <img src="./assets/NetlifyToml.png" alt="`netlify.toml` en repo">
+</div>
 
 ---
 
@@ -2762,6 +2789,7 @@ Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada hi
 Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
 
 [![image.png](https://i.postimg.cc/9fGXCpYK/image.png)](https://postimg.cc/Ty3vcnSJ)
+
 <table>
 <tr>
     <th colspan="3">Sprint #</th>
@@ -3149,7 +3177,7 @@ Se incluye una nota breve para la *landing* en Netlify.
 
 **Configuración mínima**
 
-* Engine: **PostgreSQL 15** · Template: **Free tier** · Class: **db.t3.micro** · Storage: **20 GB gp2**
+* Engine: **PostgreSQL 17** · Template: **Free tier** · Class: **db.t3.micro** · Storage: **20 GB gp2**
 * DB identifier: `cobox` *(único)*
 * Master user: `cl_admin` · Password: *(guardar en secreto)*
 * **VPC**: default (la misma del ecosistema actual) · **Public access**: **Yes**
@@ -3165,7 +3193,9 @@ Desc: Acceso temporal de desarrollo
 
 > Luego se restringe para permitir **solo** el SG del entorno de EB.
 
-![Consola RDS – detalles de instancia](/assets/AuroraRDSCobox.png)
+<div align="center">
+    <img src="./assets/AuroraRDSCobox.png" alt="Consola RDS – detalles de instancia">
+</div>
 
 ---
 
@@ -3195,8 +3225,13 @@ SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
 * Roles/Profiles: **aws-elasticbeanstalk-service-role** / **aws-elasticbeanstalk-ec2-role**
 * Network: VPC default, subnets públicas, **Public IP: enabled**
 
-![Configuración de variables en EB](/assets/AWSCoboxVariables.png)
-![Entorno de Cobox habilitado en AWS](/assets/AWSCoboxBackendEnv.png)
+<div align="center">
+    <img src="./assets/AWSCoboxVariables.png" alt="Configuración de variables en EB">
+</div>
+
+<div align="center">
+    <img src="./assets/AWSCoboxBackendEnv.png" alt="Entorno de Cobox habilitado en AWS">
+</div>
 
 ---
 
@@ -3210,7 +3245,9 @@ Type: PostgreSQL | Protocol: TCP | Port: 5432 | Source: <SG-ID-de-EB>
 Desc: Acceso desde Elastic Beanstalk
 ```
 
-![Reglas inbound del SG de RDS](/assets/PanelSGCobox.png)
+<div align="center">
+    <img src="./assets/PanelSGCobox.png" alt="Reglas inbound del SG de RDS">
+</div>
 
 ---
 
@@ -3265,8 +3302,13 @@ jobs:
           deployment_package: target/cobox-0.0.1-SNAPSHOT.jar
 ```
 
-![Secrets en GitHub](/assets/CoboxBackendRepoSecrets.png)
-![Workflow exitoso](/assets/SuccesfulWorkflow.png)
+<div align="center">
+    <img src="./assets/CoboxBackendRepoSecrets.png" alt="Secrets en GitHub">
+</div>
+
+<div align="center">
+    <img src="./assets/SuccesfulWorkflow.png" alt="Workflow exitoso">
+</div>
 
 ---
 
@@ -3301,8 +3343,13 @@ spring.jpa.properties.hibernate.dialect=${SPRING_JPA_PROPERTIES_HIBERNATE_DIALEC
 
 * Cada **push a main** dispara el deploy automático.
 
-![Sitio conectado en Netlify](/assets/NetlifyConnection.png)
-![`netlify.toml` en repo](/assets/NetlifyToml.png)
+<div align="center">
+    <img src="./assets/NetlifyConnection.png" alt="Sitio conectado en Netlify">
+</div>
+
+<div align="center">
+    <img src="./assets/NetlifyToml.png" alt="`netlify.toml` en repo">
+</div>
 
 
 ##### 5.3.1.7. Team Collaboration Insights during Sprint
@@ -3313,13 +3360,19 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 - _Evidencias de colaboración:_
 
   - Backend Web Services:
-  ![Evidencias de colaboración - Backend Web Services](/assets/insights_backend.png)
+  <div align="center">
+      <img src="./assets/insights_backend.png" alt="Evidencias de colaboración - Backend Web Services">
+  </div>
 
   - Landing Page:
-  ![Evidencias de colaboración - Landing Page](/assets/insights_landingpage.png)
+  <div align="center">
+      <img src="./assets/insights_landingpage.png" alt="Evidencias de colaboración - Landing Page">
+  </div>
 
   - Reporte:
-  ![Evidencias de colaboración - Landing Page](/assets/insights_report.png)
+  <div align="center">
+      <img src="./assets/insights_report.png" alt="Evidencias de colaboración - Reporte">
+  </div>
 
 
 ##### 5.3.1.8. Kanban Board
