@@ -151,7 +151,7 @@
       - [5.3.1.6. Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
       - [5.3.1.7. Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
       - [5.3.1.8. Kanban Board --> TP1](#5318-kanban-board)
-    - [5.3.2. Sprint 1](#531-sprint-2)
+    - [5.3.2. Sprint 2](#531-sprint-2)
       - [5.3.2.1. Sprint Backlog 2](#5311-sprint-backlog-2)
       - [5.3.2.2. Development Evidence for Sprint Review](#5312-development-evidence-for-sprint-review)
       - [5.3.2.3. Testing Suite Evidence for Sprint Review](#5313-testing-suite-evidence-for-sprint-review)
