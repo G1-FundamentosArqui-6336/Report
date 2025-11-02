@@ -3389,6 +3389,13 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 ##### 5.3.2.2 Development Evidence for Sprint Review
 ##### 5.3.2.3 Testing Suite Evidence for Sprint Review
 ##### 5.3.2.4 Execution Evidence for Sprint Review
+Configuramos los services para luego ejecutarlos 
+  <img src="./assets/ex1.png" alt="C4 diagrama de contenedores coware">
+   <img src="./assets/ex2.png" alt="C4 diagrama de contenedores coware">
+    <img src="./assets/ex3.png" alt="C4 diagrama de contenedores coware">
+     <img src="./assets/ex4.png" alt="C4 diagrama de contenedores coware">
+     Se muestra la ejecución de un microservicio
+      <img src="./assets/ex5.png" alt="C4 diagrama de contenedores coware">
 ##### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
 ##### 5.3.2.6 Software Deployment Evidence for Sprint Review
 ##### 5.3.2.7 Team Collaboration Insights during Sprint
