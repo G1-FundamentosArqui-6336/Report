@@ -3396,8 +3396,152 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 Durante el srpint 2, nos centramos en la condiguración de los servicios para luego ejecutarlos. Este sprint resultó clave para establecer las primeras funcionalidades del sistema, sentando jas bases técnicas para los siguientes ciclos de desarrollo.
 ##### 5.3.2.1 Sprint Backlog 2
 Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes. Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello. Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
+
+
+<table>
+<tr>
+    <th colspan="3">Sprint #</th>
+    <th colspan="10">Sprint 1</th>
+</tr>
+<tr>
+    <td colspan="3">User Story</td>
+    <td colspan="10">Work-Item/Task</td>
+</tr>
+<tr>
+    <td>Id</td>
+    <td colspan="2">Title</td>
+    <td>Id</td>
+    <td colspan="2">Title</td>
+    <td colspan="3">Description</td>
+    <td>Estimation</td>
+    <td colspan="2">Assigned To</td>
+    <td>Status (To-do / InProcess / To-Review / Done)</td>
+</tr>
+
+<!-- Ramiro Guzmán -->
+<tr>
+    <td></td>
+    <td colspan="2"></td>
+    <td></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td></td>
+    <td colspan="2">Ramiro Alexander Guzmán Chávez</td>
+    <td>To-do</td>
+</tr>
+
+<!-- David Pérez -->
+<tr>
+    <td></td>
+    <td colspan="2"></td>
+    <td></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td></td>
+    <td colspan="2">David Alexander Pérez García</td>
+    <td>To-do</td>
+</tr>
+
+<!-- Joaquín Pedraza -->
+<tr>
+    <td></td>
+    <td colspan="2"></td>
+    <td></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td></td>
+    <td colspan="2">Joaquín Pedraza Maldonado</td>
+    <td>To-do</td>
+</tr>
+
+<!-- Merly Salon -->
+<tr>
+    <td></td>
+    <td colspan="2"></td>
+    <td></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td></td>
+    <td colspan="2">Merly Salon Puerta</td>
+    <td>To-do</td>
+</tr>
+
+<!-- Jhon Gálvez -->
+<tr>
+    <td></td>
+    <td colspan="2"></td>
+    <td></td>
+    <td colspan="2"></td>
+    <td colspan="3"></td>
+    <td></td>
+    <td colspan="2">Jhon Alexander Galvez Chambi</td>
+    <td>To-do</td>
+</tr>
+</table>
+
 ##### 5.3.2.2 Development Evidence for Sprint Review
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| ----------- | ------ | ---------- | --------------- | -------------------- | ------------------- |
+|  |  |  |  |  | 02/11/25 |
+|  |  |  |  |  | 02/11/25 |
+|  |  |  |  |  | 02/11/25 |
+|  |  |  |  |  | 02/11/25 |
+|  |  |  |  |  | 02/11/25 |
+
+
 ##### 5.3.2.3 Testing Suite Evidence for Sprint Review
+<table border="1">
+  <tr>
+    <th>Repository</th>
+    <th>Branch</th>
+    <th>Commit Id</th>
+    <th>Commit Message</th>
+    <th>Commit Message Body</th>
+    <th>Committed on (Date)</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>RamiroGuzmanCh</td>
+    <td>02/11/25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>davidalexd</td>
+    <td>02/11/25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Chaomeum</td>
+    <td>02/11/25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>JoaquinPedraza1</td>
+    <td>02/11/25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>MerlySalonP</td>
+    <td>02/11/25</td>
+  </tr>
+</table>
+
+
 ##### 5.3.2.4 Execution Evidence for Sprint Review
 Configuramos los services para luego ejecutarlos 
   <img src="./assets/ex1.png" alt="C4 diagrama de contenedores coware">
@@ -3409,8 +3553,12 @@ Configuramos los services para luego ejecutarlos
      Se muestra la ejecución de un microservicio
       <img src="./assets/ex5.png" alt="C4 diagrama de contenedores coware">
             <img src="./assets/ex7.png" alt="C4 diagrama de contenedores coware">
+            
 ##### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
+
 ##### 5.3.2.6 Software Deployment Evidence for Sprint Review
+
+
 ##### 5.3.2.7 Team Collaboration Insights during Sprint
 ##### 5.3.2.8. Kanban Board
 
