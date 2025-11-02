@@ -3394,8 +3394,11 @@ Configuramos los services para luego ejecutarlos
    <img src="./assets/ex2.png" alt="C4 diagrama de contenedores coware">
     <img src="./assets/ex3.png" alt="C4 diagrama de contenedores coware">
      <img src="./assets/ex4.png" alt="C4 diagrama de contenedores coware">
+     Esta es la configuración del servicio flota 
+           <img src="./assets/ex6.png" alt="C4 diagrama de contenedores coware">
      Se muestra la ejecución de un microservicio
       <img src="./assets/ex5.png" alt="C4 diagrama de contenedores coware">
+            <img src="./assets/ex7.png" alt="C4 diagrama de contenedores coware">
 ##### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
 ##### 5.3.2.6 Software Deployment Evidence for Sprint Review
 ##### 5.3.2.7 Team Collaboration Insights during Sprint
