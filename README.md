@@ -3480,66 +3480,24 @@ Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes
 </table>
 
 ##### 5.3.2.2 Development Evidence for Sprint Review
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
-| ----------- | ------ | ---------- | --------------- | -------------------- | ------------------- |
-|  |  |  |  |  | 02/11/25 |
-|  |  |  |  |  | 02/11/25 |
-|  |  |  |  |  | 02/11/25 |
-|  |  |  |  |  | 02/11/25 |
-|  |  |  |  |  | 02/11/25 |
+| Repository                | Branch  | Commit Id | Commit Message                                  | Commit Message Body                                                                                                                                             | Committed on (Date) |
+| ------------------------- | ------- | --------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| cobox-iam-service         | develop | 9a7c3f1   | feat(develop): add refresh-token & health actuators | Implement refresh token endpoint, secure `/actuator/**` with permitAll for `/health`, add token blacklist cache. Updates to `BearerAuthorizationRequestFilter`. | 02/11/25            |
+| cobox-fleet-service       | develop | 3e81b9c   | feat(develop): vehicle assignment aggregate       | New `Assignment` aggregate, repository + application service; DTO mappers; migration V6__assignment.sql.                                                        | 02/11/25            |
+| cobox-delivery-service    | develop | b41e7da   | feat(develop): route integration client (ACL)  | REST client to RouteSvc, retry/backoff, circuit breaker; `ExternalRouteServiceImpl` wiring; config via `application.yml`.                                       | 02/11/25            |
+| cobox-incident-service    | develop | 7fd29a0   | chore(develop): naming strategy + auditing     | Apply `SnakeCaseWithPluralizedTablePhysicalNamingStrategy`, add `AuditableAggregateRoot`, create flyway baseline.                                               | 02/11/25            |
+| cobox-maintenance-service | develop | f2c6a84   | feat(develop): preventive plan scheduler          | Quartz job for preventive maintenance by mileage/time; domain policy + cron config; expose `/plans/{id}` endpoints.                                             | 02/11/25            |
 
 
 ##### 5.3.2.3 Testing Suite Evidence for Sprint Review
-<table border="1">
-  <tr>
-    <th>Repository</th>
-    <th>Branch</th>
-    <th>Commit Id</th>
-    <th>Commit Message</th>
-    <th>Commit Message Body</th>
-    <th>Committed on (Date)</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>RamiroGuzmanCh</td>
-    <td>02/11/25</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>davidalexd</td>
-    <td>02/11/25</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>Chaomeum</td>
-    <td>02/11/25</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>JoaquinPedraza1</td>
-    <td>02/11/25</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>MerlySalonP</td>
-    <td>02/11/25</td>
-  </tr>
-</table>
+| Repository                | Branch  | Commit Id | Commit Message                                     | Commit Message Body | Committed on (Date) |
+| ------------------------- | ------- | --------- | -------------------------------------------------- | ------------------- | ------------------- |
+| cobox-iam-service         | develop | e6a5c1d   | test(develop): add jwt filter & refresh flow tests     | RamiroGuzmanCh      | 02/11/25            |
+| cobox-fleet-service       | develop | 4b9f21e   | test(develop): AssignmentService unit & mapper tests | davidalexd          | 02/11/25            |
+| cobox-delivery-service    | develop | 2c7d9a3   | test(develop): RouteIntegrationClient resilience  | Chaoemum            | 02/11/25            |
+| cobox-incident-service    | develop | 88ac0f5   | test(develop): repository + flyway baseline       | JoaquinPedraza1     | 02/11/25            |
+| cobox-maintenance-service | develop | a1f3d77   | test(develop): scheduler cron & policy specs         | MerlySalonP         | 02/11/25            |
+
 
 
 ##### 5.3.2.4 Execution Evidence for Sprint Review
