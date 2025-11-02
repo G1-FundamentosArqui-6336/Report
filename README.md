@@ -3393,8 +3393,9 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 
  
 ##### 5.3.2. Sprint 2
-
+Durante el srpint 2, nos centramos en la condiguración de los servicios para luego ejecutarlos. Este sprint resultó clave para establecer las primeras funcionalidades del sistema, sentando jas bases técnicas para los siguientes ciclos de desarrollo.
 ##### 5.3.2.1 Sprint Backlog 2
+Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes. Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello. Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
 ##### 5.3.2.2 Development Evidence for Sprint Review
 ##### 5.3.2.3 Testing Suite Evidence for Sprint Review
 ##### 5.3.2.4 Execution Evidence for Sprint Review
