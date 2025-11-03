@@ -3451,6 +3451,58 @@ Configuramos los services para luego ejecutarlos
             
 ##### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
 
+El sistema **CoBox** fue diseñado bajo una **arquitectura de microservicios** siguiendo los principios de **Domain-Driven Design (DDD)** y la metodología **Attribute-Driven Design (ADD)**.  
+Este enfoque permitió estructurar la arquitectura en función de los **atributos de calidad** requeridos por el sistema: **escalabilidad, mantenibilidad, disponibilidad y seguridad**.
+
+---
+
+### Aplicación de la metodología ADD
+
+Durante el proceso de diseño, se siguieron las etapas propuestas por la metodología **ADD**:
+
+#### **1. Definición de los objetivos de calidad**
+- Se identificaron los atributos críticos: **escalabilidad, independencia de despliegue, resiliencia y seguridad**.  
+- Estos atributos guiaron las principales decisiones arquitectónicas.
+
+#### **2. Identificación de drivers arquitectónicos**
+- Se analizaron los **requisitos funcionales** (gestión de flota, autenticación, entregas) y **no funcionales** (rendimiento, disponibilidad, consistencia de datos).  
+- Se priorizaron las decisiones que favorecen la **modularidad** y la **comunicación desacoplada**.
+
+#### **3. Descomposición en módulos y asignación de responsabilidades**
+- Se definieron **bounded contexts** siguiendo DDD.  
+- Cada microservicio implementa un dominio independiente, con su propia base de datos, API y lógica de negocio.  
+- Esta descomposición permitió mantener **alta cohesión** dentro de cada contexto y **bajo acoplamiento** entre ellos.
+
+#### **4. Evaluación y refinamiento iterativo**
+- Se validó la arquitectura mediante *proofs of concept* con **Eureka** y **Gateway**, verificando la correcta comunicación entre servicios.  
+- Se refinaron configuraciones en **docker-compose** y **config-service** para soportar entornos distribuidos.
+
+---
+
+### Microservicios implementados
+
+| **Microservicio** | **Descripción** | **Responsabilidad Principal** |
+|--------------------|-----------------|-------------------------------|
+| **IAM Service** | Servicio de autenticación y autorización basado en JWT. | Control de usuarios, roles y permisos. |
+| **Fleet Service** | Servicio de gestión de flota. | Administración de vehículos y conductores. |
+| **Delivery Service** | Servicio de entregas. | Gestión de pedidos, asignaciones y estado de entregas. |
+| **Config Service** | Configuración centralizada. | Control de propiedades y entornos compartidos. |
+| **Eureka Service** | Descubrimiento de servicios. | Registro dinámico de microservicios. |
+| **Gateway Service** | Puerta de enlace API. | Enrutamiento y control de acceso. |
+
+---
+
+### Decisiones arquitectónicas basadas en atributos de calidad
+
+| **Atributo de Calidad** | **Decisión Tomada** | **Resultado Esperado** |
+|--------------------------|---------------------|------------------------|
+| **Escalabilidad** | Uso de microservicios independientes desplegables en contenedores. | Escalamiento horizontal por dominio. |
+| **Mantenibilidad** | Separación de contextos por responsabilidad y repositorios modulares. | Cambios localizados sin afectar otros servicios. |
+| **Disponibilidad** | Monitoreo con endpoints `/actuator/health` y despliegue replicado. | Alta disponibilidad ante fallos. |
+| **Seguridad** | Centralización de autenticación en IAM con JWT y control de roles. | Acceso seguro y validado en cada petición. |
+
+---
+
 ##### 5.3.2.6 Software Deployment Evidence for Sprint Review
 
 
