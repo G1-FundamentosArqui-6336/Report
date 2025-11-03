@@ -3451,8 +3451,10 @@ Configuramos los services para luego ejecutarlos
             
 ##### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
 
-El sistema **CoBox** fue diseñado bajo una **arquitectura de microservicios** siguiendo los principios de **Domain-Driven Design (DDD)** y la metodología **Attribute-Driven Design (ADD)**.  
-Este enfoque permitió estructurar la arquitectura en función de los **atributos de calidad** requeridos por el sistema: **escalabilidad, mantenibilidad, disponibilidad y seguridad**.
+El sistema **CoBox** fue diseñado bajo una **arquitectura de microservicios**, siguiendo los principios de **Domain-Driven Design (DDD)** y la metodología **Attribute-Driven Design (ADD)**.  
+Este enfoque permitió estructurar la arquitectura en función de los **atributos de calidad** definidos para el sistema: **escalabilidad, mantenibilidad, disponibilidad y seguridad**.
+
+Además, se implementaron componentes clave de **Spring Cloud** como **Eureka Server** y **Spring Cloud Gateway**, los cuales garantizan el descubrimiento dinámico de servicios y el enrutamiento centralizado de las solicitudes dentro del ecosistema de microservicios.
 
 ---
 
@@ -3461,21 +3463,21 @@ Este enfoque permitió estructurar la arquitectura en función de los **atributo
 Durante el proceso de diseño, se siguieron las etapas propuestas por la metodología **ADD**:
 
 #### **1. Definición de los objetivos de calidad**
-- Se identificaron los atributos críticos: **escalabilidad, independencia de despliegue, resiliencia y seguridad**.  
-- Estos atributos guiaron las principales decisiones arquitectónicas.
+- Se identificaron los atributos críticos: **escalabilidad**, **independencia de despliegue**, **resiliencia** y **seguridad**.  
+- Estos atributos guiaron las principales decisiones arquitectónicas, influyendo directamente en la adopción de **Eureka** y **Spring Cloud Gateway** para lograr un entorno distribuido estable y seguro.
 
 #### **2. Identificación de drivers arquitectónicos**
-- Se analizaron los **requisitos funcionales** (gestión de flota, autenticación, entregas) y **no funcionales** (rendimiento, disponibilidad, consistencia de datos).  
-- Se priorizaron las decisiones que favorecen la **modularidad** y la **comunicación desacoplada**.
+- Se analizaron los **requisitos funcionales** (gestión de flota, autenticación, entregas) y los **requisitos no funcionales** (rendimiento, disponibilidad, consistencia de datos).  
+- Se priorizaron decisiones que fomentaran la **modularidad**, la **autonomía de despliegue** y la **comunicación desacoplada** entre microservicios.
 
 #### **3. Descomposición en módulos y asignación de responsabilidades**
-- Se definieron **bounded contexts** siguiendo DDD.  
-- Cada microservicio implementa un dominio independiente, con su propia base de datos, API y lógica de negocio.  
-- Esta descomposición permitió mantener **alta cohesión** dentro de cada contexto y **bajo acoplamiento** entre ellos.
+- Se definieron **bounded contexts** según DDD, donde cada microservicio representa un dominio independiente con su propia base de datos, API y lógica de negocio.  
+- La **alta cohesión** dentro de cada módulo y el **bajo acoplamiento** entre ellos se lograron gracias al uso de **Eureka** como registro de descubrimiento y **Gateway** como punto de entrada único.
 
 #### **4. Evaluación y refinamiento iterativo**
-- Se validó la arquitectura mediante *proofs of concept* con **Eureka** y **Gateway**, verificando la correcta comunicación entre servicios.  
-- Se refinaron configuraciones en **docker-compose** y **config-service** para soportar entornos distribuidos.
+- Se validó la arquitectura mediante *proofs of concept* conectando los microservicios a través de **Eureka Server**.  
+- Se configuró **Spring Cloud Gateway** para enrutar las solicitudes externas hacia los servicios internos, garantizando el balanceo y la protección de los endpoints.  
+- Se refinaron las configuraciones de **docker-compose** y **config-service** para asegurar el funcionamiento distribuido en entornos locales y en la nube.
 
 ---
 
@@ -3483,12 +3485,12 @@ Durante el proceso de diseño, se siguieron las etapas propuestas por la metodol
 
 | **Microservicio** | **Descripción** | **Responsabilidad Principal** |
 |--------------------|-----------------|-------------------------------|
-| **IAM Service** | Servicio de autenticación y autorización basado en JWT. | Control de usuarios, roles y permisos. |
-| **Fleet Service** | Servicio de gestión de flota. | Administración de vehículos y conductores. |
-| **Delivery Service** | Servicio de entregas. | Gestión de pedidos, asignaciones y estado de entregas. |
-| **Config Service** | Configuración centralizada. | Control de propiedades y entornos compartidos. |
-| **Eureka Service** | Descubrimiento de servicios. | Registro dinámico de microservicios. |
-| **Gateway Service** | Puerta de enlace API. | Enrutamiento y control de acceso. |
+| **IAM Service** | Autenticación y autorización basada en JWT. | Control de usuarios, roles y permisos. |
+| **Fleet Service** | Gestión de flota vehicular. | Administración de vehículos, conductores y estados de disponibilidad. |
+| **Delivery Service** | Gestión de entregas y pedidos. | Control de pedidos, asignaciones y seguimiento. |
+| **Config Service** | Configuración centralizada. | Administración de propiedades compartidas entre microservicios. |
+| **Eureka Service** | Descubrimiento de servicios. | Registro dinámico y localización automática de microservicios. |
+| **Gateway Service** | Puerta de enlace API. | Enrutamiento, control de acceso y gestión del tráfico entrante. |
 
 ---
 
@@ -3496,12 +3498,16 @@ Durante el proceso de diseño, se siguieron las etapas propuestas por la metodol
 
 | **Atributo de Calidad** | **Decisión Tomada** | **Resultado Esperado** |
 |--------------------------|---------------------|------------------------|
-| **Escalabilidad** | Uso de microservicios independientes desplegables en contenedores. | Escalamiento horizontal por dominio. |
-| **Mantenibilidad** | Separación de contextos por responsabilidad y repositorios modulares. | Cambios localizados sin afectar otros servicios. |
-| **Disponibilidad** | Monitoreo con endpoints `/actuator/health` y despliegue replicado. | Alta disponibilidad ante fallos. |
-| **Seguridad** | Centralización de autenticación en IAM con JWT y control de roles. | Acceso seguro y validado en cada petición. |
+| **Escalabilidad** | Uso de **Eureka** para descubrimiento automático y despliegue independiente por microservicio. | Permite escalar horizontalmente cada servicio según demanda. |
+| **Mantenibilidad** | Diseño modular guiado por DDD y separación clara de responsabilidades. | Cambios localizados sin afectar a otros servicios. |
+| **Disponibilidad** | Integración de **Spring Boot Actuator** (`/actuator/health`) y despliegue replicado. | Monitoreo y alta disponibilidad ante fallos. |
+| **Seguridad** | Autenticación centralizada mediante **IAM Service** y control de rutas seguras en **Gateway**. | Acceso seguro y validado en cada petición. |
 
 ---
+
+<div align="center">
+    <img src="./assets/servicesMICRO.png" alt="servicesMICRO">
+</div>
 
 ##### 5.3.2.6 Software Deployment Evidence for Sprint Review
 
