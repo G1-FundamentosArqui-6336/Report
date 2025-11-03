@@ -3397,87 +3397,24 @@ Durante el srpint 2, nos centramos en la condiguración de los servicios para lu
 ##### 5.3.2.1 Sprint Backlog 2
 Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes. Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello. Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
 
+<div align="center">
+    <img src="./assets/SPRINT2FUNDA.png" alt="SPRINT2FUNDA.png">
+</div>
 
-<table>
-<tr>
-    <th colspan="3">Sprint #</th>
-    <th colspan="10">Sprint 1</th>
-</tr>
-<tr>
-    <td colspan="3">User Story</td>
-    <td colspan="10">Work-Item/Task</td>
-</tr>
-<tr>
-    <td>Id</td>
-    <td colspan="2">Title</td>
-    <td>Id</td>
-    <td colspan="2">Title</td>
-    <td colspan="3">Description</td>
-    <td>Estimation</td>
-    <td colspan="2">Assigned To</td>
-    <td>Status (To-do / InProcess / To-Review / Done)</td>
-</tr>
 
-<!-- Ramiro Guzmán -->
-<tr>
-    <td></td>
-    <td colspan="2"></td>
-    <td></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td></td>
-    <td colspan="2">Ramiro Alexander Guzmán Chávez</td>
-    <td>To-do</td>
-</tr>
+| User Story / Work-Item ID | Title | Task ID | Task Title | Estimación (pt) | Assigned To | Status |
+|----------------------------|--------|----------|-------------|-----------------|--------------|---------|
+| US001 | Configuración centralizada de servicios | T01 | Implementar `config-service` para la gestión de configuración externa | 3 | **Ramiro Alexander Guzmán Chávez** | Done |
+| TS001 | Servidor de descubrimiento | T02 | Implementar `eureka-service` para registro y descubrimiento de microservicios | 2 | **Jhon Alexander Gálvez Chambi** | Done |
+| TS002 | Gateway de entrada | T03 | Implementar `gateway-service` con rutas a los microservicios | 2 | **Jhon Alexander Gálvez Chambi** |Done |
+| US002 | Autenticación de usuarios | T04 | Implementar `iam-service` (servicio de autenticación con JWT y roles) | 3 | **David Alexander Pérez García** | Done |
+| TS003 | Gestión de flota | T05 | Implementar `fleet-service` con CRUD de vehículos y tracking básico | 3 | **David Alexander Pérez García** |Done |
+| TS004 | Servicio de entregas | T06 | Implementar `delivery-service` con endpoints de pedidos y estado de entrega | 3 | **Joaquín Pedraza Maldonado** | Done |
+| US003 | Comunicación entre microservicios | T07 | Configurar comunicación vía `FeignClient` entre `fleet` y `delivery` | 2 | **Ramiro Alexander Guzmán Chávez** | Done |
+| TS005 | Pruebas y despliegue | T08 | Ejecutar pruebas unitarias e integración para cada microservicio | 2 | **David Alexander Pérez García** | Done |
+| TS006 | Documentación general | T09 | Configurar y documentar endpoints con `Swagger`/`SpringDoc` para todos los microservicios | 1 | **Merly Salón Puerta** | Done |
 
-<!-- David Pérez -->
-<tr>
-    <td></td>
-    <td colspan="2"></td>
-    <td></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td></td>
-    <td colspan="2">David Alexander Pérez García</td>
-    <td>To-do</td>
-</tr>
-
-<!-- Joaquín Pedraza -->
-<tr>
-    <td></td>
-    <td colspan="2"></td>
-    <td></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td></td>
-    <td colspan="2">Joaquín Pedraza Maldonado</td>
-    <td>To-do</td>
-</tr>
-
-<!-- Merly Salon -->
-<tr>
-    <td></td>
-    <td colspan="2"></td>
-    <td></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td></td>
-    <td colspan="2">Merly Salon Puerta</td>
-    <td>To-do</td>
-</tr>
-
-<!-- Jhon Gálvez -->
-<tr>
-    <td></td>
-    <td colspan="2"></td>
-    <td></td>
-    <td colspan="2"></td>
-    <td colspan="3"></td>
-    <td></td>
-    <td colspan="2">Jhon Alexander Galvez Chambi</td>
-    <td>To-do</td>
-</tr>
-</table>
+---
 
 ##### 5.3.2.2 Development Evidence for Sprint Review
 | Repository                | Branch  | Commit Id | Commit Message                                  | Commit Message Body                                                                                                                                             | Committed on (Date) |
