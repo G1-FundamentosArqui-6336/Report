@@ -150,16 +150,25 @@
       - [5.3.1.5. Microservices Documentation Evidence for Sprint Review](#5315-microservices-documentation-evidence-for-sprint-review)
       - [5.3.1.6. Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
       - [5.3.1.7. Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
-      - [5.3.1.8. Kanban Board --> TP1](#5318-kanban-board)
+      - [5.3.1.8. Kanban Board](#5318-kanban-board)
     - [5.3.2. Sprint 2](#531-sprint-2)
-      - [5.3.2.1. Sprint Backlog 2](#5311-sprint-backlog-2)
-      - [5.3.2.2. Development Evidence for Sprint Review](#5312-development-evidence-for-sprint-review)
-      - [5.3.2.3. Testing Suite Evidence for Sprint Review](#5313-testing-suite-evidence-for-sprint-review)
-      - [5.3.2.4. Execution Evidence for Sprint Review](#5314-execution-evidence-for-sprint-review)
-      - [5.3.2.5. Microservices Documentation Evidence for Sprint Review](#5315-microservices-documentation-evidence-for-sprint-review)
-      - [5.3.2.6. Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
-      - [5.3.2.7. Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
-      - [5.3.2.8. Kanban Board --> TP1](#5318-kanban-board)
+      - [5.3.2.1. Sprint Backlog 2](#5321-sprint-backlog-2)
+      - [5.3.2.2. Development Evidence for Sprint Review](#5322-development-evidence-for-sprint-review)
+      - [5.3.2.3. Testing Suite Evidence for Sprint Review](#5323-testing-suite-evidence-for-sprint-review)
+      - [5.3.2.4. Execution Evidence for Sprint Review](#5324-execution-evidence-for-sprint-review)
+      - [5.3.2.5. Microservices Documentation Evidence for Sprint Review](#5325-microservices-documentation-evidence-for-sprint-review)
+      - [5.3.2.6. Software Deployment Evidence for Sprint Review](#5326-software-deployment-evidence-for-sprint-review)
+      - [5.3.2.7. Team Collaboration Insights during Sprint](#5327-team-collaboration-insights-during-sprint)
+      - [5.3.2.8. Kanban Board](#5328-kanban-board)
+    - [5.3.3. Sprint 3](#533-sprint-2)
+      - [5.3.3.1. Sprint Backlog 2](#5331-sprint-backlog-2)
+      - [5.3.3.2. Development Evidence for Sprint Review](#5332-development-evidence-for-sprint-review)
+      - [5.3.3.3. Testing Suite Evidence for Sprint Review](#5333-testing-suite-evidence-for-sprint-review)
+      - [5.3.3.4. Execution Evidence for Sprint Review](#5334-execution-evidence-for-sprint-review)
+      - [5.3.3.5. Microservices Documentation Evidence for Sprint Review](#5335-microservices-documentation-evidence-for-sprint-review)
+      - [5.3.3.6. Software Deployment Evidence for Sprint Review](#5336-software-deployment-evidence-for-sprint-review)
+      - [5.3.3.7. Team Collaboration Insights during Sprint](#5337-team-collaboration-insights-during-sprint)
+      - [5.3.3.8. Kanban Board](#5338-kanban-board)
 
 
 - [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
@@ -3392,9 +3401,12 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 
 
  
-##### 5.3.2. Sprint 2
+#### 5.3.2. Sprint 2
+
 Durante el srpint 2, nos centramos en la condiguración de los servicios para luego ejecutarlos. Este sprint resultó clave para establecer las primeras funcionalidades del sistema, sentando jas bases técnicas para los siguientes ciclos de desarrollo.
+
 ##### 5.3.2.1 Sprint Backlog 2
+
 Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes. Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello. Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
 
 <div align="center">
@@ -3417,6 +3429,7 @@ Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes
 ---
 
 ##### 5.3.2.2 Development Evidence for Sprint Review
+
 | Repository                | Branch  | Commit Id | Commit Message                                  | Commit Message Body                                                                                                                                             | Committed on (Date) |
 | ------------------------- | ------- | --------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | cobox-iam-service         | develop | 9a7c3f1   | feat(develop): add refresh-token & health actuators | Implement refresh token endpoint, secure `/actuator/**` with permitAll for `/health`, add token blacklist cache. Updates to `BearerAuthorizationRequestFilter`. | 02/11/25            |
@@ -3427,6 +3440,7 @@ Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes
 
 
 ##### 5.3.2.3 Testing Suite Evidence for Sprint Review
+
 | Repository                | Branch  | Commit Id | Commit Message                                     | Commit Message Body | Committed on (Date) |
 | ------------------------- | ------- | --------- | -------------------------------------------------- | ------------------- | ------------------- |
 | cobox-iam-service         | develop | e6a5c1d   | test(develop): add jwt filter & refresh flow tests     | RamiroGuzmanCh      | 02/11/25            |
@@ -3438,6 +3452,7 @@ Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes
 
 
 ##### 5.3.2.4 Execution Evidence for Sprint Review
+
 Configuramos los services para luego ejecutarlos 
   <img src="./assets/ex1.png" alt="C4 diagrama de contenedores coware">
    <img src="./assets/ex2.png" alt="C4 diagrama de contenedores coware">
@@ -3511,9 +3526,354 @@ Durante el proceso de diseño, se siguieron las etapas propuestas por la metodol
 
 ##### 5.3.2.6 Software Deployment Evidence for Sprint Review
 
+El despliegue de los microservicios del sistema **CoBox** se realizó en una infraestructura basada en **Amazon Web Services (AWS)**, garantizando la escalabilidad, disponibilidad y seguridad de los componentes.
+A continuación, se resumen los pasos más relevantes y las evidencias técnicas del proceso de deployment automatizado.
+
+---
+
+### **1. Configuración de la Infraestructura en AWS**
+
+Se aprovisionaron los recursos esenciales para la ejecución de los microservicios:
+
+* **Instancia EC2** (Amazon Linux 2) configurada como host principal de Docker y Docker Compose.
+* **Repositorio ECR (Elastic Container Registry)** para almacenar las imágenes Docker generadas por los pipelines de CI/CD.
+* **Base de datos RDS PostgreSQL** como backend persistente de los contextos IAM, Fleet y Delivery.
+* **AWS Systems Manager (SSM Parameter Store)** para gestionar credenciales (DB, JWT, API Keys) evitando su exposición en repositorios.
+
+<div align="center">
+  <img src="assets/aws_infra_setup.png" alt="AWS Infrastructure Setup" width="75%">
+  <p><em>Configuración de la infraestructura base en AWS (EC2, RDS, ECR y SSM)</em></p>
+</div>
+
+---
+
+### **2. Construcción y Versionamiento de Imágenes Docker**
+
+Cada microservicio se empaquetó en un contenedor independiente siguiendo el principio de **isolated bounded contexts**.
+El pipeline de GitHub Actions compila el código, ejecuta pruebas y genera imágenes etiquetadas con `:latest` y `:<timestamp>`, las cuales se publican automáticamente en ECR.
+
+Pasos esenciales del workflow:
+
+1. Compilación del microservicio con **Maven**.
+2. Construcción del contenedor mediante su `Dockerfile`.
+3. Autenticación OIDC → Push a ECR (sin credenciales estáticas).
+
+<div align="center">
+  <img src="assets/github_actions_build.png" alt="GitHub Actions Build and Push" width="75%">
+  <p><em>Pipeline de CI/CD en GitHub Actions para build & push a ECR</em></p>
+</div>
+
+---
+
+### **3. Despliegue Automatizado en EC2 mediante GitHub Actions**
+
+El pipeline ejecuta una conexión SSH controlada hacia la instancia EC2 para desplegar las imágenes más recientes.
+Dentro de `/opt/cobox`, se recrea el entorno con los siguientes pasos:
+
+1. Carga de variables desde `cobox-env.sh` y archivos `.env` específicos por servicio.
+2. Verificación del servicio Docker y autenticación con ECR.
+3. Ejecución de `docker compose -f docker-compose.aws.yml up -d` para recrear contenedores.
+4. Validación automática de estados `healthy` mediante healthchecks de `/actuator/health`.
+
+<div align="center">
+  <img src="assets/aws_deploy_compose.png" alt="Docker Compose AWS Deployment" width="75%">
+  <p><em>Ejecución de Docker Compose para levantar los microservicios en EC2</em></p>
+</div>
+
+---
+
+### **4. Validación del Despliegue y Healthchecks**
+
+Una vez desplegados los servicios:
+
+* Se comprobó que todos los contenedores (`config-service`, `eureka-service`, `iam-service`, `fleet-service`, `delivery-service`, `gateway-service`) se encuentren en estado **healthy**.
+* Se accedió al gateway mediante su IP pública, verificando la respuesta correcta del endpoint `/actuator/health` y los redireccionamientos internos hacia cada microservicio.
+
+```bash
+$ curl http://<public-ip>/actuator/health
+HTTP/1.1 200 OK
+{"status":"UP"}
+```
+
+<div align="center">
+  <img src="assets/gateway_health_check.png" alt="Gateway Health Check" width="75%">
+  <p><em>Validación del estado del Gateway y microservicios mediante healthchecks</em></p>
+</div>
+
+---
+
+### **5. Resultado Final**
+
+El despliegue se completó exitosamente con los siguientes resultados:
+
+* Todos los microservicios levantados en contenedores independientes y registrados en **Eureka Server**.
+* Gateway accesible externamente a través de la IP pública de la instancia EC2.
+* Integración continua funcionando de forma automática ante nuevos commits en la rama principal (`main`).
+
+<div align="center">
+  <img src="assets/aws_deployment_summary.png" alt="AWS Deployment Final State" width="75%">
+  <p><em>Evidencia final del estado de los contenedores desplegados</em></p>
+</div>
 
 ##### 5.3.2.7 Team Collaboration Insights during Sprint
+
+Durante esta fase de entrega, el equipo mantuvo una coordinación constante en las tareas de desarrollo de la landing page y los servicios backend.
+Además, se realizaron las actualizaciones pertinentes en la documentación. Esta colaboración efectiva fue clave para asegurar el correcto modelado y la funcionalidad de nuestra lógica de negocio.
+
+- _Evidencias de colaboración:_
+
+  - Backend Web Services:
+  <div align="center">
+      <img src="./assets/insights_microservices.png" alt="Evidencias de colaboración - Backend Web Services">
+  </div>
+
+  - Reporte:
+  <div align="center">
+      <img src="./assets/insights_report.png" alt="Evidencias de colaboración - Reporte">
+  </div>
+
 ##### 5.3.2.8. Kanban Board
+
+[![image.png](https://i.postimg.cc/9fGXCpYK/image.png)](https://postimg.cc/Ty3vcnSJ)
+
+ Anexo: [https://shorturl.at/CzirV](https://shorturl.at/CzirV)  
+
+
+#### 5.3.3. Sprint 3
+
+Durante el sprint 2, nos centramos en la condiguración de los servicios para luego ejecutarlos. Este sprint resultó clave para establecer las primeras funcionalidades del sistema, sentando jas bases técnicas para los siguientes ciclos de desarrollo.
+
+##### 5.3.3.1 Sprint Backlog 3
+
+Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes. Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello. Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
+
+<div align="center">
+    <img src="./assets/SPRINT2FUNDA.png" alt="SPRINT2FUNDA.png">
+</div>
+
+
+| User Story / Work-Item ID | Title | Task ID | Task Title | Estimación (pt) | Assigned To | Status |
+|----------------------------|--------|----------|-------------|-----------------|--------------|---------|
+| US001 | Configuración centralizada de servicios | T01 | Implementar `config-service` para la gestión de configuración externa | 3 | **Ramiro Alexander Guzmán Chávez** | Done |
+| TS001 | Servidor de descubrimiento | T02 | Implementar `eureka-service` para registro y descubrimiento de microservicios | 2 | **Jhon Alexander Gálvez Chambi** | Done |
+| TS002 | Gateway de entrada | T03 | Implementar `gateway-service` con rutas a los microservicios | 2 | **Jhon Alexander Gálvez Chambi** |Done |
+| US002 | Autenticación de usuarios | T04 | Implementar `iam-service` (servicio de autenticación con JWT y roles) | 3 | **David Alexander Pérez García** | Done |
+| TS003 | Gestión de flota | T05 | Implementar `fleet-service` con CRUD de vehículos y tracking básico | 3 | **David Alexander Pérez García** |Done |
+| TS004 | Servicio de entregas | T06 | Implementar `delivery-service` con endpoints de pedidos y estado de entrega | 3 | **Joaquín Pedraza Maldonado** | Done |
+| US003 | Comunicación entre microservicios | T07 | Configurar comunicación vía `FeignClient` entre `fleet` y `delivery` | 2 | **Ramiro Alexander Guzmán Chávez** | Done |
+| TS005 | Pruebas y despliegue | T08 | Ejecutar pruebas unitarias e integración para cada microservicio | 2 | **David Alexander Pérez García** | Done |
+| TS006 | Documentación general | T09 | Configurar y documentar endpoints con `Swagger`/`SpringDoc` para todos los microservicios | 1 | **Merly Salón Puerta** | Done |
+
+---
+
+##### 5.3.3.2 Development Evidence for Sprint Review
+
+| Repository                | Branch  | Commit Id | Commit Message                                  | Commit Message Body                                                                                                                                             | Committed on (Date) |
+| ------------------------- | ------- | --------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| cobox-iam-service         | develop | 9a7c3f1   | feat(develop): add refresh-token & health actuators | Implement refresh token endpoint, secure `/actuator/**` with permitAll for `/health`, add token blacklist cache. Updates to `BearerAuthorizationRequestFilter`. | 02/11/25            |
+| cobox-fleet-service       | develop | 3e81b9c   | feat(develop): vehicle assignment aggregate       | New `Assignment` aggregate, repository + application service; DTO mappers; migration V6__assignment.sql.                                                        | 02/11/25            |
+| cobox-delivery-service    | develop | b41e7da   | feat(develop): route integration client (ACL)  | REST client to RouteSvc, retry/backoff, circuit breaker; `ExternalRouteServiceImpl` wiring; config via `application.yml`.                                       | 02/11/25            |
+| cobox-incident-service    | develop | 7fd29a0   | chore(develop): naming strategy + auditing     | Apply `SnakeCaseWithPluralizedTablePhysicalNamingStrategy`, add `AuditableAggregateRoot`, create flyway baseline.                                               | 02/11/25            |
+| cobox-maintenance-service | develop | f2c6a84   | feat(develop): preventive plan scheduler          | Quartz job for preventive maintenance by mileage/time; domain policy + cron config; expose `/plans/{id}` endpoints.                                             | 02/11/25            |
+
+
+##### 5.3.3.3 Testing Suite Evidence for Sprint Review
+
+| Repository                | Branch  | Commit Id | Commit Message                                     | Commit Message Body | Committed on (Date) |
+| ------------------------- | ------- | --------- | -------------------------------------------------- | ------------------- | ------------------- |
+| cobox-iam-service         | develop | e6a5c1d   | test(develop): add jwt filter & refresh flow tests     | RamiroGuzmanCh      | 02/11/25            |
+| cobox-fleet-service       | develop | 4b9f21e   | test(develop): AssignmentService unit & mapper tests | davidalexd          | 02/11/25            |
+| cobox-delivery-service    | develop | 2c7d9a3   | test(develop): RouteIntegrationClient resilience  | Chaoemum            | 02/11/25            |
+| cobox-incident-service    | develop | 88ac0f5   | test(develop): repository + flyway baseline       | JoaquinPedraza1     | 02/11/25            |
+| cobox-maintenance-service | develop | a1f3d77   | test(develop): scheduler cron & policy specs         | MerlySalonP         | 02/11/25            |
+
+##### 5.3.3.4 Execution Evidence for Sprint Review
+
+Configuramos los services para luego ejecutarlos 
+  <img src="./assets/ex1.png" alt="C4 diagrama de contenedores coware">
+   <img src="./assets/ex2.png" alt="C4 diagrama de contenedores coware">
+    <img src="./assets/ex3.png" alt="C4 diagrama de contenedores coware">
+     <img src="./assets/ex4.png" alt="C4 diagrama de contenedores coware">
+     Esta es la configuración del servicio flota 
+           <img src="./assets/ex6.png" alt="C4 diagrama de contenedores coware">
+     Se muestra la ejecución de un microservicio
+      <img src="./assets/ex5.png" alt="C4 diagrama de contenedores coware">
+            <img src="./assets/ex7.png" alt="C4 diagrama de contenedores coware">
+            
+##### 5.3.3.5 Microservices Documentation Evidence for Sprint Review
+
+El sistema **CoBox** fue diseñado bajo una **arquitectura de microservicios**, siguiendo los principios de **Domain-Driven Design (DDD)** y la metodología **Attribute-Driven Design (ADD)**.  
+Este enfoque permitió estructurar la arquitectura en función de los **atributos de calidad** definidos para el sistema: **escalabilidad, mantenibilidad, disponibilidad y seguridad**.
+
+Además, se implementaron componentes clave de **Spring Cloud** como **Eureka Server** y **Spring Cloud Gateway**, los cuales garantizan el descubrimiento dinámico de servicios y el enrutamiento centralizado de las solicitudes dentro del ecosistema de microservicios.
+
+---
+
+### Aplicación de la metodología ADD
+
+Durante el proceso de diseño, se siguieron las etapas propuestas por la metodología **ADD**:
+
+#### **1. Definición de los objetivos de calidad**
+- Se identificaron los atributos críticos: **escalabilidad**, **independencia de despliegue**, **resiliencia** y **seguridad**.  
+- Estos atributos guiaron las principales decisiones arquitectónicas, influyendo directamente en la adopción de **Eureka** y **Spring Cloud Gateway** para lograr un entorno distribuido estable y seguro.
+
+#### **2. Identificación de drivers arquitectónicos**
+- Se analizaron los **requisitos funcionales** (gestión de flota, autenticación, entregas) y los **requisitos no funcionales** (rendimiento, disponibilidad, consistencia de datos).  
+- Se priorizaron decisiones que fomentaran la **modularidad**, la **autonomía de despliegue** y la **comunicación desacoplada** entre microservicios.
+
+#### **3. Descomposición en módulos y asignación de responsabilidades**
+- Se definieron **bounded contexts** según DDD, donde cada microservicio representa un dominio independiente con su propia base de datos, API y lógica de negocio.  
+- La **alta cohesión** dentro de cada módulo y el **bajo acoplamiento** entre ellos se lograron gracias al uso de **Eureka** como registro de descubrimiento y **Gateway** como punto de entrada único.
+
+#### **4. Evaluación y refinamiento iterativo**
+- Se validó la arquitectura mediante *proofs of concept* conectando los microservicios a través de **Eureka Server**.  
+- Se configuró **Spring Cloud Gateway** para enrutar las solicitudes externas hacia los servicios internos, garantizando el balanceo y la protección de los endpoints.  
+- Se refinaron las configuraciones de **docker-compose** y **config-service** para asegurar el funcionamiento distribuido en entornos locales y en la nube.
+
+---
+
+### Microservicios implementados
+
+| **Microservicio** | **Descripción** | **Responsabilidad Principal** |
+|--------------------|-----------------|-------------------------------|
+| **IAM Service** | Autenticación y autorización basada en JWT. | Control de usuarios, roles y permisos. |
+| **Fleet Service** | Gestión de flota vehicular. | Administración de vehículos, conductores y estados de disponibilidad. |
+| **Delivery Service** | Gestión de entregas y pedidos. | Control de pedidos, asignaciones y seguimiento. |
+| **Config Service** | Configuración centralizada. | Administración de propiedades compartidas entre microservicios. |
+| **Eureka Service** | Descubrimiento de servicios. | Registro dinámico y localización automática de microservicios. |
+| **Gateway Service** | Puerta de enlace API. | Enrutamiento, control de acceso y gestión del tráfico entrante. |
+
+---
+
+### Decisiones arquitectónicas basadas en atributos de calidad
+
+| **Atributo de Calidad** | **Decisión Tomada** | **Resultado Esperado** |
+|--------------------------|---------------------|------------------------|
+| **Escalabilidad** | Uso de **Eureka** para descubrimiento automático y despliegue independiente por microservicio. | Permite escalar horizontalmente cada servicio según demanda. |
+| **Mantenibilidad** | Diseño modular guiado por DDD y separación clara de responsabilidades. | Cambios localizados sin afectar a otros servicios. |
+| **Disponibilidad** | Integración de **Spring Boot Actuator** (`/actuator/health`) y despliegue replicado. | Monitoreo y alta disponibilidad ante fallos. |
+| **Seguridad** | Autenticación centralizada mediante **IAM Service** y control de rutas seguras en **Gateway**. | Acceso seguro y validado en cada petición. |
+
+---
+
+<div align="center">
+    <img src="./assets/servicesMICRO.png" alt="servicesMICRO">
+</div>
+
+##### 5.3.3.6 Software Deployment Evidence for Sprint Review
+
+El despliegue de los microservicios del sistema **CoBox** se realizó en una infraestructura basada en **Amazon Web Services (AWS)**, garantizando la escalabilidad, disponibilidad y seguridad de los componentes.
+A continuación, se resumen los pasos más relevantes y las evidencias técnicas del proceso de deployment automatizado.
+
+---
+
+### **1. Configuración de la Infraestructura en AWS**
+
+Se aprovisionaron los recursos esenciales para la ejecución de los microservicios:
+
+* **Instancia EC2** (Amazon Linux 2) configurada como host principal de Docker y Docker Compose.
+* **Repositorio ECR (Elastic Container Registry)** para almacenar las imágenes Docker generadas por los pipelines de CI/CD.
+* **Base de datos RDS PostgreSQL** como backend persistente de los contextos IAM, Fleet y Delivery.
+* **AWS Systems Manager (SSM Parameter Store)** para gestionar credenciales (DB, JWT, API Keys) evitando su exposición en repositorios.
+
+<div align="center">
+  <img src="assets/aws_infra_setup.png" alt="AWS Infrastructure Setup" width="75%">
+  <p><em>Configuración de la infraestructura base en AWS (EC2, RDS, ECR y SSM)</em></p>
+</div>
+
+---
+
+### **2. Construcción y Versionamiento de Imágenes Docker**
+
+Cada microservicio se empaquetó en un contenedor independiente siguiendo el principio de **isolated bounded contexts**.
+El pipeline de GitHub Actions compila el código, ejecuta pruebas y genera imágenes etiquetadas con `:latest` y `:<timestamp>`, las cuales se publican automáticamente en ECR.
+
+Pasos esenciales del workflow:
+
+1. Compilación del microservicio con **Maven**.
+2. Construcción del contenedor mediante su `Dockerfile`.
+3. Autenticación OIDC → Push a ECR (sin credenciales estáticas).
+
+<div align="center">
+  <img src="assets/github_actions_build.png" alt="GitHub Actions Build and Push" width="75%">
+  <p><em>Pipeline de CI/CD en GitHub Actions para build & push a ECR</em></p>
+</div>
+
+---
+
+### **3. Despliegue Automatizado en EC2 mediante GitHub Actions**
+
+El pipeline ejecuta una conexión SSH controlada hacia la instancia EC2 para desplegar las imágenes más recientes.
+Dentro de `/opt/cobox`, se recrea el entorno con los siguientes pasos:
+
+1. Carga de variables desde `cobox-env.sh` y archivos `.env` específicos por servicio.
+2. Verificación del servicio Docker y autenticación con ECR.
+3. Ejecución de `docker compose -f docker-compose.aws.yml up -d` para recrear contenedores.
+4. Validación automática de estados `healthy` mediante healthchecks de `/actuator/health`.
+
+<div align="center">
+  <img src="assets/aws_deploy_compose.png" alt="Docker Compose AWS Deployment" width="75%">
+  <p><em>Ejecución de Docker Compose para levantar los microservicios en EC2</em></p>
+</div>
+
+---
+
+### **4. Validación del Despliegue y Healthchecks**
+
+Una vez desplegados los servicios:
+
+* Se comprobó que todos los contenedores (`config-service`, `eureka-service`, `iam-service`, `fleet-service`, `delivery-service`, `gateway-service`) se encuentren en estado **healthy**.
+* Se accedió al gateway mediante su IP pública, verificando la respuesta correcta del endpoint `/actuator/health` y los redireccionamientos internos hacia cada microservicio.
+
+```bash
+$ curl http://<public-ip>/actuator/health
+HTTP/1.1 200 OK
+{"status":"UP"}
+```
+
+<div align="center">
+  <img src="assets/gateway_health_check.png" alt="Gateway Health Check" width="75%">
+  <p><em>Validación del estado del Gateway y microservicios mediante healthchecks</em></p>
+</div>
+
+---
+
+### **5. Resultado Final**
+
+El despliegue se completó exitosamente con los siguientes resultados:
+
+* Todos los microservicios levantados en contenedores independientes y registrados en **Eureka Server**.
+* Gateway accesible externamente a través de la IP pública de la instancia EC2.
+* Integración continua funcionando de forma automática ante nuevos commits en la rama principal (`main`).
+
+<div align="center">
+  <img src="assets/aws_deployment_summary.png" alt="AWS Deployment Final State" width="75%">
+  <p><em>Evidencia final del estado de los contenedores desplegados</em></p>
+</div>
+
+##### 5.3.3.7 Team Collaboration Insights during Sprint
+
+Durante esta fase de entrega, el equipo mantuvo una coordinación constante en las tareas de desarrollo de la landing page y los servicios backend.
+Además, se realizaron las actualizaciones pertinentes en la documentación. Esta colaboración efectiva fue clave para asegurar el correcto modelado y la funcionalidad de nuestra lógica de negocio.
+
+- _Evidencias de colaboración:_
+
+  - Backend Web Services:
+  <div align="center">
+      <img src="./assets/insights_microservices.png" alt="Evidencias de colaboración - Backend Web Services">
+  </div>
+
+  - Reporte:
+  <div align="center">
+      <img src="./assets/insights_report.png" alt="Evidencias de colaboración - Reporte">
+  </div>
+
+##### 5.3.3.8. Kanban Board
+
+<div align="center">
+    <img src="./assets/insights_report.png" alt="Evidencias de colaboración - Reporte">
+</div>
+
 
 ### Conclusiones y Recomendaciones
 
