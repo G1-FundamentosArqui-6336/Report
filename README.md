@@ -63,6 +63,15 @@
 | TB3     | 02/11/2025  | Merly Salon Puerta             | Desarrollo de 5.3.2.6: Software Deployment Evidence for Sprint Review. |
 | TB3     | 02/11/2025  | Jhon Alexander Galvez Chambi   | Desarrollo de 5.3.2.7: Team Collaboration Insights during Sprint y 5.3.2.8: Kanban Board. |
 | TB3     | 03/11/2025  | Todos los integrantes          | Integración del Capítulo V: Sprint 2 Review & Evidence, revisión grupal y entrega de la TB3. |
+| TB4     | 13/11/2025    | Ramiro Alexander Guzmán Chávez | Desarrollo de 5.3.3.1: Sprint Backlog 3, priorización de historias, criterios de aceptación y planificación del sprint. |
+| TB4     | 13/11/2025   | David Alexander Pérez García   | Desarrollo de 5.3.3.2: Development Evidence for Sprint Review, documentación técnica del avance y evidencias de implementación. |
+| TB4     | 14/11/2025    | Joaquín Pedraza Maldonado      | Desarrollo de 5.3.3.3: Testing Suite Evidence for Sprint Review, ejecución de pruebas, verificación de componentes y registro de resultados. |
+| TB4     | 14/11/2025    | Merly Salon Puerta             | Desarrollo de 5.3.3.4: Execution Evidence for Sprint Review, registro de ejecuciones, validación funcional y soporte de despliegues locales. |
+| TB4     | 14/11/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.3.3.5: Microservices Documentation Evidence for Sprint Review, actualización de endpoints, diagramas de flujo y arquitectura de microservicios. |
+| TB4     | 14/11/2025    | Ramiro Alexander Guzmán Chávez | Desarrollo de 5.3.3.6: Software Deployment Evidence for Sprint Review, pipelines, despliegue en entornos de prueba y validación post‐deploy. |
+| TB4     | 16/11/2025    | Merly Salon Puerta             | Desarrollo de 5.3.3.7: Team Collaboration Insights during Sprint, análisis colaborativo, comunicación interna y hallazgos del equipo. |
+| TB4     | 16/11/2025    | Todos los integrantes          | Desarrollo de 5.3.3.8: Kanban Board, actualización del tablero y cierre grupal del Sprint 3. |
+
 
 
 
@@ -168,7 +177,7 @@
       - [5.3.2.7. Team Collaboration Insights during Sprint](#5327-team-collaboration-insights-during-sprint)
       - [5.3.2.8. Kanban Board](#5328-kanban-board)
     - [5.3.3. Sprint 3](#533-sprint-2)
-      - [5.3.3.1. Sprint Backlog 2](#5331-sprint-backlog-2)
+      - [5.3.3.1. Sprint Backlog 3](#5331-sprint-backlog-3)
       - [5.3.3.2. Development Evidence for Sprint Review](#5332-development-evidence-for-sprint-review)
       - [5.3.3.3. Testing Suite Evidence for Sprint Review](#5333-testing-suite-evidence-for-sprint-review)
       - [5.3.3.4. Execution Evidence for Sprint Review](#5334-execution-evidence-for-sprint-review)
