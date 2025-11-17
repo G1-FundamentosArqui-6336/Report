@@ -57,6 +57,13 @@
 | TP1     | 08/10/2025  | Merly Salon Puerta             | Validación del diseño actual mediante Kanban Board, coordinación del sprint y registro de evidencias del desarrollo. |
 | TP1     | 08/10/2025  | Jhon Alexander Galvez Chambi   | Validación del diseño técnico y documentación de evidencias del sprint review. |
 | TP1     | 09/10/2025  | Todos los integrantes          | Integración del Capítulo V: Product Implementation, Validation & Deployment, revisión grupal y preparación del informe final. |
+| TB3     | 02/11/2025  | Ramiro Alexander Guzmán Chávez | Desarrollo de 5.3.2.1: Sprint Backlog 2 y 5.3.2.2: Development Evidence for Sprint Review. |
+| TB3     | 02/11/2025  | David Alexander Pérez García   | Desarrollo de 5.3.2.3: Testing Suite Evidence for Sprint Review y 5.3.2.4: Execution Evidence for Sprint Review. |
+| TB3     | 02/11/2025  | Joaquín Pedraza Maldonado      | Desarrollo de 5.3.2.5: Microservices Documentation Evidence for Sprint Review. |
+| TB3     | 02/11/2025  | Merly Salon Puerta             | Desarrollo de 5.3.2.6: Software Deployment Evidence for Sprint Review. |
+| TB3     | 02/11/2025  | Jhon Alexander Galvez Chambi   | Desarrollo de 5.3.2.7: Team Collaboration Insights during Sprint y 5.3.2.8: Kanban Board. |
+| TB3     | 03/11/2025  | Todos los integrantes          | Integración del Capítulo V: Sprint 2 Review & Evidence, revisión grupal y entrega de la TB3. |
+
 
 
 
@@ -188,8 +195,9 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |----------------------|---------------------|--------------|
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Me encargué de investigar y analizar los requerimientos del sistema, lo cual me permitió profundizar en el diseño de arquitecturas escalables, aplicar buenas prácticas de desarrollo y conocer mejor el uso de bases de datos geoespaciales para funcionalidades críticas como geolocalización, evidencias y reportes.<br><br>**Ramiro Alexander Guzmán Chávez:** Investigué metodologías ágiles, centrándome en Scrum, para aplicarlas en la planificación del proyecto. Esto me permitió mejorar la organización del equipo y entender cómo adaptar estos marcos de trabajo a equipos pequeños y tareas técnicas dentro de un entorno real de desarrollo.<br><br>**Joaquín Pedraza Maldonado:** Aprendí a utilizar Figma para la creación de prototipos de alta fidelidad y estudié principios de diseño centrado en el usuario. Esto me permitió estructurar interfaces intuitivas y validar decisiones de diseño con base en criterios funcionales y estéticos dentro del proyecto.<br><br>**Merly Salon Puerta:** Profundicé en técnicas de análisis cualitativo y *needfinding* para comprender mejor las necesidades del usuario. Apliqué herramientas como mapas de empatía y user personas, lo cual facilitó la identificación de funcionalidades relevantes para el sistema desde una perspectiva centrada en el usuario.<br><br>**Jhon Alexander Galvez Chambi:** Investigué el funcionamiento de APIs de geolocalización y su integración con sistemas backend. Estudié también estructuras de datos espaciales, lo cual me permitió implementar el seguimiento en tiempo real dentro del sistema y comprender mejor el procesamiento de información geográfica.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Desarrollé conceptos de diseño arquitectónico, diagramas de contexto y enfoques basados en estilos y patrones arquitectónicos. Esto me permitió comprender cómo modelar la estructura del sistema y alinear los diagramas con las necesidades del proyecto.<br><br>**David Alexander Pérez García:** Elaboré el enfoque *Approach driven ViewPoints Diagrams*, lo que me ayudó a profundizar en cómo representar diferentes perspectivas de arquitectura para distintos interesados, fortaleciendo el entendimiento de vistas arquitectónicas escalables.<br><br>**Joaquín Pedraza Maldonado:** Diseñé diagramas de bases de datos relacionales y no relacionales, además de aplicar patrones de diseño y tácticas arquitectónicas. Esto me permitió ampliar mis conocimientos en optimización de datos, escalabilidad y en cómo estructurar soluciones flexibles y mantenibles.<br><br>**Ramiro Alexander Guzmán Chávez:** Desarrollé los *Architectural Drivers*, definiendo propósito, funcionalidades primarias, escenarios de atributos de calidad, restricciones y preocupaciones arquitectónicas. Esto me permitió profundizar en cómo los drivers influyen en las decisiones arquitectónicas y en la evaluación de trade-offs.<br><br>**Merly Salon Puerta:** Dirigí las iteraciones ADD, desarrollando el backlog arquitectónico, metas de iteración, refinamiento de elementos del sistema y vistas C4/UML. Además, analicé el diseño actual y revisé los objetivos mediante tablero Kanban. Este proceso me permitió adquirir experiencia práctica en cómo evolucionar un diseño arquitectónico en iteraciones controladas.<br><br>**TP1:**<br>**Ramiro Alexander Guzmán Chávez:** Profundicé en la configuración y despliegue de entornos de desarrollo, integrando control de versiones, convenciones de estilo y despliegue automatizado. Aprendí a manejar herramientas de configuración para asegurar coherencia entre entornos locales y remotos.<br><br>**David Alexander Pérez García:** Implementé pruebas unitarias y configuraciones de entorno para el backend, aplicando patrones de refactorización guiados por buenas prácticas. Esto me permitió reforzar mi entendimiento sobre la importancia de la calidad de código y la automatización en entornos profesionales.<br><br>**Joaquín Pedraza Maldonado:** Documenté los microservicios con enfoque DDD, aplicando patrones de diseño y estructuración modular. Comprendí cómo los bounded contexts permiten mantener independencia entre servicios y claridad en la lógica de negocio.<br><br>**Merly Salon Puerta:** Desarrollé y validé el tablero Kanban para la gestión de tareas del sprint, revisando avances y priorizaciones. Esto me permitió adquirir experiencia en documentación colaborativa y control de versiones de evidencias del desarrollo.<br><br>**Jhon Alexander Galvez Chambi:** Realicé la validación del diseño y evidencias del sprint, evaluando el cumplimiento de las metas planteadas y registrando resultados en los reportes de revisión. Esto fortaleció mi capacidad de análisis técnico y trazabilidad de avances. | **TB1:**<br>Durante esta fase, el equipo demostró su capacidad para adquirir nuevos conocimientos y aplicarlos en el desarrollo del proyecto. La búsqueda activa de información, el dominio de herramientas técnicas y el enfoque práctico evidencian que cada integrante fortaleció sus competencias, aportando valor al sistema propuesto mediante un aprendizaje técnico autónomo y efectivo.<br><br>**TB2:**<br>El equipo demostró capacidad de adquirir nuevos conocimientos aplicados directamente en el diseño arquitectónico del sistema. Cada integrante profundizó en técnicas y herramientas específicas, desde vistas arquitectónicas hasta tácticas de calidad y drivers, consolidando un aprendizaje autónomo y colaborativo orientado a la creación de una arquitectura sólida y escalable.<br><br>**TP1:**<br>El equipo consolidó nuevos aprendizajes enfocados en la implementación, validación y despliegue del producto. Se reforzaron competencias en documentación técnica, pruebas automatizadas, control de versiones, gestión de entornos y comunicación ágil, demostrando madurez en la aplicación práctica del conocimiento adquirido. |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Reconocí la importancia del aprendizaje continuo y actualicé mis conocimientos en React, Next.js y Spring Boot. También aprendí a usar PostGIS para manejar datos geoespaciales y estudié mejores prácticas para el tratamiento de información sensible y evidencias digitales en plataformas web.<br><br>**Ramiro Alexander Guzmán Chávez:** Acepté la necesidad de seguir aprendiendo para responder a las exigencias del proyecto, por lo que estudié liderazgo técnico, gestión de tiempos y coordinación en equipos ágiles, apoyándome en libros, artículos y recursos académicos relacionados a metodologías de desarrollo de software.<br><br>**Joaquín Pedraza Maldonado:** Consideré fundamental actualizar mis habilidades en diseño UX/UI, por lo que revisé guías, buenas prácticas y recursos actualizados sobre accesibilidad, diseño responsivo y comportamiento del usuario. Esto me permitió diseñar una experiencia visual adecuada y adaptada a las necesidades reales del proyecto.<br><br>**Merly Salon Puerta:** Comprendí que el aprendizaje permanente es clave para obtener información útil del usuario, por lo que me capacité en métodos de recolección de datos cualitativos, análisis de entrevistas y síntesis de hallazgos para mejorar la relevancia y funcionalidad del sistema propuesto.<br><br>**Jhon Alexander Galvez Chambi:** Reafirmé la necesidad del aprendizaje continuo para dominar tecnologías nuevas, por eso profundicé en el uso de servicios de geolocalización, estructuras REST y autenticación segura, aplicando ese conocimiento para integrar funcionalidades críticas del sistema.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Reconocí la importancia de actualizar mis conocimientos en estilos arquitectónicos, ER diagrams y modelado de contexto, entendiendo que el aprendizaje continuo es clave para representar de manera adecuada sistemas complejos.<br><br>**David Alexander Pérez García:** Reafirmé la necesidad de mantenerme actualizado en frameworks y herramientas que soportan vistas arquitectónicas. Comprendí que el aprendizaje permanente es vital para proponer soluciones escalables que atiendan diferentes perspectivas de interesados.<br><br>**Joaquín Pedraza Maldonado:** Fortalecí mis competencias en bases de datos no relacionales, tácticas de calidad y patrones de diseño, reconociendo que la actualización constante de conocimientos permite construir sistemas con mayor desempeño y mantenibilidad.<br><br>**Ramiro Alexander Guzmán Chávez:** Profundicé en el rol de los drivers arquitectónicos y entendí que el aprendizaje permanente es esencial para identificar escenarios de calidad, restricciones y preocupaciones en proyectos de software reales.<br><br>**Merly Salon Puerta:** Comprendí que el aprendizaje continuo es clave para manejar técnicas como C4, UML y Kanban en el contexto de diseño arquitectónico. Reconocí que la práctica reiterada y la iteración son necesarias para mejorar continuamente las decisiones arquitectónicas.<br><br>**TP1:**<br>**Ramiro Alexander Guzmán Chávez:** Reafirmé la necesidad del aprendizaje constante en entornos distribuidos y en la automatización de despliegues, comprendiendo que mantenerse actualizado es esencial para garantizar estabilidad y escalabilidad en soluciones modernas.<br><br>**David Alexander Pérez García:** Consolidé la importancia del aprendizaje continuo en el uso de herramientas de configuración, pruebas y despliegue, lo que refuerza la adaptabilidad ante nuevas tecnologías y procesos de integración continua.<br><br>**Joaquín Pedraza Maldonado:** Entendí que la mejora constante es fundamental para mantener la calidad técnica del sistema, aplicando revisiones periódicas y buenas prácticas de documentación en cada iteración.<br><br>**Merly Salon Puerta:** Reafirmé que el aprendizaje permanente es clave para la evolución profesional, mejorando mis habilidades en validación iterativa, gestión de tareas y comunicación efectiva dentro del equipo.<br><br>**Jhon Alexander Galvez Chambi:** Reconocí que la adquisición de nuevos conocimientos sobre validación, documentación y trazabilidad fortalece la capacidad de análisis y mejora la gestión técnica del proyecto. | **TB1:**<br>Los integrantes del equipo demostramos ser conscientes de la necesidad del aprendizaje continuo en un entorno tecnológico cambiante. Al buscar activamente nuevos conocimientos, adaptarnos a herramientas y enfrentar retos técnicos, desarrollamos una actitud profesional orientada a la mejora constante y al crecimiento personal dentro del ámbito del desarrollo de software.<br><br>**TB2:**<br>Los integrantes del equipo consolidamos la importancia del aprendizaje permanente como pilar en el desarrollo profesional. El proceso de investigación, análisis y aplicación práctica nos permitió afrontar con éxito la complejidad del diseño arquitectónico, reforzando una actitud proactiva y adaptable frente a los retos del proyecto.<br><br>**TP1:**<br>El equipo fortaleció su compromiso con el aprendizaje permanente, aplicando estrategias de autoformación y colaboración para implementar, validar y documentar los microservicios. Cada integrante demostró adaptabilidad frente a nuevas herramientas y metodologías, consolidando competencias esenciales para el ejercicio profesional en ingeniería de software. |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Me encargué de investigar y analizar los requerimientos del sistema, lo cual me permitió profundizar en el diseño de arquitecturas escalables, aplicar buenas prácticas de desarrollo y conocer mejor el uso de bases de datos geoespaciales para funcionalidades críticas como geolocalización, evidencias y reportes.<br><br>**Ramiro Alexander Guzmán Chávez:** Investigué metodologías ágiles, centrándome en Scrum, para aplicarlas en la planificación del proyecto. Esto me permitió mejorar la organización del equipo y entender cómo adaptar estos marcos de trabajo a equipos pequeños y tareas técnicas dentro de un entorno real de desarrollo.<br><br>**Joaquín Pedraza Maldonado:** Aprendí a utilizar Figma para la creación de prototipos de alta fidelidad y estudié principios de diseño centrado en el usuario. Esto me permitió estructurar interfaces intuitivas y validar decisiones de diseño con base en criterios funcionales y estéticos dentro del proyecto.<br><br>**Merly Salon Puerta:** Profundicé en técnicas de análisis cualitativo y *needfinding* para comprender mejor las necesidades del usuario. Apliqué herramientas como mapas de empatía y user personas, lo cual facilitó la identificación de funcionalidades relevantes para el sistema desde una perspectiva centrada en el usuario.<br><br>**Jhon Alexander Galvez Chambi:** Investigué el funcionamiento de APIs de geolocalización y su integración con sistemas backend. Estudié también estructuras de datos espaciales, lo cual me permitió implementar el seguimiento en tiempo real dentro del sistema y comprender mejor el procesamiento de información geográfica.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Desarrollé conceptos de diseño arquitectónico, diagramas de contexto y enfoques basados en estilos y patrones arquitectónicos. Esto me permitió comprender cómo modelar la estructura del sistema y alinear los diagramas con las necesidades del proyecto.<br><br>**David Alexander Pérez García:** Elaboré el enfoque *Approach driven ViewPoints Diagrams*, lo que me ayudó a profundizar en cómo representar diferentes perspectivas de arquitectura para distintos interesados, fortaleciendo el entendimiento de vistas arquitectónicas escalables.<br><br>**Joaquín Pedraza Maldonado:** Diseñé diagramas de bases de datos relacionales y no relacionales, además de aplicar patrones de diseño y tácticas arquitectónicas. Esto me permitió ampliar mis conocimientos en optimización de datos, escalabilidad y en cómo estructurar soluciones flexibles y mantenibles.<br><br>**Ramiro Alexander Guzmán Chávez:** Desarrollé los *Architectural Drivers*, definiendo propósito, funcionalidades primarias, escenarios de atributos de calidad, restricciones y preocupaciones arquitectónicas. Esto me permitió profundizar en cómo los drivers influyen en las decisiones arquitectónicas y en la evaluación de trade-offs.<br><br>**Merly Salon Puerta:** Dirigí las iteraciones ADD, desarrollando el backlog arquitectónico, metas de iteración, refinamiento de elementos del sistema y vistas C4/UML. Además, analicé el diseño actual y revisé los objetivos mediante tablero Kanban. Este proceso me permitió adquirir experiencia práctica en cómo evolucionar un diseño arquitectónico en iteraciones controladas.<br><br>**TP1:**<br>**Ramiro Alexander Guzmán Chávez:** Profundicé en la configuración y despliegue de entornos de desarrollo, integrando control de versiones, convenciones de estilo y despliegue automatizado. Aprendí a manejar herramientas de configuración para asegurar coherencia entre entornos locales y remotos.<br><br>**David Alexander Pérez García:** Implementé pruebas unitarias y configuraciones de entorno para el backend, aplicando patrones de refactorización guiados por buenas prácticas. Esto me permitió reforzar mi entendimiento sobre la importancia de la calidad de código y la automatización en entornos profesionales.<br><br>**Joaquín Pedraza Maldonado:** Documenté los microservicios con enfoque DDD, aplicando patrones de diseño y estructuración modular. Comprendí cómo los bounded contexts permiten mantener independencia entre servicios y claridad en la lógica de negocio.<br><br>**Merly Salon Puerta:** Desarrollé y validé el tablero Kanban para la gestión de tareas del sprint, revisando avances y priorizaciones. Esto me permitió adquirir experiencia en documentación colaborativa y control de versiones de evidencias del desarrollo.<br><br>**Jhon Alexander Galvez Chambi:** Realicé la validación del diseño y evidencias del sprint, evaluando el cumplimiento de las metas planteadas y registrando resultados en los reportes de revisión. Esto fortaleció mi capacidad de análisis técnico y trazabilidad de avances.<br><br>**TB3:**<br>**Ramiro Alexander Guzmán Chávez:** Amplié mis conocimientos en gestión avanzada de backlog e integración continua, aplicando estrategias de trazabilidad y documentación del Sprint Backlog 2 y evidencias técnicas.<br><br>**David Alexander Pérez García:** Perfeccioné habilidades en automatización de pruebas y ejecución continua, recolectando métricas de rendimiento y fortaleciendo prácticas de calidad continua.<br><br>**Joaquín Pedraza Maldonado:** Profundicé en documentación técnica de microservicios y alineación con estrategias de despliegue, aplicando buenas prácticas de versionado y trazabilidad.<br><br>**Merly Salon Puerta:** Aprendí estrategias de despliegue, control de dependencias y mecanismos de rollback, reforzando competencias en CI/CD.<br><br>**Jhon Alexander Galvez Chambi:** Profundicé en herramientas ágiles y comunicación colaborativa, documentando insights del equipo y gestionando el Kanban Board. | **TB1:**<br>Durante esta fase, el equipo demostró su capacidad para adquirir nuevos conocimientos y aplicarlos en el desarrollo del proyecto. La búsqueda activa de información, el dominio de herramientas técnicas y el enfoque práctico evidencian que cada integrante fortaleció sus competencias, aportando valor al sistema propuesto mediante un aprendizaje técnico autónomo y efectivo.<br><br>**TB2:**<br>El equipo demostró capacidad de adquirir nuevos conocimientos aplicados directamente en el diseño arquitectónico del sistema. Cada integrante profundizó en técnicas y herramientas específicas, desde vistas arquitectónicas hasta tácticas de calidad y drivers, consolidando un aprendizaje autónomo y colaborativo orientado a la creación de una arquitectura sólida y escalable.<br><br>**TP1:**<br>El equipo consolidó nuevos aprendizajes enfocados en la implementación, validación y despliegue del producto. Se reforzaron competencias en documentación técnica, pruebas automatizadas, control de versiones, gestión de entornos y comunicación ágil, demostrando madurez en la aplicación práctica del conocimiento adquirido.<br><br>**TB3:**<br>El equipo aplicó estrategias avanzadas de automatización, gestión colaborativa, documentación técnica, integración y despliegue, demostrando dominio creciente en metodologías ágiles y herramientas profesionales de ingeniería de software. |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Reconocí la importancia del aprendizaje continuo y actualicé mis conocimientos en React, Next.js y Spring Boot. También aprendí a usar PostGIS para manejar datos geoespaciales y estudié mejores prácticas para el tratamiento de información sensible y evidencias digitales en plataformas web.<br><br>**Ramiro Alexander Guzmán Chávez:** Acepté la necesidad de seguir aprendiendo para responder a las exigencias del proyecto, por lo que estudié liderazgo técnico, gestión de tiempos y coordinación en equipos ágiles, apoyándome en libros, artículos y recursos académicos relacionados a metodologías de desarrollo de software.<br><br>**Joaquín Pedraza Maldonado:** Consideré fundamental actualizar mis habilidades en diseño UX/UI, por lo que revisé guías, buenas prácticas y recursos actualizados sobre accesibilidad, diseño responsivo y comportamiento del usuario. Esto me permitió diseñar una experiencia visual adecuada y adaptada a las necesidades reales del proyecto.<br><br>**Merly Salon Puerta:** Comprendí que el aprendizaje permanente es clave para obtener información útil del usuario, por lo que me capacité en métodos de recolección de datos cualitativos, análisis de entrevistas y síntesis de hallazgos para mejorar la relevancia y funcionalidad del sistema propuesto.<br><br>**Jhon Alexander Galvez Chambi:** Reafirmé la necesidad del aprendizaje continuo para dominar tecnologías nuevas, por eso profundicé en el uso de servicios de geolocalización, estructuras REST y autenticación segura, aplicando ese conocimiento para integrar funcionalidades críticas del sistema.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Reconocí la importancia de actualizar mis conocimientos en estilos arquitectónicos, ER diagrams y modelado de contexto, entendiendo que el aprendizaje continuo es clave para representar de manera adecuada sistemas complejos.<br><br>**David Alexander Pérez García:** Reafirmé la necesidad de mantenerme actualizado en frameworks y herramientas que soportan vistas arquitectónicas. Comprendí que el aprendizaje permanente es vital para proponer soluciones escalables que atiendan diferentes perspectivas de interesados.<br><br>**Joaquín Pedraza Maldonado:** Fortalecí mis competencias en bases de datos no relacionales, tácticas de calidad y patrones de diseño, reconociendo que la actualización constante de conocimientos permite construir sistemas con mayor desempeño y mantenibilidad.<br><br>**Ramiro Alexander Guzmán Chávez:** Profundicé en el rol de los drivers arquitectónicos y entendí que el aprendizaje permanente es esencial para identificar escenarios de calidad, restricciones y preocupaciones en proyectos de software reales.<br><br>**Merly Salon Puerta:** Comprendí que el aprendizaje continuo es clave para manejar técnicas como C4, UML y Kanban en el contexto de diseño arquitectónico. Reconocí que la práctica reiterada y la iteración son necesarias para mejorar continuamente las decisiones arquitectónicas.<br><br>**TP1:**<br>**Ramiro Alexander Guzmán Chávez:** Reafirmé la necesidad del aprendizaje constante en entornos distribuidos y en la automatización de despliegues, comprendiendo que mantenerse actualizado es esencial para garantizar estabilidad y escalabilidad en soluciones modernas.<br><br>**David Alexander Pérez García:** Consolidé la importancia del aprendizaje continuo en el uso de herramientas de configuración, pruebas y despliegue, lo que refuerza la adaptabilidad ante nuevas tecnologías y procesos de integración continua.<br><br>**Joaquín Pedraza Maldonado:** Entendí que la mejora constante es fundamental para mantener la calidad técnica del sistema, aplicando revisiones periódicas y buenas prácticas de documentación en cada iteración.<br><br>**Merly Salon Puerta:** Reafirmé que el aprendizaje permanente es clave para la evolución profesional, mejorando mis habilidades en validación iterativa, gestión de tareas y comunicación efectiva dentro del equipo.<br><br>**Jhon Alexander Galvez Chambi:** Reconocí que la adquisición de nuevos conocimientos sobre validación, documentación y trazabilidad fortalece la capacidad de análisis y mejora la gestión técnica del proyecto.<br><br>**TB3:**<br>**Ramiro Alexander Guzmán Chávez:** Estudié nuevas herramientas de integración ágil y monitoreo de sprint, reforzando la importancia de la adaptación constante ante cambios de alcance y requerimientos.<br><br>**David Alexander Pérez García:** Me actualicé en automatización y optimización para entornos de ejecución en CI/CD, comprendiendo que la actualización constante es esencial para mantener la eficiencia del sistema.<br><br>**Joaquín Pedraza Maldonado:** Reforcé conocimientos en documentación técnica estructurada y estándares de calidad en proyectos distribuidos, lo que me permitió mejorar la trazabilidad y mantenimiento de los servicios.<br><br>**Merly Salon Puerta:** Amplié mis conocimientos en estrategias de despliegue y control de versiones colaborativo, consolidando la importancia del aprendizaje continuo en entornos de desarrollo compartidos.<br><br>**Jhon Alexander Galvez Chambi:** Fortalecí habilidades en documentación, validación y gestión colaborativa, reafirmando que el aprendizaje permanente impulsa la eficiencia y cohesión del equipo. | **TB1:**<br>Los integrantes del equipo demostramos ser conscientes de la necesidad del aprendizaje continuo en un entorno tecnológico cambiante. Al buscar activamente nuevos conocimientos, adaptarnos a herramientas y enfrentar retos técnicos, desarrollamos una actitud profesional orientada a la mejora constante y al crecimiento personal dentro del ámbito del desarrollo de software.<br><br>**TB2:**<br>Los integrantes del equipo consolidamos la importancia del aprendizaje permanente como pilar en el desarrollo profesional. El proceso de investigación, análisis y aplicación práctica nos permitió afrontar con éxito la complejidad del diseño arquitectónico, reforzando una actitud proactiva y adaptable frente a los retos del proyecto.<br><br>**TP1:**<br>El equipo fortaleció su compromiso con el aprendizaje permanente, aplicando estrategias de autoformación y colaboración para implementar, validar y documentar los microservicios. Cada integrante demostró adaptabilidad frente a nuevas herramientas y metodologías, consolidando competencias esenciales para el ejercicio profesional en ingeniería de software.<br><br>**TB3:**<br>Durante esta etapa, el equipo reafirmó su compromiso con el aprendizaje permanente, enfocándose en la mejora continua de procesos, documentación y trabajo colaborativo. La adaptación a nuevas herramientas, metodologías y prácticas de despliegue evidenció la madurez profesional alcanzada en la aplicación práctica del conocimiento adquirido. |
+
 
 
 ---
@@ -3633,6 +3641,276 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
   </div>
 
 ##### 5.3.2.8. Kanban Board
+##### 5.3.3. Sprint 3
+Durante el srpint 3, nos centramos en la condiguración de los servicios para luego ejecutarlos. Este sprint resultó clave para establecer las primeras funcionalidades del sistema, sentando jas bases técnicas para los siguientes ciclos de desarrollo.
+##### 5.3.3.1 Sprint Backlog 3
+Para el tercer sprint backlog, recopilamos y organizamos las historias de usuario prioritarias, dividiéndolas en tareas específicas y asignándolas a los integrantes del equipo mediante Trello. Este sprint se centró en completar las pantallas del frontend, finalizar microservicios restantes y generar evidencia de desarrollo, pruebas, ejecución, documentación y colaboración. El tablero Kanban permitió gestionar eficientemente el flujo de trabajo y mantener la transparencia entre los miembros del equipo.
+
+<div align="center">
+    <img src="./assets/sprint3Backlog.png" alt="sprint3Backlog.png">
+</div>
+
+---
+
+| User Story / Work-Item ID | Title | Task ID | Task Title | Estimación (pt) | Assigned To | Status |
+|----------------------------|--------|----------|-------------|-----------------|--------------|---------|
+| US004 | Implementación de pantallas frontend | T10 | Crear pantalla **Fleet Screen** | 3 | **Joaquín Pedraza Maldonado** | Done |
+| US004 | Implementación de pantallas frontend | T11 | Crear pantalla **Delivery Screen** | 2 | **Merly Salón Puerta** | Done |
+| US004 | Implementación de pantallas frontend | T12 | Crear pantalla **Incident Screen** | 2 | **Ramiro Alexander Guzmán Chávez** | Done |
+| US004 | Implementación de pantallas frontend | T13 | Crear pantalla **Maintenance Management Screen** | 3 | **David Alexander Pérez García** | Done |
+| US004 | Implementación de pantallas frontend | T14 | Crear **Login Screen** | 1 | **Jhon Alexander Gálvez Chambi** | Done |
+| US004 | Implementación de pantallas frontend | T15 | Crear **Filter Screen** | 1 | **Merly Salón Puerta** | Done |
+| TS007 | Microservicios – fase final | T16 | Completar estructura y validaciones del `incident-service` | 3 | **Ramiro Alexander Guzmán Chávez** | Done |
+| TS008 | Microservicios – fase final | T17 | Completar `maintenance-service` y su contexto | 2 | **Jhon Alexander Gálvez Chambi** | Done |
+| TS009 | Integración IAM | T18 | Integración del módulo IAM con frontend | 2 | **David Alexander Pérez García** | Done |
+| TS010 | Evidencia de ejecución | T19 | Logs, análisis y profiling de endpoints | 1 | **Equipo** | Done |
+| TS011 | Pruebas Sprint 3 | T20 | Pruebas unitarias y de integración | 2 | **Equipo** | Done |
+| TS012 | Documentación | T21 | Documentar servicios, pantallas y dependencias | 1 | **Merly Salón Puerta** | Done |
+| TS013 | Despliegue | T22 | Evidencia de despliegue en contenedores / entorno local | 2 | **David Alexander Pérez García** | Done |
+| TS014 | Colaboración | T23 | Consolidar *Team Collaboration Insights during Sprint* | 1 | **Equipo** | Done |
+
+---
+
+
+
+##### 5.3.3.2 Development Evidence for Sprint Review
+
+
+| Repository      | Branch  | Commit Id | Commit Message                                         | Commit Message Body                                                                                                                                                 | Committed on (Date) |
+|-----------------|---------|-----------|--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| cobox-webapp    | develop | 91bd2f3   | feat(front): add driver dashboard & pending orders card | Implementación de la vista del conductor con tarjeta de pedidos pendientes, información del conductor y rutas semanales. Se agregaron componentes reutilizables y estilos globales. | 02/11/25 |
+| cobox-webapp    | develop | c3ae71d   | feat(front): assignment view with live map integration  | Desarrollo de la pantalla de asignación con integración de mapa en tiempo real. Marcador dinámico, actualización periódica y comunicación con delivery-service.      | 02/11/25 |
+| cobox-webapp    | develop | 7fd9ab0   | feat(front): incidents module + create/report UI        | Implementación del módulo completo de incidencias: formulario reactivo, subida de adjuntos, tabs de estado y listado conectado al incident-service vía API Gateway.   | 02/11/25 |
+| cobox-webapp    | develop | a92c4d5   | feat(front): order detail view + tracking map           | Creación de la vista de detalle del pedido: datos del cliente, estado, historial y mapa de tracking en tiempo real. Integración con delivery-service.                | 02/11/25 |
+| cobox-webapp    | develop | e5b1c7f   | feat(front): admin dashboard with fleets & incidents    | Implementación del dashboard de administrador: flotas, conductores activos, pedidos pendientes e incidencias. Se añadieron badges de estado y mapa consolidado.       | 02/11/25 |
+| cobox-webapp    | develop | b7f31e9   | fix(front): adjust map loading delay on mobile          | Corrección del retraso en la carga del mapa en dispositivos móviles mediante optimización de hooks, lazy loading y ajustes en el layout responsive.                  | 02/11/25 |
+| cobox-webapp    | develop | d8a6710   | style(front): unify card spacing & sidebar consistency  | Ajustes visuales globales para unificar paddings, espaciados, tamaños de tarjeta e iconografía del sidebar siguiendo la guía de diseño de CoBox.                      | 02/11/25 |
+
+
+##### 5.3.3.3 Testing Suite Evidence for Sprint Review
+
+### Feature: Implementación del Front del Dashboard, Pedidos, Conductores, Flotas e Incidencias
+
+| Repository      | Branch  | Commit Id | Commit Message                                         | Commit Message Body                                                                                                                           | Committed on (Date) |
+|-----------------|---------|-----------|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| cobox-webapp    | develop | 91bd2f3   | feat(front): add driver dashboard & pending orders card | Implementación de la pantalla del conductor con tarjeta de pedidos pendientes, información del conductor y rutas semanales. Incluye componentes reutilizables y estilos Material. | 02/11/25 |
+| cobox-webapp    | develop | c3ae71d   | feat(front): assignment view with live map integration  | Integración del mapa en tiempo real para conductores con pedido asignado. Se agregó marcador dinámico y actualización por WebSocket/Pooling. | 02/11/25 |
+| cobox-webapp    | develop | 7fd9ab0   | feat(front): incidents module + create/report UI        | Desarrollo del módulo “Incidencias”: formulario completo, adjuntos, filtros, tabs de estado y listado actualizado desde incident-service.     | 02/11/25 |
+| cobox-webapp    | develop | a92c4d5   | feat(front): order detail view + tracking map           | Implementación de la vista de detalles del pedido con datos del cliente, estado del pedido y mapa en tiempo real. Conexión con delivery-service. | 02/11/25 |
+| cobox-webapp    | develop | e5b1c7f   | feat(front): admin dashboard with fleets & incidents    | Implementación del dashboard general para administradores: flotas, conductores, pedidos pendientes, incidencias y mapa consolidado. Incluye badges por estado. | 02/11/25 |
+| cobox-webapp    | develop | f0d9ce1   | test(front): add component tests for dashboard & orders | Pruebas unitarias para componentes de Dashboard y PendingOrders; verificación de render, bindings y consumo de servicios.                     | 02/11/25 |
+| cobox-webapp    | develop | 3c79aa2   | test(front): incidents form validation & list behavior  | Pruebas unitarias y e2e del formulario de incidencias, validaciones, adjuntos y tabs. Corrección de casos límite.                             | 02/11/25 |
+| cobox-webapp    | develop | b7f31e9   | fix(front): adjust map loading delay on mobile          | Bugfix del mapa en vista mobile que demoraba en cargar. Optimización del lifecycle hook y lazy loading.                                       | 02/11/25 |
+| cobox-webapp    | develop | d8a6710   | style(front): unify card spacing & sidebar consistency  | Ajuste de paddings, espaciados y estilos globales para mantener coherencia visual según la guía de diseño CoBox.                              | 02/11/25 |
+
+
+##### 5.3.3.4 Execution Evidence for Sprint Review
+
+[![1-ex.png](https://i.postimg.cc/SxmsfDvx/1-ex.png)](https://postimg.cc/XpD4VcWR)
+[![2-ex.png](https://i.postimg.cc/JzT1cmJW/2-ex.png)](https://postimg.cc/CRqTS3mv)
+[![3-ex.png](https://i.postimg.cc/mkGR2rxf/3-ex.png)](https://postimg.cc/ft518DTB)
+##### 5.3.3.5 Microservices Documentation Evidence for Sprint Review
+
+
+
+
+### Microservicios implementados
+
+
+
+### Decisiones arquitectónicas basadas en atributos de calidad
+
+
+<div align="center">
+    <img src="./assets/servicesMICRO.png" alt="servicesMICRO">
+</div>
+
+##### 5.3.3.6 Software Deployment Evidence for Sprint Review
+
+## 1. Crear Proyecto en Firebase y configurar Firebase Hosting
+
+1. Accede a [Firebase Console](https://console.firebase.google.com/)
+2. Click en **"Agregar proyecto"**
+3. Nombre del proyecto: `app-cobox`
+4. Desactiva Google Analytics (opcional)
+5. Click en **"Crear proyecto"**
+6. En el menú lateral, selecciona **"Hosting"**
+7. Click en **"Comenzar"**
+
+---
+
+## 2. Instalar y Autenticar Firebase CLI
+
+### Instalación
+
+```bash
+npm install -g firebase-tools
+```
+
+### Autenticación
+
+```bash
+firebase login
+```
+
+Se abrirá el navegador para autorizar Firebase CLI con tu cuenta de Google.
+
+<img src="./docs/images/firebase-login.png" alt="Login Firebase CLI" style="display: block; margin: 20px auto; max-width: 700px; border: 1px solid #ddd; border-radius: 8px;" />
+
+---
+
+## 3. Inicializar Firebase en el Proyecto
+
+Desde la raíz del proyecto:
+
+```bash
+firebase init hosting
+```
+
+**Configuración:**
+- **Proyecto:** `app-cobox`
+- **Public directory:** `dist`
+- **Single-page app:** `Yes`
+- **GitHub deploys:** `No`
+- **Overwrite index.html:** `No`
+
+[![33.png](https://i.postimg.cc/LXyH6D87/33.png)](https://postimg.cc/ZBdkwr3F)
+
+### Archivos Generados
+
+**`.firebaserc`**
+```json
+{
+  "projects": {
+    "default": "app-cobox"
+  }
+}
+```
+
+**`firebase.json`**
+```json
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+```
+
+---
+
+## 4. Crear Workflow de GitHub Actions
+
+Crea `.github/workflows/firebase-deploy.yml`:
+
+```yaml
+name: Deploy Frontend to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run TypeScript type check
+        run: npm run build -- --mode production
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Build React + Vite app
+        run: npm run build
+
+      - name: Deploy to Firebase Hosting
+        run: npx firebase-tools deploy --only hosting --non-interactive
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+```
+
+---
+
+## 5. Generar Token de Firebase
+
+En la terminal:
+
+```bash
+firebase login:ci
+```
+
+El navegador se abrirá para autorizar. Una vez autorizado, copia el token generado.
+[![555.png](https://i.postimg.cc/PNs0tv1h/555.png)](https://postimg.cc/SYdgdsZt)
+
+---
+
+## 6. Configurar Secret en GitHub
+
+1. Ve a: `https://github.com/G1-FundamentosArqui-6336/frontend/settings/secrets/actions`
+2. Click en **"New repository secret"**
+3. **Name:** `FIREBASE_SERVICE_ACCOUNT`
+4. **Secret:** Pega el token generado
+5. Click en **"Add secret"**
+
+[![6.png](https://i.postimg.cc/jjSqVBsX/6.png)](https://postimg.cc/w1nYLfRy)
+---
+
+## 7. Desplegar a Producción
+
+### Push a Main
+
+```bash
+git add .
+git commit -m "feat: configure Firebase Hosting deployment"
+git push origin main
+```
+
+### Monitorear el Despliegue
+
+1. Ve a la pestaña **Actions** en GitHub
+2. Observa la ejecución del workflow
+
+### Workflow Completado
+
+[![77.png](https://i.postimg.cc/W12TrxJR/77.png)](https://postimg.cc/tYmKGS5D)
+---
+
+## 8. Verificar en Firebase Console
+
+1. Accede a [Firebase Console](https://console.firebase.google.com/)
+2. Proyecto: `app-cobox`
+3. Menú lateral: **Hosting**
+
+[![88.png](https://i.postimg.cc/WzLP4yPZ/88.png)](https://postimg.cc/mzwnX8kZ)
+
+##### 5.3.3.7 Team Collaboration Insights during Sprint
+##### 5.3.3.8. Kanban Board
+<div align="center">
+    <img src="./assets/sprint3Backlog.png" alt="sprint3Backlog.png">
+</div>
+Link
+https://shorturl.at/bNYfk
 
 [![image.png](https://i.postimg.cc/9fGXCpYK/image.png)](https://postimg.cc/Ty3vcnSJ)
 
@@ -3892,6 +4170,7 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 6. El análisis de la Iteración 1 del ADD evidenció el cumplimiento exitoso de los tres drivers críticos establecidos: Trazabilidad en Tiempo Real mediante geolocalización GPS y WebSockets, Eficiencia Operativa a través de dashboards analíticos y reportes automatizados, y Seguridad de Datos mediante autenticación JWT y control de acceso basado en roles (RBAC).
 
 7. La aplicación de patrones arquitectónicos específicos como Factory, Observer, Command, Strategy y Facade, junto con las tácticas de calidad implementadas, aseguran que el sistema sea mantenible, escalable y resiliente ante fallos, cumpliendo con los estándares de la industria para aplicaciones críticas de transporte.
+
 
 **Recomendaciones**
 
