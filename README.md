@@ -3616,6 +3616,182 @@ Para el tercer sprint backlog, recopilamos y organizamos las historias de usuari
 
 ##### 5.3.3.6 Software Deployment Evidence for Sprint Review
 
+## 1. Crear Proyecto en Firebase y configurar Firebase Hosting
+
+1. Accede a [Firebase Console](https://console.firebase.google.com/)
+2. Click en **"Agregar proyecto"**
+3. Nombre del proyecto: `app-cobox`
+4. Desactiva Google Analytics (opcional)
+5. Click en **"Crear proyecto"**
+6. En el menú lateral, selecciona **"Hosting"**
+7. Click en **"Comenzar"**
+
+---
+
+## 2. Instalar y Autenticar Firebase CLI
+
+### Instalación
+
+```bash
+npm install -g firebase-tools
+```
+
+### Autenticación
+
+```bash
+firebase login
+```
+
+Se abrirá el navegador para autorizar Firebase CLI con tu cuenta de Google.
+
+<img src="./docs/images/firebase-login.png" alt="Login Firebase CLI" style="display: block; margin: 20px auto; max-width: 700px; border: 1px solid #ddd; border-radius: 8px;" />
+
+---
+
+## 3. Inicializar Firebase en el Proyecto
+
+Desde la raíz del proyecto:
+
+```bash
+firebase init hosting
+```
+
+**Configuración:**
+- **Proyecto:** `app-cobox`
+- **Public directory:** `dist`
+- **Single-page app:** `Yes`
+- **GitHub deploys:** `No`
+- **Overwrite index.html:** `No`
+
+[![33.png](https://i.postimg.cc/LXyH6D87/33.png)](https://postimg.cc/ZBdkwr3F)
+
+### Archivos Generados
+
+**`.firebaserc`**
+```json
+{
+  "projects": {
+    "default": "app-cobox"
+  }
+}
+```
+
+**`firebase.json`**
+```json
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+```
+
+---
+
+## 4. Crear Workflow de GitHub Actions
+
+Crea `.github/workflows/firebase-deploy.yml`:
+
+```yaml
+name: Deploy Frontend to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run TypeScript type check
+        run: npm run build -- --mode production
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Build React + Vite app
+        run: npm run build
+
+      - name: Deploy to Firebase Hosting
+        run: npx firebase-tools deploy --only hosting --non-interactive
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+```
+
+---
+
+## 5. Generar Token de Firebase
+
+En la terminal:
+
+```bash
+firebase login:ci
+```
+
+El navegador se abrirá para autorizar. Una vez autorizado, copia el token generado.
+[![555.png](https://i.postimg.cc/PNs0tv1h/555.png)](https://postimg.cc/SYdgdsZt)
+
+---
+
+## 6. Configurar Secret en GitHub
+
+1. Ve a: `https://github.com/G1-FundamentosArqui-6336/frontend/settings/secrets/actions`
+2. Click en **"New repository secret"**
+3. **Name:** `FIREBASE_SERVICE_ACCOUNT`
+4. **Secret:** Pega el token generado
+5. Click en **"Add secret"**
+
+[![6.png](https://i.postimg.cc/jjSqVBsX/6.png)](https://postimg.cc/w1nYLfRy)
+---
+
+## 7. Desplegar a Producción
+
+### Push a Main
+
+```bash
+git add .
+git commit -m "feat: configure Firebase Hosting deployment"
+git push origin main
+```
+
+### Monitorear el Despliegue
+
+1. Ve a la pestaña **Actions** en GitHub
+2. Observa la ejecución del workflow
+
+### Workflow Completado
+
+[![77.png](https://i.postimg.cc/W12TrxJR/77.png)](https://postimg.cc/tYmKGS5D)
+---
+
+## 8. Verificar en Firebase Console
+
+1. Accede a [Firebase Console](https://console.firebase.google.com/)
+2. Proyecto: `app-cobox`
+3. Menú lateral: **Hosting**
+
+[![88.png](https://i.postimg.cc/WzLP4yPZ/88.png)](https://postimg.cc/mzwnX8kZ)
 
 ##### 5.3.3.7 Team Collaboration Insights during Sprint
 ##### 5.3.3.8. Kanban Board
