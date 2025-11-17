@@ -3541,6 +3541,106 @@ Durante el proceso de diseño, se siguieron las etapas propuestas por la metodol
 
 7. La aplicación de patrones arquitectónicos específicos como Factory, Observer, Command, Strategy y Facade, junto con las tácticas de calidad implementadas, aseguran que el sistema sea mantenible, escalable y resiliente ante fallos, cumpliendo con los estándares de la industria para aplicaciones críticas de transporte.
 
+
+##### 5.3.3. Sprint 3
+Durante el srpint 3, nos centramos en la condiguración de los servicios para luego ejecutarlos. Este sprint resultó clave para establecer las primeras funcionalidades del sistema, sentando jas bases técnicas para los siguientes ciclos de desarrollo.
+##### 5.3.3.1 Sprint Backlog 3
+Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes. Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello. Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
+
+<div align="center">
+    <img src="./assets/SPRINT2FUNDA.png" alt="SPRINT2FUNDA.png">
+</div>
+
+
+| User Story / Work-Item ID | Title | Task ID | Task Title | Estimación (pt) | Assigned To | Status |
+|----------------------------|--------|----------|-------------|-----------------|--------------|---------|
+| US001 | Configuración centralizada de servicios | T01 | Implementar `config-service` para la gestión de configuración externa | 3 | **Ramiro Alexander Guzmán Chávez** | Done |
+| TS001 | Servidor de descubrimiento | T02 | Implementar `eureka-service` para registro y descubrimiento de microservicios | 2 | **Jhon Alexander Gálvez Chambi** | Done |
+| TS002 | Gateway de entrada | T03 | Implementar `gateway-service` con rutas a los microservicios | 2 | **Jhon Alexander Gálvez Chambi** |Done |
+| US002 | Autenticación de usuarios | T04 | Implementar `iam-service` (servicio de autenticación con JWT y roles) | 3 | **David Alexander Pérez García** | Done |
+| TS003 | Gestión de flota | T05 | Implementar `fleet-service` con CRUD de vehículos y tracking básico | 3 | **David Alexander Pérez García** |Done |
+| TS004 | Servicio de entregas | T06 | Implementar `delivery-service` con endpoints de pedidos y estado de entrega | 3 | **Joaquín Pedraza Maldonado** | Done |
+| US003 | Comunicación entre microservicios | T07 | Configurar comunicación vía `FeignClient` entre `fleet` y `delivery` | 2 | **Ramiro Alexander Guzmán Chávez** | Done |
+| TS005 | Pruebas y despliegue | T08 | Ejecutar pruebas unitarias e integración para cada microservicio | 2 | **David Alexander Pérez García** | Done |
+| TS006 | Documentación general | T09 | Configurar y documentar endpoints con `Swagger`/`SpringDoc` para todos los microservicios | 1 | **Merly Salón Puerta** | Done |
+
+---
+
+##### 5.3.3.2 Development Evidence for Sprint Review
+
+
+| Repository      | Branch  | Commit Id | Commit Message                                         | Commit Message Body                                                                                                                                                 | Committed on (Date) |
+|-----------------|---------|-----------|--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| cobox-webapp    | develop | 91bd2f3   | feat(front): add driver dashboard & pending orders card | Implementación de la vista del conductor con tarjeta de pedidos pendientes, información del conductor y rutas semanales. Se agregaron componentes reutilizables y estilos globales. | 02/11/25 |
+| cobox-webapp    | develop | c3ae71d   | feat(front): assignment view with live map integration  | Desarrollo de la pantalla de asignación con integración de mapa en tiempo real. Marcador dinámico, actualización periódica y comunicación con delivery-service.      | 02/11/25 |
+| cobox-webapp    | develop | 7fd9ab0   | feat(front): incidents module + create/report UI        | Implementación del módulo completo de incidencias: formulario reactivo, subida de adjuntos, tabs de estado y listado conectado al incident-service vía API Gateway.   | 02/11/25 |
+| cobox-webapp    | develop | a92c4d5   | feat(front): order detail view + tracking map           | Creación de la vista de detalle del pedido: datos del cliente, estado, historial y mapa de tracking en tiempo real. Integración con delivery-service.                | 02/11/25 |
+| cobox-webapp    | develop | e5b1c7f   | feat(front): admin dashboard with fleets & incidents    | Implementación del dashboard de administrador: flotas, conductores activos, pedidos pendientes e incidencias. Se añadieron badges de estado y mapa consolidado.       | 02/11/25 |
+| cobox-webapp    | develop | b7f31e9   | fix(front): adjust map loading delay on mobile          | Corrección del retraso en la carga del mapa en dispositivos móviles mediante optimización de hooks, lazy loading y ajustes en el layout responsive.                  | 02/11/25 |
+| cobox-webapp    | develop | d8a6710   | style(front): unify card spacing & sidebar consistency  | Ajustes visuales globales para unificar paddings, espaciados, tamaños de tarjeta e iconografía del sidebar siguiendo la guía de diseño de CoBox.                      | 02/11/25 |
+
+
+##### 5.3.3.3 Testing Suite Evidence for Sprint Review
+
+### Feature: Implementación del Front del Dashboard, Pedidos, Conductores, Flotas e Incidencias
+
+| Repository      | Branch  | Commit Id | Commit Message                                         | Commit Message Body                                                                                                                           | Committed on (Date) |
+|-----------------|---------|-----------|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| cobox-webapp    | develop | 91bd2f3   | feat(front): add driver dashboard & pending orders card | Implementación de la pantalla del conductor con tarjeta de pedidos pendientes, información del conductor y rutas semanales. Incluye componentes reutilizables y estilos Material. | 02/11/25 |
+| cobox-webapp    | develop | c3ae71d   | feat(front): assignment view with live map integration  | Integración del mapa en tiempo real para conductores con pedido asignado. Se agregó marcador dinámico y actualización por WebSocket/Pooling. | 02/11/25 |
+| cobox-webapp    | develop | 7fd9ab0   | feat(front): incidents module + create/report UI        | Desarrollo del módulo “Incidencias”: formulario completo, adjuntos, filtros, tabs de estado y listado actualizado desde incident-service.     | 02/11/25 |
+| cobox-webapp    | develop | a92c4d5   | feat(front): order detail view + tracking map           | Implementación de la vista de detalles del pedido con datos del cliente, estado del pedido y mapa en tiempo real. Conexión con delivery-service. | 02/11/25 |
+| cobox-webapp    | develop | e5b1c7f   | feat(front): admin dashboard with fleets & incidents    | Implementación del dashboard general para administradores: flotas, conductores, pedidos pendientes, incidencias y mapa consolidado. Incluye badges por estado. | 02/11/25 |
+| cobox-webapp    | develop | f0d9ce1   | test(front): add component tests for dashboard & orders | Pruebas unitarias para componentes de Dashboard y PendingOrders; verificación de render, bindings y consumo de servicios.                     | 02/11/25 |
+| cobox-webapp    | develop | 3c79aa2   | test(front): incidents form validation & list behavior  | Pruebas unitarias y e2e del formulario de incidencias, validaciones, adjuntos y tabs. Corrección de casos límite.                             | 02/11/25 |
+| cobox-webapp    | develop | b7f31e9   | fix(front): adjust map loading delay on mobile          | Bugfix del mapa en vista mobile que demoraba en cargar. Optimización del lifecycle hook y lazy loading.                                       | 02/11/25 |
+| cobox-webapp    | develop | d8a6710   | style(front): unify card spacing & sidebar consistency  | Ajuste de paddings, espaciados y estilos globales para mantener coherencia visual según la guía de diseño CoBox.                              | 02/11/25 |
+
+
+##### 5.3.3.4 Execution Evidence for Sprint Review
+
+            
+##### 5.3.3.5 Microservices Documentation Evidence for Sprint Review
+
+
+
+
+### Microservicios implementados
+
+
+
+### Decisiones arquitectónicas basadas en atributos de calidad
+
+
+<div align="center">
+    <img src="./assets/servicesMICRO.png" alt="servicesMICRO">
+</div>
+
+##### 5.3.3.6 Software Deployment Evidence for Sprint Review
+
+
+##### 5.3.3.7 Team Collaboration Insights during Sprint
+##### 5.3.3.8. Kanban Board
+
+### Conclusiones y Recomendaciones
+
+**Conclusiones**
+
+1. La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de CoWare responda a problemas concretos del sector.
+
+2. El uso de herramientas de investigación como entrevistas, User Personas, Empathy Maps y Scenario Mapping facilitó la detección de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga, aportando una base sólida para el diseño de la plataforma.
+
+3. La estructuración del Product Backlog proporcionó un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos, lo que refuerza la viabilidad de la solución tecnológica propuesta.
+
+4. La implementación del método ADD v3 (Attribute-Driven Design) ha permitido establecer una arquitectura robusta y escalable que responde directamente a los drivers arquitectónicos identificados. La separación en bounded contexts mediante Domain-Driven Design asegura que cada dominio de negocio (Fleet Management, Delivery Management, Incident Management, Maintenance Management y Analytics & Reporting) mantenga responsabilidades claras y específicas.
+
+5. La arquitectura de microservicios adoptada proporciona la flexibilidad necesaria para el crecimiento independiente de cada módulo, permitiendo deployments específicos y tecnologías optimizadas según las necesidades del dominio. La implementación de un API Gateway centralizado garantiza seguridad, control de acceso y trazabilidad en todas las operaciones.
+
+6. El análisis de la Iteración 1 del ADD evidenció el cumplimiento exitoso de los tres drivers críticos establecidos: Trazabilidad en Tiempo Real mediante geolocalización GPS y WebSockets, Eficiencia Operativa a través de dashboards analíticos y reportes automatizados, y Seguridad de Datos mediante autenticación JWT y control de acceso basado en roles (RBAC).
+
+7. La aplicación de patrones arquitectónicos específicos como Factory, Observer, Command, Strategy y Facade, junto con las tácticas de calidad implementadas, aseguran que el sistema sea mantenible, escalable y resiliente ante fallos, cumpliendo con los estándares de la industria para aplicaciones críticas de transporte.
+
+
 **Recomendaciones**
 
 1. Continuar con un proceso de validación continua, incorporando feedback de usuarios finales en cada iteración del desarrollo.  
