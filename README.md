@@ -3532,26 +3532,6 @@ Durante el proceso de diseño, se siguieron las etapas propuestas por la metodol
 
 ##### 5.3.2.7 Team Collaboration Insights during Sprint
 ##### 5.3.2.8. Kanban Board
-
-### Conclusiones y Recomendaciones
-
-**Conclusiones**
-
-1. La aplicación del enfoque Lean UX fue determinante, ya que permitió validar hipótesis, identificar necesidades reales de los usuarios y orientar el diseño hacia una solución centrada en el cliente, asegurando que la propuesta de CoWare responda a problemas concretos del sector.
-
-2. El uso de herramientas de investigación como entrevistas, User Personas, Empathy Maps y Scenario Mapping facilitó la detección de puntos de dolor y oportunidades de mejora en la gestión del transporte de carga, aportando una base sólida para el diseño de la plataforma.
-
-3. La estructuración del Product Backlog proporcionó un camino claro de desarrollo, priorizando funcionalidades críticas que garantizan eficiencia operativa y transparencia en los procesos, lo que refuerza la viabilidad de la solución tecnológica propuesta.
-
-4. La implementación del método ADD v3 (Attribute-Driven Design) ha permitido establecer una arquitectura robusta y escalable que responde directamente a los drivers arquitectónicos identificados. La separación en bounded contexts mediante Domain-Driven Design asegura que cada dominio de negocio (Fleet Management, Delivery Management, Incident Management, Maintenance Management y Analytics & Reporting) mantenga responsabilidades claras y específicas.
-
-5. La arquitectura de microservicios adoptada proporciona la flexibilidad necesaria para el crecimiento independiente de cada módulo, permitiendo deployments específicos y tecnologías optimizadas según las necesidades del dominio. La implementación de un API Gateway centralizado garantiza seguridad, control de acceso y trazabilidad en todas las operaciones.
-
-6. El análisis de la Iteración 1 del ADD evidenció el cumplimiento exitoso de los tres drivers críticos establecidos: Trazabilidad en Tiempo Real mediante geolocalización GPS y WebSockets, Eficiencia Operativa a través de dashboards analíticos y reportes automatizados, y Seguridad de Datos mediante autenticación JWT y control de acceso basado en roles (RBAC).
-
-7. La aplicación de patrones arquitectónicos específicos como Factory, Observer, Command, Strategy y Facade, junto con las tácticas de calidad implementadas, aseguran que el sistema sea mantenible, escalable y resiliente ante fallos, cumpliendo con los estándares de la industria para aplicaciones críticas de transporte.
-
-
 ##### 5.3.3. Sprint 3
 Durante el srpint 3, nos centramos en la condiguración de los servicios para luego ejecutarlos. Este sprint resultó clave para establecer las primeras funcionalidades del sistema, sentando jas bases técnicas para los siguientes ciclos de desarrollo.
 ##### 5.3.3.1 Sprint Backlog 3
