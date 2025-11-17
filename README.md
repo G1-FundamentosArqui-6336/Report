@@ -3555,26 +3555,34 @@ Durante el proceso de diseño, se siguieron las etapas propuestas por la metodol
 ##### 5.3.3. Sprint 3
 Durante el srpint 3, nos centramos en la condiguración de los servicios para luego ejecutarlos. Este sprint resultó clave para establecer las primeras funcionalidades del sistema, sentando jas bases técnicas para los siguientes ciclos de desarrollo.
 ##### 5.3.3.1 Sprint Backlog 3
-Para el segundo sprint backlog, recopilamos las historias de usuario pertinentes. Con el fin de organizar y gestionar eficientemente el trabajo, dividimos cada historia en tareas específicas y alcanzables, asignándolas a los integrantes del equipo mediante la herramienta Trello. Durante este sprint, nos concentramos en completar las historias planificadas, aprovechando las funcionalidades colaborativas de Trello para monitorear el avance, coordinar esfuerzos y resolver los desafíos surgidos durante el desarrollo.
+Para el tercer sprint backlog, recopilamos y organizamos las historias de usuario prioritarias, dividiéndolas en tareas específicas y asignándolas a los integrantes del equipo mediante Trello. Este sprint se centró en completar las pantallas del frontend, finalizar microservicios restantes y generar evidencia de desarrollo, pruebas, ejecución, documentación y colaboración. El tablero Kanban permitió gestionar eficientemente el flujo de trabajo y mantener la transparencia entre los miembros del equipo.
 
 <div align="center">
-    <img src="./assets/SPRINT2FUNDA.png" alt="SPRINT2FUNDA.png">
+    <img src="./assets/sprint3Backlog.png" alt="sprint3Backlog.png">
 </div>
 
+---
 
 | User Story / Work-Item ID | Title | Task ID | Task Title | Estimación (pt) | Assigned To | Status |
 |----------------------------|--------|----------|-------------|-----------------|--------------|---------|
-| US001 | Configuración centralizada de servicios | T01 | Implementar `config-service` para la gestión de configuración externa | 3 | **Ramiro Alexander Guzmán Chávez** | Done |
-| TS001 | Servidor de descubrimiento | T02 | Implementar `eureka-service` para registro y descubrimiento de microservicios | 2 | **Jhon Alexander Gálvez Chambi** | Done |
-| TS002 | Gateway de entrada | T03 | Implementar `gateway-service` con rutas a los microservicios | 2 | **Jhon Alexander Gálvez Chambi** |Done |
-| US002 | Autenticación de usuarios | T04 | Implementar `iam-service` (servicio de autenticación con JWT y roles) | 3 | **David Alexander Pérez García** | Done |
-| TS003 | Gestión de flota | T05 | Implementar `fleet-service` con CRUD de vehículos y tracking básico | 3 | **David Alexander Pérez García** |Done |
-| TS004 | Servicio de entregas | T06 | Implementar `delivery-service` con endpoints de pedidos y estado de entrega | 3 | **Joaquín Pedraza Maldonado** | Done |
-| US003 | Comunicación entre microservicios | T07 | Configurar comunicación vía `FeignClient` entre `fleet` y `delivery` | 2 | **Ramiro Alexander Guzmán Chávez** | Done |
-| TS005 | Pruebas y despliegue | T08 | Ejecutar pruebas unitarias e integración para cada microservicio | 2 | **David Alexander Pérez García** | Done |
-| TS006 | Documentación general | T09 | Configurar y documentar endpoints con `Swagger`/`SpringDoc` para todos los microservicios | 1 | **Merly Salón Puerta** | Done |
+| US004 | Implementación de pantallas frontend | T10 | Crear pantalla **Fleet Screen** | 3 | **Joaquín Pedraza Maldonado** | Done |
+| US004 | Implementación de pantallas frontend | T11 | Crear pantalla **Delivery Screen** | 2 | **Merly Salón Puerta** | Done |
+| US004 | Implementación de pantallas frontend | T12 | Crear pantalla **Incident Screen** | 2 | **Ramiro Alexander Guzmán Chávez** | Done |
+| US004 | Implementación de pantallas frontend | T13 | Crear pantalla **Maintenance Management Screen** | 3 | **David Alexander Pérez García** | Done |
+| US004 | Implementación de pantallas frontend | T14 | Crear **Login Screen** | 1 | **Jhon Alexander Gálvez Chambi** | Done |
+| US004 | Implementación de pantallas frontend | T15 | Crear **Filter Screen** | 1 | **Merly Salón Puerta** | Done |
+| TS007 | Microservicios – fase final | T16 | Completar estructura y validaciones del `incident-service` | 3 | **Ramiro Alexander Guzmán Chávez** | Done |
+| TS008 | Microservicios – fase final | T17 | Completar `maintenance-service` y su contexto | 2 | **Jhon Alexander Gálvez Chambi** | Done |
+| TS009 | Integración IAM | T18 | Integración del módulo IAM con frontend | 2 | **David Alexander Pérez García** | Done |
+| TS010 | Evidencia de ejecución | T19 | Logs, análisis y profiling de endpoints | 1 | **Equipo** | Done |
+| TS011 | Pruebas Sprint 3 | T20 | Pruebas unitarias y de integración | 2 | **Equipo** | Done |
+| TS012 | Documentación | T21 | Documentar servicios, pantallas y dependencias | 1 | **Merly Salón Puerta** | Done |
+| TS013 | Despliegue | T22 | Evidencia de despliegue en contenedores / entorno local | 2 | **David Alexander Pérez García** | Done |
+| TS014 | Colaboración | T23 | Consolidar *Team Collaboration Insights during Sprint* | 1 | **Equipo** | Done |
 
 ---
+
+
 
 ##### 5.3.3.2 Development Evidence for Sprint Review
 
