@@ -3795,6 +3795,11 @@ git push origin main
 
 ##### 5.3.3.7 Team Collaboration Insights during Sprint
 ##### 5.3.3.8. Kanban Board
+<div align="center">
+    <img src="./assets/sprint3Backlog.png" alt="sprint3Backlog.png">
+</div>
+Link
+https://shorturl.at/bNYfk
 
 ### Conclusiones y Recomendaciones
 
