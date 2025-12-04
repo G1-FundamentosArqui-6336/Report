@@ -1,4 +1,4 @@
-# CoWare
+<img width="1914" height="992" alt="image" src="https://github.com/user-attachments/assets/fb2e0265-add3-4aa5-9235-a33d0beac01d" /># CoWare
 ## Producto: CoBox
 # UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 
@@ -4232,7 +4232,9 @@ Despliegue del backend
 [![image.png](https://i.postimg.cc/LXgtFb3B/image.png)](https://postimg.cc/G8r8kzNH)
 Despliegue del frontend
 [![image.png](https://i.postimg.cc/mrL4qxR1/image.png)](https://postimg.cc/HrhFchrT)
-[![image.png](https://i.postimg.cc/DZQMK0g6/image.png)](https://postimg.cc/JDnqN1SH)
+  <div align="center">
+      <img src="./assets/deployfront2.png" alt="Evidencias">
+  </div>
 ##### 5.3.4.7. Team Collaboration Insights during Sprint
 
 ![image](https://hackmd.io/_uploads/ByfW47yM-e.png)
