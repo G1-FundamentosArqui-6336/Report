@@ -4235,6 +4235,18 @@ Despliegue del frontend
   <div align="center">
       <img src="./assets/deployfront2.png" alt="Evidencias">
   </div>
+    <div align="center">
+      <img src="./assets/deployfront3.png" alt="Evidencias">
+  </div>
+    <div align="center">
+      <img src="./assets/deployfront4.png" alt="Evidencias">
+  </div>
+    <div align="center">
+      <img src="./assets/deployfront5.png" alt="Evidencias">
+  </div>
+    <div align="center">
+      <img src="./assets/deployfront6.png" alt="Evidencias">
+  </div>
 ##### 5.3.4.7. Team Collaboration Insights during Sprint
 
 ![image](https://hackmd.io/_uploads/ByfW47yM-e.png)
