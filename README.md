@@ -4228,7 +4228,11 @@ Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usu
 ##### 5.3.4.5. Microservices Documentation Evidence for Sprint Review
 
 ##### 5.3.4.6. Software Deployment Evidence for Sprint Review
-
+Despliegue del backend
+[![image.png](https://i.postimg.cc/LXgtFb3B/image.png)](https://postimg.cc/G8r8kzNH)
+Despliegue del frontend
+[![image.png](https://i.postimg.cc/mrL4qxR1/image.png)](https://postimg.cc/HrhFchrT)
+[![image.png](https://i.postimg.cc/DZQMK0g6/image.png)](https://postimg.cc/JDnqN1SH)
 ##### 5.3.4.7. Team Collaboration Insights during Sprint
 
 ![image](https://hackmd.io/_uploads/ByfW47yM-e.png)
