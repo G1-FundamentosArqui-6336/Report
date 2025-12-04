@@ -4211,7 +4211,6 @@ Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usu
 
 ##### 5.3.4.3. Testing Suite Evidence for Sprint Review
 
-##### 5.3.2.3 Testing Suite Evidence for Sprint Review
 
 | Repository                | Branch  | Commit Id | Commit Message                                            | Commit Message Body | Committed on (Date) |
 | ------------------------- | ------- | --------- | ---------------------------------------------------------- | ------------------- | ------------------- |
