@@ -4198,25 +4198,15 @@ Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usu
 | US-33      | Calidad de código  | TS-15 | Integración de SonarLint / SonarQube     | Ajustar el código del backend alineado a reglas de calidad (linting, seguridad, duplicaciones).          | 4                   | Jhon        | Done   |
 
 ##### 5.3.4.2. Development Evidence for Sprint Review
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
-|-----------|--------|-----------|----------------|----------------------|----------------------|
-| https://github.com/G1-FundamentosArqui-6336/microservices.git | main |84f2336c3d5483061145143fff10ad8dc21d3ded | fix(config): update environment variables and datasource configurations for PostgreSQL
- | fix(config): update environment variables and datasource configurations for PostgreSQL
- | 01/12/2025 |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git | main | a8372d1fd487ef8c7c50e77571d2d87a94c2b3ca | fix(security): configure CORS settings and update security filters for improved API access | fix(security): configure CORS settings and update security filters for improved API access  | 01/12/2025 |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git | main | d81f5e5b3ab74e9c20ad917f7aafee5000fd2aca | fix(deploy): expose Eureka server port in AWS Docker Compose configuration
- | fix(deploy): expose Eureka server port in AWS Docker Compose configuration
- | 02/12/2025 |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git | main | a42ef73a6c21ecd22e05bffc5abca7a315f3e322 | fix(deploy): add health check wait logic for AWS Docker Compose services
- | fix(deploy): add health check wait logic for AWS Docker Compose services
- | 02/12/2025 |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git | main | 6e12d38d315fecbd1f1f3ae5af3c7e90bcfc5940 | feat(metrics): add Prometheus and Grafana services to Docker Compose
- | feat(metrics): add Prometheus and Grafana services to Docker Compose
- | 03/12/2025 |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git | main | 8c4a920dffa004feb680c6434b96f638a29c7188 | feat(metrics): add Micrometer Prometheus registry and configure Prometheus scraping
- | feat(metrics): add Micrometer Prometheus registry and configure Prometheus scraping
- | 03/12/2025 |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git | main | 427477fdf83525a926508d9819bd5a8d18635836 | feat(metrics): update application configuration for management endpoints and metrics exposure | feat(metrics): update application configuration for management endpoints and metrics exposure | 03/12/2025 |
+| Repository                                                     | Branch | Commit Id                                 | Commit Message                                                                 | Commit Message Body                                                             | Committed on (Date) |
+|---------------------------------------------------------------|--------|--------------------------------------------|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------|
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main   | 84f2336c3d5483061145143fff10ad8dc21d3ded   | fix(config): update environment variables and datasource configurations for PostgreSQL | fix(config): update environment variables and datasource configurations for PostgreSQL | 01/12/2025           |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main   | a8372d1fd487ef8c7c50e77571d2d87a94c2b3ca   | fix(security): configure CORS settings and update security filters for improved API access | fix(security): configure CORS settings and update security filters for improved API access | 01/12/2025           |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main   | d81f5e5b3ab74e9c20ad917f7aafee5000fd2aca   | fix(deploy): expose Eureka server port in AWS Docker Compose configuration       | fix(deploy): expose Eureka server port in AWS Docker Compose configuration       | 02/12/2025           |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main   | a42ef73a6c21ecd22e05bffc5abca7a315f3e322   | fix(deploy): add health check wait logic for AWS Docker Compose services        | fix(deploy): add health check wait logic for AWS Docker Compose services        | 02/12/2025           |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main   | 6e12d38d315fecbd1f1f3ae5af3c7e90bcfc5940   | feat(metrics): add Prometheus and Grafana services to Docker Compose            | feat(metrics): add Prometheus and Grafana services to Docker Compose            | 03/12/2025           |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main   | 8c4a920dffa004feb680c6434b96f638a29c7188   | feat(metrics): add Micrometer Prometheus registry and configure Prometheus scraping | feat(metrics): add Micrometer Prometheus registry and configure Prometheus scraping | 03/12/2025           |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main   | 427477fdf83525a926508d9819bd5a8d18635836   | feat(metrics): update application configuration for management endpoints and metrics exposure | feat(metrics): update application configuration for management endpoints and metrics exposure | 03/12/2025           |
 
 
 ##### 5.3.4.3. Testing Suite Evidence for Sprint Review
