@@ -4228,6 +4228,12 @@ Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usu
 
 ##### 5.3.4.7. Team Collaboration Insights during Sprint
 
+![image](https://hackmd.io/_uploads/ByfW47yM-e.png)
+
+![image](https://hackmd.io/_uploads/ry5I4Q1zWe.png)
+
+![image](https://hackmd.io/_uploads/H1StVX1fZe.png)
+
 ##### 5.3.4.8. Kanban Boar 
 
 ### 5.4. Microservices Deployment
