@@ -4236,6 +4236,9 @@ Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usu
 
 ##### 5.3.4.8. Kanban Boar 
 
+![image](https://hackmd.io/_uploads/HyOjYXkMbl.png)
+
+link: [https://trello.com/b/62WoIVsI/cobox-kanban-sprint-4]
 ### 5.4. Microservices Deployment
 
 #### 5.4.1. Cloud Architecture Diagram
