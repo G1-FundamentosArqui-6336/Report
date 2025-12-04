@@ -4177,6 +4177,25 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 #### 5.3.4. Sprint 4
 
 ##### 5.3.4.1. Sprint Backlog 4
+Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usuario priorizadas, dividiéndolas en tareas específicas y asignándolas a los miembros del equipo mediante Trello. Este sprint se centró en la implementación de las vistas correspondientes a los bounded contexts que aún estaban pendientes en el frontend, así como en la integración del servicio tanto en el backend como en el frontend. Asimismo, se generó la evidencia correspondiente a desarrollo, pruebas, ejecución, documentación y colaboración. El tablero Kanban permitió gestionar de manera eficiente el flujo de trabajo y garantizar la transparencia entre todos los integrantes del equipo.
+
+| User Story | Work-Item / Task | ID   | Title                                   | Description                                                                                               | Estimation (Hours) | Assigned To | Status |
+|------------|------------------|------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------------|-------------|--------|
+| US-26      | Ajustes de microservicio | TS-01 | Refactor de configuración base           | Ajustar configuración base del microservicio en Cobox para estandarizar paquetes, rutas y capas internas. | 3                   | Ramiro      | Done   |
+| US-26      | Despliegue inicial | TS-02 | Setup de microservicio en repositorio    | Subir el microservicio EP-API al repositorio siguiendo la estructura definida para Cobox.                | 2                   | Joaquín     | Done   |
+| US-27      | Seguridad API     | TS-03 | Configuración de JWT en Gateway          | Integrar validación JWT en el API Gateway para proteger las rutas de ms-auth y ms-core.                  | 4                   | Jhon        | Done   |
+| US-27      | Endpoints CRUD    | TS-04 | Ajustes de controladores                 | Ajustar controladores CRUD en ms-unidades para alinearlos con el API Gateway y políticas de Cobox.       | 3                   | David       | Done   |
+| US-28      | Entregas API      | TS-05 | Normalización de DTOs                    | Estandarizar DTOs del microservicio ms-entregas para asegurar interoperabilidad con clientes externos.   | 2                   | Merly       | Done   |
+| US-28      | Validaciones      | TS-06 | Validación de requests                   | Implementar validaciones centralizadas para endpoints de entregas, usando middleware estandarizado.      | 3                   | Joaquín     | Done   |
+| US-29      | Incidencias API   | TS-07 | Refactor de dependencias internas        | Eliminar dependencias cruzadas del microservicio ms-incidencias para cumplir independencia lógica.       | 4                   | Jhon        | Done   |
+| US-29      | Integración externa | TS-08 | Exposición de endpoints                  | Ajustar endpoints de incidencias para consumo desde sistemas externos vía API REST estándar.             | 3                   | Ramiro      | Done   |
+| US-30      | Estadísticas      | TS-09 | Capa de consultas read-only              | Crear endpoints optimizados para consultas de estadísticas en ms-reportes, evitando sobrecarga de BD.    | 4                   | David       | Done   |
+| US-30      | Cacheo de consultas | TS-10 | Implementación de caché                  | Implementar caché en consultas frecuentes de estadísticas usando Redis.                                  | 5                   | Jhon        | Done   |
+| US-31      | Dockerización      | TS-11 | Dockerfile por microservicio             | Crear Dockerfile estandarizado para ms-entregas, ms-unidades y ms-incidencias.                           | 3                   | Christian   | Done   |
+| US-31      | Orquestación       | TS-12 | docker-compose integración                | Integrar todos los microservicios, API Gateway y BD en un docker-compose.yml funcional.                  | 4                   | Jhon        | Done   |
+| US-32      | Monitoreo          | TS-13 | Logs y observabilidad                    | Agregar logs estructurados y configuración de monitoreo básico para cada microservicio.                 | 2                   | Merly       | Done   |
+| US-33      | Testing técnico    | TS-14 | Pruebas Postman / Newman                 | Crear colección de Postman y script automatizado de pruebas para los microservicios expuestos.          | 3                   | David       | Done   |
+| US-33      | Calidad de código  | TS-15 | Integración de SonarLint / SonarQube     | Ajustar el código del backend alineado a reglas de calidad (linting, seguridad, duplicaciones).          | 4                   | Jhon        | Done   |
 
 ##### 5.3.4.2. Development Evidence for Sprint Review
 
@@ -4190,7 +4209,7 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 
 ##### 5.3.4.7. Team Collaboration Insights during Sprint
 
-##### 5.3.4.8. Kanban Board
+##### 5.3.4.8. Kanban Boar 
 
 ### 5.4. Microservices Deployment
 
