@@ -4198,8 +4198,27 @@ Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usu
 | US-33      | Calidad de código  | TS-15 | Integración de SonarLint / SonarQube     | Ajustar el código del backend alineado a reglas de calidad (linting, seguridad, duplicaciones).          | 4                   | Jhon        | Done   |
 
 ##### 5.3.4.2. Development Evidence for Sprint Review
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|-----------|--------|-----------|----------------|----------------------|----------------------|
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main | | |  | 01/12/2025 |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main |  |  |  | 01/12/2025 |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main |  |  |  | 02/12/2025 |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main |  |  |  | 02/12/2025 |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main |  |  |  | 03/12/2025 |
+| https://github.com/G1-FundamentosArqui-6336/microservices.git | main |  |  |  | 03/12/2025 |
+
 
 ##### 5.3.4.3. Testing Suite Evidence for Sprint Review
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| ---------- | ------ | ----------| --------------- | ------------------- | ------------------- |
+|            | main   |           |                 |                     | 01/12/2025          |
+|            | main   |           |                 |                     | 01/12/2025          |
+|            | main   |           |                 |                     | 02/12/2025          |
+|            | main   |           |                 |                     | 02/12/2025          |
+|            | main   |           |                 |                     | 03/12/2025          |
+|            | main   |           |                 |                     | 03/12/2025          |
+
 
 ##### 5.3.4.4. Execution Evidence for Sprint Review
 
