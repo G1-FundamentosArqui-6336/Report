@@ -1,4 +1,4 @@
-<img width="1914" height="992" alt="image" src="https://github.com/user-attachments/assets/fb2e0265-add3-4aa5-9235-a33d0beac01d" /># CoWare
+# CoWare
 ## Producto: CoBox
 # UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 
