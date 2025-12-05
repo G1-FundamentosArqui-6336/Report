@@ -4516,26 +4516,22 @@ Despliegue del frontend
   <div align="center">
       <img src="./assets/deployfront2.png" alt="Evidencias">
   </div>
-    <div align="center">
+  <div align="center">
       <img src="./assets/deployfront3.png" alt="Evidencias">
   </div>
-    <div align="center">
+  <div align="center">
       <img src="./assets/deployfront4.png" alt="Evidencias">
   </div>
-    <div align="center">
+  <div align="center">
       <img src="./assets/deployfront5.png" alt="Evidencias">
   </div>
-    <div align="center">
+  <div align="center">
       <img src="./assets/deployfront6.png" alt="Evidencias">
   </div>
 
 ##### 5.3.4.7. Team Collaboration Insights during Sprint
 
-![image](https://hackmd.io/_uploads/ByfW47yM-e.png)
 
-![image](https://hackmd.io/_uploads/ry5I4Q1zWe.png)
-
-![image](https://hackmd.io/_uploads/H1StVX1fZe.png)
 
 ##### 5.3.4.8. Kanban Board
 
@@ -4548,11 +4544,102 @@ Enlace publico al Trello: [https://trello.com/b/62WoIVsI/cobox-kanban-sprint-4]
 #### 5.4.1. Cloud Architecture Diagram
 
 
+
 #### 5.4.2. Cloud Architecture Deployment
 
-
+La arquitectura cloud de CoBox se implementó sobre **Amazon Web Services (AWS)**, adoptando una infraestructura modular orientada a microservicios. Cada servicio de AWS cumple un rol específico dentro del flujo de despliegue, operación y seguridad del sistema, garantizando disponibilidad, aislamiento y control centralizado de recursos críticos. A continuación, se describen los componentes principales utilizados en la solución.
 
 ---
+
+### **1. Amazon RDS / Aurora – Almacenamiento de datos transaccionales**
+Aurora PostgreSQL actúa como el **repositorio de datos central** para los microservicios de IAM, Fleet y Delivery. Su función en la arquitectura es:
+
+- Proveer una base de datos administrada, altamente disponible y segura.
+- Asegurar consistencia y durabilidad de los datos operativos de CoBox.
+- Permitir que los microservicios se conecten a través de la red privada de la VPC, sin exposición a internet.
+
+Aurora sustenta las operaciones críticas del negocio como autenticación, asignación de rutas, órdenes y evidencias de entrega.
+
+<div align="center">
+    <img src="./assets/sprint4/aurorards.png" alt="Evidencias">
+</div>
+
+---
+
+### **2. Amazon Elastic Container Registry (ECR) – Gestión de imágenes Docker**
+ECR almacena las imágenes Docker generadas por GitHub Actions para cada microservicio. Su rol consiste en:
+
+- Servir como **origen oficial** de las imágenes que EC2 descargará (`docker pull`) en cada despliegue.
+- Mantener versiones y trazabilidad de los contenedores utilizados.
+- Integrarse con el pipeline CI/CD, permitiendo que cada commit produzca una nueva imagen etiquetada.
+
+Esto asegura despliegues reproducibles y una gestión centralizada de artefactos contenerizados.
+
+<div align="center">
+    <img src="./assets/sprint4/ecr.png" alt="Evidencias">    
+</div>
+
+---
+
+### **3. AWS Secrets Manager – Almacenamiento de credenciales y parámetros sensibles**
+Secrets Manager es el módulo responsable de **proteger información crítica**, incluyendo:
+
+- Credenciales de Aurora/RDS.
+- Llaves JWT del servicio IAM.
+- Variables empleadas por las pipelines de GitHub Actions.
+- Configuración privada consumida por los contenedores durante el arranque.
+
+Su rol principal es evitar exposición directa de secretos en archivos `.env`, repositorios o contenedores, reduciendo riesgos de seguridad y facilitando la rotación controlada de credenciales.
+
+<div align="center">
+    <img src="./assets/sprint4/ssm.png" alt="Evidencias">    
+</div>
+
+---
+
+### **4. Amazon EC2 – Ejecución de microservicios mediante Docker**
+Los microservicios de CoBox se ejecutan en una instancia EC2 con Docker y Docker Compose, que funciona como **servidor principal de ejecución** del backend. Esta instancia cumple los siguientes roles:
+
+- Alojar y ejecutar los contenedores de IAM, Fleet, Delivery, Incidents, Maintenance Config Server, Eureka, Gateway, Prometheus y Grafana.
+- Permitir despliegues automatizados desde GitHub Actions mediante conexión SSH.
+- Actuar como nodo de red que enruta tráfico externo a través de NGINX hacia las réplicas del Gateway.
+- Gestionar el ciclo de vida de los servicios sin necesidad de ECS/EKS.
+
+En conjunto, EC2 opera como un *orchestrator lite* basado en Docker Compose para ambientes académicos y de prototipado.
+
+<div align="center">
+    <img src="./assets/sprint4/ec2.png" alt="Evidencias">    
+</div>
+
+---
+
+### **5. Amazon VPC, Subnets y Security Groups – Aislamiento y control de red**
+CoBox se ejecuta dentro de una **VPC dedicada**, cuyo objetivo es aislar la infraestructura y controlar estrictamente cómo circula el tráfico entre servicios. La configuración implementada cumple los siguientes roles:
+
+- **Subred pública:** aloja EC2 y NGINX, permitiendo acceso HTTP controlado.
+- **Subred privada:** aloja Aurora/RDS, evitando acceso externo directo.
+- **Security Groups:** definen reglas inbound/outbound limitando el tráfico únicamente a puertos necesarios (22, 80 y conexiones internas entre microservicios).
+- **Route Tables e Internet Gateway:** permiten a EC2 comunicarse con ECR sin exponer recursos internos.
+
+Esta estructura asegura un diseño seguro basado en el principio de **mínimo privilegio**.
+
+<div align="center">
+    <img src="./assets/sprint4/vpc.png" alt="Evidencias">    
+</div>
+
+---
+
+### **6. VPN / Túneles SSH – Acceso seguro a componentes internos**
+En lugar de exponer servicios administrativos al público, se emplean túneles SSH para acceder a:
+
+- Eureka Dashboard.
+- Endpoints privados de monitoreo.
+- Servicios internos no publicados al exterior.
+
+Esto previene filtraciones y protege servicios sensibles desde control local.
+
+
+En conjunto, esta arquitectura cloud soporta los objetivos de disponibilidad, seguridad y escalabilidad definidos para CoBox, proporcionando un entorno sólido para el despliegue y operación continua de los microservicios.
 
 ## Conclusiones y Recomendaciones
 
