@@ -4543,6 +4543,78 @@ Enlace publico al Trello: [https://trello.com/b/62WoIVsI/cobox-kanban-sprint-4]
 
 #### 5.4.1. Cloud Architecture Diagram
 
+<div align="center">
+    <img src="./assets/sprint4/aws-cloud-architecture.png" alt="Evidencias">
+</div>
+
+Enlace del diagrama en Lucidchart: https://lucid.app/lucidchart/62ead420-10b7-4b2c-b070-a45343a53bc2/edit?viewport_loc=-426%2C-861%2C6725%2C2481%2C0_0&invitationId=inv_543b388d-f86a-4e5d-baf2-c4405efcca1d
+
+La Figura correspondiente presenta el diagrama arquitectónico final de la solución Cloud implementada para CoBox sobre Amazon Web Services (AWS). Este diseño refleja de manera integral la interacción entre los componentes de infraestructura, los mecanismos de despliegue, los microservicios contenerizados y las capas de seguridad que sostienen la operación del sistema en un entorno productivo.
+
+La arquitectura se organiza en cuatro bloques principales: **(1) pipeline de integración continua**, **(2) ejecución de microservicios en una instancia EC2 dentro de una VPC dedicada**, **(3) servicios administrados para datos y secretos**, y **(4) componentes de observabilidad y monitoreo**. A continuación, se describen los elementos clave representados en el diagrama.
+
+---
+
+### **1. CI/CD Pipeline y Gestión de Artefactos**
+En el extremo inferior izquierdo se ubica el flujo de integración continua, donde **GitHub Actions** ejecuta los procesos de construcción y empaquetado de cada microservicio. Luego, las imágenes Docker son publicadas en **Amazon ECR**, repositorio central de artefactos utilizado por la instancia EC2 durante el despliegue.
+
+Este pipeline automatiza el versionamiento, almacenamiento y recuperación de imágenes, garantizando despliegues consistentes y reproducibles en el entorno Cloud.
+
+---
+
+### **2. Ejecución de Microservicios en Amazon EC2 con Docker**
+Dentro de la **VPC de CoBox**, la arquitectura utiliza una instancia **Amazon EC2** configurada como *Docker Host*. Sobre esta máquina se orquestan todos los microservicios mediante Docker Compose, incluyendo:
+
+- `gateway-service` (réplicas 1 y 2)
+- `iam-service`
+- `fleet-service`
+- `delivery-service`
+- `config-service`
+- `eureka-service` (Service Registry)
+- `prometheus` y `grafana` (Monitoring Stack)
+
+La comunicación externa se realiza mediante un **NGINX Reverse Proxy**, ubicado al frente del Gateway para gestionar el tráfico entrante. Este proxy ejecuta balanceo de carga externo y direcciona las solicitudes hacia las réplicas del API Gateway.
+
+Internamente, la arquitectura utiliza **Eureka** junto con **predicates y reglas de enrutamiento de Spring Cloud Gateway**, lo que habilita *client-side load balancing* entre los microservicios y las réplicas del Gateway, permitiendo escalabilidad horizontal y mayor disponibilidad dentro de la instancia EC2.
+
+---
+
+### **3. Gestión de Datos y Seguridad**
+Los microservicios que requieren persistencia se conectan a **Amazon Aurora (RDS)**, ubicado en una **subred privada**, accesible únicamente desde la VPC y protegido por un Security Group dedicado.
+
+Asimismo, las credenciales sensibles, tokens JWT, claves privadas y parámetros de configuración se recuperan dinámicamente desde **AWS Secrets Manager**, lo que evita la inclusión de secretos en archivos locales o repositorios y fortalece la postura de seguridad de la solución.
+
+El acceso a la instancia EC2 se restringe mediante un **Security Group Público**, habilitando únicamente el tráfico por los puertos necesarios (SSH, HTTP/HTTPS). Las interfaces administrativas como Eureka y Grafana se acceden mediante túneles SSH, evitando exposición pública innecesaria.
+
+---
+
+### **4. Monitoreo y Observabilidad**
+La solución incorpora una pila de monitoreo basada en **Prometheus** y **Grafana**. Cada microservicio expone métricas a través de Actuator, las cuales son recolectadas por Prometheus y visualizadas en paneles de Grafana.
+
+Esto permite:
+
+- Supervisar disponibilidad y latencia del API Gateway.
+- Analizar métricas de IAM, Fleet y Delivery Services.
+- Identificar patrones de tráfico y consumo.
+- Detectar fallas o degradación del rendimiento.
+
+---
+
+### **5. Flujo General de Operación**
+El flujo completo puede resumirse de la siguiente manera:
+
+1. El usuario accede a la plataforma → NGINX recibe la solicitud.
+2. NGINX balancea el tráfico hacia las réplicas del Gateway.
+3. El Gateway consulta a Eureka para enrutar solicitudes internas.
+4. Los microservicios se comunican entre sí mediante service discovery.
+5. Servicios que requieren persistencia acceden a Aurora.
+6. Secretos y credenciales se obtienen desde Secrets Manager.
+7. Prometheus recolecta métricas y Grafana genera visualizaciones.
+8. GitHub Actions actualiza imágenes en ECR y despliega nuevas versiones vía SSH a EC2.
+
+---
+
+En conjunto, este diagrama evidencia una arquitectura Cloud sólida, modular, segura y alineada a los principios de disponibilidad, escalabilidad y mantenibilidad establecidos para el proyecto CoBox. El uso combinado de contenedores, registro de servicios, balanceadores internos y externos, y servicios administrados de AWS permite soportar operaciones logísticas críticas con una base técnica clara y extensible.
 
 
 #### 5.4.2. Cloud Architecture Deployment
