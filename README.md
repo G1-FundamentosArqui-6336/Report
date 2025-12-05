@@ -3119,6 +3119,57 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
 
 ##### 5.3.1.3. Testing Suite Evidence for Sprint Review
 
+#### BDD Scenarios & Acceptance Criteria
+
+**High Availability & Load Balancing Strategy**
+Esta característica define la resiliencia del API Gateway. Se valida que el sistema mantenga la continuidad operativa mediante múltiples réplicas gestionadas en Docker Compose y que el tráfico entrante sea distribuido eficientemente por el NGINX Reverse Proxy, asegurando que el servicio permanezca disponible incluso si una instancia falla.
+
+<div align="center">
+    <img src="./assets/gerki1.png" alt="BDD - Alta Disponibilidad y Balanceo de Carga" width="500">
+</div>
+
+**Observability Stack Integration**
+Aquí se especifican los criterios para la monitorización en tiempo real. Se comprueba que todos los microservicios expongan métricas a través de Spring Actuator, que Prometheus recolecte (scrape) estos datos correctamente y que Grafana visualice indicadores críticos como latencia, uso de CPU y disponibilidad en dashboards centralizados.
+
+<div align="center">
+    <img src="./assets/gerki2.png" alt="BDD - Observabilidad con Prometheus y Grafana" width="500">
+</div>
+
+**Security: Rate Limiting Policy**
+Este escenario describe la protección del API Gateway contra abusos y ataques de denegación de servicio. Se verifica que el limitador de tasa (Rate Limiter) bloquee solicitudes excesivas devolviendo un estado HTTP 429, mientras permite el tráfico legítimo dentro de los umbrales configurados.
+
+<div align="center">
+    <img src="./assets/gerki3.png" alt="BDD - Rate Limiting y Seguridad" width="500">
+</div>
+
+**API Documentation Standardization**
+Se establecen los requisitos para la documentación técnica automatizada. Las pruebas aseguran que la especificación OpenAPI se genere correctamente para los módulos IAM, Fleet y Delivery, incluyendo todos los endpoints, esquemas de datos y ejemplos necesarios para garantizar la consistencia en el consumo de la API.
+
+<div align="center">
+    <img src="./assets/gerki4.png" alt="BDD - Documentación OpenAPI" width="500">
+</div>
+
+**AWS Cloud Deployment & CI/CD**
+Esta característica valida la infraestructura de despliegue en la nube. Se confirma que el pipeline de CI/CD despliegue automáticamente los contenedores en instancias EC2 mediante Docker Compose, gestionando la comunicación interna entre Eureka y el Gateway y asegurando que los health checks pasen tras la actualización.
+
+<div align="center">
+    <img src="./assets/gerki5.png" alt="BDD - Despliegue Cloud AWS" width="500">
+</div>
+
+**Production API Validation**
+En este apartado se definen las pruebas de humo y validación funcional en el entorno productivo (`cobox.duckdns.org`). Se asegura que los endpoints respondan con los códigos de estado correctos y baja latencia, y se re-valida la eficacia del Rate Limiter en un entorno real.
+
+<div align="center">
+    <img src="./assets/gerki6.png" alt="BDD - Validación de APIs Productivas" width="500">
+</div>
+
+**Frontend-Backend Integration**
+Finalmente, se valida la integración completa del sistema. Los escenarios cubren el flujo "end-to-end", asegurando que las vistas del frontend consuman correctamente las APIs a través del Gateway y que la navegación del usuario por los módulos de rutas y órdenes se procese sin errores de consistencia.
+
+<div align="center">
+    <img src="./assets/gerki7.png" alt="BDD - Integración Frontend y Backend" width="500">
+</div>
+
 **Fleet Bounded Context - Driver Management**
 En este conjunto de pruebas se valida el `DriverController`. Se verifica el ciclo de vida de la administración de conductores, asegurando que los endpoints para crear (`createDriver`), listar (`getAllDrivers`) y buscar por ID (`getDriverById`) retornen los códigos de estado HTTP correctos (200, 201, 404) y manejen las excepciones de negocio adecuadamente.
 
