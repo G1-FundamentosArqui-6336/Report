@@ -1,30 +1,65 @@
-# CoWare
-## Producto: CoBox
-# UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
+<p align="center">
+  <strong>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</strong>
+</p>
 
 <p align="center">
   <img src="./assets/upc-logo.png" alt="UPC Logo" width="200"/>
 </p>
 
-### Carrera: Ingeniería de Software  
-### Ciclo: 7° ciclo  
-### Curso: Fundamentos de Arquitectura de Software  
-### NRC: 6336  
-### Profesor: Jorge Luis Delgado Vite
+<p align="center">
+  Ingeniería de Software <br>
+  1ASI0657 Fundamentos de Arquitectura de Software <br>
+  2025-20 <br>
+  Profesor: <strong>Jorge Luis Delgado Vite</strong> <br><br>
+  Report <br>
+  CoWare – Producto: CoBox
+</p>
 
-## Informe del TP1
-**"CoWare"**  
-**Producto: "CoBox"**
+<br>
 
-### Integrantes:
-- Ramiro Alexander Guzmán Chávez – U202217062  
-- David Alexander Pérez García – U202222942  
-- Joaquín Pedraza Maldonado – U202218514
-- Merly Salon Puerta – U20201b772  
-- Jhon Alexander Galvez Chambi – U202323270  
+<p align="center"><strong>Team Members:</strong></p>
 
-**Octubre, 2025**  
-**URL del proyecto:** [https://github.com/G1-FundamentosArqui-6336](https://github.com/G1-FundamentosArqui-6336)
+<table align="center">
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th>Código</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ramiro Alexander Guzmán Chávez</td>
+      <td>U202217062</td>
+    </tr>
+    <tr>
+      <td>David Alexander Pérez García</td>
+      <td>U202222942</td>
+    </tr>
+    <tr>
+      <td>Joaquín Pedraza Maldonado</td>
+      <td>U202218514</td>
+    </tr>
+    <tr>
+      <td>Merly Salon Puerta</td>
+      <td>U20201B772</td>
+    </tr>
+    <tr>
+      <td>Jhon Alexander Galvez Chambi</td>
+      <td>U202323270</td>
+    </tr>
+  </tbody>
+</table>
+
+<br><br>
+
+<p align="center">
+  <strong>Diciembre, 2025</strong> <br>
+  <strong>URL del proyecto:</strong> 
+  <a href="https://github.com/G1-FundamentosArqui-6336">
+    https://github.com/G1-FundamentosArqui-6336
+  </a>
+</p>
+
 
 ---
 
@@ -71,9 +106,19 @@
 | TB4     | 14/11/2025    | Ramiro Alexander Guzmán Chávez | Desarrollo de 5.3.3.6: Software Deployment Evidence for Sprint Review, pipelines, despliegue en entornos de prueba y validación post‐deploy. |
 | TB4     | 16/11/2025    | Merly Salon Puerta             | Desarrollo de 5.3.3.7: Team Collaboration Insights during Sprint, análisis colaborativo, comunicación interna y hallazgos del equipo. |
 | TB4     | 16/11/2025    | Todos los integrantes          | Desarrollo de 5.3.3.8: Kanban Board, actualización del tablero y cierre grupal del Sprint 3. |
-
-
-
+| TF1     | 25/11/2025    | Merly Salon Puerta             | Desarrollo de 5.3.4.1: Sprint Backlog 4, estructuración del backlog y definición inicial de tareas. |
+| TF1     | 25/11/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.3.4.1: Sprint Backlog 4, priorización final y refinamiento de historias de usuario del Sprint 4. |
+| TF1     | 27/11/2025    | Merly Salon Puerta             | Desarrollo de 5.3.4.2: Development Evidence for Sprint Review, documentación del avance técnico y artefactos implementados. |
+| TF1     | 27/11/2025    | Ramiro Alexander Guzmán Chávez | Desarrollo de 5.3.4.3: Testing Suite Evidence for Sprint Review, ejecución de pruebas, validación funcional y registro detallado de resultados. |
+| TF1     | 28/11/2025    | David Alexander Pérez García   | Desarrollo de 5.3.4.4: Execution Evidence for Sprint Review, documentación de la ejecución, validación del despliegue en AWS y evidencias de los atributos de calidad. |
+| TF1     | 28/11/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.3.4.4: Execution Evidence for Sprint Review, integración de la evidencia técnica de observabilidad, balanceo y despliegue cloud. |
+| TF1     | 29/11/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.3.4.5: Microservices Documentation Evidence, consolidación de endpoints, elaboración de tabla OpenAPI y diagramas de interacción. |
+| TF1     | 30/11/2025    | Joaquín Pedraza Maldonado      | Desarrollo de 5.3.4.6: Software Deployment Evidence for Sprint Review, validación del pipeline, despliegues en EC2 y documentación del proceso automatizado. |
+| TF1     | 01/12/2025    | Ramiro Alexander Guzmán Chávez | Desarrollo de 5.3.4.7: Team Collaboration Insights during Sprint, análisis del trabajo grupal, retrospectiva y conclusiones del equipo. |
+| TF1     | 02/12/2025    | Merly Salon Puerta             | Desarrollo de 5.3.4.8: Kanban Board, actualización del tablero, cierre visual del Sprint 4 y verificación del flujo de trabajo. |
+| TF1     | 03/12/2025    | David Alexander Pérez García   | Desarrollo de 5.4.1: Cloud Architecture Diagram, elaboración del diagrama general, estructuración visual del despliegue y componentes cloud. |
+| TF1     | 03/12/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.4.1: Cloud Architecture Diagram, refinamiento del diagrama, integración de balanceadores, métricas y rutas de comunicación. |
+| TF1     | 04/12/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.4.2: Cloud Architecture Deployment, documentación detallada del uso de servicios AWS, configuración de VPC, seguridad, ECR, RDS y EC2. |
 
 
 
@@ -4531,6 +4576,47 @@ Despliegue del frontend
 
 ##### 5.3.4.7. Team Collaboration Insights during Sprint
 
+Durante esta fase de entrega, el equipo mantuvo una coordinación continua para asegurar el avance simultáneo en las distintas capas del proyecto: microservicios, frontend, documentación y pruebas. El trabajo colaborativo permitió integrar nuevas funcionalidades, completar el despliegue en AWS, consolidar el modelado arquitectónico y garantizar la coherencia del producto final.
+
+A continuación, se presentan las evidencias de actividad en cada uno de los repositorios involucrados:
+
+###### **1. Microservices Repository**
+
+Incluye el desarrollo, ajuste y despliegue de los microservicios: IAM, Fleet, Delivery, Config Server, Eureka, Gateway y la implementación de los atributos de calidad (observabilidad, rate limiting, escalabilidad con NGINX y Eureka).
+
+<div align="center">
+    <img src="./assets/sprint4/insights_microservices.png" alt="Evidencias de colaboración - Microservices Repository">
+</div>
+
+---
+
+###### **2. Frontend Repository**
+
+Contempla el desarrollo y refinamiento de la landing page, la integración de vistas con los servicios desplegados en AWS y la adaptación de interfaces según los cambios efectuados en el backend.
+
+<div align="center">
+    <img src="./assets/sprint4/insights_frontend.png" alt="Evidencias de colaboración - Frontend Repository">
+</div>
+
+---
+
+###### **3. Report Repository**
+
+Incluye la actualización del informe técnico, la documentación del Sprint 4, el modelado arquitectónico, y la consolidación de evidencias de testing, despliegue y colaboración del equipo.
+
+<div align="center">
+    <img src="./assets/sprint4/insights_report.png" alt="Evidencias de colaboración - Report Repository">
+</div>
+
+---
+
+###### **4. Testing Repository**
+
+Abarca la ejecución de pruebas funcionales, la elaboración de colecciones Postman, scripts automatizados, y la validación de los endpoints tras el despliegue en AWS.
+
+<div align="center">
+    <img src="./assets/sprint4/insights_testing.png" alt="Evidencias de colaboración - Testing Repository">
+</div>
 
 
 ##### 5.3.4.8. Kanban Board
