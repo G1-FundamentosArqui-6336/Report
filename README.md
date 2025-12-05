@@ -3118,57 +3118,34 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
 | [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend) | main   | bbbf46d79cc14aaf9a761db3d7b8e681 | feat: added maintenance reminder alerts    | Programación de alertas automáticas para recordar mantenimientos (US-16).                                                                           | 09/10/25            |
 
 ##### 5.3.1.3. Testing Suite Evidence for Sprint Review
-<table border="1">
-  <tr>
-    <th>Repository</th>
-    <th>Branch</th>
-    <th>Commit Id</th>
-    <th>Commit Message</th>
-    <th>Commit Message Body</th>
-    <th>Committed on (Date)</th>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>50c74ca3a97421c41a49909d38d057569df07c16</td>
-    <td>feat: Add FleetController</td>
-    <td>RamiroGuzmanCh</td>
-    <td>08/10/25</td>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>20b8a45b00fecb8f85f9412a98ee6251f1399876</td>
-    <td>feat(delivery/order-api): Add GET endpoints for delivered orders</td>
-    <td>davidalexd</td>
-    <td>08/10/25</td>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>a294691fe518085a5ee07df5847548c4df861441</td>
-    <td>feat: Add maintenance management bounded context</td>
-    <td>Chaomeum</td>
-    <td>08/10/25</td>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>6f319f7cc223a2848d9c6ed3b9b757871ed84952</td>
-    <td>Feat(Pedraza) Adedd Bounded Context Incident</td>
-    <td>JoaquinPedraza1</td>
-    <td>08/10/25</td>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>27dceacea52a95e4db627485fb81c9e00b426275</td>
-    <td>feat(init):template for backend cobox(included context iam and shared)</td>
-    <td>MerlySalonP</td>
-    <td>1/10/25</td>
-  </tr>
 
-</table>
+**Fleet Bounded Context - Driver Management**
+En este conjunto de pruebas se valida el `DriverController`. Se verifica el ciclo de vida de la administración de conductores, asegurando que los endpoints para crear (`createDriver`), listar (`getAllDrivers`) y buscar por ID (`getDriverById`) retornen los códigos de estado HTTP correctos (200, 201, 404) y manejen las excepciones de negocio adecuadamente.
+
+<div align="center">
+    <img src="./assets/testin1.jpg" alt="Pruebas Unitarias - Driver Controller (Fleet Context)" width="400">
+</div>
+
+**Incident Bounded Context - Incident Lifecycle**
+Esta evidencia corresponde al `IncidentController`. Las pruebas unitarias confirman el flujo de reporte y gestión de incidencias, validando la creación exitosa, la actualización de estados (`updateStatus`), la asignación de responsables (`assignResponsible`) y la recuperación de detalles de incidentes específicos, garantizando la integridad de los datos en situaciones críticas.
+
+<div align="center">
+    <img src="./assets/testin2.jpg" alt="Pruebas Unitarias - Incident Controller (Incident Context)" width="400">
+</div>
+
+**Delivery Bounded Context - Order Processing**
+Aquí se muestran las pruebas del `OrderController`. Se evalúa la lógica de negocio central de los pedidos, cubriendo la creación (`createOrder`), y las transiciones de estado cruciales como marcar el pedido listo para despacho (`markOrderAsReadyForDispatch`) y completado (`markOrderAsCompleted`), asegurando que el flujo de entrega se ejecute sin errores.
+
+<div align="center">
+    <img src="./assets/testin3.jpg" alt="Pruebas Unitarias - Order Controller (Delivery Context)" width="400">
+</div>
+
+**Delivery Bounded Context - Client Order Queries**
+Finalmente, se valida el `ClientOrderController`, enfocado en las consultas del lado del cliente. Las pruebas aseguran que la búsqueda de pedidos por ID de cliente (`getOrdersByClientId`) mapee correctamente las entidades de dominio a DTOs de respuesta, verificando casos de listas vacías, listas pobladas y la correcta interacción con el servicio de consultas.
+
+<div align="center">
+    <img src="./assets/testin4.jpg" alt="Pruebas Unitarias - Client Order Controller (Delivery Context)" width="400">
+</div>
 
 ##### 5.3.1.4. Execution Evidence for Sprint Review
 
