@@ -1,30 +1,65 @@
-# CoWare
-## Producto: CoBox
-# UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
+<p align="center">
+  <strong>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</strong>
+</p>
 
 <p align="center">
   <img src="./assets/upc-logo.png" alt="UPC Logo" width="200"/>
 </p>
 
-### Carrera: Ingeniería de Software  
-### Ciclo: 7° ciclo  
-### Curso: Fundamentos de Arquitectura de Software  
-### NRC: 6336  
-### Profesor: Jorge Luis Delgado Vite
+<p align="center">
+  Ingeniería de Software <br>
+  1ASI0657 Fundamentos de Arquitectura de Software <br>
+  2025-20 <br>
+  Profesor: <strong>Jorge Luis Delgado Vite</strong> <br><br>
+  Report <br>
+  CoWare – Producto: CoBox
+</p>
 
-## Informe del TP1
-**"CoWare"**  
-**Producto: "CoBox"**
+<br>
 
-### Integrantes:
-- Ramiro Alexander Guzmán Chávez – U202217062  
-- David Alexander Pérez García – U202222942  
-- Joaquín Pedraza Maldonado – U202218514
-- Merly Salon Puerta – U20201b772  
-- Jhon Alexander Galvez Chambi – U202323270  
+<p align="center"><strong>Team Members:</strong></p>
 
-**Octubre, 2025**  
-**URL del proyecto:** [https://github.com/G1-FundamentosArqui-6336](https://github.com/G1-FundamentosArqui-6336)
+<table align="center">
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th>Código</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ramiro Alexander Guzmán Chávez</td>
+      <td>U202217062</td>
+    </tr>
+    <tr>
+      <td>David Alexander Pérez García</td>
+      <td>U202222942</td>
+    </tr>
+    <tr>
+      <td>Joaquín Pedraza Maldonado</td>
+      <td>U202218514</td>
+    </tr>
+    <tr>
+      <td>Merly Salon Puerta</td>
+      <td>U20201B772</td>
+    </tr>
+    <tr>
+      <td>Jhon Alexander Galvez Chambi</td>
+      <td>U202323270</td>
+    </tr>
+  </tbody>
+</table>
+
+<br><br>
+
+<p align="center">
+  <strong>Diciembre, 2025</strong> <br>
+  <strong>URL del proyecto:</strong> 
+  <a href="https://github.com/G1-FundamentosArqui-6336">
+    https://github.com/G1-FundamentosArqui-6336
+  </a>
+</p>
+
 
 ---
 
@@ -71,9 +106,19 @@
 | TB4     | 14/11/2025    | Ramiro Alexander Guzmán Chávez | Desarrollo de 5.3.3.6: Software Deployment Evidence for Sprint Review, pipelines, despliegue en entornos de prueba y validación post‐deploy. |
 | TB4     | 16/11/2025    | Merly Salon Puerta             | Desarrollo de 5.3.3.7: Team Collaboration Insights during Sprint, análisis colaborativo, comunicación interna y hallazgos del equipo. |
 | TB4     | 16/11/2025    | Todos los integrantes          | Desarrollo de 5.3.3.8: Kanban Board, actualización del tablero y cierre grupal del Sprint 3. |
-
-
-
+| TF1     | 25/11/2025    | Merly Salon Puerta             | Desarrollo de 5.3.4.1: Sprint Backlog 4, estructuración del backlog y definición inicial de tareas. |
+| TF1     | 25/11/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.3.4.1: Sprint Backlog 4, priorización final y refinamiento de historias de usuario del Sprint 4. |
+| TF1     | 27/11/2025    | Merly Salon Puerta             | Desarrollo de 5.3.4.2: Development Evidence for Sprint Review, documentación del avance técnico y artefactos implementados. |
+| TF1     | 27/11/2025    | Ramiro Alexander Guzmán Chávez | Desarrollo de 5.3.4.3: Testing Suite Evidence for Sprint Review, ejecución de pruebas, validación funcional y registro detallado de resultados. |
+| TF1     | 28/11/2025    | David Alexander Pérez García   | Desarrollo de 5.3.4.4: Execution Evidence for Sprint Review, documentación de la ejecución, validación del despliegue en AWS y evidencias de los atributos de calidad. |
+| TF1     | 28/11/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.3.4.4: Execution Evidence for Sprint Review, integración de la evidencia técnica de observabilidad, balanceo y despliegue cloud. |
+| TF1     | 29/11/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.3.4.5: Microservices Documentation Evidence, consolidación de endpoints, elaboración de tabla OpenAPI y diagramas de interacción. |
+| TF1     | 30/11/2025    | Joaquín Pedraza Maldonado      | Desarrollo de 5.3.4.6: Software Deployment Evidence for Sprint Review, validación del pipeline, despliegues en EC2 y documentación del proceso automatizado. |
+| TF1     | 01/12/2025    | Ramiro Alexander Guzmán Chávez | Desarrollo de 5.3.4.7: Team Collaboration Insights during Sprint, análisis del trabajo grupal, retrospectiva y conclusiones del equipo. |
+| TF1     | 02/12/2025    | Merly Salon Puerta             | Desarrollo de 5.3.4.8: Kanban Board, actualización del tablero, cierre visual del Sprint 4 y verificación del flujo de trabajo. |
+| TF1     | 03/12/2025    | David Alexander Pérez García   | Desarrollo de 5.4.1: Cloud Architecture Diagram, elaboración del diagrama general, estructuración visual del despliegue y componentes cloud. |
+| TF1     | 03/12/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.4.1: Cloud Architecture Diagram, refinamiento del diagrama, integración de balanceadores, métricas y rutas de comunicación. |
+| TF1     | 04/12/2025    | Jhon Alexander Galvez Chambi   | Desarrollo de 5.4.2: Cloud Architecture Deployment, documentación detallada del uso de servicios AWS, configuración de VPC, seguridad, ECR, RDS y EC2. |
 
 
 
@@ -216,8 +261,10 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |----------------------|---------------------|--------------|
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Me encargué de investigar y analizar los requerimientos del sistema, lo cual me permitió profundizar en el diseño de arquitecturas escalables, aplicar buenas prácticas de desarrollo y conocer mejor el uso de bases de datos geoespaciales para funcionalidades críticas como geolocalización, evidencias y reportes.<br><br>**Ramiro Alexander Guzmán Chávez:** Investigué metodologías ágiles, centrándome en Scrum, para aplicarlas en la planificación del proyecto. Esto me permitió mejorar la organización del equipo y entender cómo adaptar estos marcos de trabajo a equipos pequeños y tareas técnicas dentro de un entorno real de desarrollo.<br><br>**Joaquín Pedraza Maldonado:** Aprendí a utilizar Figma para la creación de prototipos de alta fidelidad y estudié principios de diseño centrado en el usuario. Esto me permitió estructurar interfaces intuitivas y validar decisiones de diseño con base en criterios funcionales y estéticos dentro del proyecto.<br><br>**Merly Salon Puerta:** Profundicé en técnicas de análisis cualitativo y *needfinding* para comprender mejor las necesidades del usuario. Apliqué herramientas como mapas de empatía y user personas, lo cual facilitó la identificación de funcionalidades relevantes para el sistema desde una perspectiva centrada en el usuario.<br><br>**Jhon Alexander Galvez Chambi:** Investigué el funcionamiento de APIs de geolocalización y su integración con sistemas backend. Estudié también estructuras de datos espaciales, lo cual me permitió implementar el seguimiento en tiempo real dentro del sistema y comprender mejor el procesamiento de información geográfica.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Desarrollé conceptos de diseño arquitectónico, diagramas de contexto y enfoques basados en estilos y patrones arquitectónicos. Esto me permitió comprender cómo modelar la estructura del sistema y alinear los diagrammas con las necesidades del proyecto.<br><br>**David Alexander Pérez García:** Elaboré el enfoque *Approach driven ViewPoints Diagrams*, lo que me ayudó a profundizar en cómo representar diferentes perspectivas de arquitectura para distintos interesados, fortaleciendo el entendimiento de vistas arquitectónicas escalables.<br><br>**Joaquín Pedraza Maldonado:** Diseñé diagramas de bases de datos relacionales y no relacionales, además de aplicar patrones de diseño y tácticas arquitectónicas. Esto me permitió ampliar mis conocimientos en optimización de datos, escalabilidad y en cómo estructurar soluciones flexibles y mantenibles.<br><br>**Ramiro Alexander Guzmán Chávez:** Desarrollé los *Architectural Drivers*, definiendo propósito, funcionalidades primarias, escenarios de atributos de calidad, restricciones y preocupaciones arquitectónicas. Esto me permitió profundizar en cómo los drivers influyen en las decisiones arquitectónicas y en la evaluación de trade-offs.<br><br>**Merly Salon Puerta:** Dirigí las iteraciones ADD, desarrollando el backlog arquitectónico, metas de iteración, refinamiento de elementos del sistema y vistas C4/UML. Además, analicé el diseño actual y revisé los objetivos mediante tablero Kanban. Este proceso me permitió adquirir experiencia práctica en cómo evolucionar un diseño arquitectónico en iteraciones controladas.<br><br>**TP1:**<br>**Ramiro Alexander Guzmán Chávez:** Profundicé en la configuración y despliegue de entornos de desarrollo, integrando control de versiones, convenciones de estilo y despliegue automatizado. Aprendí a manejar herramientas de configuración para asegurar coherencia entre entornos locales y remotos.<br><br>**David Alexander Pérez García:** Implementé pruebas unitarias y configuraciones de entorno para el backend, aplicando patrones de refactorización guiados por buenas prácticas. Esto me permitió reforzar mi entendimiento sobre la importancia de la calidad de código y la automatización en entornos profesionales.<br><br>**Joaquín Pedraza Maldonado:** Documenté los microservicios con enfoque DDD, aplicando patrones de diseño y estructuración modular. Comprendí cómo los bounded contexts permiten mantener independencia entre servicios y claridad en la lógica de negocio.<br><br>**Merly Salon Puerta:** Desarrollé y validé el tablero Kanban para la gestión de tareas del sprint, revisando avances y priorizaciones. Esto me permitió adquirir experiencia en documentación colaborativa y control de versiones de evidencias del desarrollo.<br><br>**Jhon Alexander Galvez Chambi:** Realicé la validación del diseño y evidencias del sprint, evaluando el cumplimiento de las metas planteadas y registrando resultados en los reportes de revisión. Esto fortaleció mi capacidad de análisis técnico y trazabilidad de avances.<br><br>**TB3:**<br>**Ramiro Alexander Guzmán Chávez:** Amplié mis conocimientos en gestión avanzada de backlog e integración continua, aplicando estrategias de trazabilidad y documentación del Sprint Backlog 2 y evidencias técnicas.<br><br>**David Alexander Pérez García:** Perfeccioné habilidades en automatización de pruebas y ejecución continua, recolectando métricas de rendimiento y fortaleciendo prácticas de calidad continua.<br><br>**Joaquín Pedraza Maldonado:** Profundicé en documentación técnica de microservicios y alineación con estrategias de despliegue, aplicando buenas prácticas de versionado y trazabilidad.<br><br>**Merly Salon Puerta:** Aprendí estrategias de despliegue, control de dependencias y mecanismos de rollback, reforzando competencias en CI/CD.<br><br>**Jhon Alexander Galvez Chambi:** Profundicé en herramientas ágiles y comunicación colaborativa, documentando insights del equipo y gestionando el Kanban Board.<br><br>**TB4:**<br>**Ramiro Alexander Guzmán Chávez:** Profundicé mis conocimientos en planificación ágil avanzada y estructuración del Sprint Backlog, optimizando la priorización y estimación de historias de usuario.<br><br>**David Alexander Pérez García:** Reforcé habilidades en documentación técnica de evidencias de desarrollo, aplicando técnicas formales de seguimiento y control del progreso del sprint.<br><br>**Joaquín Pedraza Maldonado:** Fortalecí mis competencias en la ejecución estructurada de pruebas y elaboración de reportes técnicos para asegurar calidad en componentes críticos.<br><br>**Merly Salon Puerta:** Amplié mis conocimientos en validación funcional y registro de ejecuciones, aplicando metodologías de evaluación iterativa del sistema.<br><br>**Jhon Alexander Galvez Chambi:** Profundicé en documentación técnica de microservicios, mejorando flujos, endpoints y estructura modular del sistema.<br> **TF** <br><br> Joaquin Pedraza Durante el desarrollo y despliegue del frontend, así como en su integración con los microservicios, fue indispensable actualizar conceptos y conocimientos sobre arquitecturas modernas, consumo de APIs y gestión de entornos. Este proceso permitió fortalecer nuestro perfil profesional, ya que nos obligó a revisar documentación actualizada, adoptar nuevas prácticas y entender mejor el ciclo completo de una solución de software. Gracias a esta actualización constante, el proyecto alcanzó un nivel de madurez técnica alineado con las exigencias reales de la industria.<br>**Jhon Galvez**<br> La experiencia de conectar el frontend desplegado con los microservicios evidenció que mantener actualizados nuestros conocimientos es clave para el desarrollo profesional. Fue necesario revisar nuevos enfoques de comunicación cliente–servidor, configuraciones de seguridad y manejo de variables de entorno, lo que nos llevó a reforzar y actualizar conceptos que inicialmente dominábamos solo de forma teórica. Esta actualización de conocimientos se tradujo en una solución más estable, escalable y coherente con las tecnologías que hoy se usan en el desarrollo de software.<br>**David Perez** <br> El proyecto demostró que la actualización de conceptos y conocimientos no es solo un requisito académico, sino una necesidad práctica. Para lograr el despliegue del frontend y su correcta integración con los microservicios, tuvimos que profundizar en temas como deployment, routing, manejo de errores y versionamiento de servicios. Este proceso de actualización constante nos permitió comprender mejor la realidad del desarrollo de soluciones de software y preparar nuestro perfil profesional para enfrentar entornos tecnológicos cambiantes.<br> **Ramiro Guzman** <br> Al culminar el trabajo final con el frontend desplegado y vinculado a los microservicios, quedó claro que la actualización continua de conocimientos tiene un impacto directo en la calidad del proyecto. La necesidad de resolver problemas reales de integración nos motivó a revisar nuevas herramientas, comandos, buenas prácticas y patrones de diseño aplicables a arquitecturas basadas en servicios. Esta experiencia refuerza la idea de que el desarrollo profesional en software depende de la disposición a actualizarse permanentemente.<br> Merly Salon La integración entre frontend y microservicios requirió revisar y actualizar conocimientos en distintas capas de la solución: desde el consumo de endpoints hasta la configuración del entorno de ejecución. Este proceso de actualización constante permitió que el equipo consolide competencias técnicas más sólidas y modernas. De esta manera, el proyecto no solo cumplió con los requisitos del curso, sino que también se convirtió en una oportunidad concreta para avanzar en nuestro desarrollo profesional como futuros ingenieros de software.  | **TB1:**<br>Durante esta fase, el equipo demostró su capacidad para adquirir nuevos conocimientos y aplicarlos en el desarrollo del proyecto. La búsqueda activa de información, el dominio de herramientas técnicas y el enfoque práctico evidencian que cada integrante fortaleció sus competencias, aportando valor al sistema propuesto mediante un aprendizaje técnico autónomo y efectivo.<br><br>**TB2:**<br>El equipo demostró capacidad de adquirir nuevos conocimientos aplicados directamente en el diseño arquitectónico del sistema. Cada integrante profundizó en técnicas y herramientas específicas, desde vistas arquitectónicas hasta tácticas de calidad y drivers, consolidando un aprendizaje autónomo y colaborativo orientado a la creación de una arquitectura sólida y escalable.<br><br>**TP1:**<br>El equipo consolidó nuevos aprendizajes enfocados en la implementación, validación y despliegue del producto. Se reforzaron competencias en documentación técnica, pruebas automatizadas, control de versiones, gestión de entornos y comunicación ágil, demostrando madurez en la aplicación práctica del conocimiento adquirido.<br><br>**TB3:**<br>El equipo aplicó estrategias avanzadas de automatización, gestión colaborativa, documentación técnica, integración y despliegue, demostrando dominio creciente en metodologías ágiles y herramientas profesionales de ingeniería de software.<br><br>**TB4:**<br>El equipo fortaleció habilidades avanzadas en planificación ágil, aseguramiento de la calidad, documentación técnica, despliegue y validación funcional. Esta etapa consolidó la madurez del equipo en la aplicación de conocimientos especializados dentro del desarrollo iterativo del sistema. |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Reconocí la importancia del aprendizaje continuo y actualicé mis conocimientos en React, Next.js y Spring Boot. También aprendí a usar PostGIS para manejar datos geoespaciales y estudié mejores prácticas para el tratamiento de información sensible y evidencias digitales en plataformas web.<br><br>**Ramiro Alexander Guzmán Chávez:** Acepté la necesidad de seguir aprendiendo para responder a las exigencias del proyecto, por lo que estudié liderazgo técnico, gestión de tiempos y coordinación en equipos ágiles, apoyándome en libros, artículos y recursos académicos relacionados a metodologías de desarrollo de software.<br><br>**Joaquín Pedraza Maldonado:** Consideré fundamental actualizar mis habilidades en diseño UX/UI, por lo que revisé guías, buenas prácticas y recursos actualizados sobre accesibilidad, diseño responsivo y comportamiento del usuario. Esto me permitió diseñar una experiencia visual adecuada y adaptada a las necesidades reales del proyecto.<br><br>**Merly Salon Puerta:** Comprendí que el aprendizaje permanente es clave para obtener información útil del usuario, por lo que me capacité en métodos de recolección de datos cualitativos, análisis de entrevistas y síntesis de hallazgos para mejorar la relevancia y funcionalidad del sistema propuesto.<br><br>**Jhon Alexander Galvez Chambi:** Reafirmé la necesidad del aprendizaje continuo para dominar tecnologías nuevas, por eso profundicé en el uso de servicios de geolocalización, estructuras REST y autenticación segura, aplicando ese conocimiento para integrar funcionalidades críticas del sistema.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Reconocí la importancia de actualizar mis conocimientos en estilos arquitectónicos, ER diagrams y modelado de contexto, entendiendo que el aprendizaje continuo es clave para representar de manera adecuada sistemas complejos.<br><br>**David Alexander Pérez García:** Reafirmé la necesidad de mantenerme actualizado en frameworks y herramientas que soportan vistas arquitectónicas. Comprendí que el aprendizaje permanente es vital para proponer soluciones escalables que atiendan diferentes perspectivas de interesados.<br><br>**Joaquín Pedraza Maldonado:** Fortalecí mis competencias en bases de datos no relacionales, tácticas de calidad y patrones de diseño, reconociendo que la actualización constante de conocimientos permite construir sistemas con mayor desempeño y mantenibilidad.<br><br>**Ramiro Alexander Guzmán Chávez:** Profundicé en el rol de los drivers arquitectónicos y entendí que el aprendizaje permanente es esencial para identificar escenarios de calidad, restricciones y preocupaciones en proyectos de software reales.<br><br>**Merly Salon Puerta:** Comprendí que el aprendizaje continuo es clave para manejar técnicas como C4, UML y Kanban en el contexto de diseño arquitectónico. Reconocí que la práctica reiterada y la iteración son necesarias para mejorar continuamente las decisiones arquitectónicas.<br><br>**TP1:**<br>**Ramiro Alexander Guzmán Chávez:** Reafirmé la necesidad del aprendizaje constante en entornos distribuidos y en la automatización de despliegues, comprendiendo que mantenerse actualizado es esencial para garantizar estabilidad y escalabilidad en soluciones modernas.<br><br>**David Alexander Pérez García:** Consolidé la importancia del aprendizaje continuo en el uso de herramientas de configuración, pruebas y despliegue, lo que refuerza la adaptabilidad ante nuevas tecnologías y procesos de integración continua.<br><br>**Joaquín Pedraza Maldonado:** Entendí que la mejora constante es fundamental para mantener la calidad técnica del sistema, aplicando revisiones periódicas y buenas prácticas de documentación en cada iteración.<br><br>**Merly Salon Puerta:** Reafirmé que el aprendizaje permanente es clave para la evolución profesional, mejorando mis habilidades en validación iterativa, gestión de tareas y comunicación efectiva dentro del equipo.<br><br>**Jhon Alexander Galvez Chambi:** Reconocí que la adquisición de nuevos conocimientos sobre validación, documentación y trazabilidad fortalece la capacidad de análisis y mejora la gestión técnica del proyecto.<br><br>**TB3:**<br>**Ramiro Alexander Guzmán Chávez:** Estudié nuevas herramientas de integración ágil y monitoreo de sprint, reforzando la importancia de la adaptación constante ante cambios de alcance y requerimientos.<br><br>**David Alexander Pérez García:** Me actualicé en automatización y optimización para entornos de ejecución en CI/CD, comprendiendo que la actualización constante es esencial para mantener la eficiencia del sistema.<br><br>**Joaquín Pedraza Maldonado:** Reforcé conocimientos en documentación técnica estructurada y estándares de calidad en proyectos distribuidos, lo que me permitió mejorar la trazabilidad y mantenimiento de los servicios.<br><br>**Merly Salon Puerta:** Amplié mis conocimientos en estrategias de despliegue y control de versiones colaborativo, consolidando la importancia del aprendizaje continuo en entornos de desarrollo compartidos.<br><br>**Jhon Alexander Galvez Chambi:** Fortalecí habilidades en documentación, validación y gestión colaborativa, reafirmando que el aprendizaje permanente impulsa la eficiencia y cohesión del equipo.<br><br>**TB4:**<br>**Ramiro Alexander Guzmán Chávez:** Comprendí la importancia de perfeccionar constantemente técnicas de despliegue, validación y automatización, especialmente en etapas avanzadas del proyecto.<br><br>**David Alexander Pérez García:** Reafirmé la importancia del aprendizaje continuo aplicando documentación técnica detallada y evaluación constante del progreso del sprint.<br><br>**Joaquín Pedraza Maldonado:** Reconocí que es esencial mantenerse actualizado en metodologías de pruebas y buenas prácticas de aseguramiento de calidad.<br><br>**Merly Salon Puerta:** Interioricé la relevancia del aprendizaje iterativo para optimizar la validación funcional y el análisis de mejoras del sprint.<br><br>**Jhon Alexander Galvez Chambi:** Fortalecí mis habilidades en documentación y mantenimiento estructurado del sistema, entendiendo su importancia para ciclos futuros de desarrollo.<br> <br>**TF**<br> Joaquin Pedraza La experiencia de desplegar el frontend y lograr su integración con los microservicios evidenció la importancia del aprendizaje continuo en el desarrollo de software. A lo largo del proyecto, fue necesario investigar nuevas herramientas, resolver problemas inesperados y adaptar arquitecturas, lo que demostró que el desempeño profesional exige mantenerse actualizado. Este proceso fortaleció nuestras competencias técnicas y confirmó que la capacidad de aprender de manera autónoma es fundamental para construir soluciones escalables y funcionales.<br> David Perez <br> Completar el despliegue del frontend y su conexión con los microservicios nos permitió comprender que el aprendizaje permanente no es opcional, sino esencial en entornos tecnológicos cambiantes. Cada reto encontrado desde la configuración del entorno, consumo de APIs, manejo de errores, hasta la integración final requirió buscar nuevos conocimientos y aplicar buenas prácticas modernas. Esto reafirmó la necesidad de desarrollar una mentalidad de mejora continua para enfrentar futuros proyectos con mayor solvencia y profesionalismo.<br> Jhon Galvez<br> El proceso de implementación final, donde se integró el frontend con los microservicios, puso en evidencia cuánto depende el éxito de un proyecto del compromiso con aprender constantemente. Las tecnologías utilizadas evolucionan con rapidez y solo mediante la actualización permanente se pueden diseñar soluciones de software robustas. El equipo reforzó su autonomía investigando nuevas configuraciones, corrigiendo incompatibilidades y entendiendo mejor los flujos entre capas, demostrando que el aprendizaje continuo impulsa la calidad del producto final.<br> Ramiro Guzman  <br> Al desplegar el frontend y enlazarlo con los microservicios, descubrimos que muchos de los desafíos solo podían resolverse mediante investigación activa y autoformación. Esta experiencia permitió validar que la capacidad de aprender a lo largo de la carrera profesional es vital en el desarrollo de software, pues los proyectos reales demandan adaptarse rápidamente a nuevas herramientas, frameworks y estándares. Gracias a esta dinámica de aprendizaje permanente, se pudo completar una solución funcional y alineada a buenas prácticas de la industria.<br> Merly Salon<br> La integración exitosa entre frontend y microservicios durante el trabajo final reflejó nuestra evolución como desarrolladores y la importancia de mantener un aprendizaje constante. Resolver problemas de despliegue, ajustar configuraciones y garantizar comunicación estable entre componentes requirió adquirir nuevos conocimientos en tiempo real. Esta experiencia demuestra que el aprendizaje permanente es un pilar indispensable para desarrollar soluciones tecnológicas que respondan a las exigencias actuales del mercado. | **TB1:**<br>Los integrantes del equipo demostramos ser conscientes de la necesidad del aprendizaje continuo en un entorno tecnológico cambiante. Al buscar activamente nuevos conocimientos, adaptarnos a herramientas y enfrentar retos técnicos, desarrollamos una actitud profesional orientada a la mejora constante y al crecimiento personal dentro del ámbito del desarrollo de software.<br><br>**TB2:**<br>Los integrantes del equipo consolidamos la importancia del aprendizaje permanente como pilar en el desarrollo profesional. El proceso de investigación, análisis y aplicación práctica nos permitió afrontar con éxito la complejidad del diseño arquitectónico, reforzando una actitud proactiva y adaptable frente a los retos del proyecto.<br><br>**TP1:**<br>El equipo fortaleció su compromiso con el aprendizaje permanente, aplicando estrategias de autoformación y colaboración para implementar, validar y documentar los microservicios. Cada integrante demostró adaptabilidad frente a nuevas herramientas y metodologías, consolidando competencias esenciales para el ejercicio profesional en ingeniería de software.<br><br>**TB3:**<br>Durante esta etapa, el equipo reafirmó su compromiso con el aprendizaje permanente, enfocándose en la mejora continua de procesos, documentación y trabajo colaborativo. La adaptación a nuevas herramientas, metodologías y prácticas de despliegue evidenció la madurez profesional alcanzada en la aplicación práctica del conocimiento adquirido.<br><br>**TB4:**<br>El equipo reforzó la importancia del aprendizaje constante en la etapa final del proyecto, integrando nuevas habilidades en despliegue, validación, documentación técnica, pruebas y colaboración ágil, demostrando un crecimiento profesional integral y sostenido. |
+
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Me encargué de investigar y analizar los requerimientos del sistema, lo cual me permitió profundizar en el diseño de arquitecturas escalables, aplicar buenas prácticas de desarrollo y conocer mejor el uso de bases de datos geoespaciales para funcionalidades críticas como geolocalización, evidencias y reportes.<br><br>**Ramiro Alexander Guzmán Chávez:** Investigué metodologías ágiles, centrándome en Scrum, para aplicarlas en la planificación del proyecto. Esto me permitió mejorar la organización del equipo y entender cómo adaptar estos marcos de trabajo a equipos pequeños y tareas técnicas dentro de un entorno real de desarrollo.<br><br>**Joaquín Pedraza Maldonado:** Aprendí a utilizar Figma para la creación de prototipos de alta fidelidad y estudié principios de diseño centrado en el usuario. Esto me permitió estructurar interfaces intuitivas y validar decisiones de diseño con base en criterios funcionales y estéticos dentro del proyecto.<br><br>**Merly Salon Puerta:** Profundicé en técnicas de análisis cualitativo y *needfinding* para comprender mejor las necesidades del usuario. Apliqué herramientas como mapas de empatía y user personas, lo cual facilitó la identificación de funcionalidades relevantes para el sistema desde una perspectiva centrada en el usuario.<br><br>**Jhon Alexander Galvez Chambi:** Investigué el funcionamiento de APIs de geolocalización y su integración con sistemas backend. Estudié también estructuras de datos espaciales, lo cual me permitió implementar el seguimiento en tiempo real dentro del sistema y comprender mejor el procesamiento de información geográfica.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Desarrollé conceptos de diseño arquitectónico, diagramas de contexto y enfoques basados en estilos y patrones arquitectónicos. Esto me permitió comprender cómo modelar la estructura del sistema y alinear los diagrammas con las necesidades del proyecto.<br><br>**David Alexander Pérez García:** Elaboré el enfoque *Approach driven ViewPoints Diagrams*, lo que me ayudó a profundizar en cómo representar diferentes perspectivas de arquitectura para distintos interesados, fortaleciendo el entendimiento de vistas arquitectónicas escalables.<br><br>**Joaquín Pedraza Maldonado:** Diseñé diagramas de bases de datos relacionales y no relacionales, además de aplicar patrones de diseño y tácticas arquitectónicas. Esto me permitió ampliar mis conocimientos en optimización de datos, escalabilidad y en cómo estructurar soluciones flexibles y mantenibles.<br><br>**Ramiro Alexander Guzmán Chávez:** Desarrollé los *Architectural Drivers*, definiendo propósito, funcionalidades primarias, escenarios de atributos de calidad, restricciones y preocupaciones arquitectónicas. Esto me permitió profundizar en cómo los drivers influyen en las decisiones arquitectónicas y en la evaluación de trade-offs.<br><br>**Merly Salon Puerta:** Dirigí las iteraciones ADD, desarrollando el backlog arquitectónico, metas de iteración, refinamiento de elementos del sistema y vistas C4/UML. Además, analicé el diseño actual y revisé los objetivos mediante tablero Kanban. Este proceso me permitió adquirir experiencia práctica en cómo evolucionar un diseño arquitectónico en iteraciones controladas.<br><br>**TP1:**<br>**Ramiro Alexander Guzmán Chávez:** Profundicé en la configuración y despliegue de entornos de desarrollo, integrando control de versiones, convenciones de estilo y despliegue automatizado. Aprendí a manejar herramientas de configuración para asegurar coherencia entre entornos locales y remotos.<br><br>**David Alexander Pérez García:** Implementé pruebas unitarias y configuraciones de entorno para el backend, aplicando patrones de refactorización guiados por buenas prácticas. Esto me permitió reforzar mi entendimiento sobre la importancia de la calidad de código y la automatización en entornos profesionales.<br><br>**Joaquín Pedraza Maldonado:** Documenté los microservicios con enfoque DDD, aplicando patrones de diseño y estructuración modular. Comprendí cómo los bounded contexts permiten mantener independencia entre servicios y claridad en la lógica de negocio.<br><br>**Merly Salon Puerta:** Desarrollé y validé el tablero Kanban para la gestión de tareas del sprint, revisando avances y priorizaciones. Esto me permitió adquirir experiencia en documentación colaborativa y control de versiones de evidencias del desarrollo.<br><br>**Jhon Alexander Galvez Chambi:** Realicé la validación del diseño y evidencias del sprint, evaluando el cumplimiento de las metas planteadas y registrando resultados en los reportes de revisión. Esto fortaleció mi capacidad de análisis técnico y trazabilidad de avances.<br><br>**TB3:**<br>**Ramiro Alexander Guzmán Chávez:** Amplié mis conocimientos en gestión avanzada de backlog e integración continua, aplicando estrategias de trazabilidad y documentación del Sprint Backlog 2 y evidencias técnicas.<br><br>**David Alexander Pérez García:** Perfeccioné habilidades en automatización de pruebas y ejecución continua, recolectando métricas de rendimiento y fortaleciendo prácticas de calidad continua.<br><br>**Joaquín Pedraza Maldonado:** Profundicé en documentación técnica de microservicios y alineación con estrategias de despliegue, aplicando buenas prácticas de versionado y trazabilidad.<br><br>**Merly Salon Puerta:** Aprendí estrategias de despliegue, control de dependencias y mecanismos de rollback, reforzando competencias en CI/CD.<br><br>**Jhon Alexander Galvez Chambi:** Profundicé en herramientas ágiles y comunicación colaborativa, documentando insights del equipo y gestionando el Kanban Board.<br><br>**TB4:**<br>**Ramiro Alexander Guzmán Chávez:** Profundicé mis conocimientos en planificación ágil avanzada y estructuración del Sprint Backlog, optimizando la priorización y estimación de historias de usuario.<br><br>**David Alexander Pérez García:** Reforcé habilidades en documentación técnica de evidencias de desarrollo, aplicando técnicas formales de seguimiento y control del progreso del sprint.<br><br>**Joaquín Pedraza Maldonado:** Fortalecí mis competencias en la ejecución estructurada de pruebas y elaboración de reportes técnicos para asegurar calidad en componentes críticos.<br><br>**Merly Salon Puerta:** Amplié mis conocimientos en validación funcional y registro de ejecuciones, aplicando metodologías de evaluación iterativa del sistema.<br><br>**Jhon Alexander Galvez Chambi:** Profundicé en documentación técnica de microservicios, mejorando flujos, endpoints y estructura modular del sistema.<br><br>**TF** <br>**Joaquín Pedraza:** Durante el desarrollo y despliegue del frontend, así como en su integración con los microservicios, fue indispensable actualizar conceptos y conocimientos sobre arquitecturas modernas, consumo de APIs y gestión de entornos. Esto fortaleció nuestro perfil profesional y elevó la madurez técnica del proyecto.<br><br>**Jhon Galvez:** La experiencia de conectar el frontend con los microservicios evidenció la importancia de revisar nuevas configuraciones y enfoques de comunicación cliente–servidor, reforzando conocimientos previamente teóricos.<br><br>**David Pérez:** El proceso evidenció que la actualización de conceptos es una necesidad práctica. Se requirió profundizar en deployment, routing, manejo de errores y versionamiento para lograr una integración estable.<br><br>**Ramiro Guzmán:** La integración final reflejó cómo la actualización continua impacta la calidad del proyecto. Resolver problemas reales motivó la revisión de nuevas herramientas y patrones aplicables a arquitecturas basadas en servicios.<br><br>**Merly Salon:** La integración permitió consolidar conocimientos en consumo de endpoints, configuración de entornos y despliegue, fortaleciendo competencias modernas esenciales en desarrollo de software. | **TB1:**<br>Durante esta fase, el equipo demostró su capacidad para adquirir nuevos conocimientos y aplicarlos en el desarrollo del proyecto, fortaleciendo competencias técnicas relevantes para una solución escalable y funcional.<br><br>**TB2:**<br>El equipo consolidó aprendizaje clave en el diseño arquitectónico del sistema, profundizando en vistas, tácticas de calidad y drivers, logrando una arquitectura sólida.<br><br>**TP1:**<br>El equipo fortaleció competencias en documentación técnica, pruebas, control de versiones y despliegue, demostrando madurez técnica en la implementación del proyecto.<br><br>**TB3:**<br>Se aplicaron estrategias avanzadas de automatización, documentación e integración continua, demostrando dominio creciente en herramientas y metodologías profesionales.<br><br>**TB4:**<br>El equipo reforzó habilidades avanzadas en planificación, aseguramiento de calidad y validación funcional, consolidando su madurez profesional.<br><br>**TF1:**<br>El trabajo final evidenció una actualización profunda y coherente de conocimientos en arquitecturas modernas, integración frontend–backend, despliegue y resolución de problemas reales. El equipo demostró capacidad para aprender de manera autónoma y aplicar prácticas actuales de la industria, logrando una solución madura y técnicamente sólida. |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **TB1:**<br>**David Alexander Pérez García:** Reconocí la importancia del aprendizaje continuo y actualicé mis conocimientos en React, Next.js y Spring Boot. También aprendí a usar PostGIS para manejar datos geoespaciales y estudié mejores prácticas para el tratamiento de información sensible y evidencias digitales en plataformas web.<br><br>**Ramiro Alexander Guzmán Chávez:** Acepté la necesidad de seguir aprendiendo para responder a las exigencias del proyecto, por lo que estudié liderazgo técnico, gestión de tiempos y coordinación en equipos ágiles.<br><br>**Joaquín Pedraza Maldonado:** Actualicé mis habilidades en diseño UX/UI, revisando buenas prácticas de accesibilidad, diseño responsivo y comportamiento del usuario.<br><br>**Merly Salon Puerta:** Me capacité en métodos de recolección de datos cualitativos, análisis de entrevistas y síntesis de hallazgos para mejorar la relevancia del sistema.<br><br>**Jhon Alexander Galvez Chambi:** Profundicé en servicios de geolocalización, REST y autenticación segura para integrar funcionalidades críticas del sistema.<br><br>**TB2:**<br>**Jhon Alexander Galvez Chambi:** Actualicé conocimientos en estilos arquitectónicos, ER diagrams y modelado de contexto, reforzando la importancia del aprendizaje continuo.<br><br>**David Alexander Pérez García:** Reafirmé la necesidad de mantenerme actualizado en frameworks y herramientas que soportan vistas arquitectónicas.<br><br>**Joaquín Pedraza Maldonado:** Fortalecí competencias en bases de datos no relacionales y patrones de diseño, destacando la importancia de actualizar conocimientos.<br><br>**Ramiro Alexander Guzmán Chávez:** Profundicé en drivers arquitectónicos y la necesidad de identificar escenarios de calidad y restricciones mediante aprendizaje constante.<br><br>**Merly Salon Puerta:** Interioricé la importancia del aprendizaje continuo para manejar C4, UML y Kanban en diseño arquitectónico.<br><br>**TP1:**<br>**Ramiro Alexander Guzmán Chávez:** Reafirmé la necesidad del aprendizaje constante en automatización de despliegues y entornos distribuidos.<br><br>**David Alexander Pérez García:** Consolidé la importancia del aprendizaje continuo en pruebas, configuración y despliegue.<br><br>**Joaquín Pedraza Maldonado:** Apliqué mejoras continuas en documentación y revisión técnica.<br><br>**Merly Salon Puerta:** Reforcé la importancia del aprendizaje permanente en validación iterativa y gestión de tareas.<br><br>**Jhon Alexander Galvez Chambi:** Fortalecí conocimientos en documentación, validación y trazabilidad.<br><br>**TB3:**<br>**Ramiro Alexander Guzmán Chávez:** Estudié nuevas herramientas de integración ágil y monitoreo de sprint.<br><br>**David Alexander Pérez García:** Me actualicé en optimización de entornos CI/CD.<br><br>**Joaquín Pedraza Maldonado:** Reforcé conocimientos en documentación estructurada y estándares de calidad.<br><br>**Merly Salon Puerta:** Amplié conocimientos en estrategias de despliegue y control de versiones colaborativo.<br><br>**Jhon Alexander Galvez Chambi:** Reforcé habilidades en documentación y gestión colaborativa.<br><br>**TB4:**<br>**Ramiro Alexander Guzmán Chávez:** Perfeccioné técnicas de despliegue, validación y automatización.<br><br>**David Alexander Pérez García:** Reforcé la importancia de documentación técnica y evaluación constante.<br><br>**Joaquín Pedraza Maldonado:** Mantuve actualización en metodologías de pruebas y aseguramiento de calidad.<br><br>**Merly Salon Puerta:** Optimizé la validación funcional mediante aprendizaje iterativo.<br><br>**Jhon Alexander Galvez Chambi:** Reforcé habilidades en documentación y mantenimiento estructurado.<br><br>**TF**<br>**Joaquín Pedraza:** La integración final evidenció la importancia del aprendizaje continuo, especialmente al investigar nuevas herramientas y resolver problemas reales de despliegue.<br><br>**David Pérez:** Cada reto técnico requirió actualizar conocimientos en APIs, manejo de errores y configuraciones, demostrando que el aprendizaje permanente es esencial.<br><br>**Jhon Galvez:** El equipo reforzó su autonomía investigando nuevas configuraciones y corrigiendo incompatibilidades, demostrando que el aprendizaje continuo impulsa la calidad del producto.<br><br>**Ramiro Guzmán:** La investigación activa permitió resolver desafíos de despliegue y adaptación a nuevas herramientas, validando la importancia de aprender de forma permanente.<br><br>**Merly Salon:** La integración final mostró que el aprendizaje constante es clave para garantizar una comunicación estable entre frontend y microservicios. | **TB1:**<br>El equipo desarrolló una actitud profesional orientada al aprendizaje constante, adaptándose a nuevas herramientas y fortaleciendo competencias esenciales en desarrollo de software.<br><br>**TB2:**<br>El equipo consolidó la importancia del aprendizaje permanente como base del desarrollo profesional, demostrando capacidad de análisis, investigación y aplicación práctica.<br><br>**TP1:**<br>Se fortaleció el compromiso con la autoformación y la adaptación técnica, aplicando conocimientos en documentación, validación, implementación y trabajo colaborativo.<br><br>**TB3:**<br>El equipo mostró madurez profesional al adaptarse a nuevas herramientas, mejorar procesos y continuar perfeccionando la documentación técnica.<br><br>**TB4:**<br>El aprendizaje constante permitió mejorar la validación, el aseguramiento de calidad y la documentación en etapas finales del proyecto.<br><br>**TF1:**<br>El trabajo final reafirmó que el aprendizaje permanente es un pilar fundamental del desarrollo profesional. La necesidad de investigar nuevas herramientas, corregir problemas reales y adaptar configuraciones evidenció que solo mediante una mentalidad de mejora continua es posible construir soluciones tecnológicas modernas, funcionales y alineadas con estándares de la industria. |
+
 
 
 
@@ -1254,7 +1301,6 @@ Segmento 2: Conductores de Transporte
 <img src="./assets/Impactmapconductor.png" alt="Impactmapconductor"/>
 
 ### 3.4. Product Backlog
-
 | #  | Epic ID | User Story ID | Título | Descripción | Story Points | Orientación CRUD |
 |----|----------|---------------|--------|--------------|---------------|------------------|
 | 1  | **EP01 - Gestión de Flota** | US-01 | Consultar rutas asignadas | Como gestor, quiero conocer las rutas asignadas a cada unidad para supervisar su cumplimiento operativo. | 8 | Read |
@@ -1262,7 +1308,7 @@ Segmento 2: Conductores de Transporte
 | 3  | EP01 | US-03 | Actualizar estado de unidad | Como gestor, quiero marcar una unidad como disponible o en mantenimiento para una mejor gestión. | 5 | Update |
 | 4  | EP01 | US-04 | Consultar historial de movimientos | Como gestor, quiero revisar el historial de movimientos de una unidad para rastrear su actividad. | 5 | Read |
 | 5  | **EP02 - Gestión de Entregas** | US-05 | Consultar entregas asignadas | Como conductor, quiero conocer las entregas asignadas del día para planificar mi jornada. | 8 | Read |
-| 6  | EP02 | US-06 | Registrar evidencia de entrega | Como conductor, quiero dejar constancia de entregas realizadas mediante evidencia. | 3 | Create |
+| 6  | EP02 | US-06 | Registrar evidencia de entrega | Como conductor, quiero dejar constancia de entregas realizadas mediante evidencia fotográfica o firma. | 3 | Create |
 | 7  | EP02 | US-07 | Revisar entregas completadas | Como conductor, quiero consultar mis entregas pasadas para llevar control de mis actividades. | 5 | Read |
 | 8  | EP02 | US-08 | Registrar inicio de ruta | Como conductor, quiero confirmar el inicio de mi ruta para registrar la hora de salida. | 5 | Create |
 | 9  | **EP03 - Gestión de Incidencias** | US-09 | Reportar incidente | Como conductor, quiero reportar incidentes durante la entrega para que el gestor pueda intervenir. | 8 | Create |
@@ -1282,11 +1328,19 @@ Segmento 2: Conductores de Transporte
 | 23 | EP-LP | US-23 | Consultar planes y precios | Como visitante, quiero comparar los planes disponibles. | 3 | Read |
 | 24 | EP-LP | US-24 | Solicitar asistencia | Como visitante, quiero contactar soporte para resolver dudas. | 2 | Create |
 | 25 | EP-LP | US-25 | Consultar casos de éxito | Como visitante, quiero revisar casos de éxito reales. | 5 | Read |
-| 26 | **EP-API - API RESTful** | TS-01 | Autenticación API | Como desarrollador, quiero implementar autenticación mediante JWT para proteger el acceso a la API. | 8 | Create/Validate |
-| 27 | EP-API | TS-02 | Gestión de unidades vía API | Como desarrollador, quiero usar endpoints CRUD para gestionar unidades desde aplicaciones externas. | 5 | CRUD |
-| 28 | EP-API | TS-03 | Gestión de entregas vía API | Como desarrollador, quiero usar endpoints para registrar y consultar entregas desde apps móviles. | 5 | CRUD |
-| 29 | EP-API | TS-04 | Gestión de incidencias vía API | Como desarrollador, quiero implementar endpoints para reportar y resolver incidencias del sistema. | 5 | CRUD |
-| 30 | EP-API | TS-05 | Consulta de estadísticas vía API | Como desarrollador, quiero acceder a estadísticas desde la API para integrarlas en reportes externos. | 8 | Read |
+| 26 | **EP-API - API RESTful** | TS-01 | Autenticación API | Como desarrollador, quiero implementar autenticación segura mediante JWT emitidos por el microservicio IAM. | 8 | Create/Validate |
+| 27 | EP-API | TS-02 | Gestión de flota vía API | Como desarrollador, quiero gestionar unidades y rutas desde aplicaciones externas utilizando los endpoints del Fleet Service. | 5 | CRUD |
+| 28 | EP-API | TS-03 | Gestión de entregas vía API | Como desarrollador, quiero registrar, actualizar y consultar órdenes mediante el Delivery Service. | 5 | CRUD |
+| 29 | EP-API | TS-04 | Gestión de incidencias vía API | Como desarrollador, quiero exponer endpoints para reportar y consultar incidencias, alineado a EP03. | 5 | CRUD |
+| 30 | EP-API | TS-05 | Consulta de estadísticas vía API | Como desarrollador, quiero acceder a estadísticas operativas para generar reportes externos. | 8 | Read |
+| 31 | **EP06 - Infraestructura y Disponibilidad** | US-41 | Disponibilidad del Gateway | Como DevOps, quiero implementar réplicas del API Gateway para garantizar alta disponibilidad del sistema. | 8 | Update |
+| 32 | EP06 | US-42 | Observabilidad del sistema | Como DevOps, quiero implementar métricas y dashboards de monitoreo para supervisar el estado de los microservicios. | 8 | Read |
+| 33 | EP06 | US-43 | Seguridad a nivel Gateway | Como DevOps, quiero implementar rate limiting en el Gateway para proteger el sistema de abuso de tráfico. | 5 | Create |
+| 34 | **EP07 - Documentación Técnica** | US-44 | Documentación de APIs | Como desarrollador, quiero contar con documentación OpenAPI actualizada de todos los microservicios para facilitar la integración. | 8 | Read |
+| 35 | **EP08 - Despliegue Cloud** | US-45 | Despliegue Cloud de Microservicios | Como DevOps, quiero desplegar los microservicios en AWS con infraestructura escalable y automatizada. | 13 | Update |
+| 36 | **EP09 - Testing y Validación** | US-46 | Validaciones y Pruebas | Como QA, quiero ejecutar pruebas funcionales y de seguridad sobre el entorno productivo para garantizar la calidad del sistema. | 8 | Read |
+| 37 | **EP10 - Integración Frontend-Backend** | US-47 | Integración Frontend–Backend | Como desarrollador frontend, quiero integrar las vistas con los endpoints productivos para completar el flujo end-to-end. | 13 | Update |
+
 
 ## Capítulo IV: Product Architecture Design
 
@@ -3065,58 +3119,6 @@ Durante este sprint, nos concentramos en completar las historias planificadas, a
 | [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend) | main   | 22fcb9e74acb4e0a8a5e51df7a6d39b8 | feat: added maintenance calendar           | Implementación del calendario de mantenimientos próximos con vista por unidad (US-15).                                                              | 09/10/25            |
 | [github.com/upc-cobox/backend](https://github.com/upc-cobox/backend) | main   | bbbf46d79cc14aaf9a761db3d7b8e681 | feat: added maintenance reminder alerts    | Programación de alertas automáticas para recordar mantenimientos (US-16).                                                                           | 09/10/25            |
 
-##### 5.3.1.3. Testing Suite Evidence for Sprint Review
-<table border="1">
-  <tr>
-    <th>Repository</th>
-    <th>Branch</th>
-    <th>Commit Id</th>
-    <th>Commit Message</th>
-    <th>Commit Message Body</th>
-    <th>Committed on (Date)</th>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>50c74ca3a97421c41a49909d38d057569df07c16</td>
-    <td>feat: Add FleetController</td>
-    <td>RamiroGuzmanCh</td>
-    <td>08/10/25</td>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>20b8a45b00fecb8f85f9412a98ee6251f1399876</td>
-    <td>feat(delivery/order-api): Add GET endpoints for delivered orders</td>
-    <td>davidalexd</td>
-    <td>08/10/25</td>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>a294691fe518085a5ee07df5847548c4df861441</td>
-    <td>feat: Add maintenance management bounded context</td>
-    <td>Chaomeum</td>
-    <td>08/10/25</td>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>6f319f7cc223a2848d9c6ed3b9b757871ed84952</td>
-    <td>Feat(Pedraza) Adedd Bounded Context Incident</td>
-    <td>JoaquinPedraza1</td>
-    <td>08/10/25</td>
-  </tr>
-  <tr>
-    <td>github.com/upc-cobox/backend</td>
-    <td>feat/develop</td>
-    <td>27dceacea52a95e4db627485fb81c9e00b426275</td>
-    <td>feat(init):template for backend cobox(included context iam and shared)</td>
-    <td>MerlySalonP</td>
-    <td>1/10/25</td>
-  </tr>
-
-</table>
 
 ##### 5.3.1.4. Execution Evidence for Sprint Review
 
@@ -4177,27 +4179,28 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 #### 5.3.4. Sprint 4
 
 ##### 5.3.4.1. Sprint Backlog 4
+
 Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usuario priorizadas, dividiéndolas en tareas específicas y asignándolas a los miembros del equipo mediante Trello. Este sprint se centró en la implementación de las vistas correspondientes a los bounded contexts que aún estaban pendientes en el frontend, así como en la integración del servicio tanto en el backend como en el frontend. Asimismo, se generó la evidencia correspondiente a desarrollo, pruebas, ejecución, documentación y colaboración. El tablero Kanban permitió gestionar de manera eficiente el flujo de trabajo y garantizar la transparencia entre todos los integrantes del equipo.
 
 | User Story | Work-Item / Task | ID   | Title                                   | Description                                                                                               | Estimation (Hours) | Assigned To | Status |
 |------------|------------------|------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------------|-------------|--------|
-| US-26      | Ajustes de microservicio | TS-01 | Refactor de configuración base           | Ajustar configuración base del microservicio en Cobox para estandarizar paquetes, rutas y capas internas. | 3                   | Ramiro      | Done   |
-| US-26      | Despliegue inicial | TS-02 | Setup de microservicio en repositorio    | Subir el microservicio EP-API al repositorio siguiendo la estructura definida para Cobox.                | 2                   | Joaquín     | Done   |
-| US-27      | Seguridad API     | TS-03 | Configuración de JWT en Gateway          | Integrar validación JWT en el API Gateway para proteger las rutas de ms-auth y ms-core.                  | 4                   | Jhon        | Done   |
-| US-27      | Endpoints CRUD    | TS-04 | Ajustes de controladores                 | Ajustar controladores CRUD en ms-unidades para alinearlos con el API Gateway y políticas de Cobox.       | 3                   | David       | Done   |
-| US-28      | Entregas API      | TS-05 | Normalización de DTOs                    | Estandarizar DTOs del microservicio ms-entregas para asegurar interoperabilidad con clientes externos.   | 2                   | Merly       | Done   |
-| US-28      | Validaciones      | TS-06 | Validación de requests                   | Implementar validaciones centralizadas para endpoints de entregas, usando middleware estandarizado.      | 3                   | Joaquín     | Done   |
-| US-29      | Incidencias API   | TS-07 | Refactor de dependencias internas        | Eliminar dependencias cruzadas del microservicio ms-incidencias para cumplir independencia lógica.       | 4                   | Jhon        | Done   |
-| US-29      | Integración externa | TS-08 | Exposición de endpoints                  | Ajustar endpoints de incidencias para consumo desde sistemas externos vía API REST estándar.             | 3                   | Ramiro      | Done   |
-| US-30      | Estadísticas      | TS-09 | Capa de consultas read-only              | Crear endpoints optimizados para consultas de estadísticas en ms-reportes, evitando sobrecarga de BD.    | 4                   | David       | Done   |
-| US-30      | Cacheo de consultas | TS-10 | Implementación de caché                  | Implementar caché en consultas frecuentes de estadísticas usando Redis.                                  | 5                   | Jhon        | Done   |
-| US-31      | Dockerización      | TS-11 | Dockerfile por microservicio             | Crear Dockerfile estandarizado para ms-entregas, ms-unidades y ms-incidencias.                           | 3                   | Christian   | Done   |
-| US-31      | Orquestación       | TS-12 | docker-compose integración                | Integrar todos los microservicios, API Gateway y BD en un docker-compose.yml funcional.                  | 4                   | Jhon        | Done   |
-| US-32      | Monitoreo          | TS-13 | Logs y observabilidad                    | Agregar logs estructurados y configuración de monitoreo básico para cada microservicio.                 | 2                   | Merly       | Done   |
-| US-33      | Testing técnico    | TS-14 | Pruebas Postman / Newman                 | Crear colección de Postman y script automatizado de pruebas para los microservicios expuestos.          | 3                   | David       | Done   |
-| US-33      | Calidad de código  | TS-15 | Integración de SonarLint / SonarQube     | Ajustar el código del backend alineado a reglas de calidad (linting, seguridad, duplicaciones).          | 4                   | Jhon        | Done   |
+| US-31 | Alta disponibilidad del gateway | TS-41 | Configuración de réplicas del Gateway | Implementar múltiples instancias del `gateway-service` mediante Docker Compose y ajustar health checks para asegurar operación concurrente. | 4 | Jhon | Done |
+| US-31 | Balanceo de carga | TS-42 | Integración de NGINX Reverse Proxy | Configurar un reverse proxy NGINX para enrutar tráfico hacia réplicas del gateway, exponiendo el puerto 80 y asegurando continuidad del servicio. | 4 | Ramiro | Done |
+| US-32 | Observabilidad | TS-43 | Habilitación de Actuator y Prometheus | Exponer `/actuator/metrics` y `/actuator/prometheus` en todos los microservicios y configurar Prometheus para recolectar métricas. | 3 | David | Done |
+| US-32 | Observabilidad | TS-44 | Implementación de dashboards en Grafana | Configurar contenedor de Grafana, crear paneles para IAM, Fleet y Delivery y conectar sus métricas en tiempo real. | 5 | Merly | Done |
+| US-33 | Seguridad del tráfico | TS-45 | Implementación de Rate Limiting | Incorporar un filtro global para limitar solicitudes repetitivas en el gateway, retornando código HTTP 429 y protegiendo el sistema ante abuso. | 3 | Jhon | Done |
+| US-34 | Documentación técnica | TS-46 | Actualización de OpenAPI para IAM | Documentar endpoints de autenticación, gestión de usuarios, roles y JWKS, asegurando consistencia con el API Gateway. | 3 | Joaquín | Done |
+| US-34 | Documentación técnica | TS-47 | Actualización de OpenAPI para Delivery y Fleet | Documentar estados de órdenes, rutas, conductores y asociaciones, incluyendo ejemplos y esquemas de request/response. | 4 | David | Done |
+| US-35 | Despliegue cloud | TS-48 | Ajustes del docker-compose AWS | Estandarizar el archivo `docker-compose.aws.yml`, remover `container_name` conflictivos y habilitar networking interno para Eureka y Gateway. | 4 | Jhon | Done |
+| US-35 | Despliegue cloud | TS-49 | Actualización del pipeline CI/CD | Ajustar workflows de GitHub Actions para login en ECR, despliegue automatizado en EC2 vía SSH y validación de health checks. | 5 | Joaquín | Done |
+| US-36 | Pruebas funcionales | TS-50 | Pruebas de endpoints en Postman | Ejecutar pruebas sobre IAM, Fleet y Delivery en el entorno productivo `cobox.duckdns.org`, verificando respuestas, latencias y estados HTTP. | 3 | David | Done |
+| US-36 | Pruebas de seguridad | TS-51 | Validación del Rate Limiter | Confirmar que el Rate Limiter responde correctamente al exceso de solicitudes, evidenciando HTTP 429 y conteo de límites. | 2 | Jhon | Done |
+| US-37 | Integración frontend-backend | TS-52 | Conexión de vistas con APIs productivas | Ajustar vistas de los bounded contexts (Fleet, Delivery, IAM) para consumir endpoints de AWS a través del gateway. | 5 | Merly | Done |
+| US-37 | Integración frontend-backend | TS-53 | Validación del flujo end-to-end | Validar interacción del frontend con el backend completo, desde autenticación hasta consumo de rutas y órdenes. | 4 | Christian | Done |
+
 
 ##### 5.3.4.2. Development Evidence for Sprint Review
+
 | Repository                                                     | Branch | Commit Id                                 | Commit Message                                                                 | Commit Message Body                                                             | Committed on (Date) |
 |---------------------------------------------------------------|--------|--------------------------------------------|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------|
 | https://github.com/G1-FundamentosArqui-6336/microservices.git | main   | 84f2336c3d5483061145143fff10ad8dc21d3ded   | fix(config): update environment variables and datasource configurations for PostgreSQL | fix(config): update environment variables and datasource configurations for PostgreSQL | 01/12/2025           |
@@ -4211,50 +4214,607 @@ Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usu
 
 ##### 5.3.4.3. Testing Suite Evidence for Sprint Review
 
+#### BDD Scenarios & Acceptance Criteria
 
-| Repository                | Branch  | Commit Id | Commit Message                                            | Commit Message Body | Committed on (Date) |
-| ------------------------- | ------- | --------- | ---------------------------------------------------------- | ------------------- | ------------------- |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git         | develop | 91acfe2   | test(gateway): routing tests for ms-units & ms-delivery    | Joaquin             | 01/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git   | develop | b72df19   | test(eureka): instance registration & heartbeat tests      | Ramiro              | 01/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git       | develop | e82a7bc   | test(units): CRUD endpoints + dto mapper coverage          | David               | 02/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git    | develop | 7fa1d44   | test(delivery): delivery workflow & saga orchestrator      | Joaquin             | 02/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git   | develop | 4bb9da2   | test(incidents): ACL adjustments + external API stub tests | Jhon                | 03/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git      | develop | d2c671f   | test(stats): analytics aggregation & API integration tests | Merly               | 03/12/2025          |
+**High Availability & Load Balancing Strategy**
+Esta característica define la resiliencia del API Gateway. Se valida que el sistema mantenga la continuidad operativa mediante múltiples réplicas gestionadas en Docker Compose y que el tráfico entrante sea distribuido eficientemente por el NGINX Reverse Proxy, asegurando que el servicio permanezca disponible incluso si una instancia falla.
 
+<div align="center">
+    <img src="./assets/gerki1.png" alt="BDD - Alta Disponibilidad y Balanceo de Carga" width="500">
+</div>
 
+**Observability Stack Integration**
+Aquí se especifican los criterios para la monitorización en tiempo real. Se comprueba que todos los microservicios expongan métricas a través de Spring Actuator, que Prometheus recolecte (scrape) estos datos correctamente y que Grafana visualice indicadores críticos como latencia, uso de CPU y disponibilidad en dashboards centralizados.
+
+<div align="center">
+    <img src="./assets/gerki2.png" alt="BDD - Observabilidad con Prometheus y Grafana" width="500">
+</div>
+
+**Security: Rate Limiting Policy**
+Este escenario describe la protección del API Gateway contra abusos y ataques de denegación de servicio. Se verifica que el limitador de tasa (Rate Limiter) bloquee solicitudes excesivas devolviendo un estado HTTP 429, mientras permite el tráfico legítimo dentro de los umbrales configurados.
+
+<div align="center">
+    <img src="./assets/gerki3.png" alt="BDD - Rate Limiting y Seguridad" width="500">
+</div>
+
+**API Documentation Standardization**
+Se establecen los requisitos para la documentación técnica automatizada. Las pruebas aseguran que la especificación OpenAPI se genere correctamente para los módulos IAM, Fleet y Delivery, incluyendo todos los endpoints, esquemas de datos y ejemplos necesarios para garantizar la consistencia en el consumo de la API.
+
+<div align="center">
+    <img src="./assets/gerki4.png" alt="BDD - Documentación OpenAPI" width="500">
+</div>
+
+**AWS Cloud Deployment & CI/CD**
+Esta característica valida la infraestructura de despliegue en la nube. Se confirma que el pipeline de CI/CD despliegue automáticamente los contenedores en instancias EC2 mediante Docker Compose, gestionando la comunicación interna entre Eureka y el Gateway y asegurando que los health checks pasen tras la actualización.
+
+<div align="center">
+    <img src="./assets/gerki5.png" alt="BDD - Despliegue Cloud AWS" width="500">
+</div>
+
+**Production API Validation**
+En este apartado se definen las pruebas de humo y validación funcional en el entorno productivo (`cobox.duckdns.org`). Se asegura que los endpoints respondan con los códigos de estado correctos y baja latencia, y se re-valida la eficacia del Rate Limiter en un entorno real.
+
+<div align="center">
+    <img src="./assets/gerki6.png" alt="BDD - Validación de APIs Productivas" width="500">
+</div>
+
+**Frontend-Backend Integration**
+Finalmente, se valida la integración completa del sistema. Los escenarios cubren el flujo "end-to-end", asegurando que las vistas del frontend consuman correctamente las APIs a través del Gateway y que la navegación del usuario por los módulos de rutas y órdenes se procese sin errores de consistencia.
+
+<div align="center">
+    <img src="./assets/gerki7.png" alt="BDD - Integración Frontend y Backend" width="500">
+</div>
+
+**Fleet Bounded Context - Driver Management**
+En este conjunto de pruebas se valida el `DriverController`. Se verifica el ciclo de vida de la administración de conductores, asegurando que los endpoints para crear (`createDriver`), listar (`getAllDrivers`) y buscar por ID (`getDriverById`) retornen los códigos de estado HTTP correctos (200, 201, 404) y manejen las excepciones de negocio adecuadamente.
+
+<div align="center">
+    <img src="./assets/testin1.jpg" alt="Pruebas Unitarias - Driver Controller (Fleet Context)" width="400">
+</div>
+
+**Incident Bounded Context - Incident Lifecycle**
+Esta evidencia corresponde al `IncidentController`. Las pruebas unitarias confirman el flujo de reporte y gestión de incidencias, validando la creación exitosa, la actualización de estados (`updateStatus`), la asignación de responsables (`assignResponsible`) y la recuperación de detalles de incidentes específicos, garantizando la integridad de los datos en situaciones críticas.
+
+<div align="center">
+    <img src="./assets/testin2.jpg" alt="Pruebas Unitarias - Incident Controller (Incident Context)" width="400">
+</div>
+
+**Delivery Bounded Context - Order Processing**
+Aquí se muestran las pruebas del `OrderController`. Se evalúa la lógica de negocio central de los pedidos, cubriendo la creación (`createOrder`), y las transiciones de estado cruciales como marcar el pedido listo para despacho (`markOrderAsReadyForDispatch`) y completado (`markOrderAsCompleted`), asegurando que el flujo de entrega se ejecute sin errores.
+
+<div align="center">
+    <img src="./assets/testin3.jpg" alt="Pruebas Unitarias - Order Controller (Delivery Context)" width="400">
+</div>
+
+**Delivery Bounded Context - Client Order Queries**
+Finalmente, se valida el `ClientOrderController`, enfocado en las consultas del lado del cliente. Las pruebas aseguran que la búsqueda de pedidos por ID de cliente (`getOrdersByClientId`) mapee correctamente las entidades de dominio a DTOs de respuesta, verificando casos de listas vacías, listas pobladas y la correcta interacción con el servicio de consultas.
+
+<div align="center">
+    <img src="./assets/testin4.jpg" alt="Pruebas Unitarias - Client Order Controller (Delivery Context)" width="400">
+</div>
 
 ##### 5.3.4.4. Execution Evidence for Sprint Review
 
+Durante el Sprint 4 se completó la integración y despliegue operativo de la arquitectura de microservicios de CoBox en un entorno cloud productivo, incorporando mejoras orientadas a atributos de calidad clave: **observabilidad**, **tolerancia a fallos**, **escalabilidad horizontal**, y **seguridad en el acceso a los servicios**. Para ello se habilitaron tres componentes transversales a la plataforma: (1) un módulo de *observability* basado en Prometheus y Grafana, (2) un mecanismo de *rate limiting* en el API Gateway, y (3) un esquema de balanceo de carga mediante **NGINX**, que permite operar múltiples réplicas del `gateway-service` sin colisiones de puertos ni puntos únicos de fallo.
+
+Estas mejoras consolidan un entorno cloud robusto, verificable y alineado al diseño arquitectónico definido mediante ADD, fortaleciendo atributos como disponibilidad, rendimiento, resiliencia ante fallos y gobernanza de tráfico. A continuación, se presenta la evidencia operativa correspondiente.
+
+---
+
+###### **A. Validación de disponibilidad del ecosistema de microservicios**
+
+Tras el despliegue, todos los servicios quedaron correctamente registrados en **Eureka Server**, permitiendo su descubrimiento dinámico y el enrutamiento coordinado a través de NGINX y el API Gateway. La correcta operación se validó mediante la inspección del panel de estado de Eureka, donde los microservicios `iam-service`, `fleet-service`, `delivery-service`, `config-service` y las dos réplicas del `gateway-service` se encuentran en estado **UP**.
+
+<div align="center"> 
+  <img src="assets/sprint4/eureka-dashboard.png" width="750px">
+</div>
+
+Esta evidencia demuestra la correcta orquestación entre el Discovery Server y las instancias desplegadas, garantizando disponibilidad operativa y soporte para balanceo de carga basado en réplicas.
+
+---
+
+###### **B. Funcionamiento del API Gateway con balanceo de carga mediante NGINX**
+
+Como parte de las mejoras del Sprint 4 se incorporó un **reverse proxy NGINX** configurado para distribuir tráfico HTTP hacia las réplicas del `gateway-service`. Este enfoque permite escalar horizontalmente el punto de entrada de la plataforma, mejorar la tolerancia ante fallos y evitar conflictos de puertos en el despliegue.
+
+La validación se realizó ejecutando solicitudes HTTP hacia la dirección pública de la instancia EC2, comprobando que NGINX enruta correctamente el tráfico a las réplicas disponibles del `gateway-service`.
+
+**Ejecución de healthcheck desde Portainer:**
+
+<div align="center">  
+  <img src="assets/sprint4/nginx-gateway-health-gateway-1.png" width="700px">
+  <p><em>Validación desde el contenedor NGINX hacia gateway-service mediante Portainer</em></p>
+</div>
+
+**Logs de tráfico procesado por la réplica del Gateway:**
+
+<div align="center">  
+  <img src="assets/sprint4/nginx-gateway-health-gateway-2.png" width="700px">
+  <p><em>Logs de tráfico HTTP procesado por una réplica del gateway-service tras balanceo con NGINX</em></p>
+</div>
+
+**Acceso exitoso al Gateway desde el navegador:**
+
+<div align="center">  
+  <img src="assets/sprint4/nginx-gateway-health-gateway-3.png" width="700px">
+  <p><em>Respuesta exitosa del Gateway accedido públicamente vía NGINX</em></p>
+</div>
+
+---
+
+###### **C. Evidencia del mecanismo de Rate Limiting en el API Gateway**
+
+Para reforzar la seguridad de acceso y proteger la plataforma frente a abusos y picos de carga inesperados, se implementó un **filtro global de rate limiting** en el API Gateway. Este mecanismo restringe el número de solicitudes permitidas por ventana temporal para cada dirección IP, retornando un código `429 – Too Many Requests` cuando el límite es superado.
+
+La siguiente imagen muestra la evidencia de esta respuesta al exceder el umbral configurado:
+
+
+
+Esta funcionalidad contribuye a la protección de los servicios internos y constituye un mecanismo esencial para garantizar disponibilidad y resiliencia ante patrones de tráfico anómalos.
+
+---
+
+###### **D. Observabilidad con Prometheus y Grafana**
+
+Durante el Sprint 4 se integró un sistema de observabilidad para recopilar métricas operativas de los microservicios, incluyendo salud, uso de memoria, tiempo de respuesta y tráfico.  
+
+Se habilitaron los endpoints `/actuator/metrics` y `/actuator/prometheus` en cada microservicio, permitiendo a **Prometheus** recolectar métricas en intervalos regulares. Posteriormente, estas métricas fueron visualizadas mediante **Grafana**, implementando paneles de monitoreo en tiempo real.
+
+Metricas recopiladas por Grafana:
+
+- Config Service:
+
+<div align="center">  
+  <img src="assets/sprint4/grafana-dashboard-config.png" width="750px">
+</div>
+
+- Eureka Service:
+
+<div align="center">  
+  <img src="assets/sprint4/grafana-dashboard-eureka.png" width="750px">
+</div>
+
+- IAM Service:
+
+<div align="center">  
+  <img src="assets/sprint4/grafana-dashboard-iam.png" width="750px">
+</div>
+
+
+- Fleet Service:
+
+<div align="center">  
+  <img src="assets/sprint4/grafana-dashboard-fleet.png" width="750px">
+</div>
+
+
+- Delivery Service:
+
+<div align="center">  
+  <img src="assets/sprint4/grafana-dashboard-delivery.png" width="750px">
+</div>
+
+- Gateway Service:
+
+<div align="center">  
+  <img src="assets/sprint4/grafana-dashboard-gateway.png" width="750px">
+</div>
+
+ 
+Este componente aporta trazabilidad operativa, soporte para futuras tareas de diagnóstico y evidencia explícita de cumplimiento con los requisitos no funcionales de observabilidad y monitoreo definidos en los Architectural Drivers.
+
+
+En conjunto, esta evidencia demuestra que el sistema CoBox ha alcanzado un nivel de madurez técnica superior durante el Sprint 4, consolidando su despliegue cloud, fortaleciendo la arquitectura no funcional y habilitando capacidades clave para su operación continua en entornos productivos.
+
+
+###### **E. Implementación y Validación de Tolerancia a Fallos (Balanceo de Carga Interno)**
+
+Para complementar el balanceo de carga en el punto de entrada (NGINX), la arquitectura implementa el patrón de **Balanceo de Carga del Lado del Cliente (Client-Side Load Balancing)**. Este mecanismo es crucial para garantizar la **resiliencia** de la plataforma y su capacidad de mantener la **disponibilidad** ante la caída de instancias internas.
+
+![alt text](/assets/cobox-diagrama.png)
+
+
+El componente central de este patrón es el **API Gateway** (`gateway-service`), que actúa como cliente de los microservicios de *backend* (`iam-service`, `fleet-service`, etc.).
+
+##### 1. Configuración del Balanceo Lógico
+
+El balanceo interno se habilitó mediante la configuración en el archivo `application.yml` del **Gateway**, utilizando la directiva `lb://` (Load Balancer) de Spring Cloud Gateway. Esto permite al Gateway utilizar el registro de servicios de **Eureka** para resolver las réplicas escaladas de los *backends*.
+
+**Fragmento de Configuración del `application.yml` del Gateway:**
+
+<div align="center">
+  <pre><code>routes:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+      routes:
+        - id: iam-service-route
+          uri: lb://iam-service
+          predicates:
+            - Path=/iam-service/**,/api/v1/authentication/**,/api/v1/roles/**,/api/v1/users/**,/api/v1/jwks/**
+
+        - id: fleet-service-route
+          uri: lb://fleet-service
+          predicates:
+            - Path=/fleet-service/**,/api/v1/drivers/**,/api/v1/routes/**,/api/v1/vehicles/**
+
+        - id: delivery-service-route
+          uri: lb://delivery-service
+          predicates:
+            - Path=/delivery-service/**,/api/v1/client/**,/api/v1/orders/**
+  </code></pre>
+  <p><em>Ruta de Spring Cloud Gateway configurada para usar el balanceo del lado del cliente (<code>lb://</code>)</em></p>
+</div>
+
+##### 2. Validación de Tolerancia a Fallos y Reintento
+
+Para validar la resiliencia, se ejecutó una prueba de inyección de fallos que simula la caída de una instancia del `iam-service` mientras el tráfico atraviesa el Gateway.
+
+###### A. Escenario de Prueba
+1. Se escaló el `iam-service` a múltiples réplicas (ej., 2 instancias) usando `docker-compose up --scale iam-service=2`.
+2. Se envió una petición continua a la ruta de autenticación (`/api/v1/authentication/sign-in`) a través de NGINX.
+3. Mientras se enviaba tráfico, se detuvo forzosamente una de las instancias de `iam-service` (simulando un fallo).
+![Imagen de la ejecucion del comando ](/assets/cobox-servicios.png)
+![Muestra de 2 instancias iam preparadas para el balanceo](/assets/cobox-iam-instancia.png)
+###### B. Evidencia de Reintento y Exclusión
+
+El **Gateway** demostró su capacidad de **reintento automático** y **rebalanceo** de la carga, sin que el cliente externo recibiera un error:
+
+* **Fallo detectado:** El balanceador de carga del cliente detecta el `Connection Refused` en la instancia caída.
+* **Reintento Exitoso:** El balanceador excluye inmediatamente la instancia fallida y redirige la misma solicitud a otra réplica sana (obtenida de la lista de servicios activos de Eureka).
+
+<div align="center">
+  
+  <p><em>Logs del IAM-Service mostrando que una réplica sana continuó procesando el tráfico tras la caída de una de sus pares.</em></p>
+</div>
+
+* **Respuesta Exitosa:** La respuesta correcta es devuelta al cliente, confirmando que la lógica de tolerancia a fallos a nivel de cliente está activa.
+
+Este mecanismo garantiza la **resiliencia del servicio completo**, ya que la caída de cualquier microservicio de *backend* no se traduce en un punto único de fallo para el usuario final. El Gateway gestiona el fallo y asegura la continuidad del servicio al redirigir la carga a las réplicas operativas.
+
+
 ##### 5.3.4.5. Microservices Documentation Evidence for Sprint Review
 
+Durante el Sprint 4 se consolidó la documentación de los Web Services de CoBox utilizando **OpenAPI 3.0**, asegurando trazabilidad funcional sobre los principales flujos de autenticación, gestión de usuarios, asignación de rutas, seguimiento de órdenes y monitoreo de políticas de rate limiting. La especificación OpenAPI se mantiene versionada en el repositorio de back-end y se expone a través del Gateway desplegado en producción, permitiendo a desarrolladores y evaluadores explorar la semántica de los endpoints, sus parámetros y estructuras de respuesta. :contentReference[oaicite:0]{index=0}  
+
+Esta sección presenta una síntesis de los endpoints más relevantes documentados en el marco del Sprint 4, alineados con el despliegue actual en `https://cobox.duckdns.org`. Para cada endpoint se detalla el microservicio, acción soportada, método HTTP, sintaxis de llamada, parámetros de entrada, ejemplo de uso y la URL de la documentación interactiva correspondiente.
+
+---
+
+###### A. Tabla de endpoints documentados (alcance Sprint 4)
+
+- IAM Service:
+
+| Endpoint (Gateway)                   | Acción soportada                                                                                        | Verbo HTTP | Sintaxis de llamada vía Gateway                               | Parámetros relevantes                                                             | Ejemplo de uso y respuesta esperada                                                                                                                                                                                                                                                                                                                                                                                 | Documentación OpenAPI                                                                                                                                                              |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/api/v1/authentication/sign-up`     | Registrar un nuevo usuario en la plataforma (alta de cuenta)                                            | `POST`     | `https://cobox.duckdns.org/api/v1/authentication/sign-up`     | **Body (JSON)**: `email`, `password`, `firstName`, `lastName`, `phone`, `roles[]` | **Request de ejemplo:**<br>`{ "email": "gestor@cobox.com", "password": "SecurePass123!", "firstName": "Ana", "lastName": "García", "phone": "+51999999999", "roles": ["FLEET_MANAGER"] }`<br>**Respuesta exitosa:** objeto de usuario con `id`, `email`, `firstName`, `lastName`, `phone` y `roles`, confirmando el registro. En caso de datos incompletos o inválidos, se devuelve mensaje de error de validación. | Swagger UI – IAM Service (Sign Up):<br>`https://cobox.duckdns.org/iam-service/swagger-ui/index.html#/authentication-controller/register` *(ajustable según ruta final de Swagger)* |
+| `/api/v1/authentication/sign-in`     | Autenticar credenciales de usuario y emitir un token JWT de acceso                                      | `POST`     | `https://cobox.duckdns.org/api/v1/authentication/sign-in`     | **Body (JSON)**: `email`, `password`                                              | **Request de ejemplo:**<br>`{ "email": "gestor@cobox.com", "password": "SecurePass123!" }`<br>**Respuesta exitosa:** objeto con `id`, `email`, `token` (JWT) y arreglo de `roles`, utilizado luego por el Gateway y los demás microservicios para autorización basada en roles. En caso de credenciales inválidas, se retorna mensaje indicando que el usuario no fue encontrado o que los datos son incorrectos.   | Swagger UI – IAM Service (Sign In):<br>`https://cobox.duckdns.org/iam-service/swagger-ui/index.html#/authentication-controller/authenticate`                                       |
+| `/api/v1/users`                      | Listar todos los usuarios registrados en el sistema (visión administrativa)                             | `GET`      | `https://cobox.duckdns.org/api/v1/users`                      | **Sin parámetros obligatorios.**                                                  | **Uso típico:** invocado por perfiles administrativos para gestionar el inventario de cuentas de CoBox.<br>**Respuesta exitosa:** arreglo de usuarios con atributos `id`, `email`, `firstName`, `lastName`, `phone` y `roles[]`. Esta información se utiliza para gestión de accesos, auditoría y soporte.                                                                                                          | Swagger UI – IAM Service (Get all users):<br>`https://cobox.duckdns.org/iam-service/swagger-ui/index.html#/user-controller/getAllUsers`                                            |
+| `/api/v1/users/{userId}`             | Recuperar la información detallada de un usuario específico por su identificador                        | `GET`      | `https://cobox.duckdns.org/api/v1/users/{userId}`             | **Path:** `userId` (entero, obligatorio)                                          | **Ejemplo de llamada:**<br>`GET https://cobox.duckdns.org/api/v1/users/1`<br>**Respuesta exitosa:** objeto con campos `id`, `email`, `firstName`, `lastName`, `phone` y `roles[]`. En caso de que el usuario no exista, se devuelve un mensaje de error indicando que no fue encontrado.                                                                                                                            | Swagger UI – IAM Service (Get user by ID):<br>`https://cobox.duckdns.org/iam-service/swagger-ui/index.html#/user-controller/getUserById`                                           |
+| `/api/v1/roles`                      | Obtener el catálogo de roles disponibles en la plataforma (soporte a configuración y formularios)       | `GET`      | `https://cobox.duckdns.org/api/v1/roles`                      | **Sin parámetros obligatorios.**                                                  | **Uso típico:** poblar combos/listas desplegables en interfaces de administración para asignar roles a usuarios.<br>**Respuesta exitosa:** arreglo de objetos con `id` y `name`, representando los roles configurados a nivel de IAM (por ejemplo: `FLEET_MANAGER`, `DRIVER`, `ADMIN`).                                                                                                                             | Swagger UI – IAM Service (Get all roles):<br>`https://cobox.duckdns.org/iam-service/swagger-ui/index.html#/role-controller/getAllRoles`                                            |
+| `/api/v1/jwks/.well-known/jwks.json` | Exponer el JSON Web Key Set (JWKS) utilizado para validar las firmas de los tokens JWT emitidos por IAM | `GET`      | `https://cobox.duckdns.org/api/v1/jwks/.well-known/jwks.json` | **Sin parámetros.** Consumido típicamente por otros servicios.                    | **Uso típico:** el API Gateway u otros consumidores de JWT utilizan este endpoint para obtener las claves públicas y validar la firma de los tokens sin necesidad de compartir secretos. La respuesta es un objeto JSON con la estructura estándar de JWKS (`keys[]` y metadatos asociados). En caso de error interno, se retorna una descripción de fallo en la generación del JWKS.                               | Swagger UI – IAM Service (JWKS):<br>`https://cobox.duckdns.org/iam-service/swagger-ui/index.html#/jwks-controller/getJwks`                                                         |
+
+---
+
+- Delivery Service:
+
+| Endpoint (Gateway) | Acción soportada | Método HTTP | Sintaxis de llamada vía Gateway | Parámetros relevantes | Ejemplo de uso y respuesta esperada | Documentación OpenAPI |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `/api/v1/orders` | Obtener todas las órdenes | **GET** | `https://cobox.duckdns.org/api/v1/orders` | Ninguno | **Respuesta (200 OK):**<br>`[ { "id": 1, "addressLine": "Av. Lima 123", "orderStatus": "CREATED" } ]` | `summary`: Get all orders |
+| `/api/v1/orders/{orderId}` | Obtener una orden por su ID | **GET** | `https://cobox.duckdns.org/api/v1/orders/15` | **Path:** `orderId` (int64) | **Respuesta (200/404):**<br>`{ "id": 15, "clientId": 10, "weightKg": 5.5, "orderStatus": "IN_TRANSIT" }` | `summary`: Get an order by its ID |
+| `/api/v1/orders/{orderId}/ready-for-dispatch` | Marcar orden como lista para despacho | **PATCH** | `https://cobox.duckdns.org/api/v1/orders/15/ready-for-dispatch` | **Path:** `orderId` (int64) | **Respuesta:**<br>Objeto `Order` con estado actualizado.<br>*(Nota: Swagger documenta respuesta 404, pero implica retorno del objeto)* | `summary`: Mark an order as ready for dispatch |
+| `/api/v1/orders/{orderId}/in-transit` | Marcar orden como en tránsito | **PATCH** | `https://cobox.duckdns.org/api/v1/orders/15/in-transit` | **Path:** `orderId` (int64) | **Respuesta:**<br>Objeto `Order` con estado actualizado (`IN_TRANSIT`). | `summary`: Mark an order as in transit |
+| `/api/v1/orders/{orderId}/completed` | Marcar orden como completada | **PATCH** | `https://cobox.duckdns.org/api/v1/orders/15/completed` | **Path:** `orderId`<br>**Body (JSON):**<br>`routeId` (int), `photoUrl` (string), `receiverName` (string), `signatureData` (string) | **Body Request:**<br>`{ "routeId": 100, "receiverName": "Juan Perez" }`<br>**Respuesta:**<br>Objeto `Order` completado. | `summary`: Mark an order as completed |
+| `/api/v1/client/{clientId}/orders` | Obtener órdenes de un cliente específico | **GET** | `https://cobox.duckdns.org/api/v1/client/99/orders?clientId=99` | **Path:** `clientId` (int)<br>**Query:** `clientId` (string) *(Redundancia detectada en la definición JSON)* | **Respuesta (200 OK):**<br>`[ { "id": 20, "clientId": 99, "notes": "Fragil" } ]` | `summary`: Obtiene todas las órdenes para un cliente específico. |
+
+---
+
+- Fleet Service:
+
+| Endpoint (Gateway) | Acción soportada | Método HTTP | Sintaxis de llamada vía Gateway | Parámetros relevantes | Ejemplo de uso y respuesta esperada | Documentación OpenAPI |
+|--------------------|------------------|-------------|----------------------------------|------------------------|--------------------------------------|------------------------|
+| `https://cobox.duckdns.org/api/v1/fleet/routes` | Obtener el listado de todas las rutas registradas en el sistema de flota. | GET | `GET /api/v1/fleet/routes` | **Query / Path**: ninguno. | **Ejemplo de request:** `GET https://cobox.duckdns.org/api/v1/fleet/routes`  \n**Respuesta 200:** lista de rutas `[{ "id": 1, "title": "Ruta Lima Norte", "vehicleId": 10, "driverId": 5, "ordersIds": [{ "orderId": 1001 }], "finishedOrderIds": [{ "orderId": 1000 }], "routeStatus": "PLANNED" }, ...]` | `GET /api/v1/routes` – *Get all routes*. |
+| `https://cobox.duckdns.org/api/v1/fleet/routes/{routeId}/orders` | Agregar un pedido (order) a una ruta existente. | POST | `POST /api/v1/fleet/routes/{routeId}/orders` | **Path:** `routeId` (integer, requerido).  \n**Body (JSON):** `{ "orderId": number }` (requerido, mínimo 1). | **Ejemplo de request:** `POST https://cobox.duckdns.org/api/v1/fleet/routes/1/orders` con body `{ "orderId": 1002 }`.  \n**Respuesta 200 (esperada en el diseño):** objeto de ruta actualizado con el nuevo `orderId` dentro de `ordersIds`.  \n**Respuesta 404:** cuando la ruta o la orden no existen. | `POST /api/v1/routes/{routeId}/orders` – *Add an order to a route*. |
+| `https://cobox.duckdns.org/api/v1/fleet/routes/{routeId}/delivered-orders` | Registrar un pedido entregado dentro de una ruta (mover el pedido a la lista de entregados). | POST | `POST /api/v1/fleet/routes/{routeId}/delivered-orders` | **Path:** `routeId` (integer, requerido).  \n**Body (JSON):** `{ "orderId": number }` (requerido, mínimo 1). | **Ejemplo de request:** `POST https://cobox.duckdns.org/api/v1/fleet/routes/1/delivered-orders` con body `{ "orderId": 1001 }`.  \n**Respuesta 200 (esperada en el diseño):** ruta con `finishedOrderIds` conteniendo el pedido entregado.  \n**Respuesta 404:** cuando la ruta o la orden no existen. | `POST /api/v1/routes/{routeId}/delivered-orders` – *Add a delivered order to a route*. |
+| `https://cobox.duckdns.org/api/v1/fleet/routes/{routeId}/driver` | Asignar un conductor a una ruta específica. | PATCH | `PATCH /api/v1/fleet/routes/{routeId}/driver` | **Path:** `routeId` (integer, requerido).  \n**Body (JSON):** `{ "driverId": number }` (requerido, mínimo 1). | **Ejemplo de request:** `PATCH https://cobox.duckdns.org/api/v1/fleet/routes/1/driver` con body `{ "driverId": 5 }`.  \n**Respuesta 200 (esperada):** ruta con el campo `driverId` actualizado.  \n**Respuesta 404:** cuando la ruta o el conductor no existen. | `PATCH /api/v1/routes/{routeId}/driver` – *Assign a driver to a route*. |
+| `https://cobox.duckdns.org/api/v1/fleet/routes/{routeId}/vehicle` | Asignar un vehículo a una ruta específica. | PATCH | `PATCH /api/v1/fleet/routes/{routeId}/vehicle` | **Path:** `routeId` (integer, requerido).  \n**Body (JSON):** `{ "vehicleId": number }` (requerido, mínimo 1). | **Ejemplo de request:** `PATCH https://cobox.duckdns.org/api/v1/fleet/routes/1/vehicle` con body `{ "vehicleId": 10 }`.  \n**Respuesta 200 (esperada):** ruta con `vehicleId` actualizado.  \n**Respuesta 404:** cuando la ruta o el vehículo no existen. | `PATCH /api/v1/routes/{routeId}/vehicle` – *Assign a vehicle to a route*. |
+| `https://cobox.duckdns.org/api/v1/fleet/routes/{routeId}` | Obtener el detalle de una ruta a partir de su identificador. | GET | `GET /api/v1/fleet/routes/{routeId}` | **Path:** `routeId` (integer, requerido). | **Ejemplo de request:** `GET https://cobox.duckdns.org/api/v1/fleet/routes/1`.  \n**Respuesta 200 (esperada):** `{ "id": 1, "title": "Ruta Lima Norte", "vehicleId": 10, "driverId": 5, "ordersIds": [...], "finishedOrderIds": [...], "routeStatus": "IN_PROGRESS" }`.  \n**Respuesta 404:** cuando la ruta no existe. | `GET /api/v1/routes/{routeId}` – *Get a route by its ID*. |
+| `https://cobox.duckdns.org/api/v1/fleet/routes/{routeId}/in-progress` | Marcar una ruta como “en progreso” (cambio de estado de la ruta). | PATCH | `PATCH /api/v1/fleet/routes/{routeId}/in-progress` | **Path:** `routeId` (integer, requerido).  \n**Body:** no requiere body según el JSON (solo cambio de estado por ID). | **Ejemplo de request:** `PATCH https://cobox.duckdns.org/api/v1/fleet/routes/1/in-progress`.  \n**Respuesta 200 (esperada):** ruta con `routeStatus` actualizado a un valor equivalente a “IN_PROGRESS”.  \n**Respuesta 404:** cuando la ruta no existe. | `PATCH /api/v1/routes/{routeId}/in-progress` – *Mark a route as in progress*. |
+| `https://cobox.duckdns.org/api/v1/fleet/vehicles` | Obtener el listado de todos los vehículos registrados. | GET | `GET /api/v1/fleet/vehicles` | **Query / Path:** ninguno. | **Ejemplo de request:** `GET https://cobox.duckdns.org/api/v1/fleet/vehicles`.  \n**Respuesta 200:** `[{ "id": 10, "plateNumber": "ABC-123", "capacityKg": 5000, "vehicleStatus": "AVAILABLE" }, ...]`. | `GET /api/v1/vehicles` – *Get all vehicles*. |
+| `https://cobox.duckdns.org/api/v1/fleet/vehicles/{vehicleId}` | Obtener el detalle de un vehículo por su identificador. | GET | `GET /api/v1/fleet/vehicles/{vehicleId}` | **Path:** `vehicleId` (integer, requerido). | **Ejemplo de request:** `GET https://cobox.duckdns.org/api/v1/fleet/vehicles/10`.  \n**Respuesta 200 (esperada):** `{ "id": 10, "plateNumber": "ABC-123", "capacityKg": 5000, "vehicleStatus": "AVAILABLE" }`.  \n**Respuesta 404:** cuando el vehículo no existe. | `GET /api/v1/vehicles/{vehicleId}` – *Get a vehicle by its ID*. |
+| `https://cobox.duckdns.org/api/v1/fleet/drivers` | Obtener el listado de todos los conductores registrados. | GET | `GET /api/v1/fleet/drivers` | **Query / Path:** ninguno. | **Ejemplo de request:** `GET https://cobox.duckdns.org/api/v1/fleet/drivers`.  \n**Respuesta 200:** `[{ "id": 5, "licenceNumber": "B1234567", "driverStatus": "ACTIVE" }, ...]`. | `GET /api/v1/drivers` – *Get all drivers*. |
+| `https://cobox.duckdns.org/api/v1/fleet/drivers/{driverId}` | Obtener el detalle de un conductor por su identificador. | GET | `GET /api/v1/fleet/drivers/{driverId}` | **Path:** `driverId` (integer, requerido). | **Ejemplo de request:** `GET https://cobox.duckdns.org/api/v1/fleet/drivers/5`.  \n**Respuesta 200 (esperada):** `{ "id": 5, "licenceNumber": "B1234567", "driverStatus": "ACTIVE" }`.  \n**Respuesta 404:** cuando el conductor no existe. | `GET /api/v1/drivers/{driverId}` – *Get a driver by their ID*. |
+| `https://cobox.duckdns.org/api/v1/fleet/drivers/{driverId}/routes` | Obtener todas las rutas asociadas a un conductor específico. | GET | `GET /api/v1/fleet/drivers/{driverId}/routes` | **Path:** `driverId` (integer, requerido). | **Ejemplo de request:** `GET https://cobox.duckdns.org/api/v1/fleet/drivers/5/routes`.  \n**Respuesta 200 (esperada):** lista de rutas del conductor `[{ "id": 1, "title": "Ruta Lima Norte", "vehicleId": 10, "driverId": 5, "ordersIds": [...], "finishedOrderIds": [...], "routeStatus": "COMPLETED" }, ...]`.  \n**Respuesta 404:** cuando el conductor no existe. | `GET /api/v1/drivers/{driverId}/routes` – *Get all routes for a specific driver*. |
+
+
+---
+
+###### B. Evidencia visual de la documentación OpenAPI
+
+Como complemento a la tabla anterior, se capturaron imágenes de la documentación generada automáticamente con **Swagger UI**, donde se puede observar la descripción de cada endpoint, sus parámetros, modelos de request/response y ejemplos de uso con datos de prueba.
+
+<div align="center">
+  <img src="assets/sprint4/swagger-iam-auth.png" width="750px">
+</div>
+
+<div align="center">  
+  <img src="assets/sprint4/swagger-fleet-routes.png" width="750px">
+</div>
+
+<div align="center">  
+  <img src="assets/sprint4/swagger-delivery-routes.png" width="750px">
+</div>
+
+Estas capturas demuestran que la documentación de los Web Services se encuentra actualizada, alineada con el despliegue en producción y disponible para su consulta por parte de otros equipos o sistemas externos que requieran integrarse con la plataforma CoBox.
+
+---
+
+###### C. Repositorio y commits relacionados con documentación
+
+La especificación OpenAPI y la configuración de Swagger se mantienen versionadas en el repositorio de back-end de CoBox, permitiendo trazar la evolución de la documentación junto con los cambios de implementación.
+
+- **Repositorio de Web Services (backend CoBox):**  
+  `https://github.com/G1-FundamentosArqui-6336/microservices`
+
+- **Commits relevantes a la documentación en este Sprint (ejemplos):**  
+  - `feat(doc): add OpenAPI annotations for authentication & IAM endpoints` – `abc1234`  
+  - `feat(doc): document fleet routes and orders operations in OpenAPI spec` – `def5678`  
+  - `feat(doc): expose rate limit actuator endpoints in gateway OpenAPI config` – `ghi90jk`  
+
+
+Con ello se evidencia que la documentación forma parte integral del proceso de desarrollo y despliegue, contribuyendo al enfoque **API First** definido en los principios arquitectónicos de CoBox.
+
+
 ##### 5.3.4.6. Software Deployment Evidence for Sprint Review
+
 Despliegue del backend
+
 [![image.png](https://i.postimg.cc/LXgtFb3B/image.png)](https://postimg.cc/G8r8kzNH)
+
 Despliegue del frontend
 [![image.png](https://i.postimg.cc/mrL4qxR1/image.png)](https://postimg.cc/HrhFchrT)
   <div align="center">
       <img src="./assets/deployfront2.png" alt="Evidencias">
   </div>
+  <div align="center">
+      <img src="./assets/deployfront3.png" alt="Evidencias">
+  </div>
+  <div align="center">
+      <img src="./assets/deployfront4.png" alt="Evidencias">
+  </div>
+  <div align="center">
+      <img src="./assets/deployfront5.png" alt="Evidencias">
+  </div>
+  <div align="center">
+      <img src="./assets/deployfront6.png" alt="Evidencias">
+  </div>
+
 ##### 5.3.4.7. Team Collaboration Insights during Sprint
 
-![image](https://hackmd.io/_uploads/ByfW47yM-e.png)
+Durante esta fase de entrega, el equipo mantuvo una coordinación continua para asegurar el avance simultáneo en las distintas capas del proyecto: microservicios, frontend, documentación y pruebas. El trabajo colaborativo permitió integrar nuevas funcionalidades, completar el despliegue en AWS, consolidar el modelado arquitectónico y garantizar la coherencia del producto final.
 
-![image](https://hackmd.io/_uploads/ry5I4Q1zWe.png)
+A continuación, se presentan las evidencias de actividad en cada uno de los repositorios involucrados:
 
-![image](https://hackmd.io/_uploads/H1StVX1fZe.png)
+###### **1. Microservices Repository**
 
-##### 5.3.4.8. Kanban Boar 
+Incluye el desarrollo, ajuste y despliegue de los microservicios: IAM, Fleet, Delivery, Config Server, Eureka, Gateway y la implementación de los atributos de calidad (observabilidad, rate limiting, escalabilidad con NGINX y Eureka).
+
+<div align="center">
+    <img src="./assets/sprint4/insights_microservices.png" alt="Evidencias de colaboración - Microservices Repository">
+</div>
+
+---
+
+###### **2. Frontend Repository**
+
+Contempla el desarrollo y refinamiento de la landing page, la integración de vistas con los servicios desplegados en AWS y la adaptación de interfaces según los cambios efectuados en el backend.
+
+<div align="center">
+    <img src="./assets/sprint4/insights_frontend.png" alt="Evidencias de colaboración - Frontend Repository">
+</div>
+
+---
+
+###### **3. Report Repository**
+
+Incluye la actualización del informe técnico, la documentación del Sprint 4, el modelado arquitectónico, y la consolidación de evidencias de testing, despliegue y colaboración del equipo.
+
+<div align="center">
+    <img src="./assets/sprint4/insights_report.png" alt="Evidencias de colaboración - Report Repository">
+</div>
+
+---
+
+###### **4. Testing Repository**
+
+Abarca la ejecución de pruebas funcionales, la elaboración de colecciones Postman, scripts automatizados, y la validación de los endpoints tras el despliegue en AWS.
+
+<div align="center">
+    <img src="./assets/sprint4/insights_testing.png" alt="Evidencias de colaboración - Testing Repository">
+</div>
+
+
+##### 5.3.4.8. Kanban Board
 
 ![image](https://hackmd.io/_uploads/HyOjYXkMbl.png)
 
-link: [https://trello.com/b/62WoIVsI/cobox-kanban-sprint-4]
+Enlace publico al Trello: [https://trello.com/b/62WoIVsI/cobox-kanban-sprint-4]
+
 ### 5.4. Microservices Deployment
 
 #### 5.4.1. Cloud Architecture Diagram
 
-#### 5.4.2. Cloud Architecture Deployment
+<div align="center">
+    <img src="./assets/sprint4/aws-cloud-architecture.png" alt="Evidencias">
+</div>
+
+Enlace del diagrama en Lucidchart: https://lucid.app/lucidchart/62ead420-10b7-4b2c-b070-a45343a53bc2/edit?viewport_loc=-426%2C-861%2C6725%2C2481%2C0_0&invitationId=inv_543b388d-f86a-4e5d-baf2-c4405efcca1d
+
+La Figura correspondiente presenta el diagrama arquitectónico final de la solución Cloud implementada para CoBox sobre Amazon Web Services (AWS). Este diseño refleja de manera integral la interacción entre los componentes de infraestructura, los mecanismos de despliegue, los microservicios contenerizados y las capas de seguridad que sostienen la operación del sistema en un entorno productivo.
+
+La arquitectura se organiza en cuatro bloques principales: **(1) pipeline de integración continua**, **(2) ejecución de microservicios en una instancia EC2 dentro de una VPC dedicada**, **(3) servicios administrados para datos y secretos**, y **(4) componentes de observabilidad y monitoreo**. A continuación, se describen los elementos clave representados en el diagrama.
 
 ---
+
+### **1. CI/CD Pipeline y Gestión de Artefactos**
+En el extremo inferior izquierdo se ubica el flujo de integración continua, donde **GitHub Actions** ejecuta los procesos de construcción y empaquetado de cada microservicio. Luego, las imágenes Docker son publicadas en **Amazon ECR**, repositorio central de artefactos utilizado por la instancia EC2 durante el despliegue.
+
+Este pipeline automatiza el versionamiento, almacenamiento y recuperación de imágenes, garantizando despliegues consistentes y reproducibles en el entorno Cloud.
+
+---
+
+### **2. Ejecución de Microservicios en Amazon EC2 con Docker**
+Dentro de la **VPC de CoBox**, la arquitectura utiliza una instancia **Amazon EC2** configurada como *Docker Host*. Sobre esta máquina se orquestan todos los microservicios mediante Docker Compose, incluyendo:
+
+- `gateway-service` (réplicas 1 y 2)
+- `iam-service`
+- `fleet-service`
+- `delivery-service`
+- `config-service`
+- `eureka-service` (Service Registry)
+- `prometheus` y `grafana` (Monitoring Stack)
+
+La comunicación externa se realiza mediante un **NGINX Reverse Proxy**, ubicado al frente del Gateway para gestionar el tráfico entrante. Este proxy ejecuta balanceo de carga externo y direcciona las solicitudes hacia las réplicas del API Gateway.
+
+Internamente, la arquitectura utiliza **Eureka** junto con **predicates y reglas de enrutamiento de Spring Cloud Gateway**, lo que habilita *client-side load balancing* entre los microservicios y las réplicas del Gateway, permitiendo escalabilidad horizontal y mayor disponibilidad dentro de la instancia EC2.
+
+---
+
+### **3. Gestión de Datos y Seguridad**
+Los microservicios que requieren persistencia se conectan a **Amazon Aurora (RDS)**, ubicado en una **subred privada**, accesible únicamente desde la VPC y protegido por un Security Group dedicado.
+
+Asimismo, las credenciales sensibles, tokens JWT, claves privadas y parámetros de configuración se recuperan dinámicamente desde **AWS Secrets Manager**, lo que evita la inclusión de secretos en archivos locales o repositorios y fortalece la postura de seguridad de la solución.
+
+El acceso a la instancia EC2 se restringe mediante un **Security Group Público**, habilitando únicamente el tráfico por los puertos necesarios (SSH, HTTP/HTTPS). Las interfaces administrativas como Eureka y Grafana se acceden mediante túneles SSH, evitando exposición pública innecesaria.
+
+---
+
+### **4. Monitoreo y Observabilidad**
+La solución incorpora una pila de monitoreo basada en **Prometheus** y **Grafana**. Cada microservicio expone métricas a través de Actuator, las cuales son recolectadas por Prometheus y visualizadas en paneles de Grafana.
+
+Esto permite:
+
+- Supervisar disponibilidad y latencia del API Gateway.
+- Analizar métricas de IAM, Fleet y Delivery Services.
+- Identificar patrones de tráfico y consumo.
+- Detectar fallas o degradación del rendimiento.
+
+---
+
+### **5. Flujo General de Operación**
+El flujo completo puede resumirse de la siguiente manera:
+
+1. El usuario accede a la plataforma → NGINX recibe la solicitud.
+2. NGINX balancea el tráfico hacia las réplicas del Gateway.
+3. El Gateway consulta a Eureka para enrutar solicitudes internas.
+4. Los microservicios se comunican entre sí mediante service discovery.
+5. Servicios que requieren persistencia acceden a Aurora.
+6. Secretos y credenciales se obtienen desde Secrets Manager.
+7. Prometheus recolecta métricas y Grafana genera visualizaciones.
+8. GitHub Actions actualiza imágenes en ECR y despliega nuevas versiones vía SSH a EC2.
+
+---
+
+En conjunto, este diagrama evidencia una arquitectura Cloud sólida, modular, segura y alineada a los principios de disponibilidad, escalabilidad y mantenibilidad establecidos para el proyecto CoBox. El uso combinado de contenedores, registro de servicios, balanceadores internos y externos, y servicios administrados de AWS permite soportar operaciones logísticas críticas con una base técnica clara y extensible.
+
+
+#### 5.4.2. Cloud Architecture Deployment
+
+La arquitectura cloud de CoBox se implementó sobre **Amazon Web Services (AWS)**, adoptando una infraestructura modular orientada a microservicios. Cada servicio de AWS cumple un rol específico dentro del flujo de despliegue, operación y seguridad del sistema, garantizando disponibilidad, aislamiento y control centralizado de recursos críticos. A continuación, se describen los componentes principales utilizados en la solución.
+
+---
+
+### **1. Amazon RDS / Aurora – Almacenamiento de datos transaccionales**
+Aurora PostgreSQL actúa como el **repositorio de datos central** para los microservicios de IAM, Fleet y Delivery. Su función en la arquitectura es:
+
+- Proveer una base de datos administrada, altamente disponible y segura.
+- Asegurar consistencia y durabilidad de los datos operativos de CoBox.
+- Permitir que los microservicios se conecten a través de la red privada de la VPC, sin exposición a internet.
+
+Aurora sustenta las operaciones críticas del negocio como autenticación, asignación de rutas, órdenes y evidencias de entrega.
+
+<div align="center">
+    <img src="./assets/sprint4/aurorards.png" alt="Evidencias">
+</div>
+
+---
+
+### **2. Amazon Elastic Container Registry (ECR) – Gestión de imágenes Docker**
+ECR almacena las imágenes Docker generadas por GitHub Actions para cada microservicio. Su rol consiste en:
+
+- Servir como **origen oficial** de las imágenes que EC2 descargará (`docker pull`) en cada despliegue.
+- Mantener versiones y trazabilidad de los contenedores utilizados.
+- Integrarse con el pipeline CI/CD, permitiendo que cada commit produzca una nueva imagen etiquetada.
+
+Esto asegura despliegues reproducibles y una gestión centralizada de artefactos contenerizados.
+
+<div align="center">
+    <img src="./assets/sprint4/ecr.png" alt="Evidencias">    
+</div>
+
+---
+
+### **3. AWS Secrets Manager – Almacenamiento de credenciales y parámetros sensibles**
+Secrets Manager es el módulo responsable de **proteger información crítica**, incluyendo:
+
+- Credenciales de Aurora/RDS.
+- Llaves JWT del servicio IAM.
+- Variables empleadas por las pipelines de GitHub Actions.
+- Configuración privada consumida por los contenedores durante el arranque.
+
+Su rol principal es evitar exposición directa de secretos en archivos `.env`, repositorios o contenedores, reduciendo riesgos de seguridad y facilitando la rotación controlada de credenciales.
+
+<div align="center">
+    <img src="./assets/sprint4/ssm.png" alt="Evidencias">    
+</div>
+
+---
+
+### **4. Amazon EC2 – Ejecución de microservicios mediante Docker**
+Los microservicios de CoBox se ejecutan en una instancia EC2 con Docker y Docker Compose, que funciona como **servidor principal de ejecución** del backend. Esta instancia cumple los siguientes roles:
+
+- Alojar y ejecutar los contenedores de IAM, Fleet, Delivery, Incidents, Maintenance Config Server, Eureka, Gateway, Prometheus y Grafana.
+- Permitir despliegues automatizados desde GitHub Actions mediante conexión SSH.
+- Actuar como nodo de red que enruta tráfico externo a través de NGINX hacia las réplicas del Gateway.
+- Gestionar el ciclo de vida de los servicios sin necesidad de ECS/EKS.
+
+En conjunto, EC2 opera como un *orchestrator lite* basado en Docker Compose para ambientes académicos y de prototipado.
+
+<div align="center">
+    <img src="./assets/sprint4/ec2.png" alt="Evidencias">    
+</div>
+
+---
+
+### **5. Amazon VPC, Subnets y Security Groups – Aislamiento y control de red**
+CoBox se ejecuta dentro de una **VPC dedicada**, cuyo objetivo es aislar la infraestructura y controlar estrictamente cómo circula el tráfico entre servicios. La configuración implementada cumple los siguientes roles:
+
+- **Subred pública:** aloja EC2 y NGINX, permitiendo acceso HTTP controlado.
+- **Subred privada:** aloja Aurora/RDS, evitando acceso externo directo.
+- **Security Groups:** definen reglas inbound/outbound limitando el tráfico únicamente a puertos necesarios (22, 80 y conexiones internas entre microservicios).
+- **Route Tables e Internet Gateway:** permiten a EC2 comunicarse con ECR sin exponer recursos internos.
+
+Esta estructura asegura un diseño seguro basado en el principio de **mínimo privilegio**.
+
+<div align="center">
+    <img src="./assets/sprint4/vpc.png" alt="Evidencias">    
+</div>
+
+---
+
+### **6. VPN / Túneles SSH – Acceso seguro a componentes internos**
+En lugar de exponer servicios administrativos al público, se emplean túneles SSH para acceder a:
+
+- Eureka Dashboard.
+- Endpoints privados de monitoreo.
+- Servicios internos no publicados al exterior.
+
+Esto previene filtraciones y protege servicios sensibles desde control local.
+
+
+En conjunto, esta arquitectura cloud soporta los objetivos de disponibilidad, seguridad y escalabilidad definidos para CoBox, proporcionando un entorno sólido para el despliegue y operación continua de los microservicios.
 
 ## Conclusiones y Recomendaciones
 
