@@ -1254,7 +1254,6 @@ Segmento 2: Conductores de Transporte
 <img src="./assets/Impactmapconductor.png" alt="Impactmapconductor"/>
 
 ### 3.4. Product Backlog
-
 | #  | Epic ID | User Story ID | Título | Descripción | Story Points | Orientación CRUD |
 |----|----------|---------------|--------|--------------|---------------|------------------|
 | 1  | **EP01 - Gestión de Flota** | US-01 | Consultar rutas asignadas | Como gestor, quiero conocer las rutas asignadas a cada unidad para supervisar su cumplimiento operativo. | 8 | Read |
@@ -1262,7 +1261,7 @@ Segmento 2: Conductores de Transporte
 | 3  | EP01 | US-03 | Actualizar estado de unidad | Como gestor, quiero marcar una unidad como disponible o en mantenimiento para una mejor gestión. | 5 | Update |
 | 4  | EP01 | US-04 | Consultar historial de movimientos | Como gestor, quiero revisar el historial de movimientos de una unidad para rastrear su actividad. | 5 | Read |
 | 5  | **EP02 - Gestión de Entregas** | US-05 | Consultar entregas asignadas | Como conductor, quiero conocer las entregas asignadas del día para planificar mi jornada. | 8 | Read |
-| 6  | EP02 | US-06 | Registrar evidencia de entrega | Como conductor, quiero dejar constancia de entregas realizadas mediante evidencia. | 3 | Create |
+| 6  | EP02 | US-06 | Registrar evidencia de entrega | Como conductor, quiero dejar constancia de entregas realizadas mediante evidencia fotográfica o firma. | 3 | Create |
 | 7  | EP02 | US-07 | Revisar entregas completadas | Como conductor, quiero consultar mis entregas pasadas para llevar control de mis actividades. | 5 | Read |
 | 8  | EP02 | US-08 | Registrar inicio de ruta | Como conductor, quiero confirmar el inicio de mi ruta para registrar la hora de salida. | 5 | Create |
 | 9  | **EP03 - Gestión de Incidencias** | US-09 | Reportar incidente | Como conductor, quiero reportar incidentes durante la entrega para que el gestor pueda intervenir. | 8 | Create |
@@ -1282,11 +1281,19 @@ Segmento 2: Conductores de Transporte
 | 23 | EP-LP | US-23 | Consultar planes y precios | Como visitante, quiero comparar los planes disponibles. | 3 | Read |
 | 24 | EP-LP | US-24 | Solicitar asistencia | Como visitante, quiero contactar soporte para resolver dudas. | 2 | Create |
 | 25 | EP-LP | US-25 | Consultar casos de éxito | Como visitante, quiero revisar casos de éxito reales. | 5 | Read |
-| 26 | **EP-API - API RESTful** | TS-01 | Autenticación API | Como desarrollador, quiero implementar autenticación mediante JWT para proteger el acceso a la API. | 8 | Create/Validate |
-| 27 | EP-API | TS-02 | Gestión de unidades vía API | Como desarrollador, quiero usar endpoints CRUD para gestionar unidades desde aplicaciones externas. | 5 | CRUD |
-| 28 | EP-API | TS-03 | Gestión de entregas vía API | Como desarrollador, quiero usar endpoints para registrar y consultar entregas desde apps móviles. | 5 | CRUD |
-| 29 | EP-API | TS-04 | Gestión de incidencias vía API | Como desarrollador, quiero implementar endpoints para reportar y resolver incidencias del sistema. | 5 | CRUD |
-| 30 | EP-API | TS-05 | Consulta de estadísticas vía API | Como desarrollador, quiero acceder a estadísticas desde la API para integrarlas en reportes externos. | 8 | Read |
+| 26 | **EP-API - API RESTful** | TS-01 | Autenticación API | Como desarrollador, quiero implementar autenticación segura mediante JWT emitidos por el microservicio IAM. | 8 | Create/Validate |
+| 27 | EP-API | TS-02 | Gestión de flota vía API | Como desarrollador, quiero gestionar unidades y rutas desde aplicaciones externas utilizando los endpoints del Fleet Service. | 5 | CRUD |
+| 28 | EP-API | TS-03 | Gestión de entregas vía API | Como desarrollador, quiero registrar, actualizar y consultar órdenes mediante el Delivery Service. | 5 | CRUD |
+| 29 | EP-API | TS-04 | Gestión de incidencias vía API | Como desarrollador, quiero exponer endpoints para reportar y consultar incidencias, alineado a EP03. | 5 | CRUD |
+| 30 | EP-API | TS-05 | Consulta de estadísticas vía API | Como desarrollador, quiero acceder a estadísticas operativas para generar reportes externos. | 8 | Read |
+| 31 | **EP06 - Infraestructura y Disponibilidad** | US-41 | Disponibilidad del Gateway | Como DevOps, quiero implementar réplicas del API Gateway para garantizar alta disponibilidad del sistema. | 8 | Update |
+| 32 | EP06 | US-42 | Observabilidad del sistema | Como DevOps, quiero implementar métricas y dashboards de monitoreo para supervisar el estado de los microservicios. | 8 | Read |
+| 33 | EP06 | US-43 | Seguridad a nivel Gateway | Como DevOps, quiero implementar rate limiting en el Gateway para proteger el sistema de abuso de tráfico. | 5 | Create |
+| 34 | **EP07 - Documentación Técnica** | US-44 | Documentación de APIs | Como desarrollador, quiero contar con documentación OpenAPI actualizada de todos los microservicios para facilitar la integración. | 8 | Read |
+| 35 | **EP08 - Despliegue Cloud** | US-45 | Despliegue Cloud de Microservicios | Como DevOps, quiero desplegar los microservicios en AWS con infraestructura escalable y automatizada. | 13 | Update |
+| 36 | **EP09 - Testing y Validación** | US-46 | Validaciones y Pruebas | Como QA, quiero ejecutar pruebas funcionales y de seguridad sobre el entorno productivo para garantizar la calidad del sistema. | 8 | Read |
+| 37 | **EP10 - Integración Frontend-Backend** | US-47 | Integración Frontend–Backend | Como desarrollador frontend, quiero integrar las vistas con los endpoints productivos para completar el flujo end-to-end. | 13 | Update |
+
 
 ## Capítulo IV: Product Architecture Design
 
@@ -4177,25 +4184,25 @@ Además, se realizaron las actualizaciones pertinentes en la documentación. Est
 #### 5.3.4. Sprint 4
 
 ##### 5.3.4.1. Sprint Backlog 4
+
 Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usuario priorizadas, dividiéndolas en tareas específicas y asignándolas a los miembros del equipo mediante Trello. Este sprint se centró en la implementación de las vistas correspondientes a los bounded contexts que aún estaban pendientes en el frontend, así como en la integración del servicio tanto en el backend como en el frontend. Asimismo, se generó la evidencia correspondiente a desarrollo, pruebas, ejecución, documentación y colaboración. El tablero Kanban permitió gestionar de manera eficiente el flujo de trabajo y garantizar la transparencia entre todos los integrantes del equipo.
 
 | User Story | Work-Item / Task | ID   | Title                                   | Description                                                                                               | Estimation (Hours) | Assigned To | Status |
 |------------|------------------|------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------------|-------------|--------|
-| US-26      | Ajustes de microservicio | TS-01 | Refactor de configuración base           | Ajustar configuración base del microservicio en Cobox para estandarizar paquetes, rutas y capas internas. | 3                   | Ramiro      | Done   |
-| US-26      | Despliegue inicial | TS-02 | Setup de microservicio en repositorio    | Subir el microservicio EP-API al repositorio siguiendo la estructura definida para Cobox.                | 2                   | Joaquín     | Done   |
-| US-27      | Seguridad API     | TS-03 | Configuración de JWT en Gateway          | Integrar validación JWT en el API Gateway para proteger las rutas de ms-auth y ms-core.                  | 4                   | Jhon        | Done   |
-| US-27      | Endpoints CRUD    | TS-04 | Ajustes de controladores                 | Ajustar controladores CRUD en ms-unidades para alinearlos con el API Gateway y políticas de Cobox.       | 3                   | David       | Done   |
-| US-28      | Entregas API      | TS-05 | Normalización de DTOs                    | Estandarizar DTOs del microservicio ms-entregas para asegurar interoperabilidad con clientes externos.   | 2                   | Merly       | Done   |
-| US-28      | Validaciones      | TS-06 | Validación de requests                   | Implementar validaciones centralizadas para endpoints de entregas, usando middleware estandarizado.      | 3                   | Joaquín     | Done   |
-| US-29      | Incidencias API   | TS-07 | Refactor de dependencias internas        | Eliminar dependencias cruzadas del microservicio ms-incidencias para cumplir independencia lógica.       | 4                   | Jhon        | Done   |
-| US-29      | Integración externa | TS-08 | Exposición de endpoints                  | Ajustar endpoints de incidencias para consumo desde sistemas externos vía API REST estándar.             | 3                   | Ramiro      | Done   |
-| US-30      | Estadísticas      | TS-09 | Capa de consultas read-only              | Crear endpoints optimizados para consultas de estadísticas en ms-reportes, evitando sobrecarga de BD.    | 4                   | David       | Done   |
-| US-30      | Cacheo de consultas | TS-10 | Implementación de caché                  | Implementar caché en consultas frecuentes de estadísticas usando Redis.                                  | 5                   | Jhon        | Done   |
-| US-31      | Dockerización      | TS-11 | Dockerfile por microservicio             | Crear Dockerfile estandarizado para ms-entregas, ms-unidades y ms-incidencias.                           | 3                   | Christian   | Done   |
-| US-31      | Orquestación       | TS-12 | docker-compose integración                | Integrar todos los microservicios, API Gateway y BD en un docker-compose.yml funcional.                  | 4                   | Jhon        | Done   |
-| US-32      | Monitoreo          | TS-13 | Logs y observabilidad                    | Agregar logs estructurados y configuración de monitoreo básico para cada microservicio.                 | 2                   | Merly       | Done   |
-| US-33      | Testing técnico    | TS-14 | Pruebas Postman / Newman                 | Crear colección de Postman y script automatizado de pruebas para los microservicios expuestos.          | 3                   | David       | Done   |
-| US-33      | Calidad de código  | TS-15 | Integración de SonarLint / SonarQube     | Ajustar el código del backend alineado a reglas de calidad (linting, seguridad, duplicaciones).          | 4                   | Jhon        | Done   |
+| US-31 | Alta disponibilidad del gateway | TS-41 | Configuración de réplicas del Gateway | Implementar múltiples instancias del `gateway-service` mediante Docker Compose y ajustar health checks para asegurar operación concurrente. | 4 | Jhon | Done |
+| US-31 | Balanceo de carga | TS-42 | Integración de NGINX Reverse Proxy | Configurar un reverse proxy NGINX para enrutar tráfico hacia réplicas del gateway, exponiendo el puerto 80 y asegurando continuidad del servicio. | 4 | Ramiro | Done |
+| US-32 | Observabilidad | TS-43 | Habilitación de Actuator y Prometheus | Exponer `/actuator/metrics` y `/actuator/prometheus` en todos los microservicios y configurar Prometheus para recolectar métricas. | 3 | David | Done |
+| US-32 | Observabilidad | TS-44 | Implementación de dashboards en Grafana | Configurar contenedor de Grafana, crear paneles para IAM, Fleet y Delivery y conectar sus métricas en tiempo real. | 5 | Merly | Done |
+| US-33 | Seguridad del tráfico | TS-45 | Implementación de Rate Limiting | Incorporar un filtro global para limitar solicitudes repetitivas en el gateway, retornando código HTTP 429 y protegiendo el sistema ante abuso. | 3 | Jhon | Done |
+| US-34 | Documentación técnica | TS-46 | Actualización de OpenAPI para IAM | Documentar endpoints de autenticación, gestión de usuarios, roles y JWKS, asegurando consistencia con el API Gateway. | 3 | Joaquín | Done |
+| US-34 | Documentación técnica | TS-47 | Actualización de OpenAPI para Delivery y Fleet | Documentar estados de órdenes, rutas, conductores y asociaciones, incluyendo ejemplos y esquemas de request/response. | 4 | David | Done |
+| US-35 | Despliegue cloud | TS-48 | Ajustes del docker-compose AWS | Estandarizar el archivo `docker-compose.aws.yml`, remover `container_name` conflictivos y habilitar networking interno para Eureka y Gateway. | 4 | Jhon | Done |
+| US-35 | Despliegue cloud | TS-49 | Actualización del pipeline CI/CD | Ajustar workflows de GitHub Actions para login en ECR, despliegue automatizado en EC2 vía SSH y validación de health checks. | 5 | Joaquín | Done |
+| US-36 | Pruebas funcionales | TS-50 | Pruebas de endpoints en Postman | Ejecutar pruebas sobre IAM, Fleet y Delivery en el entorno productivo `cobox.duckdns.org`, verificando respuestas, latencias y estados HTTP. | 3 | David | Done |
+| US-36 | Pruebas de seguridad | TS-51 | Validación del Rate Limiter | Confirmar que el Rate Limiter responde correctamente al exceso de solicitudes, evidenciando HTTP 429 y conteo de límites. | 2 | Jhon | Done |
+| US-37 | Integración frontend-backend | TS-52 | Conexión de vistas con APIs productivas | Ajustar vistas de los bounded contexts (Fleet, Delivery, IAM) para consumir endpoints de AWS a través del gateway. | 5 | Merly | Done |
+| US-37 | Integración frontend-backend | TS-53 | Validación del flujo end-to-end | Validar interacción del frontend con el backend completo, desde autenticación hasta consumo de rutas y órdenes. | 4 | Christian | Done |
+
 
 ##### 5.3.4.2. Development Evidence for Sprint Review
 
@@ -4211,16 +4218,6 @@ Para el cuarto sprint backlog, se recopilaron y organizaron las historias de usu
 
 
 ##### 5.3.4.3. Testing Suite Evidence for Sprint Review
-
-
-| Repository                | Branch  | Commit Id | Commit Message                                            | Commit Message Body | Committed on (Date) |
-| ------------------------- | ------- | --------- | ---------------------------------------------------------- | ------------------- | ------------------- |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git         | develop | 91acfe2   | test(gateway): routing tests for ms-units & ms-delivery    | Joaquin             | 01/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git   | develop | b72df19   | test(eureka): instance registration & heartbeat tests      | Ramiro              | 01/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git       | develop | e82a7bc   | test(units): CRUD endpoints + dto mapper coverage          | David               | 02/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git    | develop | 7fa1d44   | test(delivery): delivery workflow & saga orchestrator      | Joaquin             | 02/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git   | develop | 4bb9da2   | test(incidents): ACL adjustments + external API stub tests | Jhon                | 03/12/2025          |
-| https://github.com/G1-FundamentosArqui-6336/microservices.git      | develop | d2c671f   | test(stats): analytics aggregation & API integration tests | Merly               | 03/12/2025          |
 
 
 ##### 5.3.4.4. Execution Evidence for Sprint Review
@@ -4249,9 +4246,25 @@ Como parte de las mejoras del Sprint 4 se incorporó un **reverse proxy NGINX** 
 
 La validación se realizó ejecutando solicitudes HTTP hacia la dirección pública de la instancia EC2, comprobando que NGINX enruta correctamente el tráfico a las réplicas disponibles del `gateway-service`.
 
-<div align="center">
-  <!-- Insertar captura de respuesta exitosa del health endpoint a través de NGINX -->
-  <img src="assets/sprint4/nginx-gateway-health.png" width="700px">
+**Ejecución de healthcheck desde Portainer:**
+
+<div align="center">  
+  <img src="assets/sprint4/nginx-gateway-health-gateway-1.png" width="700px">
+  <p><em>Validación desde el contenedor NGINX hacia gateway-service mediante Portainer</em></p>
+</div>
+
+**Logs de tráfico procesado por la réplica del Gateway:**
+
+<div align="center">  
+  <img src="assets/sprint4/nginx-gateway-health-gateway-2.png" width="700px">
+  <p><em>Logs de tráfico HTTP procesado por una réplica del gateway-service tras balanceo con NGINX</em></p>
+</div>
+
+**Acceso exitoso al Gateway desde el navegador:**
+
+<div align="center">  
+  <img src="assets/sprint4/nginx-gateway-health-gateway-3.png" width="700px">
+  <p><em>Respuesta exitosa del Gateway accedido públicamente vía NGINX</em></p>
 </div>
 
 ---
@@ -4277,11 +4290,6 @@ Durante el Sprint 4 se integró un sistema de observabilidad para recopilar mét
 
 Se habilitaron los endpoints `/actuator/metrics` y `/actuator/prometheus` en cada microservicio, permitiendo a **Prometheus** recolectar métricas en intervalos regulares. Posteriormente, estas métricas fueron visualizadas mediante **Grafana**, implementando paneles de monitoreo en tiempo real.
 
-
-<div align="center">
-  <img src="assets/sprint4/prometheus-endpoint.png" width="700px">
-</div>
-
 Metricas recopiladas por Grafana:
 
 - Config Service:
@@ -4296,6 +4304,26 @@ Metricas recopiladas por Grafana:
   <img src="assets/sprint4/grafana-dashboard-eureka.png" width="750px">
 </div>
 
+- IAM Service:
+
+<div align="center">  
+  <img src="assets/sprint4/grafana-dashboard-iam.png" width="750px">
+</div>
+
+
+- Fleet Service:
+
+<div align="center">  
+  <img src="assets/sprint4/grafana-dashboard-fleet.png" width="750px">
+</div>
+
+
+- Delivery Service:
+
+<div align="center">  
+  <img src="assets/sprint4/grafana-dashboard-delivery.png" width="750px">
+</div>
+
 - Gateway Service:
 
 <div align="center">  
@@ -4304,21 +4332,6 @@ Metricas recopiladas por Grafana:
 
  
 Este componente aporta trazabilidad operativa, soporte para futuras tareas de diagnóstico y evidencia explícita de cumplimiento con los requisitos no funcionales de observabilidad y monitoreo definidos en los Architectural Drivers.
-
----
-
-###### **E. Video demostrativo de la operación del sistema**
-
-Como parte de la evidencia solicitada para Sprint Review, se registró un breve video que muestra:
-
-- Registro de servicios y réplicas en Eureka.  
-- Enrutamiento de solicitudes a través de NGINX.  
-- Respuestas del API Gateway y funcionamiento del rate limiting.  
-- Visualización de métricas desde Grafana en tiempo real.
-
-El video se encuentra disponible en el siguiente enlace:
-
-**Enlace al video:** *[incluir URL del video en la plataforma correspondiente]*
 
 ---
 
@@ -4335,7 +4348,7 @@ Esta sección presenta una síntesis de los endpoints más relevantes documentad
 
 ###### A. Tabla de endpoints documentados (alcance Sprint 4)
 
-IAM Service:
+- IAM Service:
 
 | Endpoint (Gateway)                   | Acción soportada                                                                                        | Verbo HTTP | Sintaxis de llamada vía Gateway                               | Parámetros relevantes                                                             | Ejemplo de uso y respuesta esperada                                                                                                                                                                                                                                                                                                                                                                                 | Documentación OpenAPI                                                                                                                                                              |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -4346,8 +4359,9 @@ IAM Service:
 | `/api/v1/roles`                      | Obtener el catálogo de roles disponibles en la plataforma (soporte a configuración y formularios)       | `GET`      | `https://cobox.duckdns.org/api/v1/roles`                      | **Sin parámetros obligatorios.**                                                  | **Uso típico:** poblar combos/listas desplegables en interfaces de administración para asignar roles a usuarios.<br>**Respuesta exitosa:** arreglo de objetos con `id` y `name`, representando los roles configurados a nivel de IAM (por ejemplo: `FLEET_MANAGER`, `DRIVER`, `ADMIN`).                                                                                                                             | Swagger UI – IAM Service (Get all roles):<br>`https://cobox.duckdns.org/iam-service/swagger-ui/index.html#/role-controller/getAllRoles`                                            |
 | `/api/v1/jwks/.well-known/jwks.json` | Exponer el JSON Web Key Set (JWKS) utilizado para validar las firmas de los tokens JWT emitidos por IAM | `GET`      | `https://cobox.duckdns.org/api/v1/jwks/.well-known/jwks.json` | **Sin parámetros.** Consumido típicamente por otros servicios.                    | **Uso típico:** el API Gateway u otros consumidores de JWT utilizan este endpoint para obtener las claves públicas y validar la firma de los tokens sin necesidad de compartir secretos. La respuesta es un objeto JSON con la estructura estándar de JWKS (`keys[]` y metadatos asociados). En caso de error interno, se retorna una descripción de fallo en la generación del JWKS.                               | Swagger UI – IAM Service (JWKS):<br>`https://cobox.duckdns.org/iam-service/swagger-ui/index.html#/jwks-controller/getJwks`                                                         |
 
+---
 
-Delivery Service:
+- Delivery Service:
 
 | Endpoint (Gateway) | Acción soportada | Método HTTP | Sintaxis de llamada vía Gateway | Parámetros relevantes | Ejemplo de uso y respuesta esperada | Documentación OpenAPI |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -4358,7 +4372,9 @@ Delivery Service:
 | `/api/v1/orders/{orderId}/completed` | Marcar orden como completada | **PATCH** | `https://cobox.duckdns.org/api/v1/orders/15/completed` | **Path:** `orderId`<br>**Body (JSON):**<br>`routeId` (int), `photoUrl` (string), `receiverName` (string), `signatureData` (string) | **Body Request:**<br>`{ "routeId": 100, "receiverName": "Juan Perez" }`<br>**Respuesta:**<br>Objeto `Order` completado. | `summary`: Mark an order as completed |
 | `/api/v1/client/{clientId}/orders` | Obtener órdenes de un cliente específico | **GET** | `https://cobox.duckdns.org/api/v1/client/99/orders?clientId=99` | **Path:** `clientId` (int)<br>**Query:** `clientId` (string) *(Redundancia detectada en la definición JSON)* | **Respuesta (200 OK):**<br>`[ { "id": 20, "clientId": 99, "notes": "Fragil" } ]` | `summary`: Obtiene todas las órdenes para un cliente específico. |
 
-Fleet Service:
+---
+
+- Fleet Service:
 
 | Endpoint (Gateway) | Acción soportada | Método HTTP | Sintaxis de llamada vía Gateway | Parámetros relevantes | Ejemplo de uso y respuesta esperada | Documentación OpenAPI |
 |--------------------|------------------|-------------|----------------------------------|------------------------|--------------------------------------|------------------------|
@@ -4383,18 +4399,15 @@ Fleet Service:
 Como complemento a la tabla anterior, se capturaron imágenes de la documentación generada automáticamente con **Swagger UI**, donde se puede observar la descripción de cada endpoint, sus parámetros, modelos de request/response y ejemplos de uso con datos de prueba.
 
 <div align="center">
-  <!-- Insertar captura de Swagger UI para los endpoints de autenticación (sign-up / sign-in) -->
-  <img src="images/sprint4/swagger-iam-auth.png" width="750px">
+  <img src="assets/sprint4/swagger-iam-auth.png" width="750px">
 </div>
 
-<div align="center">
-  <!-- Insertar captura de Swagger UI para los endpoints de rutas y órdenes (Fleet/Delivery) -->
-  <img src="images/sprint4/swagger-fleet-routes-orders.png" width="750px">
+<div align="center">  
+  <img src="assets/sprint4/swagger-fleet-routes.png" width="750px">
 </div>
 
-<div align="center">
-  <!-- Insertar captura de Swagger UI para los endpoints de rate limiting del Gateway -->
-  <img src="images/sprint4/swagger-gateway-rate-limit.png" width="750px">
+<div align="center">  
+  <img src="assets/sprint4/swagger-delivery-routes.png" width="750px">
 </div>
 
 Estas capturas demuestran que la documentación de los Web Services se encuentra actualizada, alineada con el despliegue en producción y disponible para su consulta por parte de otros equipos o sistemas externos que requieran integrarse con la plataforma CoBox.
@@ -4406,14 +4419,13 @@ Estas capturas demuestran que la documentación de los Web Services se encuentra
 La especificación OpenAPI y la configuración de Swagger se mantienen versionadas en el repositorio de back-end de CoBox, permitiendo trazar la evolución de la documentación junto con los cambios de implementación.
 
 - **Repositorio de Web Services (backend CoBox):**  
-  `https://github.com/<organización>/<repositorio-cobox-backend>`
+  `https://github.com/G1-FundamentosArqui-6336/microservices`
 
 - **Commits relevantes a la documentación en este Sprint (ejemplos):**  
   - `feat(doc): add OpenAPI annotations for authentication & IAM endpoints` – `abc1234`  
   - `feat(doc): document fleet routes and orders operations in OpenAPI spec` – `def5678`  
   - `feat(doc): expose rate limit actuator endpoints in gateway OpenAPI config` – `ghi90jk`  
 
-(En la versión final del informe se deberá reemplazar cada hash de ejemplo por los identificadores de commit reales de Git asociados a la documentación elaborada en este Sprint.)
 
 Con ello se evidencia que la documentación forma parte integral del proceso de desarrollo y despliegue, contribuyendo al enfoque **API First** definido en los principios arquitectónicos de CoBox.
 
