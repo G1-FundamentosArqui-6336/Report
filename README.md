@@ -4333,9 +4333,76 @@ Metricas recopiladas por Grafana:
  
 Este componente aporta trazabilidad operativa, soporte para futuras tareas de diagnóstico y evidencia explícita de cumplimiento con los requisitos no funcionales de observabilidad y monitoreo definidos en los Architectural Drivers.
 
----
 
 En conjunto, esta evidencia demuestra que el sistema CoBox ha alcanzado un nivel de madurez técnica superior durante el Sprint 4, consolidando su despliegue cloud, fortaleciendo la arquitectura no funcional y habilitando capacidades clave para su operación continua en entornos productivos.
+
+
+###### **E. Implementación y Validación de Tolerancia a Fallos (Balanceo de Carga Interno)**
+
+Para complementar el balanceo de carga en el punto de entrada (NGINX), la arquitectura implementa el patrón de **Balanceo de Carga del Lado del Cliente (Client-Side Load Balancing)**. Este mecanismo es crucial para garantizar la **resiliencia** de la plataforma y su capacidad de mantener la **disponibilidad** ante la caída de instancias internas.
+
+![alt text](/assets/cobox-diagrama.png)
+
+
+El componente central de este patrón es el **API Gateway** (`gateway-service`), que actúa como cliente de los microservicios de *backend* (`iam-service`, `fleet-service`, etc.).
+
+##### 1. Configuración del Balanceo Lógico
+
+El balanceo interno se habilitó mediante la configuración en el archivo `application.yml` del **Gateway**, utilizando la directiva `lb://` (Load Balancer) de Spring Cloud Gateway. Esto permite al Gateway utilizar el registro de servicios de **Eureka** para resolver las réplicas escaladas de los *backends*.
+
+**Fragmento de Configuración del `application.yml` del Gateway:**
+
+<div align="center">
+  <pre><code>routes:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+      routes:
+        - id: iam-service-route
+          uri: lb://iam-service
+          predicates:
+            - Path=/iam-service/**,/api/v1/authentication/**,/api/v1/roles/**,/api/v1/users/**,/api/v1/jwks/**
+
+        - id: fleet-service-route
+          uri: lb://fleet-service
+          predicates:
+            - Path=/fleet-service/**,/api/v1/drivers/**,/api/v1/routes/**,/api/v1/vehicles/**
+
+        - id: delivery-service-route
+          uri: lb://delivery-service
+          predicates:
+            - Path=/delivery-service/**,/api/v1/client/**,/api/v1/orders/**
+  </code></pre>
+  <p><em>Ruta de Spring Cloud Gateway configurada para usar el balanceo del lado del cliente (<code>lb://</code>)</em></p>
+</div>
+
+##### 2. Validación de Tolerancia a Fallos y Reintento
+
+Para validar la resiliencia, se ejecutó una prueba de inyección de fallos que simula la caída de una instancia del `iam-service` mientras el tráfico atraviesa el Gateway.
+
+###### A. Escenario de Prueba
+1. Se escaló el `iam-service` a múltiples réplicas (ej., 2 instancias) usando `docker-compose up --scale iam-service=2`.
+2. Se envió una petición continua a la ruta de autenticación (`/api/v1/authentication/sign-in`) a través de NGINX.
+3. Mientras se enviaba tráfico, se detuvo forzosamente una de las instancias de `iam-service` (simulando un fallo).
+![Imagen de la ejecucion del comando ](/assets/cobox-servicios.png)
+![Muestra de 2 instancias iam preparadas para el balanceo](/assets/cobox-iam-instancia.png)
+###### B. Evidencia de Reintento y Exclusión
+
+El **Gateway** demostró su capacidad de **reintento automático** y **rebalanceo** de la carga, sin que el cliente externo recibiera un error:
+
+* **Fallo detectado:** El balanceador de carga del cliente detecta el `Connection Refused` en la instancia caída.
+* **Reintento Exitoso:** El balanceador excluye inmediatamente la instancia fallida y redirige la misma solicitud a otra réplica sana (obtenida de la lista de servicios activos de Eureka).
+
+<div align="center">
+  
+  <p><em>Logs del IAM-Service mostrando que una réplica sana continuó procesando el tráfico tras la caída de una de sus pares.</em></p>
+</div>
+
+* **Respuesta Exitosa:** La respuesta correcta es devuelta al cliente, confirmando que la lógica de tolerancia a fallos a nivel de cliente está activa.
+
+Este mecanismo garantiza la **resiliencia del servicio completo**, ya que la caída de cualquier microservicio de *backend* no se traduce en un punto único de fallo para el usuario final. El Gateway gestiona el fallo y asegura la continuidad del servicio al redirigir la carga a las réplicas operativas.
 
 
 ##### 5.3.4.5. Microservices Documentation Evidence for Sprint Review
