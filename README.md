@@ -4283,10 +4283,7 @@ Para reforzar la seguridad de acceso y proteger la plataforma frente a abusos y 
 
 La siguiente imagen muestra la evidencia de esta respuesta al exceder el umbral configurado:
 
-<div align="center">
-  <!-- Insertar captura del error 429 en Postman -->
-  <img src="assets/sprint4/rate-limit-429.png" width="700px">
-</div>
+
 
 Esta funcionalidad contribuye a la protección de los servicios internos y constituye un mecanismo esencial para garantizar disponibilidad y resiliencia ante patrones de tráfico anómalos.
 
